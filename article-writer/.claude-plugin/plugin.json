@@ -1,0 +1,11 @@
+{
+  "name": "article-writer",
+  "description": "Autonomous agent for writing articles and fiction. Articles: 9 content types with deep research, real-world examples, and quality-gated completion. Fiction: voice-profiled book writing with character POV filters, forbidden AI pattern detection, and six-pass editing.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Doug Silkstone"
+  },
+  "homepage": "https://github.com/dougwithseismic/article-writer",
+  "repository": "https://github.com/dougwithseismic/article-writer",
+  "license": "MIT"
+}

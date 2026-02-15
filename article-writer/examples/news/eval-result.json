@@ -1,0 +1,66 @@
+{
+  "evaluation_date": "2026-02-06",
+  "status": "passed",
+  "metrics": {
+    "total_words": 1558,
+    "target_words": 1500,
+    "minimum_words": 800,
+    "words_pass": true,
+    "sections": {
+      "whats-new": {
+        "word_count": 341,
+        "word_target": 400,
+        "word_minimum": 200,
+        "pass": true
+      },
+      "cloud-deploy-details": {
+        "word_count": 446,
+        "word_target": 450,
+        "word_minimum": 200,
+        "pass": true
+      },
+      "ai-sdk-impact": {
+        "word_count": 374,
+        "word_target": 400,
+        "word_minimum": 200,
+        "pass": true
+      },
+      "whats-next": {
+        "word_count": 342,
+        "word_target": 250,
+        "word_minimum": 200,
+        "pass": true
+      }
+    },
+    "external_links": 22,
+    "target_links": 8,
+    "links_pass": true,
+    "code_samples": 2,
+    "target_code_samples": 2,
+    "code_pass": true,
+    "real_examples": 6,
+    "target_examples": 3,
+    "examples_pass": true,
+    "prose_ratio": 1.0,
+    "prose_ratio_minimum": 0.8,
+    "prose_pass": true,
+    "narrative_flow": true
+  },
+  "quality_gates": {
+    "min_words_per_section": "PASS - all sections above 200 words",
+    "min_links_per_section": "PASS - all sections have 2+ links",
+    "min_examples_total": "PASS - 6 real-world examples (target: 3)",
+    "prose_ratio_minimum": "PASS - 100% prose (target: 80%)",
+    "narrative_flow_check": "PASS - inverted pyramid structure, transitions between sections",
+    "total_words": "PASS - 1558 words (target: 1500, minimum: 800)",
+    "external_links": "PASS - 22 links (target: 8)",
+    "code_samples": "PASS - 2 code samples (target: 2)"
+  },
+  "notes": [
+    "Article adapted from fictional Deno 3.0 spec to cover real Deno news: Deploy GA and Sandbox launch (Feb 3, 2026)",
+    "All facts verified against official Deno blog posts and third-party sources",
+    "Inverted pyramid structure: most newsworthy info (Sandbox + Deploy GA) leads, context follows",
+    "Real-world examples include Netlify, Supabase, Anthropic/Bun, AWS Lambda/Firecracker, Cloudflare Workers",
+    "Zero bullet points - 100% prose outside of code samples"
+  ]
+}

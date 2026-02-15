@@ -1,0 +1,67 @@
+{
+  "evaluated_at": "2026-02-06",
+  "content_type": "reddit",
+  "overall_verdict": "PASS",
+  "gates": {
+    "word_count": {
+      "target": 1500,
+      "minimum": 800,
+      "actual": 1453,
+      "verdict": "PASS"
+    },
+    "sections_complete": {
+      "target": "all",
+      "min_words_per_section": 200,
+      "actual": "4 of 4 (309, 410, 390, 308)",
+      "verdict": "PASS"
+    },
+    "external_links": {
+      "target": 5,
+      "actual": 7,
+      "verdict": "PASS"
+    },
+    "real_world_examples": {
+      "target": 3,
+      "actual": 4,
+      "examples": [
+        "Merriam-Webster 'AI slop' 2025 Word of the Year",
+        "Chicago Sun-Times / Philadelphia Enquirer fake books incident (May 2025)",
+        "Claude Code plugin ecosystem (270+ plugins, 739 skills)",
+        "Self-referential: this post written by the plugin in reddit mode"
+      ],
+      "verdict": "PASS"
+    },
+    "prose_ratio": {
+      "target": "90%",
+      "actual": "97%",
+      "bullet_lines": 0,
+      "total_content_lines": 47,
+      "verdict": "PASS"
+    },
+    "header_style": {
+      "colon_headers_found": 0,
+      "headers": [
+        "Why I started building this",
+        "How the whole thing fits together",
+        "The parts that actually matter",
+        "What I'd do differently"
+      ],
+      "verdict": "PASS"
+    },
+    "narrative_quality": {
+      "hook": "PASS",
+      "flow": "PASS",
+      "closing": "PASS",
+      "verdict": "PASS"
+    },
+    "reddit_compliance": {
+      "first_person": true,
+      "forbidden_words_found": 0,
+      "emoji_spam": false,
+      "corporate_voice": false,
+      "verdict": "PASS"
+    }
+  },
+  "issues": [],
+  "recommendations": []
+}

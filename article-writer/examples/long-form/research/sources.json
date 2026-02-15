@@ -1,0 +1,389 @@
+{
+  "sources": [
+    {
+      "id": "s1",
+      "title": "AI Agent Statistics for 2026",
+      "url": "https://www.multimodal.dev/post/agentic-ai-statistics",
+      "type": "statistics",
+      "sections": ["intro-why-agents-now"]
+    },
+    {
+      "id": "s2",
+      "title": "How enterprises are building AI agents in 2026 - Anthropic",
+      "url": "https://claude.com/blog/how-enterprises-are-building-ai-agents-in-2026",
+      "type": "case-study",
+      "sections": ["intro-why-agents-now", "production-deployment"]
+    },
+    {
+      "id": "s3",
+      "title": "150+ AI Agent Statistics 2026 - Master of Code",
+      "url": "https://masterofcode.com/blog/ai-agent-statistics",
+      "type": "statistics",
+      "sections": ["intro-why-agents-now"]
+    },
+    {
+      "id": "s4",
+      "title": "Agentic AI Adoption Statistics 2026 - Axis Intelligence",
+      "url": "https://axis-intelligence.com/agentic-ai-adoption-statistics-2026/",
+      "type": "statistics",
+      "sections": ["intro-why-agents-now", "production-deployment"]
+    },
+    {
+      "id": "s5",
+      "title": "Google Cloud - Choose a design pattern for agentic AI",
+      "url": "https://docs.google.com/architecture/choose-design-pattern-agentic-ai-system",
+      "type": "reference",
+      "sections": ["agent-landscape"]
+    },
+    {
+      "id": "s6",
+      "title": "Google's Eight Essential Multi-Agent Design Patterns - InfoQ",
+      "url": "https://www.infoq.com/news/2026/01/multi-agent-design-patterns/",
+      "type": "reference",
+      "sections": ["agent-landscape", "multi-agent-systems"]
+    },
+    {
+      "id": "s7",
+      "title": "The Landscape of Emerging AI Agent Architectures - arXiv",
+      "url": "https://arxiv.org/html/2404.11584v1",
+      "type": "research",
+      "sections": ["agent-landscape"]
+    },
+    {
+      "id": "s8",
+      "title": "AI Agent Planning: ReAct vs Plan and Execute - By AI Team",
+      "url": "https://byaiteam.com/blog/2025/12/09/ai-agent-planning-react-vs-plan-and-execute-for-reliability/",
+      "type": "reference",
+      "sections": ["agent-landscape"]
+    },
+    {
+      "id": "s9",
+      "title": "Anthropic - Building Effective Agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "type": "reference",
+      "sections": ["agent-landscape", "frameworks-deep-dive"]
+    },
+    {
+      "id": "s10",
+      "title": "Claude Opus 4.5 vs Gemini 3 Pro vs GPT-5 - Klavis AI",
+      "url": "https://www.klavis.ai/blog/claude-opus-4-5-vs-gemini-3-pro-vs-gpt-5-the-ultimate-agentic-ai-showdown-for-developers",
+      "type": "benchmark",
+      "sections": ["foundations-llm-layer"]
+    },
+    {
+      "id": "s11",
+      "title": "AI Model Benchmarks Jan 2026 - LM Council",
+      "url": "https://lmcouncil.ai/benchmarks",
+      "type": "benchmark",
+      "sections": ["foundations-llm-layer"]
+    },
+    {
+      "id": "s12",
+      "title": "Best AI for Developers Technical Comparison 2026 - Cosmic",
+      "url": "https://www.cosmicjs.com/blog/best-ai-for-developers-claude-vs-gpt-vs-gemini-technical-comparison-2026",
+      "type": "benchmark",
+      "sections": ["foundations-llm-layer"]
+    },
+    {
+      "id": "s13",
+      "title": "Comparing Agentic Frameworks: LangGraph, CrewAI, AutoGen, Strands",
+      "url": "https://medium.com/@a.posoldova/comparing-4-agentic-frameworks-langgraph-crewai-autogen-and-strands-agents-b2d482691311",
+      "type": "comparison",
+      "sections": ["frameworks-deep-dive"]
+    },
+    {
+      "id": "s14",
+      "title": "Best Agentic AI Frameworks For Production Scale 2026 - AceCloud",
+      "url": "https://acecloud.ai/blog/agentic-ai-frameworks-comparison/",
+      "type": "comparison",
+      "sections": ["frameworks-deep-dive"]
+    },
+    {
+      "id": "s15",
+      "title": "OpenAI Agents SDK Documentation",
+      "url": "https://openai.github.io/openai-agents-python/",
+      "type": "documentation",
+      "sections": ["frameworks-deep-dive"]
+    },
+    {
+      "id": "s16",
+      "title": "14 AI Agent Frameworks Compared - Softcery",
+      "url": "https://softcery.com/lab/top-14-ai-agent-frameworks-of-2025-a-founders-guide-to-building-smarter-systems",
+      "type": "comparison",
+      "sections": ["frameworks-deep-dive"]
+    },
+    {
+      "id": "s17",
+      "title": "Model Context Protocol Specification",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25",
+      "type": "specification",
+      "sections": ["tool-use-patterns"]
+    },
+    {
+      "id": "s18",
+      "title": "Introducing the Model Context Protocol - Anthropic",
+      "url": "https://www.anthropic.com/news/model-context-protocol",
+      "type": "announcement",
+      "sections": ["tool-use-patterns"]
+    },
+    {
+      "id": "s19",
+      "title": "Running MCP in Production - ByteBridge",
+      "url": "https://bytebridge.medium.com/what-it-takes-to-run-mcp-model-context-protocol-in-production-3bbf19413f69",
+      "type": "guide",
+      "sections": ["tool-use-patterns"]
+    },
+    {
+      "id": "s20",
+      "title": "OpenAI Function Calling Documentation",
+      "url": "https://platform.openai.com/docs/guides/function-calling",
+      "type": "documentation",
+      "sections": ["tool-use-patterns"]
+    },
+    {
+      "id": "s21",
+      "title": "Context Engineering for AI Agents - Manus",
+      "url": "https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus",
+      "type": "case-study",
+      "sections": ["tool-use-patterns", "memory-state"]
+    },
+    {
+      "id": "s22",
+      "title": "Mem0: Universal Memory Layer for AI Agents",
+      "url": "https://mem0.ai/",
+      "type": "tool",
+      "sections": ["memory-state"]
+    },
+    {
+      "id": "s23",
+      "title": "Mem0 Research: 26% Accuracy Boost for LLMs",
+      "url": "https://mem0.ai/research",
+      "type": "research",
+      "sections": ["memory-state"]
+    },
+    {
+      "id": "s24",
+      "title": "Effective Context Engineering for AI Agents - Anthropic",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "type": "reference",
+      "sections": ["memory-state"]
+    },
+    {
+      "id": "s25",
+      "title": "Memory-augmented agents - AWS Prescriptive Guidance",
+      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-patterns/memory-augmented-agents.html",
+      "type": "reference",
+      "sections": ["memory-state"]
+    },
+    {
+      "id": "s26",
+      "title": "Cognition - Don't Build Multi-Agents",
+      "url": "https://cognition.ai/blog/dont-build-multi-agents",
+      "type": "case-study",
+      "sections": ["multi-agent-systems"]
+    },
+    {
+      "id": "s27",
+      "title": "Anthropic - How we built our multi-agent research system",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "type": "case-study",
+      "sections": ["multi-agent-systems"]
+    },
+    {
+      "id": "s28",
+      "title": "Google A2A Protocol",
+      "url": "https://a2a-protocol.org/latest/",
+      "type": "specification",
+      "sections": ["multi-agent-systems"]
+    },
+    {
+      "id": "s29",
+      "title": "Announcing the Agent2Agent Protocol - Google",
+      "url": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/",
+      "type": "announcement",
+      "sections": ["multi-agent-systems"]
+    },
+    {
+      "id": "s30",
+      "title": "Demystifying Evals for AI Agents - Anthropic",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "type": "reference",
+      "sections": ["testing-observability"]
+    },
+    {
+      "id": "s31",
+      "title": "4 Frameworks to Test Non-Deterministic AI Agents - Datagrid",
+      "url": "https://datagrid.com/blog/4-frameworks-test-non-deterministic-ai-agents",
+      "type": "guide",
+      "sections": ["testing-observability"]
+    },
+    {
+      "id": "s32",
+      "title": "AI Agent Evaluation Framework - Braintrust",
+      "url": "https://www.braintrust.dev/articles/ai-agent-evaluation-framework",
+      "type": "guide",
+      "sections": ["testing-observability"]
+    },
+    {
+      "id": "s33",
+      "title": "7 Best LLM Tracing Tools 2026 - Braintrust",
+      "url": "https://www.braintrust.dev/articles/best-llm-tracing-tools-2026",
+      "type": "comparison",
+      "sections": ["testing-observability"]
+    },
+    {
+      "id": "s34",
+      "title": "Top 5 AI Agent Observability Platforms 2026 - O-mega",
+      "url": "https://o-mega.ai/articles/top-5-ai-agent-observability-platforms-the-ultimate-2026-guide",
+      "type": "comparison",
+      "sections": ["testing-observability"]
+    },
+    {
+      "id": "s35",
+      "title": "Replit AI Deletes Production Database - Fortune",
+      "url": "https://fortune.com/2025/07/23/ai-coding-tool-replit-wiped-database-called-it-a-catastrophic-failure/",
+      "type": "incident",
+      "sections": ["production-deployment", "tool-use-patterns"]
+    },
+    {
+      "id": "s36",
+      "title": "Hidden Costs of AI Agent Development 2026",
+      "url": "https://hypersense-software.com/blog/2026/01/12/hidden-costs-ai-agent-development/",
+      "type": "analysis",
+      "sections": ["production-deployment"]
+    },
+    {
+      "id": "s37",
+      "title": "Sandboxing AI Agents 2026 - Northflank",
+      "url": "https://northflank.com/blog/how-to-sandbox-ai-agents",
+      "type": "guide",
+      "sections": ["production-deployment", "tool-use-patterns"]
+    },
+    {
+      "id": "s38",
+      "title": "NVIDIA Practical Security Guidance for Sandboxing Agentic Workflows",
+      "url": "https://developer.nvidia.com/blog/practical-security-guidance-for-sandboxing-agentic-workflows-and-managing-execution-risk/",
+      "type": "guide",
+      "sections": ["production-deployment"]
+    },
+    {
+      "id": "s39",
+      "title": "AI Agent Engineering Skills and Salary 2026 - Second Talent",
+      "url": "https://www.secondtalent.com/resources/most-in-demand-ai-engineering-skills-and-salary-ranges/",
+      "type": "market",
+      "sections": ["whats-next"]
+    },
+    {
+      "id": "s40",
+      "title": "Agentic AI Career Opportunities 2026 - Divergence",
+      "url": "https://knowledge.divergence.one/blog/unlock-transformative-agentic-ai-career-opportunities-in-2026",
+      "type": "market",
+      "sections": ["whats-next"]
+    },
+    {
+      "id": "s41",
+      "title": "Introducing Strands Agents - AWS",
+      "url": "https://aws.amazon.com/blogs/opensource/introducing-strands-agents-an-open-source-ai-agents-sdk/",
+      "type": "announcement",
+      "sections": ["frameworks-deep-dive"]
+    },
+    {
+      "id": "s42",
+      "title": "LLM Cost Optimization: Smart Routing - Kosmoy",
+      "url": "https://www.kosmoy.com/post/llm-cost-management-stop-burning-money-on-tokens",
+      "type": "guide",
+      "sections": ["foundations-llm-layer", "production-deployment"]
+    },
+    {
+      "id": "s43",
+      "title": "Effective Harnesses for Long-Running Agents - Anthropic",
+      "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+      "type": "reference",
+      "sections": ["memory-state", "production-deployment"]
+    },
+    {
+      "id": "s44",
+      "title": "Agentic AI Market to Reach $98B by 2033 - OpenPR",
+      "url": "https://www.openpr.com/news/4377218/agentic-ai-market-growth-2026-2033-market-to-reach-us-98-26",
+      "type": "market",
+      "sections": ["intro-why-agents-now"]
+    },
+    {
+      "id": "s45",
+      "title": "Cognition - Rebuilding Devin for Claude Sonnet 4.5",
+      "url": "https://cognition.ai/blog/devin-sonnet-4-5-lessons-and-challenges",
+      "type": "case-study",
+      "sections": ["multi-agent-systems", "foundations-llm-layer"]
+    },
+    {
+      "id": "s46",
+      "title": "SWE-bench Verified Leaderboard",
+      "url": "https://www.swebench.com/",
+      "type": "benchmark",
+      "sections": ["foundations-llm-layer"]
+    },
+    {
+      "id": "s47",
+      "title": "Claude Code Sub-Agents Documentation",
+      "url": "https://code.claude.com/docs/en/sub-agents",
+      "type": "documentation",
+      "sections": ["multi-agent-systems"]
+    },
+    {
+      "id": "s48",
+      "title": "Building Effective AI Agents with MCP - Red Hat",
+      "url": "https://developers.redhat.com/articles/2026/01/08/building-effective-ai-agents-mcp",
+      "type": "guide",
+      "sections": ["tool-use-patterns"]
+    },
+    {
+      "id": "s49",
+      "title": "Context Compression - Google ADK",
+      "url": "https://google.github.io/adk-docs/context/compaction/",
+      "type": "documentation",
+      "sections": ["memory-state"]
+    },
+    {
+      "id": "s50",
+      "title": "Doctolib Engineering with Claude Code",
+      "url": "https://claude.com/blog/how-enterprises-are-building-ai-agents-in-2026",
+      "type": "case-study",
+      "sections": ["intro-why-agents-now", "production-deployment"]
+    },
+    {
+      "id": "s51",
+      "title": "MCP Architecture Patterns for Multi-Agent AI - IBM",
+      "url": "https://developer.ibm.com/articles/mcp-architecture-patterns-ai-systems/",
+      "type": "reference",
+      "sections": ["tool-use-patterns", "multi-agent-systems"]
+    },
+    {
+      "id": "s52",
+      "title": "Azure Agent Factory Design Patterns",
+      "url": "https://azure.microsoft.com/en-us/blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/",
+      "type": "reference",
+      "sections": ["agent-landscape"]
+    },
+    {
+      "id": "s53",
+      "title": "PydanticAI with Amazon Bedrock AgentCore",
+      "url": "https://dev.to/aws/building-production-ready-ai-agents-with-pydantic-ai-and-amazon-bedrock-agentcore-738",
+      "type": "guide",
+      "sections": ["frameworks-deep-dive"]
+    },
+    {
+      "id": "s54",
+      "title": "Factory.ai Evaluating Context Compression for AI Agents",
+      "url": "https://factory.ai/news/evaluating-compression",
+      "type": "research",
+      "sections": ["memory-state"]
+    },
+    {
+      "id": "s55",
+      "title": "Agents Context Compaction - Will Larson",
+      "url": "https://lethain.com/agents-context-compaction/",
+      "type": "guide",
+      "sections": ["memory-state"]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "evaluation_date": "2026-02-06",
+  "status": "passed",
+  "metrics": {
+    "total_words": 1178,
+    "target_words": 1000,
+    "minimum_words": 500,
+    "meets_word_target": true,
+    "sections": {
+      "opener": {
+        "title": "What Shipped This Week",
+        "word_count": 185,
+        "word_target": 250,
+        "word_minimum": 150,
+        "meets_minimum": true,
+        "links": 2,
+        "meets_link_minimum": true,
+        "examples": ["Qodo", "Monday.com", "Box", "Ollama", "Goose", "Block"]
+      },
+      "picks": {
+        "title": "The Tools Worth Installing",
+        "word_count": 700,
+        "word_target": 550,
+        "word_minimum": 250,
+        "meets_minimum": true,
+        "links": 11,
+        "meets_link_minimum": true,
+        "examples": ["Qodo", "Monday.com", "Box", "Ollama", "Block", "Goose", "Square", "Cash App", "CodeRabbit", "mabl"]
+      },
+      "closing": {
+        "title": "One Thing to Try This Week",
+        "word_count": 259,
+        "word_target": 200,
+        "word_minimum": 100,
+        "meets_minimum": true,
+        "links": 2,
+        "meets_link_minimum": true,
+        "examples": ["Ollama"]
+      }
+    },
+    "external_links": {
+      "total": 15,
+      "target": 3,
+      "meets_target": true,
+      "unique_domains": [
+        "qodo.ai",
+        "globenewswire.com",
+        "ollama.com",
+        "github.com",
+        "block.github.io",
+        "venturebeat.com",
+        "coderabbit.ai",
+        "mabl.com",
+        "docs.ollama.com"
+      ]
+    },
+    "real_examples": {
+      "total": 10,
+      "target": 2,
+      "meets_target": true,
+      "entities": [
+        "Qodo",
+        "Monday.com",
+        "Box",
+        "Ollama",
+        "Block (Square / Cash App)",
+        "Goose",
+        "CodeRabbit",
+        "mabl",
+        "VentureBeat"
+      ]
+    },
+    "prose_ratio": {
+      "value": 0.927,
+      "target": 0.85,
+      "meets_target": true
+    },
+    "narrative_flow": {
+      "has_hook": true,
+      "has_value_section": true,
+      "has_cta": true,
+      "transitions_smooth": true
+    }
+  },
+  "quality_gates": {
+    "min_words_per_section": "PASS (185, 700, 259 -- all above 150 minimum)",
+    "min_links_per_section": "PASS (2, 11, 2 -- all above 1 minimum)",
+    "min_examples_total": "PASS (10 real-world examples, target was 2)",
+    "prose_ratio_minimum": "PASS (92.7% vs 85% target)",
+    "narrative_flow_check": "PASS (hook > value > cta arc present)",
+    "prose_ratio_check": "PASS"
+  },
+  "all_gates_passed": true
+}

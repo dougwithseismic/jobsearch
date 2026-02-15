@@ -1,0 +1,174 @@
+{
+  "topic": "Weekly AI Tools Roundup: The Best New Developer Tools This Week",
+  "slug": "weekly-ai-tools-roundup",
+  "title": "This Week in AI Dev Tools: 5 Releases Worth Your Attention",
+  "subtitle": "A curated look at the developer tools that shipped this week and why they matter for your workflow",
+  "summary": "Every week, dozens of AI-powered developer tools launch. Most are noise. This newsletter cuts through the hype to spotlight the handful of releases that could actually change how you build software. This edition covers new entrants in code review, local model hosting, and AI-assisted testing that are turning heads in the developer community.",
+  "content_type": "email",
+  "article_type": "technical",
+  "custom_word_count": null,
+  "status": "complete",
+  "created": "2026-02-06",
+  "targets": {
+    "total_words": 1000,
+    "minimum_words": 500,
+    "sections": 3,
+    "external_links": 3,
+    "real_examples": 2
+  },
+  "narrative_arc": {
+    "hook": "Three tools shipped this week that solve problems you've been hacking around for months — and one of them is free",
+    "value": "Concise breakdowns of each tool with real use cases, performance benchmarks where available, and honest takes on where they fall short",
+    "cta": "Try the one tool that fits your current stack and reply with what you find — we feature reader experiments in next week's issue"
+  },
+  "sections": [
+    {
+      "id": "opener",
+      "title": "What Shipped This Week",
+      "priority": 1,
+      "status": "written",
+      "research_complete": true,
+      "word_count": 185,
+      "word_target": 250,
+      "word_minimum": 150,
+      "narrative_role": "hook",
+      "scaffold": "Open with the single most impressive tool release this week. Lead with a specific capability that solves a real pain point. Set up why this week's batch matters more than usual — maybe a trend is forming or a category is heating up. Keep it tight and forward-leaning.",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": false,
+        "external_links_minimum": 1,
+        "case_study": false
+      },
+      "research_questions": [
+        "What are the most notable AI developer tools released this week?",
+        "Which new tool launches are getting traction on Hacker News or dev Twitter?"
+      ]
+    },
+    {
+      "id": "picks",
+      "title": "The Tools Worth Installing",
+      "priority": 2,
+      "status": "written",
+      "research_complete": true,
+      "word_count": 700,
+      "word_target": 550,
+      "word_minimum": 250,
+      "narrative_role": "value",
+      "scaffold": "Cover 3-5 tools in brief, punchy paragraphs. For each: what it does, why it matters, and one honest caveat. Prioritize tools readers can try today. Include at least one free or open-source option. Weave in a real developer quote or early benchmark if available. Keep prose ratio high — this is a newsletter, not a listicle.",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": false,
+        "external_links_minimum": 1,
+        "case_study": false
+      },
+      "research_questions": [
+        "What benchmarks or early user feedback exist for these tools?",
+        "Are any established players responding to these new entrants?"
+      ]
+    },
+    {
+      "id": "closing",
+      "title": "One Thing to Try This Week",
+      "priority": 3,
+      "status": "written",
+      "research_complete": true,
+      "word_count": 259,
+      "word_target": 200,
+      "word_minimum": 100,
+      "narrative_role": "cta",
+      "scaffold": "Pick the single most actionable tool from the roundup. Give the reader a specific, low-effort experiment they can run in under 30 minutes. Close with a clear ask — reply with results, share with a teammate, or forward the newsletter. Keep it personal and direct.",
+      "required_elements": {
+        "examples_minimum": 0,
+        "code_samples": false,
+        "external_links_minimum": 1,
+        "case_study": false
+      },
+      "research_questions": [
+        "What is the fastest getting-started path for the top recommended tool?",
+        "Are there quick-start guides or playground environments available?"
+      ]
+    }
+  ],
+  "editorial_standards": {
+    "prose_ratio_minimum": 0.85,
+    "max_consecutive_bullets": 3,
+    "header_style": "conversational, no colons"
+  },
+  "quality_gates": {
+    "min_words_per_section": 150,
+    "min_links_per_section": 1,
+    "min_examples_total": 2,
+    "prose_ratio_minimum": 0.85,
+    "narrative_flow_check": true,
+    "prose_ratio_check": true
+  },
+  "research_config": {
+    "sources_per_section": 3,
+    "search_queries_min": 2,
+    "include_video_research": false
+  },
+  "sources": [
+    {
+      "id": "qodo-2-launch",
+      "title": "Introducing Qodo 2.0 and the next generation of AI code review",
+      "url": "https://www.qodo.ai/blog/introducing-qodo-2-0-agentic-code-review/"
+    },
+    {
+      "id": "qodo-2-press",
+      "title": "Qodo 2.0 Redefines AI Code Review For Accuracy and Enterprise Trust",
+      "url": "https://www.globenewswire.com/news-release/2026/02/04/3232129/0/en/Qodo-2-0-Redefines-AI-Code-Review-For-Accuracy-and-Enterprise-Trust.html"
+    },
+    {
+      "id": "ollama-launch-blog",
+      "title": "ollama launch - Ollama Blog",
+      "url": "https://ollama.com/blog/launch"
+    },
+    {
+      "id": "ollama-releases",
+      "title": "Ollama Releases - GitHub",
+      "url": "https://github.com/ollama/ollama/releases"
+    },
+    {
+      "id": "goose-github",
+      "title": "Goose - an open source, extensible AI agent by Block",
+      "url": "https://github.com/block/goose"
+    },
+    {
+      "id": "goose-venturebeat",
+      "title": "Jack Dorsey is back with Goose - VentureBeat",
+      "url": "https://venturebeat.com/programming-development/jack-dorsey-is-back-with-goose-a-new-ultra-simple-open-source-ai-agent-building-platform-from-his-startup-block"
+    },
+    {
+      "id": "coderabbit-main",
+      "title": "CodeRabbit - AI Code Reviews",
+      "url": "https://www.coderabbit.ai/"
+    },
+    {
+      "id": "mabl-main",
+      "title": "mabl - AI-Powered Testing",
+      "url": "https://www.mabl.com/"
+    },
+    {
+      "id": "dev-productivity-stats",
+      "title": "Top 100 Developer Productivity Statistics with AI Tools 2026",
+      "url": "https://www.index.dev/blog/developer-productivity-statistics-with-ai-tools"
+    },
+    {
+      "id": "ollama-claude-docs",
+      "title": "Claude Code - Ollama Integration Docs",
+      "url": "https://docs.ollama.com/integrations/claude-code"
+    },
+    {
+      "id": "cortex-ai-tools",
+      "title": "AI Tools for Developers 2026: More Than Just Coding Assistants",
+      "url": "https://www.cortex.io/post/the-engineering-leaders-guide-to-ai-tools-for-developers-in-2026"
+    }
+  ],
+  "metadata": {
+    "target_audience": "software developers and engineering leads interested in AI tooling",
+    "reading_time": "3-5 minutes",
+    "technical_depth": "medium",
+    "content_depth": "low",
+    "tags": ["AI tools", "developer tools", "newsletter", "weekly roundup", "code review", "local models", "AI testing"]
+  }
+}

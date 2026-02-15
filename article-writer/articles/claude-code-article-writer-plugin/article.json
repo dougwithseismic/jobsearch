@@ -1,0 +1,193 @@
+{
+  "topic": "I built a Claude Code plugin that writes entire articles autonomously — here's how it works and what I learned",
+  "slug": "claude-code-article-writer-plugin",
+  "article_type": "technical",
+  "content_type": "reddit",
+  "title": "I built a Claude Code plugin that writes entire articles autonomously",
+  "subtitle": "A skills-based architecture that handles research, outlining, writing, and quality evaluation — and what actually surprised me about the process",
+  "summary": "Most AI writing tools give you a text box and a 'generate' button. I wanted something different — an agent that does its own research, writes in proper narrative prose instead of bullet-point soup, and keeps iterating until quality gates actually pass. So I built an article-writer plugin for Claude Code using the skills architecture. It supports 9 content types from 10,000-word long-form pieces to reddit posts like this one, and every target is driven by a spec file so nothing is hardcoded. Here's what the architecture looks like and what I learned building it.",
+  "status": "complete",
+  "created": "2026-02-06",
+  "custom_word_count": null,
+  "targets": {
+    "total_words": 1500,
+    "minimum_words": 800,
+    "sections": "2-4",
+    "external_links": 5,
+    "real_world_examples": 3
+  },
+  "editorial_standards": {
+    "prose_ratio_minimum": 0.9,
+    "max_consecutive_bullets": 3,
+    "header_style": "ultra-casual or no headers, never formal",
+    "voice": "first-person, direct, no marketing language",
+    "forbidden_words": ["leverage", "synergy", "game-changer", "revolutionary", "cutting-edge", "best-in-class", "robust", "seamless", "elevate", "empower", "unlock", "supercharge"],
+    "no_emoji_spam": true
+  },
+  "narrative_arc": {
+    "hook": "The frustration with existing AI writing tools — they produce bullet-heavy, generic content that reads like a corporate memo. What if an AI agent could actually write like a person?",
+    "tension": "Building an autonomous writing pipeline is harder than it sounds. Quality control, research depth, prose vs bullets, iteration loops — all need to work together.",
+    "resolution": "A skills-based architecture where each phase (PRD, research, outline, write, review, eval) is a separate skill with its own rules, and everything reads from a single spec file.",
+    "transformation": "Readers understand how to think about autonomous agent architectures for content — and maybe build their own."
+  },
+  "sections": [
+    {
+      "id": "the-problem-with-ai-writing",
+      "title": "Why I started building this",
+      "priority": 1,
+      "status": "written",
+      "word_count": 317,
+      "research_complete": true,
+      "word_target": 350,
+      "word_minimum": 200,
+      "narrative_role": "hook",
+      "required_elements": {
+        "examples_minimum": 1,
+        "external_links_minimum": 1,
+        "evidence_types": ["personal experience", "industry observation"]
+      },
+      "scaffold": {
+        "opening_hook": "Every AI writing tool I tried produced the same thing — listicle-shaped content that reads like someone fed a prompt into ChatGPT and hit publish.",
+        "central_argument": "The problem isn't AI writing itself. It's that most tools optimize for speed over quality, and there's no feedback loop to catch when the output is garbage.",
+        "key_questions": [
+          "Why does most AI-generated content read the same?",
+          "What's actually missing from current AI writing workflows?",
+          "What would it look like if an AI agent wrote the way a good editor thinks?"
+        ],
+        "example_types": ["personal frustration with existing tools", "specific example of bad AI output"],
+        "closing_bridge": "So I decided to build something that actually iterates on quality instead of just generating and shipping."
+      },
+      "research_questions": [
+        "What are the common criticisms of AI-generated content in 2025-2026?",
+        "What do professional writers and editors say about AI writing quality?",
+        "What autonomous AI writing tools exist and what are their limitations?"
+      ]
+    },
+    {
+      "id": "how-it-actually-works",
+      "title": "How the whole thing fits together",
+      "priority": 2,
+      "status": "written",
+      "word_count": 410,
+      "research_complete": true,
+      "word_target": 500,
+      "word_minimum": 200,
+      "narrative_role": "context",
+      "required_elements": {
+        "examples_minimum": 1,
+        "external_links_minimum": 2,
+        "evidence_types": ["technical architecture", "code example", "tool reference"]
+      },
+      "scaffold": {
+        "opening_hook": "The plugin is built on Claude Code's skills architecture — each phase of writing is a separate skill that knows its job and reads its targets from one source of truth.",
+        "central_argument": "Breaking the writing process into discrete skills (PRD, research, outline, write-section, embed-media, review, eval) with a central spec file makes the whole system composable and debuggable.",
+        "key_questions": [
+          "Why separate skills instead of one big prompt?",
+          "How does the spec file drive everything downstream?",
+          "What makes this different from just chaining prompts together?"
+        ],
+        "example_types": ["architecture walkthrough", "pipeline diagram", "skill interaction example"],
+        "closing_bridge": "The architecture is simple on paper. The interesting part is what happens when you add quality gates."
+      },
+      "research_questions": [
+        "How does Claude Code's skills/plugin architecture work?",
+        "What patterns exist for multi-step autonomous agent workflows?",
+        "How do other writing agent systems handle orchestration?"
+      ]
+    },
+    {
+      "id": "what-makes-it-different",
+      "title": "The parts that actually matter",
+      "priority": 3,
+      "status": "written",
+      "word_count": 390,
+      "research_complete": true,
+      "word_target": 400,
+      "word_minimum": 200,
+      "narrative_role": "substance",
+      "required_elements": {
+        "examples_minimum": 1,
+        "external_links_minimum": 1,
+        "evidence_types": ["technical detail", "design decision", "comparison"]
+      },
+      "scaffold": {
+        "opening_hook": "Three things made the biggest difference: content type presets, the eval loop, and the prose-over-bullets philosophy baked into every skill.",
+        "central_argument": "The secret sauce isn't any single feature — it's that quality rules are enforced at every stage, not just checked at the end. And the content type system means you get appropriate structure whether you're writing a 10k deep-dive or a reddit post.",
+        "key_questions": [
+          "How do content types change the writing behavior?",
+          "Why does the eval loop matter more than the initial generation?",
+          "What does enforcing prose ratio actually do to output quality?"
+        ],
+        "example_types": ["content type comparison", "eval loop example", "before/after prose ratio"],
+        "closing_bridge": "It's not perfect — there are real limitations."
+      },
+      "research_questions": [
+        "How do quality gates in AI agent systems improve output?",
+        "What research exists on prose vs bullet-heavy content engagement?",
+        "How do content type systems work in other writing platforms?"
+      ]
+    },
+    {
+      "id": "honest-take",
+      "title": "What I'd do differently",
+      "priority": 4,
+      "status": "written",
+      "word_count": 308,
+      "research_complete": true,
+      "word_target": 250,
+      "word_minimum": 200,
+      "narrative_role": "honest-take",
+      "required_elements": {
+        "examples_minimum": 0,
+        "external_links_minimum": 1,
+        "evidence_types": ["personal reflection", "honest limitation"]
+      },
+      "scaffold": {
+        "opening_hook": "This thing isn't magic. It still needs a human to check the output, and the research phase can burn through context fast on long articles.",
+        "central_argument": "Autonomous doesn't mean unsupervised. The biggest lesson was that the quality gates are only as good as your spec — garbage in, garbage out still applies even with a feedback loop.",
+        "key_questions": [
+          "What are the real limitations?",
+          "Where does human oversight still matter?",
+          "What would version 2 look like?"
+        ],
+        "example_types": ["honest limitation", "lesson learned"],
+        "closing_bridge": "If you're building something similar, the repo is open source — feel free to steal the approach."
+      },
+      "research_questions": [
+        "What are known limitations of autonomous AI writing agents?",
+        "How are other builders approaching quality control in AI content systems?",
+        "What's the state of Claude Code plugin development and the ecosystem?"
+      ]
+    }
+  ],
+  "quality_gates": {
+    "min_words_per_section": 200,
+    "min_links_per_section": 1,
+    "min_examples_total": 3,
+    "narrative_flow_check": true,
+    "prose_ratio_check": true
+  },
+  "research_config": {
+    "sources_per_section": 3,
+    "search_queries_min": 3,
+    "include_video_research": false
+  },
+  "sources": [
+    "https://www.meltwater.com/en/blog/ai-slop-consumer-sentiment-social-listening-analysis",
+    "https://futurism.com/artificial-intelligence/over-50-percent-internet-ai-slop",
+    "https://surferseo.com/blog/ai-generated-content/",
+    "https://code.claude.com/docs/en/skills",
+    "https://leehanchung.github.io/blogs/2025/10/26/claude-skills-deep-dive/",
+    "https://www.anthropic.com/research/building-effective-agents",
+    "https://www.writing-skills.com/blog/why-bullets-wont-make-your-case/",
+    "https://claude-plugins.dev/",
+    "https://github.com/dougwithseismic/article-writer",
+    "https://digiday.com/media/after-an-oversaturation-of-ai-generated-content-creators-authenticity-and-messiness-are-in-high-demand/"
+  ],
+  "metadata": {
+    "target_audience": "Developers and technical users interested in Claude Code, AI agents, and autonomous content creation workflows",
+    "reading_time": "5-8 minutes",
+    "depth": "medium",
+    "tags": ["claude-code", "plugins", "skills", "ai-writing", "autonomous-agents", "content-creation"]
+  }
+}

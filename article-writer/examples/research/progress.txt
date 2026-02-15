@@ -1,0 +1,42 @@
+Article Pipeline Progress Log
+=============================
+
+Phase 1: RESEARCH - COMPLETE
+- Conducted 25+ web searches across all 8 sections
+- Found 40+ unique sources: academic papers, industry reports, vendor studies, case studies
+- Created research notes for each section: intro, measurement-landscape, code-generation, debugging-maintenance, documentation-knowledge, hidden-costs, organizational-patterns, conclusion
+- Created comprehensive sources.json with 42 categorized sources
+- Key findings: METR 19% slowdown vs GitHub 55% speedup creates core narrative tension
+- All sections marked research_complete: true
+
+Phase 2: OUTLINE - COMPLETE
+- Detailed section-by-section outline written to outline.md
+- Narrative arc: hook -> context -> foundation -> deep-dive x3 -> analysis -> conclusion
+- Each section mapped to specific research notes and data points
+
+Phase 3: WRITE - COMPLETE
+- Full article written to output/article.md
+- 8,012 total words (target: 8,000, minimum: 6,000)
+- 8 sections, all above 700-word minimum
+- 87 inline links (55 unique URLs), target was 40
+- 17 named organizations with specific case study data
+- 100% prose ratio (zero bullet points), target was 75%
+- All headers conversational, no colons
+
+Phase 4: REVIEW - COMPLETE
+- Verified all major claims have inline citations
+- Confirmed narrative flow from hook through conclusion
+- Checked that both positive and negative evidence presented fairly
+- Verified real-world examples include specific data points, not just name-drops
+
+Phase 5: EVAL - COMPLETE
+- All quality gates PASS
+- eval-result.json written with detailed metrics
+- article.json status updated to "reviewed"
+
+Key Learnings:
+- The METR vs vendor study contrast provides strong narrative anchor
+- Atlassian DevEx 2025 report was an unexpectedly rich source (10hr savings + 10hr friction paradox)
+- GitClear longitudinal data (211M lines) provides most compelling code quality evidence
+- Booking.com + Palo Alto Networks provide best organizational case studies
+- Veracode security data (45% vulnerability rate, 100+ LLMs) is the strongest hidden cost evidence

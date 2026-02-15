@@ -1,0 +1,305 @@
+{
+  "sources": [
+    {
+      "id": "github-copilot-productivity-study",
+      "title": "Research: Quantifying GitHub Copilot's Impact on Developer Productivity and Happiness",
+      "url": "https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/",
+      "type": "vendor_research",
+      "key_findings": "55% faster task completion, 95 professional developers, P=.0017"
+    },
+    {
+      "id": "arxiv-copilot-impact",
+      "title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot",
+      "url": "https://arxiv.org/abs/2302.06590",
+      "type": "academic_paper",
+      "key_findings": "Controlled experiment showing productivity gains from Copilot"
+    },
+    {
+      "id": "metr-2025-study",
+      "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+      "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+      "type": "independent_research",
+      "key_findings": "19% slower with AI tools, 39-point perception gap, 16 developers, 246 tasks"
+    },
+    {
+      "id": "metr-arxiv",
+      "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity (arXiv)",
+      "url": "https://arxiv.org/abs/2507.09089",
+      "type": "academic_paper",
+      "key_findings": "RCT showing AI tools slowed experienced developers by 19%"
+    },
+    {
+      "id": "systematic-literature-review-llm",
+      "title": "The Impact of LLM-Assistants on Software Developer Productivity: A Systematic Literature Review",
+      "url": "https://arxiv.org/abs/2507.03156",
+      "type": "academic_paper",
+      "key_findings": "37 peer-reviewed studies, mixed results, cognitive offloading concerns"
+    },
+    {
+      "id": "stack-overflow-2025",
+      "title": "2025 Stack Overflow Developer Survey - AI Section",
+      "url": "https://survey.stackoverflow.co/2025/ai",
+      "type": "industry_survey",
+      "key_findings": "84% adoption, 29% trust, 46% distrust accuracy, 66% frustrated by almost-right code"
+    },
+    {
+      "id": "stack-overflow-trust-decline",
+      "title": "Stack Overflow 2025 Developer Survey Reveals Trust in AI at All Time Low",
+      "url": "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/",
+      "type": "industry_survey",
+      "key_findings": "Trust dropped from 40% to 29%, positive sentiment from 70%+ to 60%"
+    },
+    {
+      "id": "space-framework",
+      "title": "The SPACE of Developer Productivity: There's More to It Than You Think",
+      "url": "https://queue.acm.org/detail.cfm?id=3454124",
+      "type": "academic_paper",
+      "key_findings": "Five dimensions: Satisfaction, Performance, Activity, Communication, Efficiency"
+    },
+    {
+      "id": "dora-2024-report",
+      "title": "Announcing the 2024 DORA Report",
+      "url": "https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report",
+      "type": "industry_report",
+      "key_findings": "AI paradox: individual output up but delivery throughput down 1.5%, stability down 7.2%"
+    },
+    {
+      "id": "dora-2025-takeaways",
+      "title": "DORA Report 2025 Key Takeaways: AI Impact on Dev Metrics",
+      "url": "https://www.faros.ai/blog/key-takeaways-from-the-dora-report-2025",
+      "type": "industry_analysis",
+      "key_findings": "21% more tasks completed, 98% more PRs merged, but flat delivery metrics"
+    },
+    {
+      "id": "google-ai-engineering",
+      "title": "AI in Software Engineering at Google: Progress and the Path Ahead",
+      "url": "https://research.google/blog/ai-in-software-engineering-at-google-progress-and-the-path-ahead/",
+      "type": "vendor_research",
+      "key_findings": "Google internal AI code assist research and deployment findings"
+    },
+    {
+      "id": "google-rct-productivity",
+      "title": "How Much Does AI Impact Development Speed? An Enterprise-Based Randomized Controlled Trial",
+      "url": "https://arxiv.org/html/2410.12944v2",
+      "type": "academic_paper",
+      "key_findings": "Google RCT: 21% faster task completion, newer developers 35-39% speedup"
+    },
+    {
+      "id": "google-code-migration",
+      "title": "How Google Uses AI to Speed Up Code Migrations by 50%",
+      "url": "https://linearb.io/blog/how-google-uses-ai-to-speed-up-code-migrations",
+      "type": "industry_analysis",
+      "key_findings": "AI wrote 75% of migration code, 50% productivity increase"
+    },
+    {
+      "id": "google-code-migration-arxiv",
+      "title": "How is Google Using AI for Internal Code Migrations?",
+      "url": "https://arxiv.org/html/2501.06972v1",
+      "type": "academic_paper",
+      "key_findings": "32-bit to 64-bit migration, years reduced to months"
+    },
+    {
+      "id": "gitclear-2024-analysis",
+      "title": "Coding on Copilot: 2023 Data Suggests Downward Pressure on Code Quality",
+      "url": "https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality",
+      "type": "industry_research",
+      "key_findings": "Code churn doubled, copy/paste grew from 8.3% to 12.3%, refactoring dropped from 25% to <10%"
+    },
+    {
+      "id": "gitclear-2025-analysis",
+      "title": "AI Copilot Code Quality: 2025 Data Suggests 4x Growth in Code Clones",
+      "url": "https://www.gitclear.com/ai_assistant_code_quality_2025_research",
+      "type": "industry_research",
+      "key_findings": "211M lines analyzed, 4x growth in code clones, refactoring from 24.1% to 9.5%"
+    },
+    {
+      "id": "stanford-security-study",
+      "title": "Do Users Write More Insecure Code with AI Assistants?",
+      "url": "https://arxiv.org/html/2211.03622v3",
+      "type": "academic_paper",
+      "key_findings": "AI assistant users wrote less secure code, more likely to believe code was secure"
+    },
+    {
+      "id": "stanford-boneh",
+      "title": "Dan Boneh and Team Find Relying on AI is More Likely to Make Your Code Buggier",
+      "url": "https://ee.stanford.edu/dan-boneh-and-team-find-relying-ai-more-likely-make-your-code-buggier",
+      "type": "academic_research",
+      "key_findings": "Stanford study showing AI assistant users produce less secure code"
+    },
+    {
+      "id": "veracode-2025",
+      "title": "Veracode 2025 GenAI Code Security Report",
+      "url": "https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/",
+      "type": "industry_report",
+      "key_findings": "45% of AI-generated code had security flaws, 100+ LLMs tested, Java 72% failure rate"
+    },
+    {
+      "id": "veracode-blog",
+      "title": "AI-Generated Code Security Risks: What Developers Must Know",
+      "url": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "type": "industry_analysis",
+      "key_findings": "45% vulnerability rate, larger models no better than smaller ones"
+    },
+    {
+      "id": "coderabbit-ai-vs-human",
+      "title": "AI vs Human Code Gen Report: AI Code Creates 1.7x More Issues",
+      "url": "https://www.coderabbit.ai/blog/state-of-ai-vs-human-code-generation-report",
+      "type": "industry_report",
+      "key_findings": "10.83 issues per AI PR vs 6.45 human, 1.4x more critical issues"
+    },
+    {
+      "id": "cursor-technical-debt",
+      "title": "Speed at the Cost of Quality? The Impact of LLM Agent Assistance on Software Development",
+      "url": "https://arxiv.org/html/2511.04427v1",
+      "type": "academic_paper",
+      "key_findings": "806 repos tracked, velocity gains transient, persistent technical debt increases"
+    },
+    {
+      "id": "booking-com-dx",
+      "title": "Booking.com Uses DX to Measure AI's Impact on Developer Productivity",
+      "url": "https://getdx.com/customers/booking-uses-dx-to-measure-impact-of-genai/",
+      "type": "case_study",
+      "key_findings": "3500 engineers, 16% higher throughput for daily AI users, 15-point satisfaction increase"
+    },
+    {
+      "id": "palo-alto-sourcegraph",
+      "title": "Palo Alto Networks Boosts 2,000 Developers' Productivity Using AI",
+      "url": "https://aws.amazon.com/partners/success/palo-alto-networks-anthropic-sourcegraph/",
+      "type": "case_study",
+      "key_findings": "2000 developers, up to 40% productivity increase, avg 25%, phased rollout"
+    },
+    {
+      "id": "zoominfo-copilot",
+      "title": "Experience with GitHub Copilot for Developer Productivity at ZoomInfo",
+      "url": "https://arxiv.org/html/2501.13282v1",
+      "type": "academic_paper",
+      "key_findings": "400+ developers, 33% acceptance rate, 20% time savings, 72% satisfaction"
+    },
+    {
+      "id": "atlassian-devex-2025",
+      "title": "Atlassian State of Developer Experience Report 2025",
+      "url": "https://www.atlassian.com/blog/developer/developer-experience-report-2025",
+      "type": "industry_survey",
+      "key_findings": "99% saving time with AI, 68% save 10+ hrs/week, 50% lose 10+ hrs to non-coding"
+    },
+    {
+      "id": "microsoft-ai-code-review",
+      "title": "Enhancing Code Quality at Scale with AI-Powered Code Reviews",
+      "url": "https://devblogs.microsoft.com/engineering-at-microsoft/enhancing-code-quality-at-scale-with-ai-powered-code-reviews/",
+      "type": "vendor_research",
+      "key_findings": "Microsoft internal AI review leading to GitHub Copilot for PR Reviews"
+    },
+    {
+      "id": "github-code-quality",
+      "title": "Does GitHub Copilot Improve Code Quality? Here's What the Data Says",
+      "url": "https://github.blog/news-insights/research/does-github-copilot-improve-code-quality-heres-what-the-data-says/",
+      "type": "vendor_research",
+      "key_findings": "Readability +3.62%, reliability +2.94%, maintainability +2.47%"
+    },
+    {
+      "id": "salesforce-code-review",
+      "title": "Scaling Code Reviews: Adapting to a Surge in AI-Generated Code",
+      "url": "https://engineering.salesforce.com/scaling-code-reviews-adapting-to-a-surge-in-ai-generated-code/",
+      "type": "case_study",
+      "key_findings": "30% code volume increase, PRs expanded beyond 20 files and 1000 lines"
+    },
+    {
+      "id": "ai-code-defect-study",
+      "title": "Human-Written vs. AI-Generated Code: A Large-Scale Study of Defects, Vulnerabilities, and Complexity",
+      "url": "https://arxiv.org/abs/2508.21634",
+      "type": "academic_paper",
+      "key_findings": "Large-scale comparison of defect rates between human and AI code"
+    },
+    {
+      "id": "ai-code-maintainability",
+      "title": "Is LLM-Generated Code More Maintainable & Reliable than Human-Written Code?",
+      "url": "https://arxiv.org/abs/2508.00700",
+      "type": "academic_paper",
+      "key_findings": "AI code simpler but more prone to unused constructs and hardcoded debugging"
+    },
+    {
+      "id": "mit-technology-review-ai-coding",
+      "title": "AI Coding Is Now Everywhere. But Not Everyone Is Convinced.",
+      "url": "https://www.technologyreview.com/2025/12/15/1128352/rise-of-ai-coding-developers-2026/",
+      "type": "journalism",
+      "key_findings": "Overview of AI coding adoption and skepticism landscape"
+    },
+    {
+      "id": "addy-osmani-workflow",
+      "title": "My LLM Coding Workflow Going Into 2026",
+      "url": "https://addyosmani.com/blog/ai-coding-workflow/",
+      "type": "expert_opinion",
+      "key_findings": "Practical workflow patterns for effective LLM use in development"
+    },
+    {
+      "id": "addy-osmani-next-two-years",
+      "title": "The Next Two Years of Software Engineering",
+      "url": "https://addyosmani.com/blog/next-two-years/",
+      "type": "expert_opinion",
+      "key_findings": "Predictions for AI impact on software engineering 2025-2027"
+    },
+    {
+      "id": "llm-automated-bug-repair",
+      "title": "A Deep Dive into Large Language Models for Automated Bug Localization and Repair",
+      "url": "https://dl.acm.org/doi/10.1145/3660773",
+      "type": "academic_paper",
+      "key_findings": "LLM approaches for bug localization at token level"
+    },
+    {
+      "id": "rethinking-code-review",
+      "title": "Rethinking Code Review Workflows with LLM Assistance: An Empirical Study",
+      "url": "https://arxiv.org/html/2505.16339v1",
+      "type": "academic_paper",
+      "key_findings": "73.8% automated comments resolved but PR closure time increased"
+    },
+    {
+      "id": "replit-2025-review",
+      "title": "Replit 2025: Year in Review",
+      "url": "https://blog.replit.com/2025-replit-in-review",
+      "type": "vendor_report",
+      "key_findings": "Agent-first platform, 5M apps created, 500K businesses, 40-60% dev time reduction"
+    },
+    {
+      "id": "six-step-llm-framework",
+      "title": "Six-Step Decision Framework for LLM Adoption",
+      "url": "https://www.emergentmind.com/topics/six-step-decision-framework-for-llm-adoption",
+      "type": "framework",
+      "key_findings": "Systematic framework from assessment to deployment"
+    },
+    {
+      "id": "walking-tightrope-llm",
+      "title": "Walking the Tightrope of LLMs for Software Development: A Practitioners' Perspective",
+      "url": "https://arxiv.org/html/2511.06428v1",
+      "type": "academic_paper",
+      "key_findings": "22 practitioners, benefits and disadvantages of LLM adoption"
+    },
+    {
+      "id": "dx-measuring-ai",
+      "title": "Measuring AI Code Assistants and Agents",
+      "url": "https://getdx.com/research/measuring-ai-code-assistants-and-agents/",
+      "type": "industry_research",
+      "key_findings": "Frameworks for measuring AI tool impact on developer productivity"
+    },
+    {
+      "id": "microsoft-ai-30-percent",
+      "title": "AI Is Already Writing About 30% of Code at Microsoft and Google",
+      "url": "https://www.entrepreneur.com/business-news/ai-is-taking-over-coding-at-microsoft-google-and-meta/490896",
+      "type": "journalism",
+      "key_findings": "30% of new code at Google and Microsoft is AI-generated"
+    },
+    {
+      "id": "senior-dev-review-burden",
+      "title": "AI Code Looks Fine Until the Review Starts",
+      "url": "https://www.helpnetsecurity.com/2025/12/23/coderabbit-ai-assisted-pull-requests-report/",
+      "type": "industry_analysis",
+      "key_findings": "Senior dev original contributions dropped 19%, review workload up 6.5%"
+    },
+    {
+      "id": "copilot-review-26-longer",
+      "title": "Why AI Coding Speed Gains Disappear in Code Reviews",
+      "url": "https://www.softwareseni.com/why-ai-coding-speed-gains-disappear-in-code-reviews/",
+      "type": "industry_analysis",
+      "key_findings": "Copilot-heavy PRs take 26% longer to review"
+    }
+  ]
+}

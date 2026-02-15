@@ -1,0 +1,184 @@
+[
+  {
+    "id": "deno-blog-v2.6",
+    "title": "Deno 2.6: dx is the new npx",
+    "url": "https://deno.com/blog/v2.6",
+    "type": "official",
+    "section": ["whats-new", "cloud-deploy-details"]
+  },
+  {
+    "id": "deno-deploy-ga",
+    "title": "Deno Deploy is Generally Available",
+    "url": "https://deno.com/blog/deno-deploy-is-ga",
+    "type": "official",
+    "section": ["whats-new", "cloud-deploy-details"]
+  },
+  {
+    "id": "deno-sandbox-blog",
+    "title": "Introducing Deno Sandbox",
+    "url": "https://deno.com/blog/introducing-deno-sandbox",
+    "type": "official",
+    "section": ["whats-new", "ai-sdk-impact"]
+  },
+  {
+    "id": "deno-deploy-pricing",
+    "title": "Deno Deploy Pricing",
+    "url": "https://deno.com/deploy/pricing",
+    "type": "official",
+    "section": ["cloud-deploy-details"]
+  },
+  {
+    "id": "deno-deploy-page",
+    "title": "Deno Deploy",
+    "url": "https://deno.com/deploy",
+    "type": "official",
+    "section": ["cloud-deploy-details"]
+  },
+  {
+    "id": "deno-anatomy-isolate",
+    "title": "The Anatomy of an Isolate Cloud",
+    "url": "https://deno.com/blog/anatomy-isolate-cloud",
+    "type": "official",
+    "section": ["cloud-deploy-details"]
+  },
+  {
+    "id": "deno-secure-cloud",
+    "title": "How we built a secure, performant, multi-tenant cloud platform",
+    "url": "https://deno.com/blog/build-secure-performant-cloud-platform",
+    "type": "official",
+    "section": ["cloud-deploy-details"]
+  },
+  {
+    "id": "infoworld-sandbox",
+    "title": "Deno Sandbox launched for running AI-generated code",
+    "url": "https://www.infoworld.com/article/4127684/deno-sandbox-launched-for-running-ai-generated-code.html",
+    "type": "media",
+    "section": ["ai-sdk-impact"]
+  },
+  {
+    "id": "netlify-deno",
+    "title": "How Netlify used Deno Subhosting to build edge functions",
+    "url": "https://deno.com/blog/netlify-subhosting",
+    "type": "official",
+    "section": ["cloud-deploy-details", "whats-next"]
+  },
+  {
+    "id": "supabase-edge",
+    "title": "Deno Edge Functions - Supabase",
+    "url": "https://supabase.com/features/deno-edge-functions",
+    "type": "official",
+    "section": ["cloud-deploy-details"]
+  },
+  {
+    "id": "stackoverflow-dahl",
+    "title": "Ryan Dahl explains why Deno had to evolve with version 2.0",
+    "url": "https://stackoverflow.blog/2024/08/20/ryan-dahl-deno-20-scale-improve-npm-nodejs/",
+    "type": "media",
+    "section": ["whats-new", "whats-next"]
+  },
+  {
+    "id": "betterstack-comparison",
+    "title": "Node.js vs Deno vs Bun: Comparing JavaScript Runtimes",
+    "url": "https://betterstack.com/community/guides/scaling-nodejs/nodejs-vs-deno-vs-bun/",
+    "type": "guide",
+    "section": ["whats-next"]
+  },
+  {
+    "id": "devto-runtime-2026",
+    "title": "Deno 2 vs Node.js vs Bun in 2026: The Complete JavaScript Runtime Comparison",
+    "url": "https://dev.to/pockit_tools/deno-2-vs-nodejs-vs-bun-in-2026-the-complete-javascript-runtime-comparison-1elm",
+    "type": "community",
+    "section": ["whats-next"]
+  },
+  {
+    "id": "logrocket-node24",
+    "title": "Node.js 24 is here: What's new and what to expect",
+    "url": "https://blog.logrocket.com/node-js-24-new/",
+    "type": "media",
+    "section": ["whats-next"]
+  },
+  {
+    "id": "infoq-bun-v3.1",
+    "title": "Bun Introduces Built-in Database Clients and Zero-Config Frontend Development",
+    "url": "https://www.infoq.com/news/2026/01/bun-v3-1-release/",
+    "type": "media",
+    "section": ["whats-next"]
+  },
+  {
+    "id": "deno-changes-blog",
+    "title": "Big Changes Ahead for Deno",
+    "url": "https://deno.com/blog/changes",
+    "type": "official",
+    "section": ["whats-new", "whats-next"]
+  },
+  {
+    "id": "socket-deno-security",
+    "title": "Deno 2.6 + Socket: Supply Chain Defense In Your CLI",
+    "url": "https://socket.dev/blog/deno-2-6-socket-supply-chain-defense-in-your-cli",
+    "type": "media",
+    "section": ["whats-new"]
+  },
+  {
+    "id": "stackoverflow-survey-2025",
+    "title": "2025 Stack Overflow Developer Survey",
+    "url": "https://survey.stackoverflow.co/2025",
+    "type": "survey",
+    "section": ["whats-next"]
+  },
+  {
+    "id": "deno-node-compat",
+    "title": "Node and npm Compatibility - Deno Docs",
+    "url": "https://docs.deno.com/runtime/fundamentals/node/",
+    "type": "official",
+    "section": ["whats-next"]
+  },
+  {
+    "id": "jsr-intro",
+    "title": "Introducing JSR - the JavaScript Registry",
+    "url": "https://deno.com/blog/jsr_open_beta",
+    "type": "official",
+    "section": ["whats-next"]
+  },
+  {
+    "id": "fresh-update",
+    "title": "An Update on Fresh",
+    "url": "https://deno.com/blog/an-update-on-fresh",
+    "type": "official",
+    "section": ["whats-next"]
+  },
+  {
+    "id": "deno-sandbox-docs",
+    "title": "Deno Sandbox Documentation",
+    "url": "https://docs.deno.com/sandbox/",
+    "type": "official",
+    "section": ["ai-sdk-impact"]
+  },
+  {
+    "id": "simonwillison-sandbox",
+    "title": "Introducing Deno Sandbox - Simon Willison",
+    "url": "https://simonwillison.net/2026/Feb/3/introducing-deno-sandbox/",
+    "type": "media",
+    "section": ["ai-sdk-impact"]
+  },
+  {
+    "id": "deno-in-2024",
+    "title": "Deno in 2024",
+    "url": "https://deno.com/blog/deno-in-2024",
+    "type": "official",
+    "section": ["whats-new"]
+  },
+  {
+    "id": "devclass-bun-anthropic",
+    "title": "Bun JavaScript runtime acquired by Anthropic",
+    "url": "https://devclass.com/2025/12/03/bun-javascript-runtime-acquired-by-anthropic-tying-its-future-to-ai-coding/",
+    "type": "media",
+    "section": ["whats-next"]
+  },
+  {
+    "id": "netlify-edge-announcement",
+    "title": "Netlify Edge Functions: Serverless Compute Powered by Deno",
+    "url": "https://www.netlify.com/blog/announcing-serverless-compute-with-edge-functions/",
+    "type": "official",
+    "section": ["cloud-deploy-details"]
+  }
+]

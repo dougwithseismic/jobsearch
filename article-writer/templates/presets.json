@@ -1,0 +1,317 @@
+{
+  "content_types": {
+    "long-form": {
+      "label": "Long-Form Article",
+      "description": "Comprehensive, in-depth article with extensive research and examples",
+      "targets": {
+        "total_words": 10000,
+        "minimum_words": 8000,
+        "sections_min": 8,
+        "sections_max": 12,
+        "external_links": 30,
+        "real_world_examples": 10
+      },
+      "quality_gates": {
+        "min_words_per_section": 800,
+        "min_links_per_section": 3,
+        "min_examples_total": 10,
+        "prose_ratio_minimum": 0.7,
+        "narrative_flow_check": true,
+        "prose_ratio_check": true
+      },
+      "editorial": {
+        "prose_ratio_minimum": 0.7,
+        "max_consecutive_bullets": 5,
+        "header_style": "conversational, no colons"
+      },
+      "research": {
+        "sources_per_section": 10,
+        "search_queries_min": 5,
+        "include_video_research": true
+      },
+      "narrative_arc": ["hook", "context", "foundation", "deep-dive", "deep-dive", "deep-dive", "practical", "inspiration", "action"],
+      "reading_time_estimate": "40-50 minutes",
+      "depth": "high"
+    },
+    "research": {
+      "label": "Research Article",
+      "description": "Data-heavy, citation-rich analysis with academic rigor",
+      "targets": {
+        "total_words": 8000,
+        "minimum_words": 6000,
+        "sections_min": 6,
+        "sections_max": 10,
+        "external_links": 40,
+        "real_world_examples": 8
+      },
+      "quality_gates": {
+        "min_words_per_section": 700,
+        "min_links_per_section": 4,
+        "min_examples_total": 8,
+        "prose_ratio_minimum": 0.75,
+        "narrative_flow_check": true,
+        "prose_ratio_check": true
+      },
+      "editorial": {
+        "prose_ratio_minimum": 0.75,
+        "max_consecutive_bullets": 4,
+        "header_style": "conversational, no colons"
+      },
+      "research": {
+        "sources_per_section": 10,
+        "search_queries_min": 5,
+        "include_video_research": true
+      },
+      "narrative_arc": ["hook", "context", "foundation", "deep-dive", "deep-dive", "deep-dive", "analysis", "conclusion"],
+      "reading_time_estimate": "30-40 minutes",
+      "depth": "high"
+    },
+    "news": {
+      "label": "News Article",
+      "description": "Timely, concise coverage of a current event or announcement",
+      "targets": {
+        "total_words": 1500,
+        "minimum_words": 800,
+        "sections_min": 3,
+        "sections_max": 5,
+        "external_links": 8,
+        "real_world_examples": 3
+      },
+      "quality_gates": {
+        "min_words_per_section": 200,
+        "min_links_per_section": 2,
+        "min_examples_total": 3,
+        "prose_ratio_minimum": 0.8,
+        "narrative_flow_check": true,
+        "prose_ratio_check": true
+      },
+      "editorial": {
+        "prose_ratio_minimum": 0.8,
+        "max_consecutive_bullets": 3,
+        "header_style": "conversational, no colons"
+      },
+      "research": {
+        "sources_per_section": 3,
+        "search_queries_min": 3,
+        "include_video_research": false
+      },
+      "narrative_arc": ["hook", "context", "details", "impact", "next-steps"],
+      "reading_time_estimate": "5-7 minutes",
+      "depth": "medium"
+    },
+    "opinion": {
+      "label": "Opinion Piece",
+      "description": "Argument-driven essay with a clear thesis and supporting evidence",
+      "targets": {
+        "total_words": 3000,
+        "minimum_words": 2000,
+        "sections_min": 4,
+        "sections_max": 6,
+        "external_links": 10,
+        "real_world_examples": 5
+      },
+      "quality_gates": {
+        "min_words_per_section": 400,
+        "min_links_per_section": 2,
+        "min_examples_total": 5,
+        "prose_ratio_minimum": 0.8,
+        "narrative_flow_check": true,
+        "prose_ratio_check": true
+      },
+      "editorial": {
+        "prose_ratio_minimum": 0.8,
+        "max_consecutive_bullets": 3,
+        "header_style": "conversational, no colons"
+      },
+      "research": {
+        "sources_per_section": 5,
+        "search_queries_min": 3,
+        "include_video_research": false
+      },
+      "narrative_arc": ["hook", "thesis", "argument", "counterpoint", "synthesis", "action"],
+      "reading_time_estimate": "12-15 minutes",
+      "depth": "medium"
+    },
+    "listicle": {
+      "label": "Listicle",
+      "description": "List-driven article with structured items and supporting context",
+      "targets": {
+        "total_words": 3000,
+        "minimum_words": 2000,
+        "sections_min": 5,
+        "sections_max": 15,
+        "external_links": 15,
+        "real_world_examples": 8
+      },
+      "quality_gates": {
+        "min_words_per_section": 150,
+        "min_links_per_section": 1,
+        "min_examples_total": 8,
+        "prose_ratio_minimum": 0.4,
+        "narrative_flow_check": true,
+        "prose_ratio_check": true
+      },
+      "editorial": {
+        "prose_ratio_minimum": 0.4,
+        "max_consecutive_bullets": 10,
+        "header_style": "conversational, no colons"
+      },
+      "research": {
+        "sources_per_section": 5,
+        "search_queries_min": 3,
+        "include_video_research": false
+      },
+      "narrative_arc": ["hook", "context", "items", "items", "items", "wrap-up"],
+      "reading_time_estimate": "12-15 minutes",
+      "depth": "medium"
+    },
+    "email": {
+      "label": "Email / Newsletter",
+      "description": "Short, focused newsletter or email content with a clear CTA",
+      "targets": {
+        "total_words": 1000,
+        "minimum_words": 500,
+        "sections_min": 2,
+        "sections_max": 4,
+        "external_links": 3,
+        "real_world_examples": 2
+      },
+      "quality_gates": {
+        "min_words_per_section": 150,
+        "min_links_per_section": 1,
+        "min_examples_total": 2,
+        "prose_ratio_minimum": 0.85,
+        "narrative_flow_check": true,
+        "prose_ratio_check": true
+      },
+      "editorial": {
+        "prose_ratio_minimum": 0.85,
+        "max_consecutive_bullets": 3,
+        "header_style": "conversational, no colons"
+      },
+      "research": {
+        "sources_per_section": 3,
+        "search_queries_min": 2,
+        "include_video_research": false
+      },
+      "narrative_arc": ["hook", "value", "cta"],
+      "reading_time_estimate": "3-5 minutes",
+      "depth": "low"
+    },
+    "tutorial": {
+      "label": "Tutorial",
+      "description": "Step-by-step instructional content with code samples and walkthroughs",
+      "targets": {
+        "total_words": 5000,
+        "minimum_words": 3000,
+        "sections_min": 5,
+        "sections_max": 8,
+        "external_links": 15,
+        "real_world_examples": 5
+      },
+      "quality_gates": {
+        "min_words_per_section": 400,
+        "min_links_per_section": 2,
+        "min_examples_total": 5,
+        "prose_ratio_minimum": 0.55,
+        "narrative_flow_check": true,
+        "prose_ratio_check": true
+      },
+      "editorial": {
+        "prose_ratio_minimum": 0.55,
+        "max_consecutive_bullets": 5,
+        "header_style": "conversational, no colons"
+      },
+      "research": {
+        "sources_per_section": 8,
+        "search_queries_min": 4,
+        "include_video_research": true
+      },
+      "narrative_arc": ["hook", "prerequisites", "foundation", "walkthrough", "walkthrough", "advanced", "wrap-up"],
+      "reading_time_estimate": "20-25 minutes",
+      "depth": "high"
+    },
+    "case-study": {
+      "label": "Case Study",
+      "description": "Deep dive into a specific example with context, process, and results",
+      "targets": {
+        "total_words": 4000,
+        "minimum_words": 2500,
+        "sections_min": 4,
+        "sections_max": 6,
+        "external_links": 10,
+        "real_world_examples": 3
+      },
+      "quality_gates": {
+        "min_words_per_section": 500,
+        "min_links_per_section": 2,
+        "min_examples_total": 3,
+        "prose_ratio_minimum": 0.75,
+        "narrative_flow_check": true,
+        "prose_ratio_check": true
+      },
+      "editorial": {
+        "prose_ratio_minimum": 0.75,
+        "max_consecutive_bullets": 4,
+        "header_style": "conversational, no colons"
+      },
+      "research": {
+        "sources_per_section": 5,
+        "search_queries_min": 4,
+        "include_video_research": true
+      },
+      "narrative_arc": ["hook", "background", "challenge", "approach", "results", "lessons"],
+      "reading_time_estimate": "15-20 minutes",
+      "depth": "high"
+    },
+    "reddit": {
+      "label": "Reddit Post",
+      "description": "Authentic, first-person post written for Reddit. No corporate speak, no buzzwords, no shill energy. Reads like a real person sharing something they actually know about.",
+      "targets": {
+        "total_words": 1500,
+        "minimum_words": 800,
+        "sections_min": 2,
+        "sections_max": 4,
+        "external_links": 5,
+        "real_world_examples": 3
+      },
+      "quality_gates": {
+        "min_words_per_section": 200,
+        "min_links_per_section": 1,
+        "min_examples_total": 3,
+        "prose_ratio_minimum": 0.9,
+        "narrative_flow_check": true,
+        "prose_ratio_check": true
+      },
+      "editorial": {
+        "prose_ratio_minimum": 0.9,
+        "max_consecutive_bullets": 3,
+        "header_style": "ultra-casual or no headers, never formal",
+        "voice": "first-person, direct, no marketing language",
+        "forbidden_words": ["leverage", "synergy", "game-changer", "revolutionary", "cutting-edge", "best-in-class", "robust", "seamless", "elevate", "empower", "unlock", "supercharge"],
+        "no_emoji_spam": true
+      },
+      "research": {
+        "sources_per_section": 3,
+        "search_queries_min": 3,
+        "include_video_research": false
+      },
+      "narrative_arc": ["hook", "context", "substance", "honest-take"],
+      "reading_time_estimate": "5-8 minutes",
+      "depth": "medium"
+    }
+  },
+  "default_content_type": "long-form",
+  "valid_content_types": ["long-form", "research", "news", "opinion", "listicle", "email", "tutorial", "case-study", "reddit"],
+  "word_length_scaling": {
+    "description": "When a custom word count is provided, scale other targets proportionally relative to the preset's default total_words. The content_type preset provides the base ratios; the custom word count overrides total_words and minimum_words, and other targets scale accordingly.",
+    "rules": {
+      "minimum_words": "custom_words * 0.8",
+      "sections": "scale proportionally, minimum 2",
+      "external_links": "scale proportionally, minimum 3",
+      "real_world_examples": "scale proportionally, minimum 2",
+      "min_words_per_section": "custom_words / section_count",
+      "sources_per_section": "scale proportionally, minimum 3"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "evaluation_date": "2026-02-06",
+  "article_slug": "nextjs-realtime-dashboard-drizzle-sse",
+  "status": "pass",
+  "metrics": {
+    "total_words": 5688,
+    "target_words": 5000,
+    "minimum_words": 3000,
+    "words_pass": true,
+    "sections_count": 7,
+    "sections_target": 7,
+    "sections_pass": true,
+    "external_links": 44,
+    "external_links_target": 15,
+    "external_links_pass": true,
+    "unique_urls": 32,
+    "code_samples": 24,
+    "code_samples_target": 20,
+    "code_samples_pass": true,
+    "real_examples": 11,
+    "real_examples_target": 5,
+    "real_examples_pass": true,
+    "real_examples_list": [
+      "OpenAI/ChatGPT (SSE streaming for LLM responses)",
+      "Vercel AI SDK (default SSE protocol for streaming)",
+      "Mercure (open-source SSE hub for Symfony ecosystem)",
+      "Neon (serverless Postgres provider)",
+      "Railway (long-lived server deployment)",
+      "Fly.io (container-based global deployment)",
+      "Upstash (Redis-based real-time with Next.js)",
+      "Recharts (charting library for React dashboards)",
+      "Prisma (ORM compared against Drizzle)",
+      "Nginx (reverse proxy configuration)",
+      "Drizzle ORM (primary ORM used throughout)"
+    ],
+    "prose_ratio": 0.636,
+    "prose_ratio_target": 0.55,
+    "prose_ratio_pass": true
+  },
+  "section_results": [
+    {
+      "id": "why-sse",
+      "title": "Why Server-Sent Events Beat WebSockets for Dashboards",
+      "word_count": 562,
+      "word_minimum": 400,
+      "word_target": 550,
+      "meets_minimum": true,
+      "has_comparison_table": true,
+      "external_links": 5,
+      "examples": ["Vercel AI SDK", "OpenAI/ChatGPT", "Mercure"]
+    },
+    {
+      "id": "prerequisites",
+      "title": "What You Need Before We Start",
+      "word_count": 503,
+      "word_minimum": 400,
+      "word_target": 450,
+      "meets_minimum": true,
+      "has_code_samples": true,
+      "external_links": 7,
+      "version_pinning": true
+    },
+    {
+      "id": "database-schema",
+      "title": "Designing the Schema with Drizzle",
+      "word_count": 795,
+      "word_minimum": 600,
+      "word_target": 800,
+      "meets_minimum": true,
+      "has_code_samples": true,
+      "has_full_file_listings": true,
+      "external_links": 4,
+      "examples": ["Drizzle ORM patterns", "Prisma comparison"]
+    },
+    {
+      "id": "sse-api-route",
+      "title": "Building the Streaming API Route",
+      "word_count": 775,
+      "word_minimum": 700,
+      "word_target": 900,
+      "meets_minimum": true,
+      "has_code_samples": true,
+      "has_full_file_listings": true,
+      "has_curl_examples": true,
+      "external_links": 5,
+      "examples": ["Vercel streaming docs", "Nginx buffering"]
+    },
+    {
+      "id": "dashboard-ui",
+      "title": "Wiring Up the Dashboard Components",
+      "word_count": 1288,
+      "word_minimum": 700,
+      "word_target": 900,
+      "meets_minimum": true,
+      "has_code_samples": true,
+      "has_full_file_listings": true,
+      "has_custom_hook": true,
+      "external_links": 4,
+      "examples": ["Recharts patterns"]
+    },
+    {
+      "id": "production-hardening",
+      "title": "Making It Production-Ready",
+      "word_count": 1214,
+      "word_minimum": 600,
+      "word_target": 800,
+      "meets_minimum": true,
+      "has_code_samples": true,
+      "has_production_checklist": true,
+      "external_links": 8,
+      "examples": ["Vercel timeout limits", "Railway", "Fly.io", "Postgres LISTEN/NOTIFY"]
+    },
+    {
+      "id": "wrap-up",
+      "title": "Where to Go from Here",
+      "word_count": 551,
+      "word_minimum": 400,
+      "word_target": 600,
+      "meets_minimum": true,
+      "has_resource_links": true,
+      "external_links": 11,
+      "examples": ["Upstash", "WebTransport"]
+    }
+  ],
+  "quality_gates": {
+    "min_words_per_section": {
+      "target": 400,
+      "result": "all sections >= 400 words",
+      "pass": true
+    },
+    "min_links_per_section": {
+      "target": 2,
+      "result": "all sections have 4+ links",
+      "pass": true
+    },
+    "min_examples_total": {
+      "target": 5,
+      "result": 11,
+      "pass": true
+    },
+    "prose_ratio_minimum": {
+      "target": 0.55,
+      "result": 0.636,
+      "pass": true
+    },
+    "code_samples_minimum": {
+      "target": 20,
+      "result": 24,
+      "pass": true
+    },
+    "narrative_flow_check": {
+      "result": "Each section ends with a transition to the next. Hook -> prerequisites -> foundation -> walkthrough -> walkthrough -> advanced -> wrap-up arc is complete.",
+      "pass": true
+    },
+    "code_consistency_check": {
+      "result": "All code examples share consistent imports (drizzle-orm/postgres-js, @/lib/db, @/lib/schema). Schema types used across route handler and components. File paths are consistent (src/lib/, src/app/api/, src/hooks/, src/components/).",
+      "pass": true
+    }
+  },
+  "editorial_standards": {
+    "header_style": "All headers are conversational with no colons. Examples: 'Why Server-Sent Events Beat WebSockets for Dashboards', 'Making It Production-Ready'",
+    "code_block_style": "All code blocks have typescript/bash language tags and filename comments",
+    "code_explanation_required": "Every code block is preceded by context and followed by explanation of key decisions",
+    "prose_ratio": "63.6% prose (target: 55%+) — appropriate for a code-heavy tutorial"
+  }
+}

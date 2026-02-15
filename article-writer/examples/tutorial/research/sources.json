@@ -1,0 +1,261 @@
+[
+  {
+    "id": 1,
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events",
+    "title": "Using server-sent events - MDN Web Docs",
+    "type": "documentation",
+    "sections": ["why-sse", "sse-api-route", "wrap-up"]
+  },
+  {
+    "id": 2,
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource",
+    "title": "EventSource API - MDN Web Docs",
+    "type": "documentation",
+    "sections": ["why-sse", "dashboard-ui"]
+  },
+  {
+    "id": 3,
+    "url": "https://nextjs.org/docs/app/getting-started/installation",
+    "title": "Next.js Installation - Official Docs",
+    "type": "documentation",
+    "sections": ["prerequisites"]
+  },
+  {
+    "id": 4,
+    "url": "https://nextjs.org/blog/next-15",
+    "title": "Next.js 15 Release Blog",
+    "type": "documentation",
+    "sections": ["prerequisites"]
+  },
+  {
+    "id": 5,
+    "url": "https://orm.drizzle.team/docs/get-started/postgresql-new",
+    "title": "Drizzle ORM - Get Started with PostgreSQL",
+    "type": "documentation",
+    "sections": ["prerequisites", "database-schema"]
+  },
+  {
+    "id": 6,
+    "url": "https://orm.drizzle.team/docs/kit-overview",
+    "title": "Drizzle Kit Overview",
+    "type": "documentation",
+    "sections": ["prerequisites", "database-schema"]
+  },
+  {
+    "id": 7,
+    "url": "https://orm.drizzle.team/docs/drizzle-kit-generate",
+    "title": "Drizzle Kit generate command",
+    "type": "documentation",
+    "sections": ["database-schema"]
+  },
+  {
+    "id": 8,
+    "url": "https://orm.drizzle.team/docs/drizzle-kit-migrate",
+    "title": "Drizzle Kit migrate command",
+    "type": "documentation",
+    "sections": ["database-schema"]
+  },
+  {
+    "id": 9,
+    "url": "https://orm.drizzle.team/docs/drizzle-kit-push",
+    "title": "Drizzle Kit push command",
+    "type": "documentation",
+    "sections": ["database-schema"]
+  },
+  {
+    "id": 10,
+    "url": "https://orm.drizzle.team/docs/migrations",
+    "title": "Drizzle ORM Migrations",
+    "type": "documentation",
+    "sections": ["database-schema"]
+  },
+  {
+    "id": 11,
+    "url": "https://neon.com/docs/guides/drizzle-migrations",
+    "title": "Schema migration with Neon Postgres and Drizzle ORM",
+    "type": "documentation",
+    "sections": ["database-schema", "prerequisites"]
+  },
+  {
+    "id": 12,
+    "url": "https://www.pedroalonso.net/blog/sse-nextjs-real-time-notifications/",
+    "title": "Real-Time Notifications with SSE in Next.js - Pedro Alonso",
+    "type": "tutorial",
+    "sections": ["sse-api-route"]
+  },
+  {
+    "id": 13,
+    "url": "https://damianhodgkiss.com/tutorials/real-time-updates-sse-nextjs",
+    "title": "Real-Time Updates with SSE in Next.js 15 - Damian Hodgkiss",
+    "type": "tutorial",
+    "sections": ["sse-api-route"]
+  },
+  {
+    "id": 14,
+    "url": "https://hackernoon.com/streaming-in-nextjs-15-websockets-vs-server-sent-events",
+    "title": "Streaming in Next.js 15: WebSockets vs SSE - HackerNoon",
+    "type": "article",
+    "sections": ["sse-api-route", "why-sse"]
+  },
+  {
+    "id": 15,
+    "url": "https://upstash.com/blog/sse-streaming-llm-responses",
+    "title": "Using SSE to stream LLM responses in Next.js - Upstash",
+    "type": "tutorial",
+    "sections": ["sse-api-route"]
+  },
+  {
+    "id": 16,
+    "url": "https://vercel.com/blog/an-introduction-to-streaming-on-the-web",
+    "title": "An Introduction to Streaming on the Web - Vercel",
+    "type": "article",
+    "sections": ["sse-api-route"]
+  },
+  {
+    "id": 17,
+    "url": "https://ai-sdk.dev/docs/ai-sdk-ui/stream-protocol",
+    "title": "AI SDK UI: Stream Protocols - Vercel",
+    "type": "documentation",
+    "sections": ["why-sse"]
+  },
+  {
+    "id": 18,
+    "url": "https://www.nimbleway.com/blog/server-sent-events-vs-websockets-what-is-the-difference-2026-guide",
+    "title": "SSE vs WebSockets: Key Differences (2026 Guide)",
+    "type": "article",
+    "sections": ["why-sse"]
+  },
+  {
+    "id": 19,
+    "url": "https://www.timeplus.com/post/websocket-vs-sse",
+    "title": "WebSocket vs SSE: A Performance Comparison - Timeplus",
+    "type": "article",
+    "sections": ["why-sse"]
+  },
+  {
+    "id": 20,
+    "url": "https://ably.com/blog/websockets-vs-sse",
+    "title": "WebSockets vs SSE: Key differences - Ably",
+    "type": "article",
+    "sections": ["why-sse"]
+  },
+  {
+    "id": 21,
+    "url": "https://www.smashingmagazine.com/2018/02/sse-websockets-data-flow-http2/",
+    "title": "Using SSE Instead Of WebSockets Over HTTP/2 - Smashing Magazine",
+    "type": "article",
+    "sections": ["why-sse"]
+  },
+  {
+    "id": 22,
+    "url": "https://recharts.org",
+    "title": "Recharts - A composable charting library for React",
+    "type": "documentation",
+    "sections": ["dashboard-ui"]
+  },
+  {
+    "id": 23,
+    "url": "https://github.com/alexanderkasten/use-next-sse",
+    "title": "use-next-sse - React hook library for SSE in Next.js",
+    "type": "library",
+    "sections": ["dashboard-ui", "wrap-up"]
+  },
+  {
+    "id": 24,
+    "url": "https://www.postgresql.org/docs/current/sql-notify.html",
+    "title": "PostgreSQL NOTIFY Documentation",
+    "type": "documentation",
+    "sections": ["production-hardening"]
+  },
+  {
+    "id": 25,
+    "url": "https://www.postgresql.org/docs/current/sql-listen.html",
+    "title": "PostgreSQL LISTEN Documentation",
+    "type": "documentation",
+    "sections": ["production-hardening"]
+  },
+  {
+    "id": 26,
+    "url": "https://www.pedroalonso.net/blog/postgres-listen-notify-real-time/",
+    "title": "PostgreSQL LISTEN/NOTIFY: Real-Time Without the Message Broker",
+    "type": "article",
+    "sections": ["production-hardening"]
+  },
+  {
+    "id": 27,
+    "url": "https://docs.railway.com/maturity/compare-to-vercel",
+    "title": "Railway vs Vercel - Railway Docs",
+    "type": "documentation",
+    "sections": ["production-hardening"]
+  },
+  {
+    "id": 28,
+    "url": "https://vercel.com/kb/guide/what-can-i-do-about-vercel-serverless-functions-timing-out",
+    "title": "Vercel Functions timeout guide",
+    "type": "documentation",
+    "sections": ["production-hardening"]
+  },
+  {
+    "id": 29,
+    "url": "https://softwaremill.com/sse-vs-websockets-comparing-real-time-communication-protocols/",
+    "title": "SSE vs WebSockets: Comparing Real-Time Protocols - SoftwareMill",
+    "type": "article",
+    "sections": ["why-sse", "wrap-up"]
+  },
+  {
+    "id": 30,
+    "url": "https://nextjs.org/learn/dashboard-app/streaming",
+    "title": "App Router: Streaming - Next.js Learn",
+    "type": "documentation",
+    "sections": ["sse-api-route", "wrap-up"]
+  },
+  {
+    "id": 31,
+    "url": "https://orm.drizzle.team",
+    "title": "Drizzle ORM - Official Website",
+    "type": "documentation",
+    "sections": ["wrap-up"]
+  },
+  {
+    "id": 32,
+    "url": "https://www.tinybird.co/blog-posts/real-time-dashboard-step-by-step",
+    "title": "A step-by-step guide to build a real-time dashboard - Tinybird",
+    "type": "tutorial",
+    "sections": ["wrap-up"]
+  },
+  {
+    "id": 33,
+    "url": "https://strapi.io/blog/how-to-use-drizzle-orm-with-postgresql-in-a-nextjs-15-project",
+    "title": "How to Use Drizzle ORM with PostgreSQL in Next.js 15 - Strapi",
+    "type": "tutorial",
+    "sections": ["database-schema"]
+  },
+  {
+    "id": 34,
+    "url": "https://dev.to/sameer_saleem/the-ultimate-guide-to-drizzle-orm-postgresql-2025-edition-22b",
+    "title": "The Ultimate Guide to Drizzle ORM + PostgreSQL (2025) - DEV",
+    "type": "article",
+    "sections": ["database-schema"]
+  },
+  {
+    "id": 35,
+    "url": "https://github.com/vercel/next.js/discussions/48427",
+    "title": "Server-Sent Events in Next API routes - GitHub Discussion",
+    "type": "discussion",
+    "sections": ["sse-api-route"]
+  },
+  {
+    "id": 36,
+    "url": "https://rxdb.info/articles/websockets-sse-polling-webrtc-webtransport.html",
+    "title": "WebSockets vs SSE vs Polling vs WebRTC vs WebTransport - RxDB",
+    "type": "article",
+    "sections": ["wrap-up"]
+  },
+  {
+    "id": 37,
+    "url": "https://authjs.dev/getting-started/session-management/protecting",
+    "title": "Auth.js - Protecting Routes",
+    "type": "documentation",
+    "sections": ["production-hardening"]
+  }
+]

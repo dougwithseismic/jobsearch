@@ -1,0 +1,48 @@
+{
+  "topic": "",
+  "slug": "",
+  "article_type": "",
+  "content_type": "long-form",
+  "title": "",
+  "summary": "",
+  "status": "draft",
+  "created": "",
+  "targets": {
+    "total_words": 10000,
+    "minimum_words": 8000,
+    "sections": 10,
+    "external_links": 30,
+    "real_world_examples": 10
+  },
+  "editorial_standards": {
+    "prose_ratio_minimum": 0.7,
+    "max_consecutive_bullets": 5,
+    "header_style": "conversational, no colons"
+  },
+  "quality_gates": {
+    "min_words_per_section": 800,
+    "min_links_per_section": 3,
+    "min_examples_total": 10,
+    "narrative_flow_check": true,
+    "prose_ratio_check": true
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction",
+      "priority": 1,
+      "status": "pending",
+      "research_complete": false,
+      "research_questions": [],
+      "word_count": 0
+    }
+  ],
+  "sources": [],
+  "youtube_embeds": [],
+  "metadata": {
+    "target_audience": "",
+    "estimated_words": 10000,
+    "depth": "high",
+    "tags": []
+  }
+}

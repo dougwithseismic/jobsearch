@@ -1,0 +1,114 @@
+[
+  {
+    "id": "qodo-2-launch",
+    "title": "Introducing Qodo 2.0 and the next generation of AI code review",
+    "url": "https://www.qodo.ai/blog/introducing-qodo-2-0-agentic-code-review/",
+    "type": "product_announcement",
+    "used_in": ["opener", "picks"]
+  },
+  {
+    "id": "qodo-2-press",
+    "title": "Qodo 2.0 Redefines AI Code Review For Accuracy and Enterprise Trust",
+    "url": "https://www.globenewswire.com/news-release/2026/02/04/3232129/0/en/Qodo-2-0-Redefines-AI-Code-Review-For-Accuracy-and-Enterprise-Trust.html",
+    "type": "press_release",
+    "used_in": ["opener", "picks"]
+  },
+  {
+    "id": "ollama-launch-blog",
+    "title": "ollama launch - Ollama Blog",
+    "url": "https://ollama.com/blog/launch",
+    "type": "product_announcement",
+    "used_in": ["opener", "picks", "closing"]
+  },
+  {
+    "id": "ollama-releases",
+    "title": "Ollama Releases - GitHub",
+    "url": "https://github.com/ollama/ollama/releases",
+    "type": "release_notes",
+    "used_in": ["opener", "picks"]
+  },
+  {
+    "id": "goose-github",
+    "title": "Goose - an open source, extensible AI agent by Block",
+    "url": "https://github.com/block/goose",
+    "type": "repository",
+    "used_in": ["picks"]
+  },
+  {
+    "id": "goose-venturebeat",
+    "title": "Jack Dorsey is back with Goose - VentureBeat",
+    "url": "https://venturebeat.com/programming-development/jack-dorsey-is-back-with-goose-a-new-ultra-simple-open-source-ai-agent-building-platform-from-his-startup-block",
+    "type": "article",
+    "used_in": ["picks"]
+  },
+  {
+    "id": "goose-site",
+    "title": "Goose - Official Site",
+    "url": "https://block.github.io/goose/",
+    "type": "documentation",
+    "used_in": ["picks"]
+  },
+  {
+    "id": "coderabbit-main",
+    "title": "CodeRabbit - AI Code Reviews",
+    "url": "https://www.coderabbit.ai/",
+    "type": "product_page",
+    "used_in": ["picks"]
+  },
+  {
+    "id": "coderabbit-pricing",
+    "title": "CodeRabbit Pricing",
+    "url": "https://www.coderabbit.ai/pricing",
+    "type": "pricing_page",
+    "used_in": ["picks"]
+  },
+  {
+    "id": "mabl-main",
+    "title": "mabl - AI-Powered Testing",
+    "url": "https://www.mabl.com/",
+    "type": "product_page",
+    "used_in": ["picks"]
+  },
+  {
+    "id": "mabl-ai",
+    "title": "mabl AI Test Automation",
+    "url": "https://www.mabl.com/ai-test-automation",
+    "type": "product_page",
+    "used_in": ["picks"]
+  },
+  {
+    "id": "dev-productivity-stats",
+    "title": "Top 100 Developer Productivity Statistics with AI Tools 2026",
+    "url": "https://www.index.dev/blog/developer-productivity-statistics-with-ai-tools",
+    "type": "research",
+    "used_in": ["opener", "picks"]
+  },
+  {
+    "id": "qodo-benchmark-tools",
+    "title": "8 Best AI Code Review Tools That Catch Real Bugs in 2026",
+    "url": "https://www.qodo.ai/blog/best-ai-code-review-tools-2026/",
+    "type": "comparison",
+    "used_in": ["opener"]
+  },
+  {
+    "id": "ollama-claude-docs",
+    "title": "Claude Code - Ollama Integration Docs",
+    "url": "https://docs.ollama.com/integrations/claude-code",
+    "type": "documentation",
+    "used_in": ["closing"]
+  },
+  {
+    "id": "coderabbit-ide",
+    "title": "CodeRabbit for VS Code",
+    "url": "https://www.coderabbit.ai/ide",
+    "type": "product_page",
+    "used_in": ["closing"]
+  },
+  {
+    "id": "cortex-ai-tools",
+    "title": "AI Tools for Developers 2026: More Than Just Coding Assistants",
+    "url": "https://www.cortex.io/post/the-engineering-leaders-guide-to-ai-tools-for-developers-in-2026",
+    "type": "article",
+    "used_in": ["opener"]
+  }
+]

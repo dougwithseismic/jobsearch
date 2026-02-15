@@ -1,0 +1,50 @@
+== Article Pipeline Progress ==
+Topic: This Week in AI Dev Tools: 5 Releases Worth Your Attention
+Date: 2026-02-06
+
+--- RESEARCH PHASE ---
+[DONE] Ran 8 web searches across AI dev tools, code review, local models, testing, benchmarks
+[DONE] Found 16 unique sources across 9 domains
+[DONE] Identified 5 tools to feature: Qodo 2.0, Ollama v0.15.3, Goose by Block, CodeRabbit, mabl
+[DONE] Research notes written for all 3 sections (opener, picks, closing)
+[DONE] sources.json created with 16 entries
+
+Key research decisions:
+- Led with Qodo 2.0 as the biggest release (launched Feb 4, multi-agent code review)
+- Ollama v0.15.3 chosen as the actionable CTA pick (free, zero-config, shipped Feb 1)
+- Goose by Block included for open-source angle (26k+ GitHub stars, Apache 2.0)
+- CodeRabbit for the "free for OSS" angle
+- mabl for the testing category gap
+
+--- WRITING PHASE ---
+[DONE] Opener section: 185 words (target 250, min 150) -- PASS
+[DONE] Picks section: 700 words (target 550, min 250) -- PASS
+[DONE] Closing section: 259 words (target 200, min 100) -- PASS
+[DONE] Total: 1,178 words (target 1,000, min 500) -- PASS
+
+Writing decisions:
+- Kept prose-heavy, no bullet lists -- achieved 92.7% prose ratio (target 85%)
+- Each tool pick follows: what it does, why it matters, one honest caveat
+- Conversational headers, no colons
+- Closed with specific 20-minute experiment using Ollama
+
+--- REVIEW PHASE ---
+[DONE] Full article read-through for flow
+[DONE] Narrative arc: hook (Qodo release) > context (agentic trend) > value (5 tools) > CTA (try Ollama)
+[DONE] Prose ratio: 92.7% -- exceeds 85% target
+[DONE] No consecutive bullet points in article
+[DONE] All headers conversational, no colons
+
+--- EVAL PHASE ---
+[DONE] All quality gates passed:
+  - Total words: 1,178 (target 1,000) -- PASS
+  - External links: 15 (target 3) -- PASS
+  - Real examples: 10 named entities (target 2) -- PASS
+  - Prose ratio: 92.7% (target 85%) -- PASS
+  - Section minimums: all met -- PASS
+  - Narrative flow: present -- PASS
+
+[DONE] eval-result.json written
+[DONE] article.json updated to status: complete
+
+--- FINAL STATUS: COMPLETE ---

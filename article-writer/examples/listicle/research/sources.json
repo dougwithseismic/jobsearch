@@ -1,0 +1,238 @@
+{
+  "sources": [
+    {
+      "id": "plane-github",
+      "url": "https://github.com/makeplane/plane",
+      "title": "Plane GitHub Repository",
+      "section": "item-01-project-management"
+    },
+    {
+      "id": "plane-site",
+      "url": "https://plane.so",
+      "title": "Plane Official Website",
+      "section": "item-01-project-management"
+    },
+    {
+      "id": "plane-blog-stars",
+      "url": "https://plane.so/blog/how-we-got-to-20k-github-stars",
+      "title": "How Plane got to #1 in project management on GitHub",
+      "section": "item-01-project-management"
+    },
+    {
+      "id": "posthog-github",
+      "url": "https://github.com/PostHog/posthog",
+      "title": "PostHog GitHub Repository",
+      "section": "item-02-analytics"
+    },
+    {
+      "id": "posthog-site",
+      "url": "https://posthog.com/",
+      "title": "PostHog Official Website",
+      "section": "item-02-analytics"
+    },
+    {
+      "id": "posthog-pricing",
+      "url": "https://posthog.com/product-analytics-explorer/pricing",
+      "title": "PostHog Pricing",
+      "section": "item-02-analytics"
+    },
+    {
+      "id": "posthog-companies",
+      "url": "https://theirstack.com/en/technology/posthog",
+      "title": "Companies using PostHog",
+      "section": "item-02-analytics"
+    },
+    {
+      "id": "keycloak-github",
+      "url": "https://github.com/keycloak/keycloak",
+      "title": "Keycloak GitHub Repository",
+      "section": "item-03-auth"
+    },
+    {
+      "id": "keycloak-site",
+      "url": "https://www.keycloak.org/",
+      "title": "Keycloak Official Website",
+      "section": "item-03-auth"
+    },
+    {
+      "id": "phasetwo-keycloak",
+      "url": "https://phasetwo.io/blog/keycloak-vs-auth0-open-source-alternative/",
+      "title": "Phase Two - Keycloak vs Auth0",
+      "section": "item-03-auth"
+    },
+    {
+      "id": "strapi-github",
+      "url": "https://github.com/strapi/strapi",
+      "title": "Strapi GitHub Repository",
+      "section": "item-04-cms"
+    },
+    {
+      "id": "strapi-site",
+      "url": "https://strapi.io/",
+      "title": "Strapi Official Website",
+      "section": "item-04-cms"
+    },
+    {
+      "id": "strapi-v5",
+      "url": "https://strapi.io/five",
+      "title": "Strapi 5 Features",
+      "section": "item-04-cms"
+    },
+    {
+      "id": "signoz-github",
+      "url": "https://github.com/SigNoz/signoz",
+      "title": "SigNoz GitHub Repository",
+      "section": "item-05-observability"
+    },
+    {
+      "id": "signoz-site",
+      "url": "https://signoz.io/",
+      "title": "SigNoz Official Website",
+      "section": "item-05-observability"
+    },
+    {
+      "id": "signoz-datadog-comparison",
+      "url": "https://signoz.io/blog/datadog-alternatives/",
+      "title": "SigNoz Datadog Alternatives Comparison",
+      "section": "item-05-observability"
+    },
+    {
+      "id": "rocketchat-github",
+      "url": "https://github.com/RocketChat/Rocket.Chat",
+      "title": "Rocket.Chat GitHub Repository",
+      "section": "item-06-communication"
+    },
+    {
+      "id": "rocketchat-site",
+      "url": "https://www.rocket.chat",
+      "title": "Rocket.Chat Official Website",
+      "section": "item-06-communication"
+    },
+    {
+      "id": "rocketchat-slack",
+      "url": "https://www.rocket.chat/alternatives/slack",
+      "title": "Rocket.Chat vs Slack",
+      "section": "item-06-communication"
+    },
+    {
+      "id": "listmonk-github",
+      "url": "https://github.com/knadh/listmonk",
+      "title": "Listmonk GitHub Repository",
+      "section": "item-07-email"
+    },
+    {
+      "id": "listmonk-site",
+      "url": "https://listmonk.app/",
+      "title": "Listmonk Official Website",
+      "section": "item-07-email"
+    },
+    {
+      "id": "formbricks-github",
+      "url": "https://github.com/formbricks/formbricks",
+      "title": "Formbricks GitHub Repository",
+      "section": "item-08-forms"
+    },
+    {
+      "id": "formbricks-site",
+      "url": "https://formbricks.com/",
+      "title": "Formbricks Official Website",
+      "section": "item-08-forms"
+    },
+    {
+      "id": "minio-github",
+      "url": "https://github.com/minio/minio",
+      "title": "MinIO GitHub Repository",
+      "section": "item-09-storage"
+    },
+    {
+      "id": "minio-site",
+      "url": "https://www.min.io/",
+      "title": "MinIO Official Website",
+      "section": "item-09-storage"
+    },
+    {
+      "id": "minio-maintenance",
+      "url": "https://www.infoq.com/news/2025/12/minio-s3-api-alternatives/",
+      "title": "MinIO enters maintenance mode - InfoQ",
+      "section": "item-09-storage"
+    },
+    {
+      "id": "gitea-site",
+      "url": "https://about.gitea.com/",
+      "title": "Gitea Official Website",
+      "section": "item-10-ci-cd"
+    },
+    {
+      "id": "gitea-docs",
+      "url": "https://docs.gitea.com/",
+      "title": "Gitea Documentation",
+      "section": "item-10-ci-cd"
+    },
+    {
+      "id": "woodpecker-github",
+      "url": "https://github.com/woodpecker-ci/woodpecker",
+      "title": "Woodpecker CI GitHub Repository",
+      "section": "item-10-ci-cd"
+    },
+    {
+      "id": "woodpecker-site",
+      "url": "https://woodpecker-ci.org/",
+      "title": "Woodpecker CI Official Website",
+      "section": "item-10-ci-cd"
+    },
+    {
+      "id": "nocodb-github",
+      "url": "https://github.com/nocodb/nocodb",
+      "title": "NocoDB GitHub Repository",
+      "section": "item-11-database"
+    },
+    {
+      "id": "nocodb-airtable",
+      "url": "https://www.tablesprint.com/blog/airtable-vs-nocoDB",
+      "title": "Airtable vs NocoDB Comparison",
+      "section": "item-11-database"
+    },
+    {
+      "id": "upptime-github",
+      "url": "https://github.com/upptime/upptime",
+      "title": "Upptime GitHub Repository",
+      "section": "item-12-status-page"
+    },
+    {
+      "id": "upptime-site",
+      "url": "https://upptime.js.org/",
+      "title": "Upptime Official Website",
+      "section": "item-12-status-page"
+    },
+    {
+      "id": "saas-capital-benchmarks",
+      "url": "https://www.saas-capital.com/blog-posts/spending-benchmarks-for-private-b2b-saas-companies/",
+      "title": "SaaS Capital Spending Benchmarks",
+      "section": "intro"
+    },
+    {
+      "id": "open-source-startup-stack",
+      "url": "https://oneuptime.com/blog/post/2026-01-08-complete-open-source-startup-stack/view",
+      "title": "Complete Open-Source Startup Stack",
+      "section": "intro"
+    },
+    {
+      "id": "self-hosting-savings",
+      "url": "https://sliplane.io/blog/how-i-save-money-by-self-hosting-these-5-open-source-tools",
+      "title": "How I save money by self-hosting open source tools",
+      "section": "intro"
+    },
+    {
+      "id": "self-hosted-alternatives",
+      "url": "https://thecodebeast.com/the-best-self-hosted-alternatives-to-saas-in-2025/",
+      "title": "Best Self-Hosted Alternatives to SaaS",
+      "section": "wrap-up"
+    },
+    {
+      "id": "backlinko-saas-stats",
+      "url": "https://backlinko.com/saas-statistics",
+      "title": "Key SaaS Statistics 2026",
+      "section": "intro"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "topic": "Deno Deploy Hits GA and Launches Sandbox for AI-Generated Code",
+  "slug": "deno-deploy-ga-sandbox-ai-code",
+  "content_type": "news",
+  "title": "Deno Deploy Goes GA and Bets Big on Sandboxing AI-Generated Code",
+  "subtitle": "General availability, Firecracker-powered microVMs for untrusted code, and a runtime that keeps pulling ahead on security",
+  "summary": "Deno Deploy reached general availability on February 3, 2026, alongside the beta launch of Deno Sandbox, a Firecracker-powered microVM environment designed to safely execute AI-generated code. Combined with Deno 2.6's supply chain security features and the runtime's growing adoption by Netlify and Supabase, these releases mark Deno's clearest pitch yet as a full platform rather than just a Node.js alternative.",
+  "status": "reviewed",
+  "created": "2026-02-06",
+  "custom_word_count": null,
+  "article_type": "technical",
+  "targets": {
+    "total_words": 1500,
+    "minimum_words": 800,
+    "sections": 4,
+    "external_links": 8,
+    "code_samples": 2,
+    "real_examples": 3
+  },
+  "narrative_arc": {
+    "hook": "Deno Deploy hits general availability with a new sandboxing product aimed at the AI code execution problem nobody else has solved cleanly",
+    "tension": "Developers have been burned by runtime lock-in before, and Deno still holds just 3.5% market share against Node's dominance",
+    "resolution": "The technical decisions behind Deploy GA and Sandbox solve real security and deployment pain points that competitors haven't addressed",
+    "transformation": "From experimental alternative to credible production platform with a clear AI infrastructure play"
+  },
+  "editorial_standards": {
+    "prose_ratio_minimum": 0.8,
+    "max_consecutive_bullets": 3,
+    "header_style": "conversational, no colons"
+  },
+  "quality_gates": {
+    "min_words_per_section": 200,
+    "min_links_per_section": 2,
+    "min_examples_total": 3,
+    "prose_ratio_minimum": 0.8,
+    "narrative_flow_check": true,
+    "prose_ratio_check": true
+  },
+  "research_config": {
+    "sources_per_section": 3,
+    "search_queries_min": 3,
+    "include_video_research": false
+  },
+  "sections": [
+    {
+      "id": "whats-new",
+      "title": "What Deno Just Shipped",
+      "priority": 1,
+      "status": "written",
+      "word_count": 341,
+      "research_complete": true,
+      "word_target": 400,
+      "word_minimum": 200,
+      "narrative_role": "hook",
+      "scaffold": "Open with the Deploy GA and Sandbox announcements from February 3. Lead with the most newsworthy element: Deno Sandbox uses Firecracker microVMs to safely run AI-generated code. Then cover Deploy GA and what changed from the beta. Reference Deno 2.6 features that shipped in December. Frame why these releases together represent a platform play.",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 2,
+        "case_study": false
+      },
+      "research_questions": [
+        "What exactly launched on February 3, 2026?",
+        "What are the key features of Deno Sandbox?",
+        "What shipped in Deno 2.6?"
+      ]
+    },
+    {
+      "id": "cloud-deploy-details",
+      "title": "One Command to the Edge",
+      "priority": 2,
+      "status": "written",
+      "word_count": 446,
+      "research_complete": true,
+      "word_target": 450,
+      "word_minimum": 200,
+      "narrative_role": "details",
+      "scaffold": "Dig into Deno Deploy's GA release. Explain the V8 isolate architecture across 32 regions. Cover the new dashboard, framework auto-detection, and Node.js module support. Mention pricing and the free tier. Cite Netlify and Supabase as companies building on Deno's infrastructure.",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 2,
+        "case_study": false
+      },
+      "research_questions": [
+        "What is the technical architecture behind Deno Deploy?",
+        "Which companies use Deno Deploy infrastructure?",
+        "What does Deploy pricing look like?"
+      ]
+    },
+    {
+      "id": "ai-sdk-impact",
+      "title": "The AI Code Problem Nobody Solved Cleanly",
+      "priority": 3,
+      "status": "written",
+      "word_count": 374,
+      "research_complete": true,
+      "word_target": 400,
+      "word_minimum": 200,
+      "narrative_role": "impact",
+      "scaffold": "Cover Deno Sandbox in depth. Explain the Firecracker microVM architecture, the defense-in-depth security model, and the JavaScript/Python SDKs. Discuss why AI code execution is a growing problem and how Deno's permission model gives it a structural advantage. Reference Anthropic's acquisition of Bun as context for how runtimes are positioning around AI.",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": false,
+        "external_links_minimum": 2,
+        "case_study": false
+      },
+      "research_questions": [
+        "How does Deno Sandbox work technically?",
+        "What security guarantees does it provide?",
+        "How are other runtimes positioning around AI?"
+      ]
+    },
+    {
+      "id": "whats-next",
+      "title": "Where This Leaves the Runtime Wars",
+      "priority": 4,
+      "status": "written",
+      "word_count": 342,
+      "research_complete": true,
+      "word_target": 250,
+      "word_minimum": 200,
+      "narrative_role": "next-steps",
+      "scaffold": "Zoom out to the competitive landscape. Node.js 24 is the LTS standard. Bun is now Anthropic-owned. Deno is betting on platform over pure runtime. Mention remaining gaps: npm compatibility edge cases, enterprise adoption, JSR traction. Close with what to watch.",
+      "required_elements": {
+        "examples_minimum": 0,
+        "code_samples": false,
+        "external_links_minimum": 2,
+        "case_study": false
+      },
+      "research_questions": [
+        "What is the current market share of Deno vs Node.js vs Bun?",
+        "What are the known npm compatibility gaps in Deno?",
+        "What has Node.js shipped recently?"
+      ]
+    }
+  ],
+  "sources": [],
+  "metadata": {
+    "target_audience": "JavaScript and TypeScript developers, DevOps engineers, tech leads evaluating runtime choices",
+    "reading_time": "5-7 minutes",
+    "technical_depth": "medium",
+    "timeliness": "breaking announcement",
+    "tags": ["deno", "javascript", "typescript", "edge computing", "deno deploy", "deno sandbox", "AI", "runtime", "web development"]
+  }
+}

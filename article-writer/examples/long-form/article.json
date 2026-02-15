@@ -1,0 +1,313 @@
+{
+  "topic": "Building AI Agents in 2026: Architectures, Frameworks, and Production Patterns",
+  "slug": "building-ai-agents-2026",
+  "content_type": "long-form",
+  "article_type": "technical",
+  "custom_word_count": null,
+  "title": "The Complete Guide to Building AI Agents in 2026",
+  "subtitle": "From single-prompt wrappers to multi-agent production systems: the architectures, frameworks, and hard-won lessons shaping how engineers build autonomous AI today",
+  "summary": "AI agents have moved from research demos to production infrastructure. This guide walks you through every layer of building agents that actually work in the real world: choosing the right architecture for your use case, selecting frameworks that won't lock you in, designing tool-use patterns that stay reliable at scale, handling memory and state across long-running tasks, and deploying with the observability you need to sleep at night. Drawing on real production systems from companies like Anthropic, LangChain, Cognition, and dozens of startups shipping agent products today, you'll learn what works, what fails, and what the next twelve months look like for agent engineering.",
+  "status": "reviewed",
+  "created": "2026-02-06",
+  "completed": "2026-02-06",
+  "targets": {
+    "total_words": 10000,
+    "minimum_words": 8000,
+    "sections": 10,
+    "external_links": 30,
+    "code_samples": 15,
+    "real_examples": 10
+  },
+  "actuals": {
+    "total_words": 10077,
+    "sections": 10,
+    "external_links": 104,
+    "code_samples": 8,
+    "real_examples": 15,
+    "prose_ratio": 0.90
+  },
+  "narrative_arc": {
+    "hook": "A single AI agent now handles what used to take a team of engineers a quarter to build. But most agent projects still fail in production, and the gap between demo and deployment is where careers are made.",
+    "tension": "The tooling is exploding, the architectures are diverging, and teams are drowning in framework choices. Meanwhile, the agents that actually work in production look nothing like the tutorials suggest.",
+    "resolution": "A clear mental model for agent architecture, grounded in real production patterns, lets you cut through the hype and build systems that reliably solve problems at scale.",
+    "transformation": "From overwhelmed by agent hype to confidently designing, building, and deploying agent systems that hold up under real-world load"
+  },
+  "sections": [
+    {
+      "id": "intro-why-agents-now",
+      "title": "Why 2026 Is the Year Agents Got Real",
+      "priority": 1,
+      "status": "written",
+      "research_complete": true,
+      "word_target": 900,
+      "word_minimum": 800,
+      "word_count": 1000,
+      "narrative_role": "hook",
+      "required_elements": {
+        "examples_minimum": 2,
+        "code_samples": false,
+        "external_links_minimum": 3,
+        "case_study": true
+      },
+      "research_questions": [
+        "What specific production agent deployments have been publicly documented in 2025-2026?",
+        "What market size and growth numbers exist for AI agent infrastructure?",
+        "Which companies have shipped agent-first products and what results are they reporting?",
+        "What changed in foundation model capabilities that made agents viable?",
+        "What are the most cited failure modes for agent projects that never made it to production?"
+      ]
+    },
+    {
+      "id": "agent-landscape",
+      "title": "The Agent Architecture Zoo",
+      "priority": 2,
+      "status": "written",
+      "research_complete": true,
+      "word_target": 1100,
+      "word_minimum": 800,
+      "word_count": 1200,
+      "narrative_role": "context",
+      "required_elements": {
+        "examples_minimum": 2,
+        "code_samples": true,
+        "external_links_minimum": 4,
+        "case_study": false
+      },
+      "research_questions": [
+        "What are the main agent architecture patterns in use today (ReAct, plan-and-execute, multi-agent, etc.)?",
+        "How do Anthropic's agent patterns differ from OpenAI's and Google's recommended approaches?",
+        "What taxonomy of agent types has emerged in the research and industry literature?",
+        "How do single-agent vs multi-agent architectures compare in production reliability?",
+        "What are the trade-offs between code-generation agents and tool-calling agents?"
+      ]
+    },
+    {
+      "id": "foundations-llm-layer",
+      "title": "Choosing Your Foundation Model",
+      "priority": 3,
+      "status": "written",
+      "research_complete": true,
+      "word_target": 1000,
+      "word_minimum": 800,
+      "word_count": 1100,
+      "narrative_role": "foundation",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 3,
+        "case_study": false
+      },
+      "research_questions": [
+        "How do Claude, GPT-4, Gemini, and open-source models compare for agent workloads specifically?",
+        "What benchmarks exist for tool-calling accuracy, instruction following, and multi-step reasoning?",
+        "What are the cost and latency profiles of major models when used in agentic loops?",
+        "How does context window size affect agent architecture decisions?",
+        "What role do smaller fine-tuned models play in production agent systems?"
+      ]
+    },
+    {
+      "id": "frameworks-deep-dive",
+      "title": "Frameworks That Survive Contact with Production",
+      "priority": 4,
+      "status": "written",
+      "research_complete": true,
+      "word_target": 1200,
+      "word_minimum": 800,
+      "word_count": 1200,
+      "narrative_role": "deep-dive",
+      "required_elements": {
+        "examples_minimum": 2,
+        "code_samples": true,
+        "external_links_minimum": 4,
+        "case_study": true
+      },
+      "research_questions": [
+        "What are the current capabilities and limitations of LangGraph, CrewAI, AutoGen, and the Anthropic Agent SDK?",
+        "Which frameworks have the most production deployments and what do users report?",
+        "What are the common pitfalls of framework lock-in with agent tooling?",
+        "How do teams evaluate build-vs-buy for agent orchestration?",
+        "What does a minimal agent framework look like when built from scratch?"
+      ]
+    },
+    {
+      "id": "tool-use-patterns",
+      "title": "Designing Tool Use That Doesn't Break",
+      "priority": 5,
+      "status": "written",
+      "research_complete": true,
+      "word_target": 1100,
+      "word_minimum": 800,
+      "word_count": 1300,
+      "narrative_role": "deep-dive",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 3,
+        "case_study": true
+      },
+      "research_questions": [
+        "What are best practices for defining tool schemas that models call reliably?",
+        "How do production systems handle tool failures, retries, and fallbacks?",
+        "What is the MCP (Model Context Protocol) and how is it being adopted?",
+        "How do sandboxing and permission models work for agent tool execution?",
+        "What patterns exist for dynamic tool registration and discovery?"
+      ]
+    },
+    {
+      "id": "memory-state",
+      "title": "Memory and State Across Long-Running Tasks",
+      "priority": 6,
+      "status": "written",
+      "research_complete": true,
+      "word_target": 1000,
+      "word_minimum": 800,
+      "word_count": 1200,
+      "narrative_role": "deep-dive",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 3,
+        "case_study": false
+      },
+      "research_questions": [
+        "What memory architectures are used in production agents (vector stores, structured state, hybrid)?",
+        "How do agents handle context window overflow in long-running tasks?",
+        "What are the emerging patterns for persistent agent memory across sessions?",
+        "How do multi-agent systems share state and coordinate without races?",
+        "What role does RAG play in agent memory systems vs traditional chat applications?"
+      ]
+    },
+    {
+      "id": "multi-agent-systems",
+      "title": "When One Agent Isn't Enough",
+      "priority": 7,
+      "status": "written",
+      "research_complete": true,
+      "word_target": 1000,
+      "word_minimum": 800,
+      "word_count": 1100,
+      "narrative_role": "practical",
+      "required_elements": {
+        "examples_minimum": 2,
+        "code_samples": true,
+        "external_links_minimum": 3,
+        "case_study": true
+      },
+      "research_questions": [
+        "What multi-agent coordination patterns have proven effective in production?",
+        "How do systems like Cognition's Devin and Anthropic's Claude Code handle sub-agent delegation?",
+        "What are the failure modes specific to multi-agent architectures?",
+        "How do teams decide between a single powerful agent and a swarm of specialized agents?",
+        "What communication protocols exist between agents in production systems?"
+      ]
+    },
+    {
+      "id": "testing-observability",
+      "title": "Testing Agents Without Losing Your Mind",
+      "priority": 8,
+      "status": "written",
+      "research_complete": true,
+      "word_target": 900,
+      "word_minimum": 800,
+      "word_count": 1100,
+      "narrative_role": "practical",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 3,
+        "case_study": false
+      },
+      "research_questions": [
+        "What testing strategies work for non-deterministic agent behavior?",
+        "How do teams build evaluation harnesses for agent quality?",
+        "What observability tools and patterns exist for agent tracing (LangSmith, Braintrust, etc.)?",
+        "How do production teams handle regression testing when models update?",
+        "What metrics matter most for agent reliability in production?"
+      ]
+    },
+    {
+      "id": "production-deployment",
+      "title": "Shipping Agents to Real Users",
+      "priority": 9,
+      "status": "written",
+      "research_complete": true,
+      "word_target": 900,
+      "word_minimum": 800,
+      "word_count": 1000,
+      "narrative_role": "inspiration",
+      "required_elements": {
+        "examples_minimum": 2,
+        "code_samples": false,
+        "external_links_minimum": 3,
+        "case_study": true
+      },
+      "research_questions": [
+        "What deployment architectures do production agent systems use?",
+        "How do companies like Cursor, Replit, and Linear handle agent scaling and reliability?",
+        "What are the real cost profiles of running agents in production at scale?",
+        "How do teams handle human-in-the-loop patterns for high-stakes agent actions?",
+        "What safety and guardrail patterns have emerged for production agents?"
+      ]
+    },
+    {
+      "id": "whats-next",
+      "title": "What to Build First",
+      "priority": 10,
+      "status": "written",
+      "research_complete": true,
+      "word_target": 900,
+      "word_minimum": 800,
+      "word_count": 900,
+      "narrative_role": "action",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 3,
+        "case_study": false
+      },
+      "research_questions": [
+        "What is the simplest production-ready agent architecture a team can start with?",
+        "What skills and tools should engineers learn first for agent development?",
+        "What open-source agent projects are best for learning production patterns?",
+        "What does the agent engineering job market look like in 2026?",
+        "What are the most promising unsolved problems in agent engineering?"
+      ]
+    }
+  ],
+  "quality_gates": {
+    "min_words_per_section": 800,
+    "min_links_per_section": 3,
+    "min_examples_total": 10,
+    "prose_ratio_minimum": 0.7,
+    "narrative_flow_check": true,
+    "prose_ratio_check": true
+  },
+  "editorial_standards": {
+    "prose_ratio_minimum": 0.7,
+    "max_consecutive_bullets": 5,
+    "header_style": "conversational, no colons"
+  },
+  "research_config": {
+    "sources_per_section": 10,
+    "search_queries_min": 5,
+    "include_video_research": true
+  },
+  "sources": [],
+  "metadata": {
+    "target_audience": "software engineers and technical leads building AI-powered products",
+    "reading_time": "40-50 minutes",
+    "technical_depth": "high",
+    "tags": [
+      "AI agents",
+      "LLM engineering",
+      "agent frameworks",
+      "tool use",
+      "multi-agent systems",
+      "production AI",
+      "Claude",
+      "LangGraph",
+      "MCP",
+      "agent architecture"
+    ]
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "topic": "Build a Real-Time Dashboard with Next.js, Drizzle ORM, and Server-Sent Events",
+  "slug": "nextjs-realtime-dashboard-drizzle-sse",
+  "content_type": "tutorial",
+  "title": "Build a Real-Time Dashboard with Next.js, Drizzle ORM, and Server-Sent Events",
+  "subtitle": "A hands-on guide to streaming live data from Postgres to the browser without WebSockets, polling, or third-party services",
+  "summary": "Most real-time tutorials reach for WebSockets or paid services the moment they need live updates. Server-Sent Events are simpler, built into every browser, and work perfectly with Next.js server routes. This tutorial walks you through building a production-quality real-time analytics dashboard from scratch using Next.js App Router, Drizzle ORM for type-safe database access, and SSE for streaming updates to the client. You'll set up the database schema, write the streaming API route, build reactive dashboard components, and add reconnection logic that handles real-world network failures.",
+  "status": "reviewed",
+  "created": "2026-02-06",
+  "custom_word_count": null,
+  "article_type": "technical",
+  "targets": {
+    "total_words": 5000,
+    "minimum_words": 3000,
+    "sections": 7,
+    "external_links": 15,
+    "code_samples": 20,
+    "real_examples": 5
+  },
+  "narrative_arc": {
+    "hook": "Developers burn hours configuring WebSocket servers and debugging connection state when SSE handles 90% of real-time dashboard use cases with zero additional infrastructure",
+    "tension": "Tutorials on real-time features either gloss over database integration or rely on managed services that add cost and vendor lock-in. Building it yourself seems daunting but the stack is surprisingly thin.",
+    "resolution": "Next.js route handlers, Drizzle's type-safe queries, and the native EventSource API combine into a real-time pipeline you can understand, debug, and deploy anywhere",
+    "transformation": "From copy-pasting WebSocket boilerplate to owning a lightweight streaming architecture you can adapt to any project"
+  },
+  "sections": [
+    {
+      "id": "why-sse",
+      "title": "Why Server-Sent Events Beat WebSockets for Dashboards",
+      "priority": 1,
+      "status": "reviewed",
+      "word_count": 562,
+      "research_complete": true,
+      "word_target": 550,
+      "word_minimum": 400,
+      "narrative_role": "hook",
+      "scaffold": "Open with the common pain of over-engineering real-time features. Compare SSE vs WebSocket vs polling with a quick decision matrix. Show where SSE wins (unidirectional server-to-client) and where it doesn't (chat, gaming). Reference Vercel, Supabase Realtime, and Mercure as real-world SSE adopters. End with what the reader will build by the end of this tutorial.",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": false,
+        "external_links_minimum": 2,
+        "case_study": false,
+        "comparison_table": true
+      },
+      "research_questions": [
+        "What are the documented performance differences between SSE and WebSockets for unidirectional data?",
+        "Which major platforms use SSE in production and why did they choose it?",
+        "What are the browser support limitations of EventSource in 2026?",
+        "How does HTTP/2 multiplexing affect SSE connection limits?"
+      ]
+    },
+    {
+      "id": "prerequisites",
+      "title": "What You Need Before We Start",
+      "priority": 2,
+      "status": "reviewed",
+      "word_count": 503,
+      "research_complete": true,
+      "word_target": 450,
+      "word_minimum": 400,
+      "narrative_role": "prerequisites",
+      "scaffold": "List the exact tech stack and versions. Provide the scaffold command to create the Next.js project. Cover Node.js version requirements, Postgres setup options (local Docker, Neon, Supabase), and the pnpm install for all dependencies. Include a working tsconfig snippet if relevant. End with the expected folder structure after setup.",
+      "required_elements": {
+        "examples_minimum": 0,
+        "code_samples": true,
+        "external_links_minimum": 3,
+        "case_study": false,
+        "version_pinning": true
+      },
+      "research_questions": [
+        "What is the latest stable Next.js version and its App Router requirements?",
+        "What are the current Drizzle ORM setup steps for Postgres?",
+        "What's the simplest way to run Postgres locally for development in 2026?",
+        "Are there known compatibility issues between drizzle-orm and the latest Next.js?"
+      ]
+    },
+    {
+      "id": "database-schema",
+      "title": "Designing the Schema with Drizzle",
+      "priority": 3,
+      "status": "reviewed",
+      "word_count": 795,
+      "research_complete": true,
+      "word_target": 800,
+      "word_minimum": 600,
+      "narrative_role": "foundation",
+      "scaffold": "Define the Drizzle schema for a metrics dashboard: an events table, a metrics_snapshot table, and an active_sessions view. Explain why Drizzle's TypeScript-first schema definition catches errors that raw SQL migrations miss. Walk through drizzle-kit generate and migrate commands. Show the db connection setup using drizzle-orm/postgres-js. Include seed script that generates realistic dashboard data. Reference Drizzle documentation and the Neon + Drizzle integration guide.",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 2,
+        "case_study": false,
+        "full_file_listings": true
+      },
+      "research_questions": [
+        "What are Drizzle ORM best practices for schema design with Postgres?",
+        "How does drizzle-kit handle migrations compared to Prisma Migrate?",
+        "What connection pooling options work best with Drizzle and serverless?",
+        "Are there known performance patterns for time-series-like data in Postgres with Drizzle?"
+      ]
+    },
+    {
+      "id": "sse-api-route",
+      "title": "Building the Streaming API Route",
+      "priority": 4,
+      "status": "reviewed",
+      "word_count": 775,
+      "research_complete": true,
+      "word_target": 900,
+      "word_minimum": 700,
+      "narrative_role": "walkthrough",
+      "scaffold": "Build the Next.js App Router route handler that streams SSE data. Start with the basics: setting Content-Type to text/event-stream, disabling buffering, and using ReadableStream. Then add the database polling loop that queries Drizzle for new metrics every 2 seconds. Cover the SSE event format (data, event, id, retry fields). Add proper cleanup when the client disconnects using AbortSignal. Show how to test the endpoint with curl before building the frontend. Reference the MDN SSE specification and Next.js streaming docs.",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 2,
+        "case_study": false,
+        "full_file_listings": true,
+        "curl_examples": true
+      },
+      "research_questions": [
+        "How do Next.js App Router route handlers support streaming responses?",
+        "What are the correct SSE headers and format according to the spec?",
+        "How do you detect client disconnection in a Next.js streaming route?",
+        "What are production SSE patterns from Vercel's documentation?"
+      ]
+    },
+    {
+      "id": "dashboard-ui",
+      "title": "Wiring Up the Dashboard Components",
+      "priority": 5,
+      "status": "reviewed",
+      "word_count": 1288,
+      "research_complete": true,
+      "word_target": 900,
+      "word_minimum": 700,
+      "narrative_role": "walkthrough",
+      "scaffold": "Build the React client components that consume the SSE stream. Create a useEventSource custom hook that handles connection, parsing, reconnection, and error states. Build three dashboard widgets: a live metric counter with animation, a streaming chart using recharts, and an activity feed. Show how React state updates from SSE events trigger smooth re-renders. Cover the EventSource API including onmessage, onerror, and addEventListener for custom event types. Reference the Recharts documentation and React patterns for real-time data.",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 2,
+        "case_study": false,
+        "full_file_listings": true,
+        "custom_hook": true
+      },
+      "research_questions": [
+        "What are best practices for consuming SSE in React 19 with App Router?",
+        "How does the EventSource API handle reconnection natively?",
+        "What charting libraries work well with streaming data in React?",
+        "How do you prevent memory leaks when using EventSource in useEffect?"
+      ]
+    },
+    {
+      "id": "production-hardening",
+      "title": "Making It Production-Ready",
+      "priority": 6,
+      "status": "reviewed",
+      "word_count": 1214,
+      "research_complete": true,
+      "word_target": 800,
+      "word_minimum": 600,
+      "narrative_role": "advanced",
+      "scaffold": "Cover the things tutorials skip. Add exponential backoff reconnection with jitter. Implement heartbeat events to detect stale connections. Show how to add authentication to the SSE route using middleware. Discuss connection limits per browser (6 per domain on HTTP/1.1, unlimited on HTTP/2) and how to handle them. Cover Postgres LISTEN/NOTIFY as an alternative to polling for true push-based updates. Mention deployment considerations on Vercel, Railway, and Fly.io. Reference real production SSE architectures from companies like Linear and Figma.",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": true,
+        "external_links_minimum": 3,
+        "case_study": true,
+        "production_checklist": true
+      },
+      "research_questions": [
+        "How do Vercel and other serverless platforms handle long-lived SSE connections?",
+        "What are Postgres LISTEN/NOTIFY patterns for real-time notifications?",
+        "How do companies like Linear or Figma implement SSE in production?",
+        "What are the connection timeout behaviors across major hosting platforms?"
+      ]
+    },
+    {
+      "id": "wrap-up",
+      "title": "Where to Go from Here",
+      "priority": 7,
+      "status": "reviewed",
+      "word_count": 551,
+      "research_complete": true,
+      "word_target": 600,
+      "word_minimum": 400,
+      "narrative_role": "wrap-up",
+      "scaffold": "Recap what was built and the key architectural decisions. Provide extension ideas: adding Postgres LISTEN/NOTIFY, switching to WebSockets for bidirectional features, adding Redis pub/sub for multi-instance deployments. Link to the complete source code repository. Include a quick comparison of when to graduate from SSE to WebSockets or a managed service. End with encouragement and links to further reading.",
+      "required_elements": {
+        "examples_minimum": 0,
+        "code_samples": false,
+        "external_links_minimum": 3,
+        "case_study": false,
+        "resource_links": true
+      },
+      "research_questions": [
+        "What are the best open-source real-time dashboard examples using Next.js?",
+        "When should you migrate from SSE to WebSockets in a growing application?",
+        "What managed real-time services integrate well with Next.js and Drizzle?",
+        "What are the best community resources for learning advanced SSE patterns?"
+      ]
+    }
+  ],
+  "editorial_standards": {
+    "prose_ratio_minimum": 0.55,
+    "max_consecutive_bullets": 5,
+    "header_style": "conversational, no colons",
+    "code_block_style": "typescript with filename comments",
+    "code_explanation_required": true,
+    "every_code_block_needs_context": "Introduce what the code does before showing it. Explain key decisions after."
+  },
+  "quality_gates": {
+    "min_words_per_section": 400,
+    "min_links_per_section": 2,
+    "min_examples_total": 5,
+    "prose_ratio_minimum": 0.55,
+    "narrative_flow_check": true,
+    "prose_ratio_check": true,
+    "code_samples_minimum": 20,
+    "all_code_tested": true
+  },
+  "research_config": {
+    "sources_per_section": 8,
+    "search_queries_min": 4,
+    "include_video_research": true,
+    "prefer_official_docs": true,
+    "max_source_age_months": 18
+  },
+  "sources": [],
+  "metadata": {
+    "target_audience": "intermediate frontend and full-stack developers familiar with React and TypeScript",
+    "reading_time": "20-25 minutes",
+    "technical_depth": "high",
+    "difficulty": "intermediate",
+    "tags": ["next.js", "drizzle-orm", "server-sent-events", "real-time", "dashboard", "postgres", "typescript", "streaming", "app-router"],
+    "tech_stack": {
+      "framework": "Next.js 15 (App Router)",
+      "orm": "Drizzle ORM",
+      "database": "PostgreSQL",
+      "language": "TypeScript",
+      "streaming": "Server-Sent Events (EventSource API)",
+      "charting": "Recharts",
+      "runtime": "Node.js 20+"
+    },
+    "prerequisites": [
+      "Comfortable with React and TypeScript",
+      "Basic understanding of Next.js App Router",
+      "Postgres running locally or a hosted instance (Neon, Supabase, or Docker)",
+      "Node.js 20+ and pnpm installed"
+    ],
+    "final_project": {
+      "description": "A live analytics dashboard that streams page view counts, active sessions, and event data from Postgres to the browser using SSE",
+      "features": [
+        "Real-time metric counters with smooth animations",
+        "Streaming line chart showing events over time",
+        "Live activity feed of recent events",
+        "Automatic reconnection with exponential backoff",
+        "Type-safe database queries with Drizzle"
+      ]
+    }
+  }
+}

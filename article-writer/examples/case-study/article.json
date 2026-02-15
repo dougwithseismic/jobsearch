@@ -1,0 +1,196 @@
+{
+  "topic": "How Linear Redesigned Their Issue Tracker and Grew to $10M ARR",
+  "slug": "linear-issue-tracker-10m-arr",
+  "title": "How Linear Redesigned the Issue Tracker and Grew to $10M ARR",
+  "subtitle": "The product decisions, design obsessions, and go-to-market bets that turned a crowded market into a $10M revenue engine",
+  "summary": "When Karri Saarinen and Tuomas Artman left Airbnb to build yet another issue tracker, investors were skeptical. Jira dominated. GitHub Issues was free. But Linear's obsession with speed, keyboard-first design, and developer experience created a product so loved that teams switched without being asked. This case study traces Linear's journey from a two-person prototype to $10M ARR, examining the specific product decisions, growth loops, and counterintuitive bets that made it happen.",
+  "content_type": "case-study",
+  "status": "reviewed",
+  "created": "2026-02-06",
+  "custom_word_count": null,
+  "targets": {
+    "total_words": 4000,
+    "minimum_words": 2500,
+    "sections": 6,
+    "external_links": 10,
+    "real_examples": 3
+  },
+  "narrative_arc": {
+    "hook": "In a market where Jira held 70%+ share and GitHub Issues was free, two ex-Airbnb engineers bet everything on speed and taste. Four years later, Linear hit $10M ARR with almost zero outbound sales.",
+    "tension": "Building a project management tool in 2019 looked like a death wish. The market was saturated, switching costs were high, and Atlassian had a decade head start. Linear needed a fundamentally different approach to even survive.",
+    "resolution": "By treating performance as a feature, designing for keyboard-native workflows, and letting product-led growth do the selling, Linear built a tool that spread organically through engineering teams at companies like Vercel, Ramp, and Loom.",
+    "transformation": "From a crowded commodity market to a premium brand that developers actively choose and champion internally"
+  },
+  "sections": [
+    {
+      "id": "hook",
+      "title": "The Fastest App Nobody Expected",
+      "priority": 1,
+      "status": "written",
+      "word_count": 510,
+      "research_complete": true,
+      "word_target": 500,
+      "word_minimum": 400,
+      "narrative_role": "hook",
+      "scaffold": "Open with the visceral experience of using Linear for the first time. Contrast the sluggishness of Jira with Linear's sub-50ms interactions. Introduce Karri Saarinen and Tuomas Artman leaving Airbnb. Set up the central question: how do you win in a market everyone says is impossible?",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": false,
+        "external_links_minimum": 2,
+        "case_study": false
+      },
+      "research_questions": [
+        "What were Karri Saarinen and Tuomas Artman's roles at Airbnb before founding Linear?",
+        "What was the initial reaction from investors when Linear pitched an issue tracker?",
+        "What is Linear's actual measured UI response time compared to Jira?",
+        "When did Linear launch and what was the early traction?"
+      ]
+    },
+    {
+      "id": "background",
+      "title": "Why the World Didn't Need Another Issue Tracker",
+      "priority": 2,
+      "status": "written",
+      "word_count": 594,
+      "research_complete": true,
+      "word_target": 600,
+      "word_minimum": 500,
+      "scaffold": "Map the competitive landscape in 2019. Jira's dominance and its pain points. The graveyard of failed challengers. Why most investors passed on the idea. Establish what made this market so hard to crack and why previous attempts failed.",
+      "narrative_role": "background",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": false,
+        "external_links_minimum": 2,
+        "case_study": false
+      },
+      "research_questions": [
+        "What was Jira's market share in the project management space around 2019-2020?",
+        "Which other issue tracker startups tried and failed before Linear?",
+        "What were the most common complaints about Jira from engineering teams?",
+        "How much funding did Linear raise and from whom in early rounds?"
+      ]
+    },
+    {
+      "id": "challenge",
+      "title": "The Problem Hiding in Plain Sight",
+      "priority": 3,
+      "status": "written",
+      "word_count": 665,
+      "research_complete": true,
+      "word_target": 650,
+      "word_minimum": 500,
+      "scaffold": "Dig into the specific pain Linear's founders experienced. Jira had become a tool for managers, not makers. The cognitive cost of slow tools on developer flow state. The gap between what engineers wanted and what procurement departments bought. Frame this as the insight that made Linear possible.",
+      "narrative_role": "challenge",
+      "required_elements": {
+        "examples_minimum": 0,
+        "code_samples": false,
+        "external_links_minimum": 2,
+        "case_study": false
+      },
+      "research_questions": [
+        "What specific frustrations did Linear's founders cite about existing tools?",
+        "What research exists on the cost of slow developer tools on productivity?",
+        "How did Jira's feature bloat happen over time?",
+        "What does the research say about flow state and tool interruptions for developers?"
+      ]
+    },
+    {
+      "id": "approach",
+      "title": "Speed as a Feature and Other Bets",
+      "priority": 4,
+      "status": "written",
+      "word_count": 743,
+      "research_complete": true,
+      "word_target": 900,
+      "word_minimum": 700,
+      "scaffold": "Detail the specific product and technical decisions that defined Linear. The local-first sync engine for instant UI. Keyboard shortcuts as first-class citizens. Opinionated workflows instead of infinite configurability. The deliberate choice to optimize for small-to-mid engineering teams instead of enterprise. Cover the tech stack decisions, the design philosophy, and the growth strategy of product-led adoption.",
+      "narrative_role": "approach",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": false,
+        "external_links_minimum": 2,
+        "case_study": true
+      },
+      "research_questions": [
+        "What is Linear's technical architecture that enables its speed?",
+        "How does Linear's sync engine and local-first approach work?",
+        "What specific design decisions differentiate Linear from Jira?",
+        "How did Linear's product-led growth strategy work in practice?"
+      ]
+    },
+    {
+      "id": "results",
+      "title": "From Waitlist to $10M ARR",
+      "priority": 5,
+      "status": "written",
+      "word_count": 767,
+      "research_complete": true,
+      "word_target": 750,
+      "word_minimum": 500,
+      "scaffold": "Walk through the growth milestones. The waitlist that built anticipation. The companies that switched and why. Concrete revenue numbers and growth rates. How the bottom-up adoption pattern played out at companies like Vercel, Ramp, and Loom. NPS scores and retention metrics that show genuine product-market fit.",
+      "narrative_role": "results",
+      "required_elements": {
+        "examples_minimum": 1,
+        "code_samples": false,
+        "external_links_minimum": 2,
+        "case_study": true
+      },
+      "research_questions": [
+        "What are Linear's known revenue milestones and growth timeline?",
+        "Which notable companies publicly use Linear and have spoken about switching?",
+        "What is Linear's reported NPS or customer satisfaction metrics?",
+        "How did Linear's waitlist and invite-only launch contribute to early growth?"
+      ]
+    },
+    {
+      "id": "lessons",
+      "title": "What Linear Teaches Every Product Builder",
+      "priority": 6,
+      "status": "written",
+      "word_count": 596,
+      "research_complete": true,
+      "word_target": 600,
+      "word_minimum": 500,
+      "scaffold": "Extract the transferable lessons. Performance is a feature, not a metric. Opinionated beats configurable in crowded markets. Bottom-up adoption requires a product that sells itself. The courage to say no to enterprise features. Close with what Linear's story means for founders entering saturated markets.",
+      "narrative_role": "lessons",
+      "required_elements": {
+        "examples_minimum": 0,
+        "code_samples": false,
+        "external_links_minimum": 2,
+        "case_study": false
+      },
+      "research_questions": [
+        "What have Linear's founders said about their product philosophy in interviews?",
+        "How does Linear's approach compare to the classic PLG playbook?",
+        "What features has Linear deliberately chosen NOT to build?",
+        "What advice have Linear's founders given to other SaaS founders?"
+      ]
+    }
+  ],
+  "editorial_standards": {
+    "prose_ratio_minimum": 0.75,
+    "max_consecutive_bullets": 4,
+    "header_style": "conversational, no colons"
+  },
+  "quality_gates": {
+    "min_words_per_section": 500,
+    "min_links_per_section": 2,
+    "min_examples_total": 3,
+    "prose_ratio_minimum": 0.75,
+    "narrative_flow_check": true,
+    "prose_ratio_check": true
+  },
+  "research_config": {
+    "sources_per_section": 5,
+    "search_queries_min": 4,
+    "include_video_research": true
+  },
+  "sources": [],
+  "metadata": {
+    "target_audience": "SaaS founders, product managers, and startup operators",
+    "reading_time": "15-20 minutes",
+    "technical_depth": "medium",
+    "article_type": "business",
+    "tags": ["linear", "saas", "product-led growth", "case study", "issue tracker", "startup", "developer tools", "ARR"]
+  }
+}

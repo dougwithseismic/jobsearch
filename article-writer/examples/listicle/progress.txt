@@ -1,0 +1,39 @@
+Article: 12 Open Source Alternatives to Expensive SaaS Tools Your Startup Actually Needs
+Date: 2026-02-06
+
+== PIPELINE LOG ==
+
+[1] RESEARCH PHASE - COMPLETE
+- Ran 15+ web searches across all 14 sections
+- Researched each tool's GitHub stats, features, pricing, adoption
+- Created research notes for all 14 sections in research/
+- Created sources.json with 39 source entries
+- Notable finding: MinIO entered maintenance mode in late 2025 - updated article to reflect this honestly
+- All sections marked research_complete: true
+
+[2] WRITING PHASE - COMPLETE
+- Wrote all 14 sections following listicle format
+- Each tool section includes: Replaces line, GitHub link, narrative prose, trade-offs
+- Intro establishes the cost problem with real data ($1K-$3.5K per employee/year)
+- Wrap-up provides actionable adoption strategy
+- Hit 3024 words (target: 3000, minimum: 2000)
+
+[3] REVIEW PHASE - COMPLETE
+- All 12 tools have real GitHub repos with accurate star counts
+- 38 unique external links (target: 15)
+- 16 real-world examples (target: 8)
+- Every section includes honest trade-offs, not just marketing
+- Prose ratio ~75% (target: 40% minimum)
+- All links verified as real URLs pointing to official sources
+
+[4] EVAL PHASE - COMPLETE
+- eval-result.json written with full metrics
+- All quality gates pass
+- Article status set to "reviewed" in article.json
+
+== LEARNINGS ==
+- MinIO's maintenance mode is a significant development that many listicles miss
+- PostHog's "98% use it for free" stat is a strong hook for startup audiences
+- Keycloak has the steepest learning curve of any tool on the list
+- Gitea + Woodpecker is the most niche recommendation but fills a real gap
+- Upptime's zero-cost model is the most compelling pitch on the list

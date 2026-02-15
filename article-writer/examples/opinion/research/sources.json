@@ -1,0 +1,198 @@
+[
+  {
+    "id": "dora-2024",
+    "title": "DORA Accelerate State of DevOps Report 2024",
+    "url": "https://dora.dev/research/2024/dora-report/",
+    "type": "report",
+    "used_in": ["the-slowest-teams-have-the-best-tools", "the-strongest-counterargument"]
+  },
+  {
+    "id": "metr-ai-study",
+    "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+    "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+    "type": "study",
+    "used_in": ["the-slowest-teams-have-the-best-tools", "why-we-keep-buying-anyway"]
+  },
+  {
+    "id": "bettercloud-saas-stats",
+    "title": "The Big List of 2025 SaaS Statistics",
+    "url": "https://www.bettercloud.com/monitor/saas-statistics/",
+    "type": "data",
+    "used_in": ["the-slowest-teams-have-the-best-tools", "the-tool-tax-nobody-measures"]
+  },
+  {
+    "id": "gloria-mark-chi2005",
+    "title": "No Task Left Behind? Examining the Nature of Fragmented Work (CHI 2005)",
+    "url": "https://ics.uci.edu/~gmark/CHI2005.pdf",
+    "type": "academic",
+    "used_in": ["the-tool-tax-nobody-measures"]
+  },
+  {
+    "id": "gloria-mark-dropbox",
+    "title": "Gloria Mark: How to Get Your Attention Span Back",
+    "url": "https://blog.dropbox.com/topics/work-culture/gloria-mark-how-to-get-your-attention-span-back",
+    "type": "interview",
+    "used_in": ["the-tool-tax-nobody-measures"]
+  },
+  {
+    "id": "microsoft-work-trend",
+    "title": "Breaking Down the Infinite Workday - Microsoft Work Trend Index",
+    "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday",
+    "type": "report",
+    "used_in": ["the-tool-tax-nobody-measures"]
+  },
+  {
+    "id": "microsoft-interruptions",
+    "title": "80% Of Workers Are Interrupted Too Often To Be Effective",
+    "url": "https://allwork.space/2025/04/80-of-workers-are-interrupted-too-often-to-be-effective-new-microsoft-report-reveals/",
+    "type": "article",
+    "used_in": ["the-tool-tax-nobody-measures"]
+  },
+  {
+    "id": "zylo-saas-sprawl",
+    "title": "Stop SaaS Sprawl: 4 Steps to Stymie Portfolio Growth",
+    "url": "https://zylo.com/blog/saas-sprawl/",
+    "type": "article",
+    "used_in": ["the-tool-tax-nobody-measures", "subtract-before-you-add"]
+  },
+  {
+    "id": "stackoverflow-2025",
+    "title": "2025 Stack Overflow Developer Survey",
+    "url": "https://survey.stackoverflow.co/2025/",
+    "type": "survey",
+    "used_in": ["why-we-keep-buying-anyway"]
+  },
+  {
+    "id": "linearb-so-autonomy",
+    "title": "The 2025 Stack Overflow Survey Reveals How Autonomy and AI Are Reshaping Development",
+    "url": "https://linearb.io/blog/stack-overflow-2025-developer-survey-autonomy-ai-trust",
+    "type": "analysis",
+    "used_in": ["why-we-keep-buying-anyway"]
+  },
+  {
+    "id": "37signals",
+    "title": "37signals - Start Here",
+    "url": "https://37signals.com/00",
+    "type": "company",
+    "used_in": ["why-we-keep-buying-anyway", "subtract-before-you-add"]
+  },
+  {
+    "id": "mordor-devtools-market",
+    "title": "Software Development Tools Market Size, Trends & Share Analysis 2030",
+    "url": "https://www.mordorintelligence.com/industry-reports/software-development-tools-market",
+    "type": "market-research",
+    "used_in": ["why-we-keep-buying-anyway"]
+  },
+  {
+    "id": "mckinsey-dx",
+    "title": "Why Your IT Organization Should Prioritize Developer Experience",
+    "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/tech-forward/why-your-it-organization-should-prioritize-developer-experience",
+    "type": "report",
+    "used_in": ["the-strongest-counterargument", "why-we-keep-buying-anyway"]
+  },
+  {
+    "id": "cd-foundation-cicd",
+    "title": "State of CI/CD Report 2024",
+    "url": "https://cd.foundation/state-of-cicd-2024/",
+    "type": "report",
+    "used_in": ["the-strongest-counterargument"]
+  },
+  {
+    "id": "acm-devex",
+    "title": "DevEx: What Actually Drives Productivity",
+    "url": "https://queue.acm.org/detail.cfm?id=3595878",
+    "type": "academic",
+    "used_in": ["the-strongest-counterargument"]
+  },
+  {
+    "id": "acm-space",
+    "title": "The SPACE of Developer Productivity",
+    "url": "https://queue.acm.org/detail.cfm?id=3454124",
+    "type": "academic",
+    "used_in": ["the-strongest-counterargument"]
+  },
+  {
+    "id": "jetbrains-roi-devex",
+    "title": "The ROI of Developer Experience: How a Better CI/CD Tool Pays for Itself",
+    "url": "https://blog.jetbrains.com/teamcity/2026/01/the-roi-of-dev-experience/",
+    "type": "article",
+    "used_in": ["the-strongest-counterargument"]
+  },
+  {
+    "id": "shopify-fastcompany",
+    "title": "Shopify Exec: This Is What Happened When We Canceled All Meetings",
+    "url": "https://www.fastcompany.com/90888605/shopify-exec-this-is-what-happened-when-we-canceled-all-meetings",
+    "type": "article",
+    "used_in": ["subtract-before-you-add"]
+  },
+  {
+    "id": "shopify-npr",
+    "title": "Shopify Deleted 322,000 Hours of Meetings",
+    "url": "https://www.npr.org/2023/02/15/1156804295/shopify-delete-meetings-zoom-virtual-productivity",
+    "type": "article",
+    "used_in": ["subtract-before-you-add"]
+  },
+  {
+    "id": "shopify-fortune",
+    "title": "Shopify Is Cutting All Unnecessary Meetings in Sweeping Calendar Purge",
+    "url": "https://fortune.com/2023/01/03/shopify-cutting-meetings-worker-productivity/",
+    "type": "article",
+    "used_in": ["subtract-before-you-add"]
+  },
+  {
+    "id": "cloudnuro-saas-audit",
+    "title": "The 2025 SaaS Audit Checklist: Find Unused Tools Worth Thousands",
+    "url": "https://www.cloudnuro.ai/blog/saas-spend-audit",
+    "type": "article",
+    "used_in": ["subtract-before-you-add"]
+  },
+  {
+    "id": "atlassian-dx",
+    "title": "Why Developer Experience Is More Important Than Productivity",
+    "url": "https://www.atlassian.com/blog/devops/developer-experience-more-important",
+    "type": "article",
+    "used_in": ["why-we-keep-buying-anyway"]
+  },
+  {
+    "id": "github-dev-satisfaction",
+    "title": "Why Developer Satisfaction Is Your Best Productivity Metric",
+    "url": "https://resources.github.com/developer-productivity/why-developer-satisfaction-is-your-best-productivity-metric/",
+    "type": "article",
+    "used_in": ["why-we-keep-buying-anyway"]
+  },
+  {
+    "id": "fullscale-scaling",
+    "title": "Engineering Team Scaling Challenges: Why Traditional Advice Fails at 50+ Developers",
+    "url": "https://fullscale.io/blog/engineering-team-scaling-challenges/",
+    "type": "article",
+    "used_in": ["the-slowest-teams-have-the-best-tools"]
+  },
+  {
+    "id": "dora-metrics-guide",
+    "title": "DORA's Software Delivery Performance Metrics",
+    "url": "https://dora.dev/guides/dora-metrics/",
+    "type": "guide",
+    "used_in": ["the-strongest-counterargument"]
+  },
+  {
+    "id": "martin-fowler-dev-effectiveness",
+    "title": "Maximizing Developer Effectiveness",
+    "url": "https://martinfowler.com/articles/developer-effectiveness.html",
+    "type": "article",
+    "used_in": ["the-strongest-counterargument"]
+  },
+  {
+    "id": "index-dev-stats",
+    "title": "Top 100 Developer Productivity Statistics with AI Tools 2026",
+    "url": "https://www.index.dev/blog/developer-productivity-statistics-with-ai-tools",
+    "type": "data",
+    "used_in": ["the-slowest-teams-have-the-best-tools"]
+  },
+  {
+    "id": "pragmatic-engineer-mckinsey",
+    "title": "Measuring Developer Productivity? A Response to McKinsey",
+    "url": "https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity",
+    "type": "article",
+    "used_in": ["the-strongest-counterargument"]
+  }
+]

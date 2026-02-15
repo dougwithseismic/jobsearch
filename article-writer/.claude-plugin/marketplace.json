@@ -1,0 +1,26 @@
+{
+  "name": "article-writer",
+  "owner": {
+    "name": "Doug Silkstone",
+    "email": "doug@withseismic.com"
+  },
+  "metadata": {
+    "description": "Autonomous article-writing agent for Claude Code with research, quality gates, and 8 content types"
+  },
+  "plugins": [
+    {
+      "name": "article-writer",
+      "source": "./",
+      "description": "Autonomous agent for writing articles with deep research, real-world examples, and quality-gated completion. Supports 8 content types and custom word lengths.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Doug Silkstone"
+      },
+      "homepage": "https://github.com/dougwithseismic/article-writer",
+      "repository": "https://github.com/dougwithseismic/article-writer",
+      "license": "MIT",
+      "keywords": ["writing", "articles", "research", "content", "autonomous"],
+      "category": "content"
+    }
+  ]
+}

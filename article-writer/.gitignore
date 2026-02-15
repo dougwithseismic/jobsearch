@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+articles/*/output/
+articles/*/research/
+articles/*/drafts/
+articles/*/progress.txt
+*.log

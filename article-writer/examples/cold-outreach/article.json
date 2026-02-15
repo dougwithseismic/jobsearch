@@ -1,0 +1,101 @@
+{
+  "topic": "Realistic Cold Outreach for Developer Services That Don't Cost the World",
+  "slug": "cold-outreach-developer-services",
+  "title": "The Developer's No-BS Guide to Cold Outreach: Land Clients Without Breaking the Bank",
+  "subtitle": "Practical strategies, affordable tools, and real templates for freelance developers who want predictable client acquisition",
+  "summary": "Cold outreach isn't dead—lazy outreach is. This guide shows freelance developers and small agencies how to build a sustainable client acquisition system using cold email and LinkedIn, without expensive tools or massive time investments. You'll learn the exact techniques, templates, and affordable tool stack that have generated millions in project revenue for developers worldwide.",
+  "status": "draft",
+  "created": "2026-01-29",
+  "targets": {
+    "total_words": 10000,
+    "minimum_words": 8000,
+    "sections": 10,
+    "external_links": 30,
+    "code_samples": 10,
+    "real_examples": 10
+  },
+  "narrative_arc": {
+    "hook": "Freelance developers spend hours applying to job boards with 2% success rates—while those who master cold outreach close $15k+ projects from simple emails",
+    "tension": "Most developers avoid cold outreach because they think it's spammy, expensive, or requires huge volumes. The real problem is they're using outdated tactics.",
+    "resolution": "A systematic approach using personalization, proper deliverability, and affordable tools can generate 10-20% response rates",
+    "transformation": "From reactive job-hunter to proactive business owner who controls their pipeline"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Why Cold Outreach Still Works for Developers",
+      "priority": 1,
+      "status": "pending",
+      "research_complete": false,
+      "word_target": 900,
+      "word_minimum": 800,
+      "narrative_role": "hook",
+      "required_elements": {
+        "examples_minimum": 2,
+        "code_samples": false,
+        "external_links_minimum": 3,
+        "case_study": true
+      },
+      "research_questions": [
+        "What are the best documented case studies of freelancers succeeding with cold outreach?",
+        "What are actual ROI numbers for cold email campaigns?",
+        "Why do most developers think cold outreach doesn't work?"
+      ]
+    },
+    {
+      "id": "landscape",
+      "title": "The 2026 Cold Outreach Landscape",
+      "priority": 2,
+      "status": "pending",
+      "research_complete": false,
+      "word_target": 1000,
+      "word_minimum": 800,
+      "narrative_role": "context",
+      "required_elements": {
+        "examples_minimum": 2,
+        "code_samples": false,
+        "external_links_minimum": 4,
+        "case_study": false
+      },
+      "research_questions": [
+        "What specific changes have email providers made that affect cold outreach?",
+        "How has personalization evolved from 2020 to 2026?",
+        "What's the role of AI in modern cold outreach?"
+      ]
+    },
+    {
+      "id": "deliverability",
+      "title": "The Technical Foundation Nobody Talks About",
+      "priority": 3,
+      "status": "pending",
+      "research_complete": false,
+      "word_target": 1200,
+      "word_minimum": 800,
+      "narrative_role": "foundation",
+      "required_elements": {
+        "examples_minimum": 2,
+        "code_samples": true,
+        "external_links_minimum": 4,
+        "case_study": false
+      },
+      "research_questions": [
+        "What DNS records are required for cold email deliverability?",
+        "What's the recommended warmup timeline for new domains?",
+        "How many emails per day maintains good deliverability?"
+      ]
+    }
+  ],
+  "quality_gates": {
+    "min_words_per_section": 800,
+    "min_links_per_section": 3,
+    "min_examples_total": 10,
+    "narrative_flow_check": true
+  },
+  "sources": [],
+  "metadata": {
+    "target_audience": "freelance developers and small dev agencies",
+    "reading_time": "40-50 minutes",
+    "technical_depth": "medium",
+    "tags": ["cold outreach", "freelance", "client acquisition", "cold email", "LinkedIn", "developer services"]
+  }
+}

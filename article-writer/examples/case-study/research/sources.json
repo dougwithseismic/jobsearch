@@ -1,0 +1,242 @@
+{
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Starting Linear - Karri Saarinen Personal Blog",
+      "url": "https://karrisaarinen.com/posts/starting-linear-app/",
+      "type": "primary",
+      "used_in": ["hook", "background", "challenge"]
+    },
+    {
+      "id": "s2",
+      "title": "Linear: Designing for the Developers - Sequoia Capital",
+      "url": "https://sequoiacap.com/article/linear-spotlight/",
+      "type": "primary",
+      "used_in": ["hook", "background", "approach"]
+    },
+    {
+      "id": "s3",
+      "title": "The Story of Linear as told by its CTO - Pragmatic Engineer",
+      "url": "https://newsletter.pragmaticengineer.com/p/linear",
+      "type": "primary",
+      "used_in": ["hook", "approach"]
+    },
+    {
+      "id": "s4",
+      "title": "Linear raises $4.2M Seed Round - TechCrunch",
+      "url": "https://techcrunch.com/2019/11/21/linear-lines-up-4-2m-led-by-sequoia-to-build-a-better-platform-for-software-developer-collaboration/",
+      "type": "news",
+      "used_in": ["background", "results"]
+    },
+    {
+      "id": "s5",
+      "title": "Linear raises $13M Series A from Sequoia - Medium",
+      "url": "https://medium.com/linear-app/linear-raises-13m-in-series-a-funding-from-sequoia-capital-daa0f0c43758",
+      "type": "primary",
+      "used_in": ["results"]
+    },
+    {
+      "id": "s6",
+      "title": "Linear raises $35M Series B led by Accel",
+      "url": "https://linear.app/now/series-b",
+      "type": "primary",
+      "used_in": ["results"]
+    },
+    {
+      "id": "s7",
+      "title": "Linear Series C - $82M at $1.25B Valuation",
+      "url": "https://linear.app/now/building-our-way",
+      "type": "primary",
+      "used_in": ["results"]
+    },
+    {
+      "id": "s8",
+      "title": "Linear App Case Study - Eleken",
+      "url": "https://www.eleken.co/blog-posts/linear-app-case-study",
+      "type": "analysis",
+      "used_in": ["hook", "background", "results"]
+    },
+    {
+      "id": "s9",
+      "title": "Karri Saarinen 6th Anniversary Tweet",
+      "url": "https://x.com/karrisaarinen/status/1880314177165869284",
+      "type": "primary",
+      "used_in": ["results"]
+    },
+    {
+      "id": "s10",
+      "title": "Linear Customers Page",
+      "url": "https://linear.app/customers",
+      "type": "primary",
+      "used_in": ["results"]
+    },
+    {
+      "id": "s11",
+      "title": "This Startup Went from 10,000 Waitlist Signups to a $400M Valuation",
+      "url": "https://www.growth-letter.com/p/this-startup-had-10000-people-on",
+      "type": "analysis",
+      "used_in": ["background", "results"]
+    },
+    {
+      "id": "s12",
+      "title": "How Linear Grows - Aakash Gupta",
+      "url": "https://www.news.aakashg.com/p/how-linear-grows",
+      "type": "analysis",
+      "used_in": ["approach", "results"]
+    },
+    {
+      "id": "s13",
+      "title": "Scaling the Linear Sync Engine",
+      "url": "https://linear.app/now/scaling-the-linear-sync-engine",
+      "type": "primary",
+      "used_in": ["approach"]
+    },
+    {
+      "id": "s14",
+      "title": "Reverse engineering Linear's sync magic",
+      "url": "https://marknotfound.com/posts/reverse-engineering-linears-sync-magic/",
+      "type": "analysis",
+      "used_in": ["approach"]
+    },
+    {
+      "id": "s15",
+      "title": "Tuomas Artman on localfirst.fm - Linear sync engines",
+      "url": "https://www.localfirst.fm/15",
+      "type": "primary",
+      "used_in": ["approach"]
+    },
+    {
+      "id": "s16",
+      "title": "Inside Linear: Why craft and focus still win - First Round Review",
+      "url": "https://review.firstround.com/podcast/inside-linear-why-craft-and-focus-still-win-in-product-building/",
+      "type": "primary",
+      "used_in": ["challenge", "lessons"]
+    },
+    {
+      "id": "s17",
+      "title": "Karri Saarinen: 10 Rules for Crafting Products - Figma Blog",
+      "url": "https://www.figma.com/blog/karri-saarinens-10-rules-for-crafting-products-that-stand-out/",
+      "type": "primary",
+      "used_in": ["lessons"]
+    },
+    {
+      "id": "s18",
+      "title": "Linear's Path to Product-Market Fit - First Round Review",
+      "url": "https://review.firstround.com/linears-path-to-product-market-fit/",
+      "type": "primary",
+      "used_in": ["challenge", "approach", "lessons"]
+    },
+    {
+      "id": "s19",
+      "title": "The Linear Method - Principles & Practices",
+      "url": "https://linear.app/method/introduction",
+      "type": "primary",
+      "used_in": ["approach", "lessons"]
+    },
+    {
+      "id": "s20",
+      "title": "Linear: When Opinionated Products Win - Medium",
+      "url": "https://medium.com/@aryan1999varma/linear-when-opinionated-products-win-e47e01c80756",
+      "type": "analysis",
+      "used_in": ["approach", "lessons"]
+    },
+    {
+      "id": "s21",
+      "title": "Why Developers Hate Jira - DEV Community",
+      "url": "https://dev.to/teamcamp/why-developers-hate-jira-and-10-best-jira-alternatives-1hl1",
+      "type": "analysis",
+      "used_in": ["challenge"]
+    },
+    {
+      "id": "s22",
+      "title": "Developer Flow State and Its Impact on Productivity - Stack Overflow",
+      "url": "https://stackoverflow.blog/2018/09/10/developer-flow-state-and-its-impact-on-productivity/",
+      "type": "research",
+      "used_in": ["challenge"]
+    },
+    {
+      "id": "s23",
+      "title": "Linear CEO Interview - Runtime News",
+      "url": "https://www.runtime.news/linear-ceo-karri-saarinen-our-customer-base-is-quite-powerful/",
+      "type": "primary",
+      "used_in": ["results", "lessons"]
+    },
+    {
+      "id": "s24",
+      "title": "How Linear App hit $100M revenue - GetLatka",
+      "url": "https://getlatka.com/companies/linear.app",
+      "type": "data",
+      "used_in": ["results"]
+    },
+    {
+      "id": "s25",
+      "title": "Jira Market Share - Datanyze",
+      "url": "https://www.datanyze.com/market-share/project-management--217/jira-market-share",
+      "type": "data",
+      "used_in": ["background"]
+    },
+    {
+      "id": "s26",
+      "title": "Building for Quality: Our Investment in Linear - Accel",
+      "url": "https://www.accel.com/noteworthies/our-investment-in-linear",
+      "type": "primary",
+      "used_in": ["approach", "results"]
+    },
+    {
+      "id": "s27",
+      "title": "Linear Pricing Teardown - Tierly",
+      "url": "https://tierly.app/blog/linear-pricing-teardown",
+      "type": "analysis",
+      "used_in": ["approach", "results"]
+    },
+    {
+      "id": "s28",
+      "title": "Linear rockets to unicorn status - TechFundingNews",
+      "url": "https://techfundingnews.com/linear-rockets-to-unicorn-status-82m-series-c-fuels-1-25b-valuation-in-jira-showdown/",
+      "type": "news",
+      "used_in": ["results"]
+    },
+    {
+      "id": "s29",
+      "title": "Why the CEO of a $1 Billion Startup Rejects Hustle Culture - Entrepreneur",
+      "url": "https://www.entrepreneur.com/leadership/why-this-1-billion-startup-ceo-rejects-996-hustle-culture/500649",
+      "type": "primary",
+      "used_in": ["lessons"]
+    },
+    {
+      "id": "s30",
+      "title": "The Linear Growth Playbook - Thoughtlytics",
+      "url": "https://www.thoughtlytics.com/newsletter/linear-playbook-growth-engine",
+      "type": "analysis",
+      "used_in": ["approach", "results"]
+    },
+    {
+      "id": "s31",
+      "title": "Lessons from Karri Saarinen of Linear - Antoine Buteau",
+      "url": "https://www.antoinebuteau.com/lessons-from-karri-saarinen-of-linear/",
+      "type": "analysis",
+      "used_in": ["lessons"]
+    },
+    {
+      "id": "s32",
+      "title": "Linear Switch Page",
+      "url": "https://linear.app/switch",
+      "type": "primary",
+      "used_in": ["results"]
+    },
+    {
+      "id": "s33",
+      "title": "The Linear Method: Opinionated Software - Figma Blog",
+      "url": "https://www.figma.com/blog/the-linear-method-opinionated-software/",
+      "type": "analysis",
+      "used_in": ["approach", "lessons"]
+    },
+    {
+      "id": "s34",
+      "title": "Linear valuation, funding & news - Sacra",
+      "url": "https://sacra.com/c/linear/",
+      "type": "data",
+      "used_in": ["results"]
+    }
+  ]
+}

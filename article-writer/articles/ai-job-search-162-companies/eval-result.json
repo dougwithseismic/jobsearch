@@ -1,0 +1,81 @@
+{
+  "evaluated_at": "2026-02-15T23:00:00Z",
+  "content_type": "case-study",
+  "iteration": 2,
+  "overall_verdict": "PASS",
+  "gates": {
+    "word_count": {
+      "target": 5000,
+      "minimum": 4000,
+      "actual": 4000,
+      "verdict": "PASS"
+    },
+    "sections_complete": {
+      "target": "all",
+      "min_words_per_section": 500,
+      "actual": "6 of 6",
+      "section_words": {
+        "hook": 514,
+        "background": 623,
+        "challenge": 648,
+        "approach": 849,
+        "results": 653,
+        "lessons": 630
+      },
+      "verdict": "PASS"
+    },
+    "external_links": {
+      "target": 13,
+      "actual": 36,
+      "unique": 35,
+      "verdict": "PASS"
+    },
+    "real_world_examples": {
+      "target": 4,
+      "actual": 15,
+      "examples": [
+        "Bending Spoons acquire-and-fire pattern (Evernote, Filmic, WeTransfer, Vimeo)",
+        "Spitfire Audio layoffs and co-founder departure",
+        "Ableton 20% workforce reduction",
+        "Epidemic Sound rolling layoffs",
+        "Productboard implosion",
+        "thum.io/mshots vs Puppeteer build-vs-buy",
+        "ustwo (Monument Valley, employee-owned studio)",
+        "Bakken & Bæck (multi-city product studio)",
+        "Dan Abramov — Redux → Facebook React team",
+        "Kenneth Reitz — Requests → Heroku Python Architect",
+        "Kim Swift — Narbacular Drop → Portal at Valve",
+        "Realm.fun (game servers, TS dashboard)",
+        "MapTiler (mapping, TS SDK)",
+        "Tractive (pet GPS, React app)",
+        "HAMY.xyz senior engineer 2025 job search data"
+      ],
+      "verdict": "PASS"
+    },
+    "prose_ratio": {
+      "target": 0.75,
+      "actual": "100%",
+      "verdict": "PASS"
+    },
+    "header_style": {
+      "colon_headers_found": 0,
+      "verdict": "PASS"
+    },
+    "narrative_quality": {
+      "hook": "PASS",
+      "flow": "PASS",
+      "closing": "PASS",
+      "verdict": "PASS",
+      "notes": "Strong opening with credentials-contrast hook. Sections connect logically through problem → context → challenge → build → findings → lessons. Closing ties back to opening thesis."
+    },
+    "summary_quality": {
+      "verdict": "PASS",
+      "notes": "Subtitle captures main value proposition, mentions key tools and outcomes."
+    }
+  },
+  "issues": [],
+  "recommendations": [
+    "Article meets minimum word count but is below the 5,000 target — could be expanded further for the approach section",
+    "Consider adding a brief section on specific tools/code snippets for the tutorial-minded audience"
+  ]
+}

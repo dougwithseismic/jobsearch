@@ -1,0 +1,97 @@
+{
+  "evaluated_at": "2026-02-06",
+  "status": "PASS",
+  "total_words": 2989,
+  "targets": {
+    "total_words": {
+      "target": 3000,
+      "minimum": 2000,
+      "actual": 2989,
+      "pass": true,
+      "note": "Within 11 words of target, well above minimum"
+    },
+    "external_links": {
+      "target": 10,
+      "actual": 27,
+      "unique_urls": 24,
+      "pass": true
+    },
+    "real_examples": {
+      "target": 5,
+      "actual": 12,
+      "pass": true,
+      "examples": [
+        "METR study - AI tools slow experienced developers by 19% (randomized controlled trial)",
+        "37signals/Basecamp - 20+ years profitable with deliberate tool minimalism",
+        "DORA 2024 report - AI adoption correlated with decreased delivery throughput",
+        "Shopify - 322,000 hours of meetings eliminated, 25% more projects completed",
+        "Gloria Mark (UC Irvine) - attention spans shrunk from 2.5 min to 47 seconds",
+        "Microsoft telemetry - 275 interruptions per day for knowledge workers",
+        "Stack Overflow 2025 survey - 49,000 devs say autonomy is #1 satisfaction driver",
+        "Spotify squad model - organic tool adoption through autonomy, not mandates",
+        "SaaS audit case - founder found $32,736 in unused tool subscriptions",
+        "GitHub Copilot - $400M revenue but experienced devs slower per METR",
+        "CI/CD adoption data - elite teams deploy 208x more frequently",
+        "McKinsey DX programs - 10-20% measurable productivity gains"
+      ]
+    },
+    "prose_ratio": {
+      "target": 0.8,
+      "actual": 1.0,
+      "pass": true,
+      "note": "100% prose, zero bullet points in the article"
+    }
+  },
+  "section_word_counts": {
+    "the-slowest-teams-have-the-best-tools": {
+      "target": 550,
+      "minimum": 400,
+      "actual": 602,
+      "pass": true
+    },
+    "the-tool-tax-nobody-measures": {
+      "target": 700,
+      "minimum": 400,
+      "actual": 576,
+      "pass": true
+    },
+    "why-we-keep-buying-anyway": {
+      "target": 650,
+      "minimum": 400,
+      "actual": 608,
+      "pass": true
+    },
+    "the-strongest-counterargument": {
+      "target": 550,
+      "minimum": 400,
+      "actual": 540,
+      "pass": true
+    },
+    "subtract-before-you-add": {
+      "target": 550,
+      "minimum": 400,
+      "actual": 624,
+      "pass": true
+    }
+  },
+  "editorial_review": {
+    "thesis_clarity": "STRONG - thesis stated in section 1 and reinforced throughout: tool sprawl creates invisible tax; subtraction beats addition",
+    "counterarguments_addressed": "YES - dedicated section steel-mans CI/CD, version control, and infrastructure tools as genuine force multipliers; draws clear line between infrastructure and coordination tools",
+    "narrative_flow": "STRONG - hook (contrast fast/slow teams) -> thesis (hidden tool tax) -> analysis (incentive structures) -> counterpoint (real tool wins) -> action (subtract framework)",
+    "voice": "Opinionated and direct with specific data points; second person throughout; conference-talk energy without academic hedging",
+    "header_style": "PASS - conversational, no colons, 4-7 words each",
+    "prose_ratio_check": "PASS - 100% prose, no bullet points"
+  },
+  "sources_summary": {
+    "total_sources_in_article": 27,
+    "unique_sources": 24,
+    "source_types": {
+      "academic_research": 3,
+      "industry_reports": 5,
+      "surveys": 2,
+      "news_articles": 4,
+      "company_sources": 4,
+      "analysis_articles": 6
+    }
+  }
+}

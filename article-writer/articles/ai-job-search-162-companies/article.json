@@ -1,0 +1,366 @@
+{
+  "topic": "I Built an AI-Powered System to Research 162 Companies in a Day — Here's What I Learned",
+  "slug": "ai-job-search-162-companies",
+  "article_type": "technical",
+  "content_type": "case-study",
+  "title": "I Built an AI-Powered System to Research 162 Companies in a Day",
+  "subtitle": "How a growth engineer used Claude Code, browser automation, and a Tinder-style swipe tool to turn job searching into a data problem — and what 162 European startups revealed about the hiring landscape",
+  "summary": "Job searching as a senior engineer is broken. You're either swiping LinkedIn blind or spray-and-praying CVs into the void. I built an AI-powered research pipeline that evaluated 162 companies in a single day — complete with reputation scoring, automated screenshots, and a custom swipe tool. Along the way, I discovered that Glassdoor scores are systematically misleading, that the best companies for my skills aren't the ones I find most exciting, and that the entire build-vs-buy equation has flipped when you have an AI pair programmer.",
+  "status": "complete",
+  "completed_date": "2026-02-15",
+  "final_word_count": 6452,
+  "review_notes": "All quality gates passed. 44+ external links (target 13), 20+ real-world examples (target 4), 100% prose ratio (target 75%). Expanded from 3,068 initial draft through two revision passes to 5,000, then major expansion adding Section 5 (outreach machine) and Puppeteer narrative update to 6,452.",
+  "created": "2026-02-15",
+  "custom_word_count": 5000,
+  "targets": {
+    "total_words": 5000,
+    "minimum_words": 4000,
+    "sections": 6,
+    "external_links": 13,
+    "real_world_examples": 4
+  },
+  "editorial_standards": {
+    "prose_ratio_minimum": 0.75,
+    "max_consecutive_bullets": 4,
+    "header_style": "conversational, no colons"
+  },
+  "narrative_arc": {
+    "hook": "Every other candidate sends a CV. What if you showed up having already done the work?",
+    "tension": "162 companies. No signal. How do you find the right one when job boards show you everything except what matters?",
+    "resolution": "Build the research tool yourself — AI agents, reputation scoring, a swipe interface, and automated screenshots",
+    "transformation": "Reader understands how to treat job searching as an engineering problem, not a lottery"
+  },
+  "sections": [
+    {
+      "id": "hook",
+      "title": "The Recruiter's Inbox Problem",
+      "priority": 1,
+      "status": "pending",
+      "research_complete": true,
+      "word_target": 600,
+      "word_minimum": 500,
+      "narrative_role": "hook",
+      "required_elements": {
+        "examples_minimum": 1,
+        "external_links_minimum": 2,
+        "evidence_types": ["personal anecdote", "industry data point"]
+      },
+      "scaffold": {
+        "opening_hook": "I've shipped three products to exit, led teams from zero to a million users, and been featured in an MIT course taken by 50,000 students. And I still can't figure out where to apply for a job.",
+        "central_argument": "Job searching for senior engineers is fundamentally broken — the tools are designed for volume, not signal",
+        "key_questions": [
+          "Why do senior engineers with strong track records still struggle with job searching?",
+          "What's wrong with LinkedIn/Indeed/Wellfound for someone who knows exactly what they want?",
+          "What would it look like to treat this as an engineering problem?"
+        ],
+        "example_types": ["personal experience", "industry statistic"],
+        "closing_bridge": "So I did what any engineer would do — I built something"
+      },
+      "research_questions": [
+        "What are current stats on senior engineer job search frustration?",
+        "How many applications does the average senior engineer send before landing a role?",
+        "What do hiring managers say about the quality of inbound applications?"
+      ],
+      "word_count": 514,
+      "status": "written"
+    },
+    {
+      "id": "background",
+      "title": "What I Was Actually Looking For",
+      "priority": 2,
+      "status": "pending",
+      "research_complete": true,
+      "word_target": 700,
+      "word_minimum": 500,
+      "narrative_role": "background",
+      "required_elements": {
+        "examples_minimum": 1,
+        "external_links_minimum": 2,
+        "evidence_types": ["personal context", "career data"]
+      },
+      "scaffold": {
+        "opening_hook": "Prague, February 2026. I'm a full-stack engineer with 15 years of experience, three exits, and a very specific problem.",
+        "central_argument": "The more experienced you are, the harder it is to find the right fit — because 'right' stops meaning 'any job that pays' and starts meaning something much more specific",
+        "key_questions": [
+          "What does a senior engineer with 3 exits actually want from their next role?",
+          "Why is the European startup landscape harder to navigate than US/global?",
+          "What makes this search different from a typical job hunt?"
+        ],
+        "example_types": ["personal career arc", "specific companies/clients"],
+        "closing_bridge": "The criteria were clear. The problem was finding 160+ companies that might match — without spending three months on LinkedIn"
+      },
+      "research_questions": [
+        "What is the European startup landscape like for senior engineers in 2025-2026?",
+        "How do experienced engineers define 'fit' beyond salary and title?",
+        "What verticals are growing in European tech?"
+      ],
+      "word_count": 623,
+      "status": "written"
+    },
+    {
+      "id": "challenge",
+      "title": "Swiping Blind on 162 Companies",
+      "priority": 3,
+      "status": "pending",
+      "research_complete": true,
+      "word_target": 800,
+      "word_minimum": 500,
+      "narrative_role": "challenge",
+      "required_elements": {
+        "examples_minimum": 1,
+        "external_links_minimum": 2,
+        "evidence_types": ["system architecture", "data quality problem"]
+      },
+      "scaffold": {
+        "opening_hook": "The first research sprint produced 101 companies in a few hours. And they were almost useless.",
+        "central_argument": "Scale without context creates a new problem — you have data but no signal. The swipe tool exposed that you can't make decisions from one-line descriptions",
+        "key_questions": [
+          "What happens when you automate research but not understanding?",
+          "How do you make yes/no decisions on companies you've never heard of?",
+          "What data do you actually need to evaluate a company?"
+        ],
+        "example_types": ["specific tool output", "data quality example"],
+        "closing_bridge": "The tool was fast. The data feeding it wasn't good enough. Time to build the machine properly."
+      },
+      "research_questions": [
+        "What are common pitfalls of automated company research?",
+        "How do job seekers typically evaluate companies beyond job boards?",
+        "What signals matter most when evaluating startup quality?"
+      ],
+      "word_count": 648,
+      "status": "written"
+    },
+    {
+      "id": "approach",
+      "title": "Building the Machine",
+      "priority": 4,
+      "status": "pending",
+      "research_complete": true,
+      "word_target": 1200,
+      "word_minimum": 800,
+      "narrative_role": "approach",
+      "required_elements": {
+        "examples_minimum": 2,
+        "external_links_minimum": 3,
+        "evidence_types": ["code architecture", "tool comparison", "build-vs-buy decision"]
+      },
+      "scaffold": {
+        "opening_hook": "The system has five layers, and each one exists because the previous one broke.",
+        "central_argument": "Each component was built reactively — not designed upfront, but created when a real problem emerged. The AI agents did research. The swipe tool exposed data gaps. The reputation scoring caught hidden landmines. The screenshot service replaced two broken SaaS products.",
+        "key_questions": [
+          "What does an AI-powered company research pipeline actually look like?",
+          "How do you build a reputation scoring system for companies?",
+          "When does 'just build it' beat using a SaaS tool?"
+        ],
+        "example_types": ["system architecture description", "specific code/tool decisions", "build-vs-buy comparison"],
+        "closing_bridge": "The machine was running. 162 companies scored, rated, and ready to review. But the most interesting findings weren't in the data — they were in the patterns."
+      },
+      "research_questions": [
+        "What tools exist for automated company research?",
+        "How accurate are Glassdoor reviews — research and analysis?",
+        "What is the current state of Puppeteer for browser automation?",
+        "How are AI agents being used for research tasks in 2025-2026?",
+        "What is Claude Code and how does it work for agentic workflows?"
+      ],
+      "word_count": 849,
+      "status": "written"
+    },
+    {
+      "id": "results",
+      "title": "What 162 Companies Actually Taught Me",
+      "priority": 5,
+      "status": "pending",
+      "research_complete": true,
+      "word_target": 1000,
+      "word_minimum": 800,
+      "narrative_role": "results",
+      "required_elements": {
+        "examples_minimum": 2,
+        "external_links_minimum": 2,
+        "evidence_types": ["data findings", "specific company examples", "strategic insight"]
+      },
+      "scaffold": {
+        "opening_hook": "The data told three stories I wasn't expecting.",
+        "central_argument": "Three counterintuitive findings: (1) Glassdoor scores are systematically misleading — high ratings hide mass layoffs, (2) The most exciting companies don't need your skills, the boring-sounding ones do, (3) Agencies solve the 'can't pick one vertical' problem",
+        "key_questions": [
+          "How specifically are Glassdoor scores misleading?",
+          "What's the tension between exciting domains and practical skill fit?",
+          "Why did the agency angle emerge as a strategic breakthrough?"
+        ],
+        "example_types": ["specific company examples with data", "before/after realization"],
+        "closing_bridge": "The system didn't just find companies — it changed how I think about what I'm looking for"
+      },
+      "research_questions": [
+        "What research exists on Glassdoor review manipulation or inaccuracy?",
+        "How do agencies like ustwo, Bakken & Baeck position their engineering teams?",
+        "What is the 'acquire-and-fire' pattern in tech M&A?"
+      ],
+      "word_count": 653,
+      "status": "written"
+    },
+    {
+      "id": "lessons",
+      "title": "Growth Engineering Your Own Career",
+      "priority": 6,
+      "status": "pending",
+      "research_complete": true,
+      "word_target": 700,
+      "word_minimum": 500,
+      "narrative_role": "lessons",
+      "required_elements": {
+        "examples_minimum": 1,
+        "external_links_minimum": 2,
+        "evidence_types": ["meta-reflection", "actionable takeaway"]
+      },
+      "scaffold": {
+        "opening_hook": "The irony isn't lost on me: I used growth engineering to find a growth engineering job.",
+        "central_argument": "The meta-lesson: the tools and thinking you use in your day job are the same ones that make you stand out in a job search. The build IS the portfolio. The process IS the pitch.",
+        "key_questions": [
+          "What can other engineers learn from this approach?",
+          "How does 'demonstrate, don't apply' change the hiring dynamic?",
+          "What would you do differently?"
+        ],
+        "example_types": ["meta-reflection", "practical advice"],
+        "closing_bridge": "The system found me 162 companies. But the real product wasn't the database — it was the proof that I know how to build things that find signal in noise."
+      },
+      "research_questions": [
+        "What outreach strategies work for senior engineers beyond standard applications?",
+        "How do growth engineers typically demonstrate value to prospective employers?",
+        "What's the current discourse on 'building in public' as a career strategy?"
+      ],
+      "word_count": 630,
+      "status": "written"
+    }
+  ],
+  "quality_gates": {
+    "min_words_per_section": 500,
+    "min_links_per_section": 2,
+    "min_examples_total": 4,
+    "narrative_flow_check": true,
+    "prose_ratio_check": true
+  },
+  "research_config": {
+    "sources_per_section": 6,
+    "search_queries_min": 5,
+    "include_video_research": true
+  },
+  "sources": [
+    {
+      "id": "pragmatic-engineer-2025",
+      "title": "State of the software engineering jobs market, 2025: what hiring managers see",
+      "author": "Gergely Orosz",
+      "publication": "The Pragmatic Engineer",
+      "url": "https://newsletter.pragmaticengineer.com/p/state-of-the-tech-market-in-2025-hiring-managers",
+      "date": "2025-10-07",
+      "type": "newsletter",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "fortune-ai-doom-loop",
+      "title": "Trust is at an all-time low for both job seekers and recruiters",
+      "publication": "Fortune",
+      "url": "https://fortune.com/2025/11/18/hiring-job-seekers-recruiters-talent-acquisition-ai-doom-loop-application-technology/",
+      "date": "2025-11-18",
+      "type": "news",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "shrm-recruitment-broken",
+      "title": "Recruitment Is Broken. Automation and Algorithms Can't Fix It.",
+      "publication": "SHRM",
+      "url": "https://www.shrm.org/topics-tools/news/hr-trends/recruitment-is-broken",
+      "date": "2025",
+      "type": "industry_report",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "hiringthing-2025-stats",
+      "title": "2025 Job Application Statistics",
+      "publication": "HiringThing",
+      "url": "https://blog.hiringthing.com/2025-job-application-statistics-updated-data-you-need-to-know",
+      "date": "2025",
+      "type": "data_aggregation",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "ghosting-index-2025",
+      "title": "The 2025 Ghosting Index",
+      "publication": "The Interview Guys",
+      "url": "https://blog.theinterviewguys.com/the-2025-ghosting-index/",
+      "date": "2025",
+      "type": "research_report",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "passive-secrets-job-seekers",
+      "title": "Job Seekers Statistics (2026): 100+ Facts, Trends, New Data",
+      "publication": "Passive Secrets",
+      "url": "https://passivesecrets.com/job-seekers-statistics-facts/",
+      "date": "2025",
+      "type": "data_aggregation",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "talent-msh-ai-recruitment",
+      "title": "AI Recruitment Trends & Statistics In 2026",
+      "publication": "Talent MSH",
+      "url": "https://www.talentmsh.com/insights/ai-in-recruitment",
+      "date": "2025",
+      "type": "industry_analysis",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "metaview-future-recruiting",
+      "title": "Future of recruiting: 10 predictions to redefine AI and hiring in 2026",
+      "publication": "Metaview",
+      "url": "https://www.metaview.ai/resources/blog/future-of-recruiting-predictions",
+      "date": "2025",
+      "type": "industry_predictions",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "talroo-resume-spam",
+      "title": "Fighting Resume Spam in 2025",
+      "author": "Jessica Miller-Merrell",
+      "publication": "Talroo",
+      "url": "https://www.talroo.com/blog/fighting-resume-spam-in-2025-how-to-identify-low-intent-applications/",
+      "date": "2025",
+      "type": "industry_blog",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "resume-now-ai-report",
+      "title": "62% of Employers Reject AI-Generated Resumes Without Personalization",
+      "publication": "Resume Now",
+      "url": "https://www.resume-now.com/job-resources/careers/ai-applicant-report",
+      "date": "2025",
+      "type": "survey_report",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "careerplug-metrics",
+      "title": "Recruiting Metrics Benchmarks",
+      "publication": "CareerPlug",
+      "url": "https://www.careerplug.com/recruiting-metrics-and-kpis/",
+      "date": "2025",
+      "type": "data_aggregation",
+      "used_in": ["hook"]
+    },
+    {
+      "id": "addison-engineering-2026",
+      "title": "Engineering hiring trends, in-demand jobs & top salaries: 2026 Workforce Planning Guide",
+      "publication": "Addison Group",
+      "url": "https://addisongroup.com/insights/engineering-hiring-trends-workforce-planning-guide-2026/",
+      "date": "2025",
+      "type": "workforce_guide",
+      "used_in": ["hook"]
+    }
+  ],
+  "metadata": {
+    "target_audience": "Senior software engineers frustrated with traditional job searching, growth engineers, developers interested in AI-assisted workflows, HN/Dev.to readers who appreciate technical deep-dives on unconventional approaches",
+    "reading_time_estimate": "20-25 minutes",
+    "depth": "high",
+    "tags": ["job-search", "ai-agents", "growth-engineering", "claude-code", "browser-automation", "career", "startups", "europe"],
+    "publish_targets": ["personal blog", "Hacker News", "Dev.to", "LinkedIn", "Twitter thread"]
+  }
+}
