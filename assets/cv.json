@@ -1,0 +1,114 @@
+{
+  "name": "Doug Silkstone",
+  "title": "Lead Full Stack Software Engineer",
+  "availability": "February 2026",
+  "location": "Prague, Czech Republic",
+  "experience_years": "15+",
+  "links": {
+    "github": "https://github.com/dougwithseismic",
+    "portfolio": "https://contra.com/doug_silkstone/work",
+    "linkedin": "https://linkedin.com/in/dougsilkstone"
+  },
+  "about": "15 years across engineering, product, and growth. Built and sold 3 products as solo founder. Clients have collectively raised $20M USD in early-stage funding. LLM tooling work featured in MIT's Generative AI course (50,000+ students). Author of open-source automation NPM packages. Looking for ownership of a revenue-adjacent problem with opportunities to build and mentor a team.",
+  "skills": {
+    "languages": ["TypeScript", "Python", "C++"],
+    "technologies": ["React", "Next.js", "Express", "Node", "Tailwind", "Vercel", "AWS", "Postgres", "MongoDB", "GCP"],
+    "other": ["Scraping & Automation", "Martech & Analytics", "Growth Engineering", "Agentic Workflows"]
+  },
+  "notable_clients": ["Contra", "Framer", "The Motley Fool", "Groupon", "Sky", "MIT", "Techstars-backed startups"],
+  "highlights": {
+    "exits": 3,
+    "client_funding_raised": "$20M USD",
+    "mit_course_students": "50,000+",
+    "team_leadership": true
+  },
+  "experience": [
+    {
+      "company": "DinnersWithFriends.co.uk",
+      "role": "Technical Founder",
+      "period": "2024 - Present",
+      "tech": ["TypeScript", "React", "Next.js", "Hono", "Postgres", "GCP"],
+      "highlights": [
+        "Designed, developed, and owned all aspects of digital platform matching people for social dining experiences",
+        "Implemented merchant-of-record setup using Stripe Connect for franchise model",
+        "SEO-optimized with product/market analytics, email automation, messaging queues, revenue dashboards, and LLM-powered admin workflows"
+      ]
+    },
+    {
+      "company": "Patrianna Ltd",
+      "role": "Lead Growth Engineer",
+      "period": "2022 - 2023",
+      "tech": ["TypeScript", "Next.js", "React", "Postgres", "Java Spring"],
+      "highlights": [
+        "Led greenfield in-house Game Studio for top-three social casino from zero to 1M players",
+        "Built MVP game delivery mechanism and five high-stakes casino games",
+        "Hired and led nine-member team"
+      ]
+    },
+    {
+      "company": "getBenson.com",
+      "role": "Senior Full-stack Developer",
+      "period": "2021 - 2022",
+      "tech": ["TypeScript", "React", "Next.js", "Node", "Express", "Drizzle", "Postgres"],
+      "highlights": [
+        "Built SAAS app protecting 25M+ monthly sessions by detecting and blocking web extensions from leaking discount codes",
+        "Rewrote MVP to production codebase",
+        "Onboarded 80+ brands including Theory11.com",
+        "Led technical sales calls with C-Suite directors",
+        "Commercially exited in 2023"
+      ]
+    },
+    {
+      "company": "withSeismic.com",
+      "role": "Full Stack Engineering Consultant",
+      "period": "2016 - Present",
+      "tech": ["TypeScript", "JavaScript", "Node", "Express"],
+      "highlights": [
+        "Full-time consultancy across engineering, growth, and greenfield initiatives",
+        "Clients include Contra.com, Sky, Groupon, The Motley Fool, Framer, and MIT"
+      ]
+    },
+    {
+      "company": "Vouchernaut.com",
+      "role": "Full Stack Software Engineer",
+      "period": "2018 - 2021",
+      "tech": ["TypeScript", "JavaScript", "Next.js", "Node", "Express", "Gatsby", "Puppeteer", "Postgres"],
+      "highlights": [
+        "Lead engineer for affiliate network automation system covering 10,000+ brands internationally",
+        "Developed voucher publishing portal serving 250k sessions monthly",
+        "Rebuilt from Gatsby to Next.js, increasing organic traffic by 60%",
+        "Sold technology to Private Equity investors in 2021"
+      ]
+    },
+    {
+      "company": "Mekamon.com / Reach Robotics",
+      "role": "Head of Digital",
+      "period": "2016 - 2018",
+      "tech": ["Shopify", "WordPress", "GA", "GTM", "Unity", "BigQuery", "Firebase Analytics"],
+      "highlights": [
+        "Go-to-market strategy for DTC AR Spider Robot launched in Apple Stores globally",
+        "Led E-commerce project for international release",
+        "Implemented Martech and Analytics solutions",
+        "Hired and led team across digital, marketing, customer support, and procurement"
+      ]
+    },
+    {
+      "company": "Vouchercloud",
+      "role": "Performance Marketing & Automation",
+      "period": "2015 - 2016",
+      "tech": ["React"],
+      "highlights": [
+        "Managed multi-million-pound paid search budget for 15 international websites",
+        "Built internal tools saving 240 monthly hours, cutting SEM team overhead by 40%",
+        "Company later acquired by NASDAQ-listed company"
+      ]
+    },
+    {
+      "company": "Beatlock Records",
+      "role": "Digital Marketing Manager",
+      "period": "2014 - 2016",
+      "tech": [],
+      "highlights": []
+    }
+  ]
+}
