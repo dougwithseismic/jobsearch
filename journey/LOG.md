@@ -546,3 +546,311 @@ The research phase was the most expensive — each section got its own agent doi
 The meta-irony runs deep: an AI-assisted article about an AI-assisted job search, where the article itself is one of the AI-generated outreach strategies, published to a web increasingly read by AI systems. But irony doesn't invalidate utility. Better that Google sees constant traffic on Doug's domain than silence. Better that AI crawlers index a dense, specific case study than nothing. And the humans who do read it — the hiring managers at Apify, Photoroom, Raycast, Musixmatch — will see a candidate who already mapped their landscape, scored their reputation, and built infrastructure to approach them intelligently. That signal cuts through regardless of how the prose was produced.
 
 ---
+
+### 2026-02-16 — Slonik Deep Dive: Finding the Perfect PR for Contra's CTO
+
+**Phase:** Outreach
+**What:** Conducted a comprehensive analysis of Gajus Kuizinas's (Contra CTO) open source portfolio to identify the highest-value contribution opportunity. Mapped all 333 repos, verified all 26 open Slonik issues against live GitHub data, researched community sentiment across Reddit/HN/blogs, and identified Issue #719 (DISCARD ALL on connection pool return) as the ideal PR target — an enhancement Gajus himself approved four months ago that nobody's built yet.
+
+**Why:** Contra is Doug's warmest lead — prior client relationship through withSeismic, exact stack match (React/TS/Next.js/Node/PostgreSQL), remote-first, well-funded ($45M). But no engineering roles are currently posted. The outreach needs to create demand, not respond to it. Contributing to Gajus's open source work creates a technically credible warm introduction: "I submitted a PR for the pool cleanup feature you mentioned in #719" hits differently than any cold message. This is the "demonstrate, don't apply" philosophy applied to its most important target.
+
+**How:** Two parallel research tracks:
+1. **GitHub deep dive** — Browser agent explored github.com/gajus, cataloguing repos by downloads, stars, activity, and open issues. Found that Gajus's top projects by volume aren't the famous ones: roarr (5.36M weekly downloads), global-agent (4.78M), eslint-plugin-jsdoc (4.65M) dwarf Slonik's 117K. But Slonik (4.9K stars, 1,196 releases, updated 4 days ago) is the flagship — it's what Contra actually uses.
+2. **Community sentiment research** — Web search agent trawled Reddit, HN, blogs, and Stack Overflow for Slonik pain points. Uncovered a damning pattern: the community loves Slonik's ideas (SQL-first, runtime Zod validation, type safety) but is frustrated by the execution (frequent breaking changes, forced Zod migration in v33, dismissive responses to gradual adoption requests). A company literally forked Slonik (Silverhand/Logto) rather than deal with the upgrade path. Kysely now has 20x the downloads. The market has moved.
+
+Then verified every open issue against live GitHub:
+- **#719** (DISCARD ALL) — Gajus responded "This is a reasonable improvement" Nov 6, 2025. Zero PRs submitted. This is it.
+- **#660** (connection leak on error) — real production pain, connection never releases. Backup target.
+- **#569** (DISABLE_TIMEOUT silently uses 10s) — open almost 2 years, straightforward default value bug.
+- **#743** (undefined bypasses timeout defaults) — classic config spread bug.
+- **#740** (sql.unsafe returns `any`) — already has a linked PR (#741), might step on toes.
+- **#706** (Zod peer deps) — dependency management, not a code contribution.
+- **#751** (transformRowAsync parallelization) — newest, complex internals.
+
+**Outcome:**
+- Full map of Gajus's open source: 333 repos, 2.6K followers, 20M+ weekly NPM downloads across portfolio
+- Slonik community analysis: loved for ideas, frustrated by breaking changes, market share eroding to Kysely/Drizzle/postgres.js
+- Primary PR target: Issue #719 — approved enhancement, zero competition, addresses Slonik's weakest area (connection pooling)
+- Backup targets: #660 (hero play — production connection leak), #569 (easy win — wrong default value)
+- Also identified Liqe (Lucene-like parser, 670 stars, 13 issues) as an alternative lower-friction contribution — ReDoS protection needed, broken type definitions
+
+**Decisions:**
+- Chose #719 over easier bugs (#569, #743) — an approved enhancement shows initiative and taste, not just bug-fixing ability. Gajus already said yes to the concept; now someone needs to build it
+- Chose Slonik over Liqe — Slonik is Contra's actual database layer and Gajus's pride project. A contribution there carries more weight than a fix to a utility library
+- Chose contribution over building something new (like a Slonik migration tool or postgres.js wrapper) — the goal is a warm introduction to Gajus, not a competing project. The PR creates a conversation; a competing tool creates distance
+- Logged the community sentiment findings (breaking changes, Kysely migration, Silverhand fork) as context for the outreach strategy — understanding Slonik's market position helps frame Doug's contribution as supporting the project, not criticizing it
+
+**Reflection:** This is the most surgically targeted outreach prep so far. Instead of "apply to Contra and hope," the plan is: build a specific feature that the CTO already approved → submit the PR → reference it in outreach alongside the existing withSeismic relationship. Three touchpoints: prior client work, shared open-source values (Doug maintains NPM packages too), and a concrete code contribution. The community research also revealed something useful for the outreach angle — Slonik is losing market share and Gajus is actively maintaining it (release 4 days ago, 1,196 total releases). A quality contributor who shows up and ships is valuable to a maintainer watching competitors grow. Doug isn't just asking for a job; he's showing up as someone who strengthens Gajus's ecosystem. That's the play.
+
+---
+
+### 2026-02-16 — First Open Source PR: ColdFusion Support for Raycast's ray.so
+
+**Phase:** Outreach
+**What:** Spotted issue #324 on Raycast's `ray-so` repository — a feature request for ColdFusion (CFML/CFScript) syntax highlighting that had been open since November 2025. Researched the codebase, sourced a compatible TextMate grammar, implemented the feature, verified it locally, and submitted PR #407. The whole thing — from reading the issue to a merged-ready PR — took a single session.
+
+**Why:** The 50-dossier sprint flagged Raycast as a hot opportunity: Design Engineer role (EUR 100-135K), exact stack match (Next.js/TypeScript), fully remote from Prague, and the dossier specifically noted that `raycast/ray-so` had open issues in Doug's wheelhouse. This is the open-source contribution play from the outreach strategy — ship code in a company's codebase before you ever apply. A merged PR to ray.so is a warm intro to Raycast's engineering team: "I've already contributed to your product" hits differently than "I'm a fan of Raycast."
+
+**How:** End-to-end implementation:
+1. Pulled the issue details via `gh` CLI — ColdFusion user requesting CFML/CFScript syntax support, maintainer (samuelkraft) confirmed they accept TextMate grammars and would approve a PR
+2. Cloned ray.so, explored the architecture: Shiki v1.0.0 for syntax highlighting, languages registered in a single `languages.ts` file via dynamic imports of `shiki/langs/*.mjs` modules
+3. Confirmed Shiki doesn't bundle a ColdFusion grammar (checked all 300+ bundled languages — no match)
+4. Researched three grammar sources: the official TextMate ColdFusion bundle (XML, stale since 2009), ilich/vscode-coldfusion (XML, unmaintained), and KamasamaK/vscode-cfml (JSON, MIT licensed, comprehensive). Chose vscode-cfml — already in Shiki-native `.tmLanguage.json` format, covers both tag-based CFML and CFScript, self-contained with no external grammar dependencies
+5. Created the first custom grammar in the project: `grammars/cfml.tmLanguage.json` (606KB grammar file) + `grammars/cfml.ts` (thin wrapper exporting in Shiki's expected format with MIT attribution)
+6. Added 4-line entry to `languages.ts` — alphabetically placed, dynamically imported so it only loads when selected
+7. Ran the full PR review: verified alphabetical ordering, import path conventions, TypeScript strictness, module format matching Shiki's shape, license compatibility (MIT ↔ MIT), and ESLint/Prettier compliance via lint-staged
+8. Spun up dev server, verified CFML appears in the language dropdown and highlights both tag-based and script-based ColdFusion correctly
+9. Forked to `dougwithseismic/ray-so`, pushed branch `feat/cfml-syntax-support`, created PR #407 on `raycast/ray-so`
+
+**Outcome:**
+- PR #407 submitted: https://github.com/raycast/ray-so/pull/407
+- 3 files changed, 15,507 insertions (mostly the grammar JSON)
+- All lint-staged checks passed (ESLint + Prettier)
+- Establishes a reusable pattern for adding custom grammars that Shiki doesn't ship — first custom language in the project's history
+- Closes issue #324 which had been open for 3+ months
+
+**Decisions:**
+- Chose vscode-cfml grammar over the TextMate official bundle — the official bundle is XML format (needs conversion), hasn't been updated since 2009, and has less comprehensive scope coverage. vscode-cfml is already JSON, MIT licensed, and covers both CFML and CFScript
+- Created a `grammars/` directory with a wrapper module rather than trying to inline the grammar — establishes a clean pattern for future custom grammars, and the 606KB JSON needs to be code-split via dynamic import
+- Added license attribution in the wrapper file (`MIT (c) 2017 KamasamaK`) — the PR review flagged this as the only missing piece, and MIT requires the copyright notice in substantial portions
+- One entry for "CFML" rather than separate entries for "CFML" and "CFScript" — the grammar handles both syntaxes in a single scope, and splitting would create confusion about which to select
+
+**Reflection:** This is the open-source play working exactly as designed. The dossier identified ray.so as having open issues in Doug's stack. The issue was a perfect target: clearly defined, maintainer-approved, requires real engineering work (not a typo fix), and the solution demonstrates competence with the exact technologies Raycast uses (Next.js, TypeScript, Shiki, TextMate grammars). The contribution is genuine — ColdFusion developers actually need this feature — which matters. Performative PRs that exist only to get noticed are transparent and counterproductive. This one solves a real problem that a real user requested.
+
+The pattern is now proven and repeatable: read the dossier → find open issues → pick one that's substantive but scoped → ship it → reference it in outreach. Musixmatch's SDK, Moises AI's openDAW fork, and Lightdash's entire codebase are all sitting there with the same opportunity. Each PR is both a genuine contribution and a warm introduction to the engineering team.
+
+---
+
+### 2026-02-16 — Slonik PR #756: deferResetConnection for Contra/Gajus Outreach
+
+**Phase:** Outreach
+**What:** Implemented and submitted PR #756 to gajus/slonik adding a `deferResetConnection` option that runs DISCARD ALL in the background after connection release, addressing issue #719.
+**Why:** Gajus Kuizinas (Contra CTO) is the maintainer of Slonik, his flagship open-source project. Contra is Tier 1. The strategy: demonstrate technical competence directly in Gajus's codebase, on an issue he himself approved as "a reasonable improvement" (Nov 6, 2025), then reference the PR in outreach. This is the "demonstrate, don't apply" philosophy at its most targeted — contributing to the CTO's personal project in the exact area (connection pooling) where Slonik has received the most community criticism.
+**How:** Deep-dived into Slonik's architecture across the monorepo — traced the full connection release flow from `createConnection.ts` through `connection.release()` to `internalRelease()` in the driver factory. The implementation adds a deferred execution path: when `deferResetConnection: true`, `release()` resolves immediately (unblocking the caller), fires `resetConnection` in the background via an async IIFE, keeps the connection in `PENDING_RELEASE` state (via `isResetting` flag) to prevent premature reuse, and emits the `release` event only after the reset completes. Failed resets destroy the connection. `destroy()` coordinates with deferred resets via the graceful termination timeout. Wrote 8 unit tests covering the full lifecycle. All existing 40 pool tests continue to pass.
+**Outcome:** PR #756 submitted to gajus/slonik (https://github.com/gajus/slonik/pull/756). Changes span 4 source files across 2 packages (`@slonik/driver` and `slonik`), plus changeset and tests. The PR includes comprehensive documentation in the body explaining the mechanism, usage example, and test coverage.
+**Decisions:**
+- Chose issue #719 over #660 (connection leak) and #569 (DISABLE_TIMEOUT) — #719 had explicit maintainer approval, was scoped enough for a single PR, and targets Slonik's weakest area (connection pooling)
+- Implemented at the driver layer (`createDriverFactory.ts`) rather than the pool or connection layer — this is where `resetConnection` actually executes, and it keeps the change minimal
+- Made `deferResetConnection` opt-in (default `false`) rather than changing the default behavior — respects existing users, no breaking change, and lets the maintainer decide if it should ever become the default
+- Used `isResetting` flag + `PENDING_RELEASE` state rather than a separate `RESETTING` state — avoids adding a new state to the driver's state machine, which would require changes across the pool layer
+- Extracted `setIdleTimeoutAndEmitRelease()` helper to avoid duplicating the idle timeout + release event logic between the sync and deferred paths
+
+**Reflection:** This PR is the strongest proof-of-work play we've executed so far. Unlike the Raycast grammar contribution (which was a niche feature for a large company), this directly targets the CTO of a Tier 1 company, in his personal flagship project, on an issue he personally blessed. The code touches the core connection pool lifecycle — this isn't a docs fix or a config change, it's real systems-level TypeScript work that demonstrates exactly the kind of engineering Doug does.
+
+The research pipeline paid off: the dossier identified Gajus's OSS portfolio, the issue triage found #719 as the highest-signal target, and the implementation was clean because we understood the codebase architecture before writing a line of code. Total time from "let's look at Gajus's repos" to submitted PR: one session.
+
+The outreach angle is now loaded: "Hey Gajus, I submitted PR #756 for the deferred pool reset you mentioned in #719" is a warm, technically credible opener that demonstrates shared values (open source, Postgres, TypeScript, connection pool correctness) before pivoting to the Contra conversation.
+
+---
+
+### 2026-02-16 — Slonik PR #756: Integration Testing & Verification
+
+**Phase:** Outreach
+**What:** Verified the deferResetConnection feature actually works against a real PostgreSQL 16 instance, caught and fixed a workspace resolution issue, updated the PR with local testing details, and assessed follow-up contribution opportunities.
+**Why:** Unit tests with mocks prove the logic, but they don't prove the feature works in production. Before putting Doug's name on this PR, we needed to verify that DISCARD ALL genuinely runs in the background, that session state actually resets, and that failure modes degrade gracefully. Also needed to evaluate whether the work opens up further issues to file — and decided it doesn't, at least not yet.
+**How:** Spun up a PostgreSQL 16 instance via Docker, wrote 5 integration tests exercising the full flow through `createPool` + `createPgDriverFactory`. Hit a snag: pnpm resolved `@slonik/driver` to the published npm package (which doesn't have our changes) instead of the local workspace. The npm package ships `src/` alongside `dist/`, and tsimp was loading the TypeScript source over the compiled JS. Had to patch both `src/` and `dist/` in two separate node_modules copies (one per zod peer dep version) to get the real driver code running. Once patched, all 5 integration tests passed — including the critical test proving `resetFinished === false` at query return time (the deferred reset genuinely runs in the background).
+**Outcome:**
+- 5/5 integration tests pass against real PostgreSQL 16
+- PR #756 updated with detailed "Local testing" section describing each verification step, signed off with "ATB, Doug"
+- Contra dossier updated: PR status changed from "plan" to "submitted and verified," notes updated to reflect the strategic decision not to file follow-up issues preemptively
+- Assessed follow-up opportunities (selective reset, connection warmup, observability, state machine cleanup, #660 connection leak). Conclusion: none are worth filing as separate issues right now — selective reset and warmup are already possible via existing APIs, observability is too vague, state machine cleanup is presumptuous from a first-time contributor, and #660 already exists. These become conversation starters if Gajus engages on the PR, not preemptive issue filings.
+**Decisions:**
+- Decided NOT to file follow-up issues on Slonik — one clean PR is the move. Multiple issues from a first-time contributor reads as flag-planting, not genuine contribution. Let the work speak first.
+- Used `--body-file` for PR body updates after a shell alias (`bat`) mangled a heredoc and wiped the PR description. Lesson learned on the tooling side.
+- Patched node_modules rather than fighting pnpm workspace resolution — pragmatic choice for a one-off verification, not worth debugging the monorepo's dependency topology.
+**Reflection:** The "does it actually work?" question was the right one to ask. Mock tests passed from the start, but the integration test revealed that the workspace wasn't even running our code — we were testing the published driver the whole time. Without the real PostgreSQL verification, we'd have shipped a PR that we'd never actually run end-to-end. The key proof point: `resetFinished === false` at the moment the query returns to the caller. That single boolean is the difference between "the code looks right" and "this actually works."
+
+The strategic restraint on follow-up issues was also the right call. The instinct to "show more" by filing issues is strong, but the outreach philosophy is "demonstrate, don't apply" — and that applies to open source contribution too. One excellent PR demonstrates more than one PR and four speculative issues.
+
+---
+
+### 2026-02-16 — Slonik PR #756: Gajus Responds, Config Removed, PR Simplified
+
+**Phase:** Outreach
+**What:** Gajus (Contra CTO, Slonik maintainer) responded to PR #756 within hours: "I think this could be default/does not need to be configurable?" Analyzed his feedback, agreed completely, refactored the PR to remove the `deferResetConnection` config option entirely, making deferred reset the unconditional default behavior. Updated 6 files across 2 packages, rewrote all tests, rebuilt, verified, pushed, updated the PR body, and replied to Gajus confirming the change.
+
+**Why:** Gajus's feedback was both technically correct and strategically excellent. There's no scenario where blocking `release()` on a reset query benefits the caller — the connection can't be reused during reset regardless (it's in `PENDING_RELEASE` state), and the pool already tracks it correctly. Making it unconditional eliminates config surface area, reduces the changeset to just `@slonik/driver` (no `slonik` package changes needed for types/defaults), and produces a cleaner diff. From a contributor standpoint, responding quickly and agreeing with the maintainer's design instinct — rather than defending the original approach — shows good judgment and collaboration.
+
+**How:**
+1. Analyzed Gajus's comment — considered whether there's any scenario where blocking is valuable. Conclusion: no. The original config was defensive ("let the maintainer choose"), but the maintainer is telling us to just make it the default. Listen to the maintainer.
+2. Removed `deferResetConnection` from `DriverConfiguration` type in `createDriverFactory.ts`
+3. Simplified `internalRelease()` to always take the deferred path — no more branching on config
+4. Removed from `ClientConfiguration` type in `types.ts`, from defaults in `createClientConfiguration.ts`, and from the test helper
+5. Rewrote all 7 tests (down from 8 — the "blocking vs deferred" comparison test no longer makes sense)
+6. Built all packages — TypeScript compilation clean
+7. Ran all 7 driver tests — passed
+8. Ran all 40 pool tests — passed (same pre-existing flaky timing test, passes in isolation)
+9. ESLint clean on all changed files
+10. Committed, rebased onto remote (which had a merge commit we didn't have locally), pushed
+11. Updated PR body via `--body-file` to describe the simplified approach
+12. Replied to Gajus on the PR confirming the change
+
+**Outcome:**
+- PR #756 updated: 6 files changed, net -100 lines deleted (simpler is better)
+- Changeset simplified to just `@slonik/driver` minor bump (removed `slonik` from changeset since no type/config changes needed there anymore)
+- PR title updated to "feat: run resetConnection in background after release" (removed reference to config option)
+- Gajus has been replied to: "Done — removed the `deferResetConnection` config option entirely. Deferred reset is now the unconditional behavior."
+- Turnaround from Gajus's comment to updated PR: single session
+
+**Decisions:**
+- Immediately agreed with Gajus rather than defending the config option — the instinct to make things configurable is a common engineering habit, but Gajus is right that it adds complexity without value. A first-time contributor who listens to the maintainer and adapts quickly makes a better impression than one who argues
+- Dropped from 8 tests to 7 — the "blocking release waits for reset" test only existed to contrast with the deferred path. With no blocking path, it's meaningless
+- Removed `slonik` from the changeset — with no `deferResetConnection` in `ClientConfiguration` or defaults, the `slonik` package has zero changes. Cleaner changeset = easier review
+- Used `--body-file` again for the PR body update (lesson learned from the `bat` alias incident earlier)
+
+**Reflection:** This is exactly how open source contribution should work. The feedback loop was tight: submit PR → maintainer responds with design suggestion → agree and implement → push update. Gajus's response within hours is a strong signal — he's engaged with the PR, not ignoring it. And his suggestion made the code genuinely better: fewer lines, no config to document, no config to test, no config for users to misunderstand.
+
+The meta-lesson: the original PR was over-engineered. The "safe" choice of making it configurable (default `false`) added types to two packages, defaults to two more files, and doubled the test surface area — all for a code path (blocking reset) that nobody wants. Gajus cut through that in one sentence. Good maintainers do that.
+
+From a strategic perspective, this interaction is gold. Doug now has a bidirectional conversation with Contra's CTO on a technical topic. The PR isn't just sitting in a queue; Gajus is actively shaping the implementation. When Doug sends the outreach message, it's not "I submitted a PR" — it's "we already collaborated on the pool reset feature." That's a meaningfully different starting position.
+
+---
+
+### 2026-02-16 — The Contribution Map: Scanning 200+ EU Open Source Repos for Proof-of-Work Targets
+
+**Phase:** Outreach
+**What:** Ran a comprehensive intelligence sweep across European open source — music tech, gaming, creative tools, and developer tools — to map every actionable PR target and complementary tool idea for the outreach pipeline. Deployed 4 parallel research agents that collectively explored 200+ GitHub orgs and repos, verified issue counts, checked hiring pages, and cross-referenced against the existing company database. Also brainstormed 15 original open source tool ideas that could serve as proof-of-work for specific companies.
+
+**Why:** With the Slonik PR (Contra) and ray.so PR (Raycast) proving the "demonstrate, don't apply" approach works, the question became: where else can we do this? The existing 51 dossiers flagged some OSS opportunities, but only for companies we'd already researched. This sweep went wider — looking for repos and companies that weren't on the radar yet, especially in Doug's passion verticals (music, games, creative tools). The goal: build a menu of 20+ actionable contribution targets so Doug can pick based on what he's genuinely excited about, not just what's strategically optimal.
+
+**How:** Four parallel research agents, each with a different mandate:
+
+1. **EU Music Tech OSS Agent** — Explored GitHub orgs for Ableton, Bitwig, Spotify, Deezer, SoundCloud, Steinberg, Epidemic Sound, Elk Audio, Renoise, Native Instruments, Moises AI. Also searched GitHub topics (music, audio, daw, vst, web-audio) for indie projects. Used `gh` CLI to verify star counts, issue counts, and recent activity.
+
+2. **EU Gaming OSS Agent** — Explored PlayCanvas, Overwolf, Nexus Mods, Facepunch, mod.io, Ubisoft, Godot, Leetify, FACEIT, PixiJS. Also found community game projects (AncientBeast, OpenFrontIO, Athena Crisis, boardgame.io, Colyseus). Checked SourceMod for Source 2 modding opportunities.
+
+3. **EU Creative/Dev Tools Agent** — Explored tldraw, Excalidraw, Tiptap, n8n, Remotion, xyflow, Medusa, Deepnote, Prisma, Strapi, Directus, Penpot, Storyblok, Liveblocks, Cal.com, Trigger.dev, Documenso, Theatre.js, Motion Canvas, Dub.co. Verified EU presence for each.
+
+4. **Complementary Tool Ideas Agent** — Brainstormed 15 original tool concepts across web audio, gaming, creative coding, and developer tools. Each scoped to 1-3 days, with specific target companies and skill demonstrations.
+
+**Outcome:**
+
+*New high-value discoveries not in any existing dossier:*
+
+**Music (TypeScript):**
+- openDAW (Cologne) — 1,204 stars, 36 open issues, pushed today. Pure TypeScript web DAW. Moises AI forked this.
+- Tone.js — 14.7K stars, 61 issues. THE web audio framework.
+- wavesurfer.js — 10.1K stars, 50 issues. Audio waveform visualization.
+- Spotify Web API TS SDK — 459 stars, 58 issues, unmaintained since Oct 2025.
+- Spotify basic-pitch-ts — Audio-to-MIDI in TypeScript, needs React integration.
+- Bitwig dawproject — 944 stars, 37 issues. Open DAW exchange format.
+- CLAP (EU-led, by u-he + Bitwig founders) — 2.2K stars, clap-wrapper has "good first issue" labels.
+- efflux-tracker (Amsterdam) — 250 stars, 10 issues. Browser DAW in TypeScript.
+- Strudel (Berlin) — 2.9K stars. Live coding music in the browser.
+
+**Gaming (TypeScript):**
+- PlayCanvas React (London) — 450 stars, 15 issues. React bindings for 3D engine. Company hiring 2 Full Stack Engineers.
+- PlayCanvas SuperSplat (London) — 3.6K stars, 124 issues. 3D Gaussian Splat editor.
+- Nexus Mods Vortex (Exeter) — 1.2K stars, 466 issues. THE mod manager, TypeScript/Electron. Company hiring. 41M users.
+- AncientBeast (Romania) — 1.8K stars, 476 issues. TypeScript/Phaser game with bounties.
+- OpenFrontIO — 1.7K stars, 276 issues, 10 "good first issue" labels.
+- Athena Crisis — 1.9K stars, issue #8 literally says "Build a React-Three-Fiber renderer."
+- boardgame.io — 12.2K stars, 6 "help wanted" issues.
+- Facepunch s&box (UK) — 3.7K stars, 2,076 issues. Source 2 engine. 9 open roles.
+
+**Creative/Dev Tools (TypeScript, EU companies):**
+- Excalidraw (Brno, CZ — 2hrs from Prague!) — 116K stars, 2,786 issues.
+- Deepnote (Prague!) — 2.6K stars, TypeScript, hiring.
+- n8n (Berlin) — 174K stars, 1,379 issues. Automation = Doug's DNA. Hiring TS/Node in EU.
+- Tiptap (Berlin) — 35K stars, 866 issues. Hiring Sr Full Stack (EU remote). YC-backed.
+- tldraw (London) — 45K stars, 313 issues. Hiring Product Engineer. 5 "good first issue."
+- xyflow/React Flow (Berlin) — 35K stars. Built a Strudel music live-coding integration.
+- Theatre.js (Berlin) — 12K stars. 3D animation toolbox.
+- Medusa (Copenhagen) — 32K stars. Open-source commerce. Hiring engineers.
+- Dub.co (EU-remote OK) — 23K stars. Growth/analytics. Hiring Staff Engineer.
+
+*Top complementary tool ideas to build:*
+- `beat-detect-wasm` (3 days) — C++ BPM detection → WASM → TypeScript → React hook. Strongest single signal: demonstrates the rarest skill combination.
+- `react-vu-meter` (1.5 days) — Audio level meters (VU/PPM/LUFS) as React components. Covers 5+ music companies.
+- `midi-autopilot` (2 days) — Web MIDI routing library in TypeScript. Targets Arturia, NI, Bitwig.
+- `s2-asset-graph` (2 days) — Source 2 asset dependency visualizer. Authentic to Doug's modding project.
+- `feature-flag-scraper` (2 days) — Detect A/B tests on any site. Killer outreach angle for growth companies.
+
+**Decisions:**
+- Prioritized companies that are actively hiring AND have TypeScript repos with open issues — a PR to a hiring company is both a contribution and an application enhancer
+- Flagged PlayCanvas as a top-tier discovery — they're hiring 2 Full Stack Engineers in London, their React bindings repo has 15 TypeScript issues, and the SuperSplat editor has 124 issues. This wasn't in any dossier
+- Flagged Excalidraw as geographically strategic — Brno is 2 hours from Prague, 116K stars, and 2,786 open issues in TypeScript/React. Could be a local networking play
+- Identified n8n as a natural fit that was hiding in plain sight — 174K stars, automation platform, Berlin with EU-remote, hiring TypeScript/Node engineers. Doug's automation expertise is the proof-of-work here
+- Chose `beat-detect-wasm` as the strongest tool to build — the C++ → WASM → TypeScript → React pipeline is something almost nobody can do end-to-end. It's the most differentiated signal Doug can send to any music tech company
+- Did NOT add these companies to the companies database yet — this is a research output, not a commitment. Doug should pick which ones to pursue based on genuine interest
+
+**Reflection:** This sweep fundamentally changed the shape of the outreach pipeline. Before today, the "demonstrate, don't apply" strategy was limited to companies in the existing dossiers — mostly from the original 147-company swipe. Now there's a map of 30+ actionable OSS targets across music, gaming, and creative tools, many at companies that weren't even in the database.
+
+The most surprising finds: PlayCanvas (hiring, React bindings, 3D — perfect intersection), Excalidraw (literally 2 hours from Prague, 116K stars), and n8n (automation platform that's basically Doug's resume as a product). These aren't just contribution targets — they're genuine companies worth considering.
+
+The tool ideas add another dimension. Instead of only contributing to other people's repos, Doug can build original tools that demonstrate skill AND create conversation starters. `beat-detect-wasm` is the standout: "I built a BPM detector that compiles C++ to WebAssembly with TypeScript bindings and a React hook" is a sentence that would make any music tech CTO pay attention. And it's authentic — Doug is genuinely moving into C++ and lower-level work.
+
+The meta-observation: at this point, the constraint isn't "where can we contribute?" — it's "what does Doug actually want to work on?" The best outreach comes from genuine interest, not strategic optimization. The map is drawn; now it's about following curiosity.
+
+---
+
+### 2026-02-16 — Outreach Pipeline Complete + Voice Calibration Lesson
+
+**Phase:** Outreach
+**What:** Completed the full 3-stage outreach pipeline (dossier → strategy → craft-outreach) for 5 underdog companies: Lightdash, Leetify, MapTiler, Bakken & Baeck, Tractive. Then started executing — browser automation to fill out Tractive's application form. Hit a critical voice problem: the first cover letter draft was obviously AI-generated.
+
+**Why:** Doug said "to get the cash flowing" — we needed to shift from proof-of-work PRs and research to actually sending messages and applying. Selected 5 smaller underdog companies (Doug's preference over big names like Apify, which he's blacklisted). Used browser automation tools to speed up the tedious form-filling.
+
+**How:** Launched 5 parallel `/outreach-strategy` agents (Sonnet model for cost efficiency), waited for completion, then launched 5 parallel `/craft-outreach` agents. All 10 agents completed successfully — produced ready-to-send LinkedIn messages, cover letters, follow-up sequences, CV tailoring notes, and proof-of-work suggestions for each company. Then used Chrome browser automation (MCP tools) to navigate to Tractive's Teamtailor application form and start filling it out.
+
+**Outcome:**
+- 5 complete outreach packages at `journey/outreach/{company}.md`
+- 5 strategies at `journey/strategies/{company}.md`
+- Tractive application form partially filled via browser automation
+- **Voice lesson learned:** The `/craft-outreach` skill's cover letter template produces text that reads like GPT — overuse of "I don't just X, I Y" constructions, corporate-sounding phrases, too polished. Doug caught it immediately: "That is a VERY GPT like message. Its overly cheesy and has too many obvious AI giveaway."
+
+**Decisions:**
+- Rewrote the Tractive cover letter in Doug's actual voice: direct, specific, conversational, honest about gaps (Java/Kotlin). No buzzwords, no humble-brag patterns, no "I don't just build features, I instrument them" constructions. The rewrite was half the length and twice as effective.
+- Priority order: Tractive first (active posting), Lightdash (active posting), MapTiler (active posting, near Prague), Leetify (speculative but unique Source 2 hook), Bakken & Baeck (long game, no eng roles).
+- Apify permanently blacklisted — Doug rejected multiple times, bad experience with CTO.
+
+**Reflection:** The voice calibration issue is the single most important lesson so far. Every outreach message generated by the `/craft-outreach` skill needs a human rewrite pass before sending. The skill does good work on strategy, angles, CV tailoring, and portfolio selection — but the actual message copy reads like a LinkedIn influencer, not like Doug. Doug's voice is: short sentences, honest about gaps, leads with facts not feelings, no em-dash-heavy "I'm passionate about" garbage. The browser automation is a genuine time-saver for form-filling drudgery, but the words themselves need to be Doug's.
+
+Going forward: all outreach messages should be drafted shorter, more direct, with Doug reviewing before send. The skill templates need a voice section that explicitly says "no corporate speak, no 'I don't just X, I Y' patterns, no humble brags."
+
+---
+
+### 2026-02-16 — Tractive Application Aborted: No Remote Work
+
+**Phase:** Outreach
+**What:** Got halfway through filling out Tractive's Teamtailor application form via browser automation when the screening questions revealed a dealbreaker: "Are you open to relocating to Austria?" and "Just a reminder - we don't offer fully remote work at Tractive." Application abandoned.
+
+**Why:** Doug is based in Prague and needs remote or remote-friendly roles. Relocating to Linz, Austria is not on the table. This should have been caught during the dossier or strategy phase — the dossier noted "Hybrid Setup" as a benefit and the strategy flagged the "3-hour commute" as a risk, but neither explicitly verified that fully remote was off the table. The application form made it clear: no remote, must relocate.
+
+**How:** Chrome browser automation (MCP tools) to navigate Tractive's careers page, find the Senior Software Engineer (Full-Stack) posting, and fill the Teamtailor form. Got through citizenship, visa status, name, cover letter (rewritten in Doug's voice after the GPT-voice lesson), start date, and referral source before hitting the relocation screening question.
+
+**Outcome:** Tractive moved from Tier 1 to **No**. Time wasted: ~20 minutes on form filling plus the strategy and outreach generation time. Not catastrophic, but avoidable.
+
+**Decisions:**
+- Abandoned Tractive application immediately. No point applying to a role that requires Austrian relocation.
+- Updated Tractive dossier to reflect "No" status with clear reason.
+- Remaining 4 companies (Lightdash, Leetify, MapTiler, Bakken & Baeck) are all remote-friendly or have distributed teams.
+
+**Reflection:** This is a process failure, not a research failure. The dossier had the data — "Hybrid Setup" and "Linz, Austria" were right there. But the strategy didn't ask the hard question: "Does hybrid mean 'some remote days' or 'must live near the office'?" Going forward, every dossier should have a **Remote Policy** field that explicitly states: fully remote / hybrid-with-relocation / on-site only. If unclear, flag it as a risk before investing in outreach materials.
+
+The silver lining: the rewritten cover letter (Doug's actual voice, not GPT template) is solid and reusable as a template for future applications. Short, direct, honest about gaps, leads with facts.
+
+---
+
+### 2026-02-16 — LinkedIn Mass Connect: 58 Profiles From All 51 Dossiers
+
+**Phase:** Outreach
+**What:** Extracted every named contact from all 51 company dossiers and bulk-sent LinkedIn connection requests — no message, just the raw connect. The goal: seed Doug's LinkedIn network with decision-makers and engineering leads at every target company before any outreach begins.
+
+**Why:** LinkedIn connections are low-friction, high-optionality. A connection request with no message doesn't burn any bridges — it just puts Doug's name and headline in front of these people. When he later sends a DM, InMail, or shows up in their notifications via a comment or post, they'll already have the connection. It's planting seeds, not harvesting.
+
+**How:** Used a Haiku agent to scan all 51 dossier files in parallel and extract every person with a LinkedIn URL — names, titles, companies, URLs. Got back 148 contacts total, ~63 with actual LinkedIn URLs. Removed 4 Apify contacts (blacklisted). First attempted browser automation — Claude clicking Connect > Send without a note on each profile one by one. Got through 4 profiles (Alexander Wankhammer/Sonible, Angéline Camus/Deezer, Bastian Suter/BattlEye, Benjamin Guincestre/Deezer) before Doug called it — too slow. Tried `window.open()` to blast all 58 tabs at once — Chrome's popup blocker killed every one. Final solution: generated a local HTML file with an "Open All" button and batch buttons (15 tabs each). Since Doug clicks the button himself, Chrome treats it as a user gesture and allows the popups. Some profiles 404'd (stale LinkedIn slugs), but the majority landed. Doug handled the Connect clicks manually from there.
+
+**Outcome:** ~50+ connection requests sent across companies including Deezer, Mews, Spitfire Audio, Bakken & Baeck, Linear, Splice, Photoroom, Neko Health, Groover, Arturia, Facepunch, XCEED, MapTiler, Lightdash, and more. Network seeded across nearly every target company.
+
+**Decisions:**
+- No message on connection requests. Doug's philosophy: "Hey — sending out the connect just in case. Cheers — Doug" is the maximum. For a mass connect pass, even that's too much. Just connect, no note.
+- Excluded all 4 Apify contacts (Jan Curn, Jan Zenisek, Marek Trunkat, Ondra Urban) — company is blacklisted due to prior CTO issues.
+- Abandoned one-by-one browser automation after 4 profiles. The ROI on automating LinkedIn's UI is terrible — each profile takes 4-5 clicks, the page layouts vary, and modals appear inconsistently. Human clicking 58 tabs is faster than agent clicking 58 profiles.
+- Batch tab approach (15 at a time) was the sweet spot — Chrome handles it, LinkedIn doesn't rate-limit, and the human can blast through Connect buttons quickly.
+
+**Reflection:** The extraction part was the real value — having an agent read 51 markdown files and pull out every contact with a LinkedIn URL in 60 seconds is something that would take a human 2+ hours. The browser automation part was the wrong tool for the job. LinkedIn's UI is hostile to automation: inconsistent button placement, modal dialogs, anti-bot detection. The HTML-file-with-batch-buttons approach was the right call — let the agent do the data work, let the human do the clicking. A good division of labor.
+
+Some LinkedIn URLs from the dossiers were stale (404s). This is expected — dossier data is a snapshot, and people change their LinkedIn slugs, leave companies, etc. Not worth fixing retroactively; the ones that landed are the ones that matter.
+
+---

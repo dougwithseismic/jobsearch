@@ -6,7 +6,7 @@
 
 ---
 
-## Tier 1 — Dream Roles (7 companies)
+## Tier 1 — Dream Roles (6 companies, 1 rejected)
 
 Full investment: deep dive dossier, growth audit or proof-of-work project, personalized outreach to specific people. These are the companies where Doug's fit is exceptional AND the company is worth working at.
 
@@ -18,7 +18,7 @@ Full investment: deep dive dossier, growth audit or proof-of-work project, perso
 | 4 | **Mews** | Travel Tech | Prague, CZ | Prague unicorn ($1.2B, $200M revenue). B rep. In Doug's city. Hospitality tech is genuinely interesting. No layoffs. |
 | 5 | **Overwolf** | Gaming | Tel Aviv + EU | FitScore 5, B rep (4.6 GD). Modding platform = direct match for Source 2 modding interest. Doubled ad revenue to $100M. TS-based. |
 | 6 | **Bakken & Baeck** | Creative Agency | Oslo/Amsterdam/London/Barcelona/Bonn | A rep (4.7 GD, 100% recommend, 5.0 WLB). Best-rated agency in Europe. 5 EU offices. Builds real products, not just websites. |
-| 7 | **Tractive** | Pet Tech | Linz, Austria | A rep (4.8 GD). 4-day work week. Hiring Senior Full-Stack Developer. 3hr from Prague. One of the best employer reputations in EU tech. |
+| ~~7~~ | ~~**Tractive**~~ | ~~Pet Tech~~ | ~~Linz, Austria~~ | ~~REJECTED 2026-02-16: No remote work, requires relocation to Austria. Dealbreaker.~~ |
 
 ### Tier 1 Proof-of-Work Strategy
 
@@ -30,7 +30,7 @@ Full investment: deep dive dossier, growth audit or proof-of-work project, perso
 | Mews | Growth audit of their hospitality platform. Reference DinnersWithFriends hospitality experience. |
 | Overwolf | The Source 2 modding platform IS the proof-of-work. Deploy a beta and reference it directly. |
 | Bakken & Baeck | Portfolio presentation showing breadth of client work (Contra, Sky, Groupon, MIT, Framer). The consultancy pattern matches perfectly. |
-| Tractive | Quick teardown of their web app + React Native codebase (public). Show engineering thinking, not just job-seeking. |
+| ~~Tractive~~ | ~~REJECTED — no remote work~~ |
 
 ---
 

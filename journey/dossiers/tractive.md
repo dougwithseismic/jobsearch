@@ -1,8 +1,8 @@
 # Tractive -- Deep Dive Dossier
 
-**Last Updated:** 2026-02-15
-**Priority Tier:** 1 (Hot)
-**Overall Assessment:** One of the best-rated employers in EU tech (Glassdoor 4.8, 92% recommend) with a 4-day work week, actively hiring Senior Full-Stack Developers, and just crossed EUR 100M ARR. The product is genuinely fun (GPS pet trackers), the tech stack includes React, and Linz is 3 hours from Prague. The main concerns are the Java/Kotlin backend (not Doug's primary backend language) and the EUR 65k salary ceiling. Despite that, the quality-of-life package and active hiring make this a strong opportunity.
+**Last Updated:** 2026-02-16
+**Priority Tier:** No — Rejected
+**Overall Assessment:** REJECTED. Tractive does not offer fully remote work and requires relocation to Linz, Austria. This was discovered during the application process on 2026-02-16 when the Teamtailor form explicitly asked "Are you open to relocating to Austria?" with a reminder that they don't offer fully remote work. This is a hard dealbreaker for Doug (Prague-based, remote-only). The dossier and strategy pipeline failed to catch this — going forward, remote work policy must be verified before investing in outreach. Original assessment: great employer (Glassdoor 4.8, 4-day work week, EUR 100M ARR), but the no-remote policy kills it.
 **Existing Relationship:** No
 
 ---

@@ -1,9 +1,9 @@
 # Raycast --- Deep Dive Dossier
 
-**Last Updated:** 2026-02-15
+**Last Updated:** 2026-02-16
 **Priority Tier:** 2 (Warm) --- borderline Tier 1 due to strong stack fit, open Design Engineer role, and cultural alignment
 **Overall Assessment:** Raycast is a developer-beloved productivity launcher built by ex-Facebook engineers, with a 39-person remote-first team across 16 countries. The tech stack is React, TypeScript, Node.js, and Next.js --- a near-perfect match for Doug. The company expanded from Mac-only to iOS and Windows in 2025, and is now positioning itself as an "operating system for professionals in the age of AI." The Design Engineer role (EUR 100-135K, remote CET +/- 3 hours) is the active opening. While the title suggests more design than engineering, the actual requirements (Next.js, TypeScript, Radix Primitives, AI tools like Cursor/Claude) and responsibilities (own features from ideation to maintenance, contribute to design system, maintain open-source projects) make this a strong fit for Doug. The "no code reviews by default" culture signals high-trust engineering. Raycast's open-source extensions ecosystem (7.2K stars, MIT-licensed, TypeScript/React) offers an excellent contribution path.
-**Existing Relationship:** No
+**Existing Relationship:** Yes — PR #407 submitted to `raycast/ray-so` (CFML syntax highlighting, closes issue #324). First code contribution to Raycast's codebase.
 
 ---
 
@@ -77,7 +77,7 @@ The `raycast/extensions` repo has 714 open issues --- many are bug reports and f
 
 The `raycast/ray-so` repo has 7 open issues and is built with Next.js + TypeScript --- directly in Doug's stack. Contributing here demonstrates ability to work in their actual web codebase.
 
-**PR Idea:** Contribute to `raycast/ray-so`. This is their Next.js web project and the Design Engineer role would work on exactly this kind of codebase. Doug could fix one of the 7 open issues, add a new feature to the code image generator, or improve the Next.js architecture. This directly demonstrates the skills needed for the Design Engineer role and creates a warm introduction to the team.
+**PR Submitted:** PR #407 — Added CFML (ColdFusion) syntax highlighting support (https://github.com/raycast/ray-so/pull/407). Closes issue #324. Sourced a MIT-licensed TextMate grammar, created the project's first custom grammar wrapper, and established a reusable pattern for adding languages Shiki doesn't bundle. All lint checks passed. This directly demonstrates the skills needed for the Design Engineer role and creates a warm introduction to the team.
 
 **Alternative PR Idea:** Build a high-quality Raycast extension that solves a real developer problem. Extensions are built with React + TypeScript + Node --- Doug's exact stack. An extension related to automation, scraping, or agentic workflows would showcase his unique specialties while contributing to the ecosystem. The extension goes through the review process, creating a direct interaction with the Raycast team.
 
@@ -117,8 +117,8 @@ The `raycast/ray-so` repo has 7 open issues and is built with Next.js + TypeScri
 
 ## Proposed Angles
 
-1. **Open Source Contribution Angle** (Technical)
-   "I've been exploring the ray-so codebase and have a PR in mind for [specific issue or improvement]. I've built several Next.js + TypeScript projects at scale, including a platform serving 25M monthly sessions. Before reaching out about the Design Engineer role, I wanted to show rather than tell --- I find that shipping code in your actual codebase is a better introduction than any resume."
+1. **Open Source Contribution Angle** (Technical) — **PR SHIPPED**
+   "I submitted PR #407 to ray-so adding ColdFusion syntax highlighting — sourced a TextMate grammar, built the first custom language wrapper in the project, and set up a pattern for adding any grammar Shiki doesn't bundle. I've built several Next.js + TypeScript projects at scale, including a platform serving 25M monthly sessions. I find that shipping code in your actual codebase is a better introduction than any resume."
 
 2. **Developer Tool Growth Angle** (Business)
    "Raycast's expansion from Mac to three platforms in a single year is impressive execution. I led growth engineering at Patrianna where we scaled a new product from zero to 1M users, and I've been thinking about how growth engineering principles apply to developer tools specifically --- the web funnel (raycast.com to download to daily user) has unique dynamics compared to typical SaaS. I'd love to discuss how you're approaching web-driven growth as you expand the user base."
@@ -134,7 +134,7 @@ The `raycast/ray-so` repo has 7 open issues and is built with Next.js + TypeScri
 - **Remote compatibility:** Fully remote, CET +/- 3 hours. Prague is in CET --- perfect timezone fit. Team of 39 across 16 countries. This is one of the most remote-friendly companies on the target list.
 - **Competitive advantage:** Doug's combination of Next.js/TypeScript expertise, growth engineering background, and AI/agentic workflow experience is unusual. Most Design Engineer candidates will have the frontend skills but not the growth engineering and AI angles. This differentiation could be compelling.
 - **Risk factors:** Small company (39 people) with $47.8M total funding. Revenue model is freemium with Pro tier ($8/month) and Teams tier. Enterprise adoption is nascent. Sustainability depends on continued growth and potential Series C. However, the product has strong community love, investor backing (Atomico, Accel, YC), and celebrity investors (GitHub CEO, Shopify CEO, Vercel CEO).
-- **Extension contribution timing:** Building a Raycast extension or contributing to ray-so before applying creates a warm introduction. This should be done this week if pursuing the opportunity --- the role has been open since December 2025.
+- **Open source status:** PR #407 submitted to ray-so on 2026-02-16. Awaiting review from samuelkraft (maintainer who encouraged community contributions on issue #324). Once merged, this becomes a concrete talking point for the Design Engineer application. Consider a second contribution (Raycast extension or another ray-so issue) to deepen the relationship before applying.
 
 ---
 
