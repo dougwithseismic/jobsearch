@@ -36,3 +36,8 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+# Scraped data (large JSON/CSV files)
+data/ashby/
+packages/ashby-jobs-tui/ashby-data/
+packages/ashby-jobs/actor/storage/

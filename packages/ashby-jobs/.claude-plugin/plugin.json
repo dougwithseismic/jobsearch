@@ -1,0 +1,12 @@
+{
+  "name": "ashby-jobs",
+  "version": "1.0.0",
+  "description": "Discover and search 40K+ jobs across 2,800+ companies using Ashby. Scrape job boards, filter by location/remote/department, and export results.",
+  "author": {
+    "name": "Doug Silkstone",
+    "url": "https://github.com/dougwithseismic"
+  },
+  "repository": "https://github.com/dougwithseismic/ashby-jobs",
+  "license": "MIT",
+  "keywords": ["jobs", "ashby", "scraper", "careers", "hiring", "job-search", "ats"]
+}
