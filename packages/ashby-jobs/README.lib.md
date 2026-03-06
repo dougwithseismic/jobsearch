@@ -414,7 +414,7 @@ MIT
 [![Email](https://img.shields.io/badge/Email-doug%40withseismic.com-EA4335?logo=gmail&logoColor=white)](mailto:doug@withseismic.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-dougsilkstone-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dougsilkstone)
 [![GitHub](https://img.shields.io/badge/GitHub-dougwithseismic-181717?logo=github&logoColor=white)](https://github.com/dougwithseismic)
-[![Book a Call](https://img.shields.io/badge/Book_a_Call-30min-00C853?logo=googlecalendar&logoColor=white)](https://Cal.com/dougwithseismic/30min)
+[![Book a Call](https://img.shields.io/badge/Book_a_Call-45min-00C853?logo=googlecalendar&logoColor=white)](https://cal.com/dougwithseismic/session-45)
 [![Apify](https://img.shields.io/badge/Apify-deadlyaccurate-00C853?logo=apify&logoColor=white)](https://apify.com/deadlyaccurate)
 
-Need a custom scraper, data pipeline, or automation? [Book a call](https://Cal.com/dougwithseismic/30min) or email [doug@withseismic.com](mailto:doug@withseismic.com).
+Need a custom scraper, data pipeline, or automation? [Book a call](https://cal.com/dougwithseismic/session-45) or email [doug@withseismic.com](mailto:doug@withseismic.com).
