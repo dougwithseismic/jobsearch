@@ -65,8 +65,8 @@ try {
     });
 
   } else {
-    // All mode: discover via Common Crawl then scrape everything
-    log.info('Phase 1: Discovering companies from Common Crawl indexes...');
+    // All mode: discover companies then scrape everything
+    log.info('Phase 1: Discovering companies...');
     let slugs = await discoverSlugs({
       onProgress: (msg) => log.info(`  ${msg}`),
     });

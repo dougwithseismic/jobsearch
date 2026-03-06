@@ -15,7 +15,7 @@ Scrape **40,000+ jobs** from every company using [Ashby](https://www.ashbyhq.com
 
 This Actor discovers every company hosting a job board on `jobs.ashbyhq.com`, scrapes their public posting API, and returns structured data for every open role.
 
-Other Ashby scrapers require you to already know the company URL. This one finds them for you — using [Common Crawl](https://commoncrawl.org/) to discover 1,350+ company slugs across 3 web crawl indexes, then validating each against Ashby's API.
+Other Ashby scrapers require you to already know the company URL. This one finds them for you — auto-discovering 1,350+ company slugs and validating each against Ashby's API.
 
 **What you get per job:**
 
@@ -55,7 +55,7 @@ Plus `companySlug`, `jobId`, `secondaryLocations`, `region`, `scrapedAt`, and op
 Set `mode` to **`all`** and click Start. That's it.
 
 The Actor will:
-1. Query 3 Common Crawl indexes to discover every company using Ashby (~90 seconds)
+1. Auto-discover every company using Ashby (~90 seconds)
 2. Hit each company's public API endpoint concurrently (~60 seconds)
 3. Push every listed job to the dataset
 
@@ -249,21 +249,6 @@ Use [Apify Schedules](https://docs.apify.com/platform/schedules) to run daily or
 - Market intelligence dashboards
 - Competitor hiring tracking
 
-## How does discovery work?
-
-Most Ashby scrapers require you to already know the company's job board URL. That limits you to companies you've heard of.
-
-This Actor uses **Common Crawl** — a nonprofit that has been crawling the entire web since 2008 and maintains a free, public index of every URL they've seen.
-
-The discovery process:
-
-1. Query the Common Crawl CDX index for all URLs matching `jobs.ashbyhq.com/*`
-2. Extract unique company slugs from the URL paths
-3. Deduplicate across 3 crawl indexes (different time periods)
-4. Validate each slug against Ashby's API (404 = company left Ashby)
-
-This finds **1,350+ companies** — including small startups that no other scraper knows about.
-
 ## Ashby's API
 
 The Actor uses Ashby's **public job posting API**:
@@ -294,7 +279,7 @@ Job postings change daily. A weekly full scrape catches most changes. For specif
 Their Ashby board may be empty, they may have switched ATS providers, or all their roles are unlisted (internal). The Actor only returns publicly listed positions.
 
 **Can I scrape a company not in the discovery list?**
-Yes — use `companies` mode and provide the slug directly. Discovery via Common Crawl finds ~1,350 companies, but there are ~2,800+ total. If you know a slug, just add it.
+Yes — use `companies` mode and provide the slug directly. Auto-discovery finds ~1,350 companies, but there are ~2,800+ total. If you know a slug, just add it.
 
 **Is this legal?**
 This Actor uses Ashby's public, documented API endpoint. The data is publicly accessible on `jobs.ashbyhq.com`. No authentication is bypassed. See [Ashby's API docs](https://developers.ashbyhq.com/docs/public-job-posting-api).
@@ -331,7 +316,7 @@ Also available as:
 
 ## Other scrapers by this author
 
-Coming soon: Greenhouse, Lever, and Workable scrapers using the same Common Crawl discovery technique.
+Coming soon: Greenhouse, Lever, and Workable scrapers using the same auto-discovery technique.
 
 ---
 

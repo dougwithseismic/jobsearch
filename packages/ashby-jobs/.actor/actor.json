@@ -2,7 +2,7 @@
   "actorSpecification": 1,
   "name": "ashby-jobs-scraper",
   "title": "Ashby Jobs Scraper - All 2,800+ Companies",
-  "description": "Discover and scrape every job from 2,800+ companies using Ashby. Auto-discovers companies via Common Crawl — no manual URL input needed. Returns titles, departments, locations, compensation, and apply URLs.",
+  "description": "Discover and scrape every job from 2,800+ companies using Ashby. Auto-discovers companies — no manual URL input needed. Returns titles, departments, locations, compensation, and apply URLs.",
   "version": "1.0",
   "buildTag": "latest",
   "environmentVariables": {},
@@ -18,5 +18,10 @@
     }
   },
   "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json",
+    "keyValueStore": "./key_value_store_schema.json"
+  },
   "dockerfile": "../Dockerfile"
 }

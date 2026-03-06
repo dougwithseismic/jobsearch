@@ -41,21 +41,21 @@ const DEFAULT_KNOWN_SLUGS = [
 ];
 
 /**
- * Discover slugs from a single Common Crawl index.
+ * Discover slugs from a single web index.
  */
-async function discoverSlugsFromCrawl(
+async function discoverSlugsFromIndex(
   crawlId: string,
   onProgress?: (message: string) => void
 ): Promise<Set<string>> {
   const slugs = new Set<string>();
   const url = `${CC_INDEX}/${crawlId}-index?url=jobs.ashbyhq.com/*&output=text&fl=url&limit=100000`;
 
-  onProgress?.(`Querying ${crawlId}...`);
+  onProgress?.(`Querying index ${DEFAULT_CRAWLS.indexOf(crawlId) + 1}/${DEFAULT_CRAWLS.length}...`);
 
   try {
     const res = await fetch(url);
     if (!res.ok) {
-      onProgress?.(`${crawlId}: HTTP ${res.status}`);
+      onProgress?.(`Index ${DEFAULT_CRAWLS.indexOf(crawlId) + 1}: HTTP ${res.status}`);
       return slugs;
     }
     const text = await res.text();
@@ -65,16 +65,16 @@ async function discoverSlugsFromCrawl(
         slugs.add(decodeURIComponent(match[1]));
       }
     }
-    onProgress?.(`${crawlId}: found ${slugs.size} slugs`);
+    onProgress?.(`Index ${DEFAULT_CRAWLS.indexOf(crawlId) + 1}: found ${slugs.size} slugs`);
   } catch (e) {
-    onProgress?.(`${crawlId}: error - ${e}`);
+    onProgress?.(`Index ${DEFAULT_CRAWLS.indexOf(crawlId) + 1}: error - ${e}`);
   }
 
   return slugs;
 }
 
 /**
- * Discover all company slugs from Common Crawl CDX indexes.
+ * Discover all company slugs from web indexes.
  *
  * @param options - Discovery options
  * @returns Sorted array of unique company slugs
@@ -86,12 +86,14 @@ export async function discoverSlugs(
   const knownSlugs = options?.knownSlugs ?? DEFAULT_KNOWN_SLUGS;
   const onProgress = options?.onProgress;
 
-  onProgress?.("Discovering company slugs from Common Crawl...");
+  onProgress?.(`Discovering company slugs (${crawlIds.length} indexes in parallel)...`);
+
+  const results = await Promise.all(
+    crawlIds.map((crawl) => discoverSlugsFromIndex(crawl, onProgress))
+  );
 
   const allSlugs = new Set<string>();
-
-  for (const crawl of crawlIds) {
-    const slugs = await discoverSlugsFromCrawl(crawl, onProgress);
+  for (const slugs of results) {
     for (const s of slugs) allSlugs.add(s);
   }
 

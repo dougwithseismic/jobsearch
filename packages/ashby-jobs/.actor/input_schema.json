@@ -1,13 +1,13 @@
 {
   "title": "Ashby Jobs Scraper",
-  "description": "Discover, scrape, and search 40,000+ jobs from 2,800+ companies using Ashby as their ATS. Auto-discovers companies via Common Crawl — no manual URL input needed.",
+  "description": "Discover, scrape, and search 40,000+ jobs from 2,800+ companies using Ashby as their ATS. Auto-discovers companies — no manual URL input needed.",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
     "mode": {
       "title": "Mode",
       "type": "string",
-      "description": "How to run the scraper:\n• 'all' — Discover ALL companies via Common Crawl, then scrape every job board. Zero config.\n• 'companies' — Scrape only the company slugs you specify.\n• 'search' — Search a specific company's jobs by keyword (fast, single API call).",
+      "description": "How to run the scraper:\n• 'all' — Auto-discover ALL companies and scrape every job board. Zero config.\n• 'companies' — Scrape only the company slugs you specify.\n• 'search' — Search a specific company's jobs by keyword (fast, single API call).",
       "editor": "select",
       "enum": ["all", "companies", "search"],
       "default": "all",

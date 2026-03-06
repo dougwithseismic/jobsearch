@@ -61,7 +61,7 @@ export interface FlatJob {
 
 /** Options for slug discovery */
 export interface DiscoverOptions {
-  /** Common Crawl index IDs to query. Defaults to recent crawls. */
+  /** Web index IDs to query. Defaults to recent indexes. */
   crawlIds?: string[];
   /** Additional known slugs to include */
   knownSlugs?: string[];
