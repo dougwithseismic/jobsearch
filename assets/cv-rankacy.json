@@ -1,0 +1,104 @@
+{
+  "name": "Doug Silkstone",
+  "title": "Lead Full Stack Software Engineer",
+  "availability": "February 2026",
+  "location": "Prague, Czech Republic",
+  "experience_years": "15+",
+  "links": {
+    "github": "https://github.com/dougwithseismic",
+    "portfolio": "https://contra.com/doug_silkstone/work",
+    "linkedin": "https://linkedin.com/in/dougsilkstone"
+  },
+  "about": "15 years across engineering, product, and growth. 3x exits as solo founder. Took a gaming studio from zero to 1M players as Lead Growth Engineer. LLM tooling featured in MIT's Generative AI course (50,000+ students). Currently building automation tooling, agentic workflows, and Source 2 game mods. Strong track record scaling data-heavy consumer platforms and converting free users to paid.",
+  "skills": {
+    "languages": ["TypeScript", "Python", "C++"],
+    "frontend": ["React 18", "Next.js", "Three.js / WebGL", "Tailwind", "Storybook"],
+    "backend": ["Node.js", "Express", "Hono", "GraphQL", "Postgres", "MongoDB", "Redis"],
+    "infrastructure": ["AWS", "GCP", "Vercel", "Docker", "Kubernetes", "Terraform"],
+    "data": ["Scraping & automation pipelines", "Analytics (GA, BigQuery, Mixpanel)", "Custom dashboards"],
+    "ai_ml": ["LLM tooling & agentic workflows", "OpenAI API", "Prompt engineering", "Vector DBs"],
+    "testing": ["Jest", "React Testing Library", "Playwright", "BVT / build verification tests"],
+    "other": ["Growth Engineering", "Game modding (Source 2)", "Martech & Analytics", "SEO"]
+  },
+  "notable_clients": ["Contra", "Framer", "The Motley Fool", "Groupon", "Sky", "MIT", "Techstars-backed startups"],
+  "highlights": {
+    "exits": 3,
+    "client_funding_raised": "$20M USD",
+    "mit_course_students": "50,000+",
+    "team_leadership": true
+  },
+  "experience": [
+    {
+      "company": "DinnersWithFriends.co.uk",
+      "role": "Technical Founder",
+      "period": "2024 - Present",
+      "tech": ["TypeScript", "React 18", "Next.js", "Hono", "GraphQL", "Postgres", "GCP", "AWS"],
+      "highlights": [
+        "Full-stack platform with React 18, strict TypeScript, GraphQL API, and LLM-powered admin workflows",
+        "Growth infrastructure: conversion funnels, A/B testing, SEO-optimized content, email automation",
+        "Revenue dashboards with real-time analytics. Stripe Connect monetisation for franchise model",
+        "CI/CD pipeline with automated testing, monitoring, and alerting"
+      ]
+    },
+    {
+      "company": "Patrianna Ltd",
+      "role": "Lead Growth Engineer",
+      "period": "2022 - 2023",
+      "tech": ["TypeScript", "React", "Next.js", "Postgres", "Java Spring", "Analytics"],
+      "highlights": [
+        "Led greenfield in-house Game Studio for top-three social casino from zero to 1M players",
+        "Built MVP game delivery mechanism and five high-stakes casino games",
+        "Growth loops: onboarding optimisation, retention mechanics, viral sharing, conversion funnels",
+        "Hired and led nine-member team across frontend, backend, and QA"
+      ]
+    },
+    {
+      "company": "getBenson.com",
+      "role": "Senior Full-stack Developer",
+      "period": "2021 - 2022",
+      "tech": ["TypeScript", "React", "Next.js", "Node", "Express", "Postgres"],
+      "highlights": [
+        "Built SaaS protecting 25M+ monthly sessions — real-time detection and analytics at scale",
+        "Onboarded 80+ brands. Led technical sales with C-Suite directors. Commercially exited 2023"
+      ]
+    },
+    {
+      "company": "withSeismic.com",
+      "role": "Full Stack Engineering Consultant",
+      "period": "2016 - Present",
+      "tech": ["TypeScript", "React", "Node", "Python", "Scraping", "Automation"],
+      "highlights": [
+        "Consultancy across Contra.com, Sky, Groupon, The Motley Fool, Framer, and MIT",
+        "Author of open-source automation NPM packages. LLM tooling featured in MIT's GenAI course (50K+ students)"
+      ]
+    },
+    {
+      "company": "Vouchernaut.com",
+      "role": "Full Stack Software Engineer",
+      "period": "2018 - 2021",
+      "tech": ["TypeScript", "Next.js", "Node", "Puppeteer", "Postgres"],
+      "highlights": [
+        "Lead engineer for affiliate automation covering 10,000+ brands; 250k monthly sessions",
+        "Built scraping and data pipeline infrastructure at scale. Sold to PE investors 2021"
+      ]
+    },
+    {
+      "company": "Mekamon.com / Reach Robotics",
+      "role": "Head of Digital",
+      "period": "2016 - 2018",
+      "tech": ["React", "Unity", "BigQuery", "Firebase Analytics"],
+      "highlights": [
+        "Go-to-market for AR gaming robot launched in Apple Stores globally. Hired and led cross-functional team"
+      ]
+    },
+    {
+      "company": "Vouchercloud (acquired by NASDAQ-listed co.)",
+      "role": "Performance Marketing & Automation",
+      "period": "2015 - 2016",
+      "tech": ["React"],
+      "highlights": [
+        "Built React internal tools saving 240 monthly hours, cutting SEM team overhead by 40%"
+      ]
+    }
+  ]
+}

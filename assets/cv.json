@@ -15,13 +15,44 @@
     "technologies": ["React", "Next.js", "Express", "Node", "Tailwind", "Vercel", "AWS", "Postgres", "MongoDB", "GCP"],
     "other": ["Scraping & Automation", "Martech & Analytics", "Growth Engineering", "Agentic Workflows"]
   },
-  "notable_clients": ["Contra", "Framer", "The Motley Fool", "Groupon", "Sky", "MIT", "Techstars-backed startups"],
+  "notable_clients": ["Contra", "NOW TV", "TOPMAN", "Framer", "The Motley Fool", "Groupon", "Sky", "MIT", "STRV", "Techstars-backed startups"],
   "highlights": {
-    "exits": 3,
+    "exits": 4,
     "client_funding_raised": "$20M USD",
     "mit_course_students": "50,000+",
-    "team_leadership": true
+    "team_leadership": true,
+    "projects_delivered": "56+",
+    "performance_marketing_awards": 2,
+    "ad_spend_managed": "$10M+",
+    "product_sessions": "1B+",
+    "awwwards_honorable_mention": true,
+    "product_hunt_potw": true,
+    "contra_top_1_percent": true,
+    "clutch_rating": "5.0/5.0"
   },
+  "awards": [
+    {
+      "name": "Performance Marketing Award 2016",
+      "category": "Most Effective Cross-Channel Campaign",
+      "result": "Winner",
+      "client": "NOW TV"
+    },
+    {
+      "name": "Performance Marketing Award 2017",
+      "category": "Most Creative Performance Marketing Campaign",
+      "result": "Winner",
+      "client": "TOPMAN",
+      "detail": "Facebook Messenger NLP chatbot for product recommendations"
+    },
+    {
+      "name": "Awwwards Honorable Mention",
+      "project": "Ctx.eng"
+    },
+    {
+      "name": "#1 Product Hunt Product of the Week",
+      "project": "Indy.ai Chrome extension for Contra"
+    }
+  ],
   "experience": [
     {
       "company": "DinnersWithFriends.co.uk",

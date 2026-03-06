@@ -854,3 +854,70 @@ The silver lining: the rewritten cover letter (Doug's actual voice, not GPT temp
 Some LinkedIn URLs from the dossiers were stale (404s). This is expected — dossier data is a snapshot, and people change their LinkedIn slugs, leave companies, etc. Not worth fixing retroactively; the ones that landed are the ones that matter.
 
 ---
+
+### 2026-03-05 — Project Snapshot: Three Weeks After the Sprint
+
+**Phase:** Outreach
+**What:** Journaled the full project state, 18 days after the initial two-day sprint (Feb 15-16). The system has been largely static since the sprint — no new commits since Feb 16, but several pieces of uncommitted work have accumulated: a CV page (`apps/web/app/cv/`), a CV API route (`apps/web/app/api/cv/`), two tailored CV variants (`assets/cv-rankacy.json` for Rankacy, `assets/cv-outreach.json` for general outreach), a standalone CV HTML file (`cv.html`), another CV HTML variant (`cv-with-timeline`), and updates to `CLAUDE.md` and `cv.json`. The CLAUDE.md has been significantly revised (~111 insertions, ~108 deletions).
+
+**Why:** The project had reached the end of the initial build sprint with massive momentum — 51 dossiers, 5 strategies, 5 outreach packages, 58 LinkedIn connections sent, a 6,500-word case study article written, and a 200+ repo contribution map produced. But then 18 days passed. This journal entry captures where things stand so the project doesn't lose its thread.
+
+**How:** Read the full LOG.md (857 lines, 13 entries covering Feb 15-16), checked git status, examined uncommitted files, reviewed the tier list and pipeline state.
+
+**Outcome:**
+
+*What was built (Feb 15-16):*
+- 147-company database with scores, categories, and metadata
+- Tinder-style swipe tool (keyboard-driven, arrow keys)
+- Company detail pages rendering 51 dossier markdowns
+- Puppeteer screenshot service
+- HN Algolia research panel
+- 5 Claude Code skills (company-research, company-deep-dive, outreach-strategy, craft-outreach, journey-log)
+- Article-writer pipeline (separate tool, 9 skills)
+- File-based persistence (decisions.json, research-cache.json, dossiers, strategies, outreach)
+
+*Pipeline state:*
+- **Dossiers:** 51 completed (all 50 "yes" companies + Rankacy)
+- **Strategies:** 5 completed (Lightdash, Leetify, MapTiler, Bakken & Baeck, Tractive)
+- **Outreach:** 5 completed (same 5), but Tractive killed (no remote)
+- **LinkedIn:** ~50+ connections sent to decision-makers across target companies
+- **Article:** 6,452-word case study ready to publish
+- **OSS PR strategy:** Abandoned. Slonik #756 (Contra) and ray.so #407 (Raycast) submitted but got no traction. The "contribute to their repo before applying" play sounds good in theory but didn't translate to responses. Time spent on PRs would have been better spent on direct outreach
+
+*What's uncommitted (built since the sprint):*
+- CV page and API (`apps/web/app/cv/`, `apps/web/app/api/cv/`)
+- Tailored CV for Rankacy (`assets/cv-rankacy.json`) — gaming analytics focus, Python/C++ emphasis
+- General outreach CV (`assets/cv-outreach.json`) — broader positioning, observability and monorepo emphasis
+- Standalone CV HTMLs (`cv.html`, `cv-with-timeline`)
+- CLAUDE.md refinements (significant rewrite, ~220 lines changed)
+
+*What hasn't happened yet:*
+- No Tier 1 strategies or outreach (Photoroom, Framer, Mews, Overwolf, Bakken & Baeck — only B&B has outreach but it's a Tier 1 long game, no eng roles)
+- No article published (SEO, HN, Dev.to, LinkedIn targets identified but not executed)
+- No proof-of-work projects shipped (Source 2 modding platform, growth audits, beat-detect-wasm)
+- Remaining 45 strategies and outreach packages not generated
+- No applications actually submitted (Tractive was the only attempt, aborted)
+
+*Tier 1 status:*
+| Company | Dossier | Strategy | Outreach | PR/Proof | Status |
+|---------|---------|----------|----------|----------|--------|
+| ~~Apify~~ | Done | — | — | — | BLACKLISTED |
+| Photoroom | Done | — | — | — | Not started |
+| Framer | Done | — | — | — | Not started (warm lead) |
+| Mews | Done | — | — | — | Not started |
+| Overwolf | Done | — | — | — | Not started |
+| Bakken & Baeck | Done | Done | Done | — | Outreach ready, no eng roles |
+| ~~Tractive~~ | Done | Done | Done | — | REJECTED (no remote) |
+
+**Decisions:**
+- The CV tailoring work (Rankacy-specific, outreach-general) shows the right instinct — different companies need different emphasis. The Rankacy variant leads with gaming and C++/Python; the outreach variant leads with monorepos and observability. This pattern should extend to Tier 1 companies
+- Building a web-rendered CV page is smart — it's linkable, searchable, and demonstrates frontend craft. The HTML variants suggest Doug was experimenting with formats for different submission contexts
+- The 18-day gap between the sprint and now is the natural energy drop after an intense 2-day build session. The system is built; the work that remains is execution (sending messages, publishing the article, submitting applications)
+
+**Reflection:** The Feb 15-16 sprint was genuinely impressive — two engineers and ten AI threads producing a research pipeline, 51 dossiers, a swipe tool, an article, and a full outreach strategy in 48 hours. But the system is only as valuable as the outreach it enables, and 18 days later, zero applications have been submitted, zero messages sent, and the article hasn't been published. The infrastructure-to-execution gap is the story of many engineering projects: building the system feels productive; using it feels vulnerable. The next milestone isn't another feature — it's sending the first message.
+
+The OSS PR strategy was a bust. The Slonik and ray.so contributions were well-executed engineering work, but they didn't open doors. In hindsight, the "contribute to their codebase before applying" play has a fatal assumption: that maintainers connect a GitHub PR to a hiring conversation. They don't. A PR from a stranger is just a PR from a stranger. The time spent researching Gajus's repos, implementing deferred connection resets, and adding ColdFusion grammars would have been better spent sending 10 direct messages. Lesson: clever indirection loses to direct outreach.
+
+The uncommitted CV work suggests Doug has been iterating on self-presentation — also important, but less urgent than execution. The CV page, the tailored variants, the HTML exports — these are tools for applying. The applying itself still needs to happen.
+
+---
