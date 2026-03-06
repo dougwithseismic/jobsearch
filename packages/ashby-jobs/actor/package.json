@@ -5,15 +5,16 @@
   "private": true,
   "description": "Apify actor: Discover and scrape every job from 2,800+ Ashby company job boards",
   "scripts": {
-    "start": "tsx src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js",
     "test": "echo 'Run tests from parent package'"
   },
   "dependencies": {
-    "apify": "^3.6.0"
+    "apify": "^3.6.0",
+    "ashby-jobs": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^25.3.5",
-    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }

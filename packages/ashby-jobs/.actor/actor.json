@@ -3,9 +3,9 @@
   "name": "ashby-jobs-scraper",
   "title": "Ashby Jobs Scraper - All 2,800+ Companies",
   "description": "Discover and scrape every job from 2,800+ companies using Ashby. Auto-discovers companies via Common Crawl — no manual URL input needed. Returns titles, departments, locations, compensation, and apply URLs.",
-  "version": "1.0.0",
+  "version": "1.0",
   "buildTag": "latest",
-  "environmentVariables": [],
+  "environmentVariables": {},
   "meta": {
     "authorName": "Doug Silkstone",
     "authorProfileUrl": "https://apify.com/deadlyaccurate",
@@ -18,5 +18,5 @@
     }
   },
   "input": "./input_schema.json",
-  "dockerfile": "./Dockerfile"
+  "dockerfile": "../Dockerfile"
 }

@@ -28,9 +28,7 @@
       "title": "Remote Jobs Only",
       "type": "boolean",
       "description": "Only return jobs explicitly marked as remote by the company.",
-      "default": false,
-      "groupCaption": "Filters",
-      "groupDescription": "Narrow results with regex patterns. All filters are case-insensitive."
+      "default": false
     },
     "locationFilter": {
       "title": "Location Filter",
@@ -57,9 +55,7 @@
       "title": "Include Full Descriptions",
       "type": "boolean",
       "description": "Include the full plain-text job description in output. Increases dataset size significantly (~10x). Default: off to keep results lean.",
-      "default": false,
-      "groupCaption": "Output Options",
-      "groupDescription": "Control what data is included in the results."
+      "default": false
     },
     "includeCompensation": {
       "title": "Include Compensation Data",
@@ -73,9 +69,7 @@
       "description": "Number of parallel API requests. Higher = faster scraping but more memory. Recommended: 10 for full scrape, 5 for testing.",
       "default": 10,
       "minimum": 1,
-      "maximum": 20,
-      "groupCaption": "Performance",
-      "groupDescription": "Tune speed and resource usage."
+      "maximum": 20
     },
     "maxCompanies": {
       "title": "Max Companies",

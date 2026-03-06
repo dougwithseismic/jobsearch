@@ -1,7 +1,7 @@
 import { Actor, log } from 'apify';
 
-import { discoverSlugs, scrapeAll, scrapeCompany, searchJobs } from '../../src/index.js';
-import type { CompanyJobs, JobFilter } from '../../src/types.js';
+import { discoverSlugs, scrapeAll, scrapeCompany, searchJobs } from 'ashby-jobs';
+import type { CompanyJobs, JobFilter } from 'ashby-jobs';
 
 interface Input {
   mode: 'all' | 'companies' | 'search';
