@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doug Silkstone — Cover Letter</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --ink-soft: #2a2a2a;
+    --ink-muted: #5a5a5a;
+    --ink-light: #8a8a8a;
+    --accent: #1a56db;
+    --surface: #ffffff;
+    --border: #e2e2de;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+  html { font-size: 15px; }
+  body { font-family: var(--sans); color: var(--ink-soft); background: #e8e8e4; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+
+  @media print {
+    html { font-size: 13.5px; }
+    body { background: white; }
+    .page { box-shadow: none !important; margin: 0 !important; }
+    .print-controls { display: none !important; }
+  }
+
+  .print-controls { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 100; }
+  .print-btn {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--ink);
+    color: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+  }
+  .print-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+
+  .page { width: 210mm; min-height: 297mm; margin: 2rem auto; background: var(--surface); box-shadow: 0 4px 40px rgba(0,0,0,0.12); overflow: hidden; }
+  .page-inner { padding: 2.4rem 2.8rem 2rem; display: flex; flex-direction: column; min-height: 297mm; box-sizing: border-box; }
+
+  .cover-header { padding-bottom: 1.1rem; border-bottom: 2.5px solid var(--ink); margin-bottom: 1.6rem; }
+  .cover-header-name { font-family: var(--serif); font-size: 2.4rem; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; }
+  .cover-header-sub { font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.3rem; }
+  .cover-header-links { display: flex; gap: 0.85rem; margin-top: 0.45rem; flex-wrap: wrap; }
+  .cover-header-links a { font-size: 0.7rem; font-weight: 500; color: var(--accent); text-decoration: none; }
+
+  .cover-body { flex: 1; }
+  .cover-body p { font-size: 0.82rem; line-height: 1.7; color: var(--ink-soft); margin-bottom: 0.85rem; }
+  .cover-body p.opener { font-size: 0.86rem; font-weight: 500; color: var(--ink); margin-bottom: 1rem; }
+  .cover-body p.cta { margin-top: 0.4rem; font-size: 0.82rem; line-height: 1.7; color: var(--ink); font-weight: 500; }
+  .cover-body p.cta a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .cover-body p.sign-off { margin-top: 1.2rem; font-weight: 600; color: var(--ink); font-size: 0.86rem; }
+  .cover-body p.verify { font-size: 0.73rem; color: var(--ink-light); margin-top: 0.5rem; }
+
+  .cover-footer { margin-top: auto; padding-top: 0.8rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .cover-footer span { font-size: 0.63rem; color: var(--ink-light); }
+  .cover-footer a { font-size: 0.63rem; color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="print-controls">
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="page">
+  <div class="page-inner">
+    <div class="cover-header">
+      <h1 class="cover-header-name">Doug Silkstone</h1>
+      <p class="cover-header-sub">Prague, CZ &middot; doug@withseismic.com &middot; Remote / Hybrid</p>
+      <div class="cover-header-links">
+        <a href="https://github.com/dougwithseismic">GitHub</a>
+        <a href="https://linkedin.com/in/dougsilkstone">LinkedIn</a>
+        <a href="https://contra.com/doug_silkstone/work">Portfolio</a>
+        <a href="https://clutch.co/profile/doug-silkstone-full-stack-engineering">Clutch</a>
+        <a href="https://withseismic.com">withseismic.com</a>
+      </div>
+    </div>
+
+    <div class="cover-body">
+      <p class="opener">Hey,</p>
+
+      <p>If you're looking for someone who's done tickets, delivery, standup, retro for four years straight on the same project, you will absolutely find that person. I've seen the CVs out there. There are a lot of good engineers who are perfectly content doing exactly that, and they'll do a great job for you.</p>
+
+      <p>This isn't me any more.</p>
+
+      <p>I'm looking for the tough problems. The situations with pressure, ambiguity, moving parts, and real stakes. The products that have promise but need direction. The teams that are capable but stretched. The work where the brief is incomplete, the path is unclear, and the business needs someone who can get to clarity quickly and start moving things forward.</p>
+
+      <p>What I bring is breadth, but not in the shallow sense. I came up through growth and technical marketing before I was an engineer, so I naturally think about acquisition, conversion, commercial value, architecture, delivery, and product decisions as parts of the same system. That lets me be useful before the roadmap is clean and after execution begins. I can help define the problem, pressure-test priorities, make the technical tradeoffs, and then ship the thing properly.</p>
+
+      <p>The consultancy alone accounts for over 100 client projects in the last ten years. Some small, some names you'd recognise. Paid ads became analytics, analytics became custom development, development became full product builds. Technical sales, project management, hiring, running the business itself. Ten years is a longer run than most people give anything.</p>
+
+      <p>That is what the last 15 years have trained me to do. I've built and sold three products, run a consultancy since 2016, and delivered work for companies like Contra, Framer, Sky, The Motley Fool, and MIT. The point is not that I have touched a lot of different things. It is that I know how to enter unfamiliar terrain quickly, separate signal from noise, make sound decisions, and turn effort into outcomes the business can actually feel.</p>
+
+      <p>I build teams as well as products. I've hired people, led them, and protected their time so they could do good work. In environments where priorities are shifting or delivery needs steadying, what usually helps is not more theatre. It is clearer judgment, calmer ownership, and someone willing to carry weight without adding noise. That is typically where I do my best work.</p>
+
+      <p class="cta">If reading this brings to mind a product, team, or problem that would benefit from that kind of ownership, I'd be glad to talk. You can reach me at <a href="mailto:doug@withseismic.com">doug@withseismic.com</a> or <a href="https://linkedin.com/in/dougsilkstone">linkedin.com/in/dougsilkstone</a>.</p>
+
+      <p class="sign-off">Doug</p>
+    </div>
+
+    <div class="cover-footer">
+      <span>Cover Letter &middot; Page 1 of 1</span>
+      <a href="https://withseismic.com">withseismic.com</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
