@@ -1,0 +1,256 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "type": "object",
+    "properties": {
+      "company": {
+        "type": "string",
+        "description": "Company display name"
+      },
+      "companySlug": {
+        "type": "string",
+        "description": "Workable job board slug (e.g. '1000heads', 'typeform')"
+      },
+      "shortcode": {
+        "type": "string",
+        "description": "Unique Workable job shortcode"
+      },
+      "title": {
+        "type": "string",
+        "description": "Job title"
+      },
+      "department": {
+        "type": "string",
+        "description": "Department name"
+      },
+      "employmentType": {
+        "type": "string",
+        "description": "Full-time, Part-time, Contract, etc."
+      },
+      "isRemote": {
+        "type": "boolean",
+        "description": "Whether the job allows telecommuting"
+      },
+      "country": {
+        "type": "string",
+        "description": "Primary country"
+      },
+      "city": {
+        "type": "string",
+        "description": "Primary city"
+      },
+      "state": {
+        "type": "string",
+        "description": "Primary state/region"
+      },
+      "locations": {
+        "type": "array",
+        "description": "All locations for the role",
+        "items": {
+          "type": "object",
+          "properties": {
+            "country": { "type": "string" },
+            "countryCode": { "type": "string" },
+            "city": { "type": "string" },
+            "region": { "type": "string" }
+          }
+        }
+      },
+      "experience": {
+        "type": "string",
+        "description": "Experience level (e.g. 'Mid-Senior level', 'Director')"
+      },
+      "industry": {
+        "type": "string",
+        "description": "Industry category"
+      },
+      "publishedAt": {
+        "type": "string",
+        "description": "Date when the job was published (YYYY-MM-DD)"
+      },
+      "jobUrl": {
+        "type": "string",
+        "description": "URL to the job posting on Workable"
+      },
+      "applyUrl": {
+        "type": "string",
+        "description": "Direct application URL"
+      },
+      "scrapedAt": {
+        "type": "string",
+        "description": "ISO 8601 timestamp of when this job was scraped"
+      }
+    },
+    "required": [
+      "company",
+      "companySlug",
+      "shortcode",
+      "title",
+      "isRemote",
+      "jobUrl",
+      "applyUrl",
+      "scrapedAt"
+    ]
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "company",
+          "title",
+          "department",
+          "country",
+          "city",
+          "isRemote",
+          "employmentType",
+          "experience",
+          "publishedAt",
+          "jobUrl"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "company": {
+            "label": "Company",
+            "format": "text"
+          },
+          "title": {
+            "label": "Job Title",
+            "format": "text"
+          },
+          "department": {
+            "label": "Department",
+            "format": "text"
+          },
+          "country": {
+            "label": "Country",
+            "format": "text"
+          },
+          "city": {
+            "label": "City",
+            "format": "text"
+          },
+          "isRemote": {
+            "label": "Remote",
+            "format": "boolean"
+          },
+          "employmentType": {
+            "label": "Type",
+            "format": "text"
+          },
+          "experience": {
+            "label": "Experience",
+            "format": "text"
+          },
+          "publishedAt": {
+            "label": "Published",
+            "format": "date"
+          },
+          "jobUrl": {
+            "label": "Job URL",
+            "format": "link"
+          }
+        }
+      }
+    },
+    "full": {
+      "title": "Full Details",
+      "transformation": {
+        "fields": [
+          "company",
+          "companySlug",
+          "shortcode",
+          "title",
+          "department",
+          "employmentType",
+          "isRemote",
+          "country",
+          "city",
+          "state",
+          "locations",
+          "experience",
+          "industry",
+          "publishedAt",
+          "jobUrl",
+          "applyUrl",
+          "scrapedAt"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "company": {
+            "label": "Company",
+            "format": "text"
+          },
+          "companySlug": {
+            "label": "Slug",
+            "format": "text"
+          },
+          "shortcode": {
+            "label": "Shortcode",
+            "format": "text"
+          },
+          "title": {
+            "label": "Job Title",
+            "format": "text"
+          },
+          "department": {
+            "label": "Department",
+            "format": "text"
+          },
+          "employmentType": {
+            "label": "Type",
+            "format": "text"
+          },
+          "isRemote": {
+            "label": "Remote",
+            "format": "boolean"
+          },
+          "country": {
+            "label": "Country",
+            "format": "text"
+          },
+          "city": {
+            "label": "City",
+            "format": "text"
+          },
+          "state": {
+            "label": "State",
+            "format": "text"
+          },
+          "locations": {
+            "label": "All Locations",
+            "format": "array"
+          },
+          "experience": {
+            "label": "Experience",
+            "format": "text"
+          },
+          "industry": {
+            "label": "Industry",
+            "format": "text"
+          },
+          "publishedAt": {
+            "label": "Published",
+            "format": "date"
+          },
+          "jobUrl": {
+            "label": "Job URL",
+            "format": "link"
+          },
+          "applyUrl": {
+            "label": "Apply URL",
+            "format": "link"
+          },
+          "scrapedAt": {
+            "label": "Scraped At",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}

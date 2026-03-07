@@ -1,0 +1,99 @@
+{
+  "title": "Personio Jobs Scraper",
+  "description": "Discover, scrape, and search jobs from companies using Personio as their ATS. Auto-discovers companies -- no manual URL input needed. Personio is the dominant HR platform in Europe, used by N26, Celonis, Gorillas, and hundreds more.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "How to run the scraper:\n- 'all' -- Auto-discover ALL companies and scrape every job board. Zero config.\n- 'companies' -- Scrape only the company slugs you specify.\n- 'search' -- Search a specific company's jobs by keyword (fast, single API call).",
+      "editor": "select",
+      "enum": ["all", "companies", "search"],
+      "default": "all",
+      "prefill": "all",
+      "sectionCaption": "Scraping Mode",
+      "sectionDescription": "Choose how you want to discover and scrape Personio job boards."
+    },
+    "companies": {
+      "title": "Company Slugs (Subdomains)",
+      "type": "array",
+      "description": "Personio subdomains to scrape. Used in 'companies' and 'search' modes.\n\nThe slug is the subdomain in {slug}.jobs.personio.de. Examples: 'n26', 'celonis', 'gorillas', 'personio'.\n\nNot sure of the slug? Run in 'all' mode first -- the output includes every slug.",
+      "editor": "stringList",
+      "default": [],
+      "sectionCaption": "Target Companies",
+      "sectionDescription": "Specify which companies to scrape. Leave empty for 'all' mode."
+    },
+    "locationFilter": {
+      "title": "Location/Office Filter",
+      "type": "string",
+      "description": "Regex pattern to match job office/location.\n\nExamples:\n- 'berlin|munich|hamburg' -- German cities\n- 'remote' -- Any location containing 'remote'\n- 'europe|germany|uk|france' -- European jobs\n- 'prague|czech' -- Specific city/country",
+      "editor": "textfield",
+      "default": ""
+    },
+    "departmentFilter": {
+      "title": "Department Filter",
+      "type": "string",
+      "description": "Regex pattern to match departments.\n\nExamples:\n- 'engineering|product' -- Tech roles\n- 'sales|marketing|growth' -- Go-to-market\n- 'design|creative' -- Design teams\n- 'data|machine.learning|ai' -- Data/ML roles",
+      "editor": "textfield",
+      "default": ""
+    },
+    "officeFilter": {
+      "title": "Office Filter",
+      "type": "string",
+      "description": "Regex pattern to match office names.\n\nExamples:\n- 'berlin|london|amsterdam' -- European offices\n- 'remote' -- Remote offices\n- 'new york|san francisco' -- US offices",
+      "editor": "textfield",
+      "default": ""
+    },
+    "keywordFilter": {
+      "title": "Title/Keyword Filter",
+      "type": "string",
+      "description": "Regex pattern to match job titles and keywords.\n\nExamples:\n- 'senior|staff|lead|principal' -- Senior roles\n- 'full.?stack|fullstack' -- Full-stack engineers\n- 'react|typescript|node' -- Tech-specific\n- 'founding|head.of|vp|director' -- Leadership\n- 'intern|junior|entry' -- Entry-level",
+      "editor": "textfield",
+      "default": ""
+    },
+    "seniorityFilter": {
+      "title": "Seniority Filter",
+      "type": "string",
+      "description": "Regex pattern to match seniority level.\n\nExamples:\n- 'senior|lead' -- Senior roles\n- 'junior|entry' -- Entry-level\n- 'mid' -- Mid-level",
+      "editor": "textfield",
+      "default": ""
+    },
+    "employmentTypeFilter": {
+      "title": "Employment Type Filter",
+      "type": "string",
+      "description": "Regex pattern to match employment type.\n\nExamples:\n- 'permanent' -- Permanent roles\n- 'contract|freelance' -- Contract work\n- 'intern' -- Internships",
+      "editor": "textfield",
+      "default": ""
+    },
+    "includeContent": {
+      "title": "Include Full Descriptions",
+      "type": "boolean",
+      "description": "Include the full HTML job descriptions in output. Increases dataset size significantly. Default: off to keep results lean.",
+      "default": false
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "description": "Number of parallel requests. Personio rate-limits aggressively, so keep this low. Recommended: 3-5.",
+      "default": 5,
+      "minimum": 1,
+      "maximum": 10
+    },
+    "maxCompanies": {
+      "title": "Max Companies",
+      "type": "integer",
+      "description": "Limit the number of companies to scrape. 0 = no limit (scrape all). Useful for testing or staying within budget.",
+      "default": 0,
+      "minimum": 0
+    },
+    "language": {
+      "title": "Language",
+      "type": "string",
+      "description": "Language parameter for job listings. Default: 'en' (English).\n\nExamples:\n- 'en' -- English\n- 'de' -- German\n- 'fr' -- French",
+      "editor": "textfield",
+      "default": "en"
+    }
+  },
+  "required": ["mode"]
+}

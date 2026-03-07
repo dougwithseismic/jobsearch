@@ -1,0 +1,272 @@
+/* CV Page — fully self-contained light-mode styles */
+/* Scoped under .cv-page so nothing leaks to the rest of the app */
+
+.cv-page {
+  --cv-bg: #ffffff;
+  --cv-fg: #1a1a1a;
+  --cv-muted: #6b7280;
+  --cv-border: #e5e7eb;
+  --cv-accent: #2563eb;
+  --cv-gap: 0.7rem;
+
+  background: #f3f4f6;
+  min-height: 100vh;
+  font-family: var(--font-geist-sans), -apple-system, system-ui, sans-serif;
+  color: var(--cv-fg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Toolbar (hidden when printing) ─── */
+
+.cv-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid var(--cv-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cv-toolbar button {
+  background: var(--cv-accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cv-toolbar button:hover {
+  opacity: 0.9;
+}
+
+.cv-toolbar-hint {
+  color: var(--cv-muted);
+  font-size: 0.8rem;
+}
+
+.cv-variant-select {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--cv-border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  background: #fff;
+  color: var(--cv-fg);
+  cursor: pointer;
+}
+
+/* ─── Sheet (the white page) ─── */
+
+.cv-sheet {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--cv-bg);
+  padding: 2.5rem 3rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+/* ─── Header ─── */
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--cv-fg);
+  margin-bottom: var(--cv-gap);
+}
+
+.cv-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.cv-title {
+  font-size: 0.85rem;
+  color: var(--cv-muted);
+  margin: 0.1rem 0 0;
+}
+
+.cv-meta {
+  font-size: 0.72rem;
+  color: var(--cv-muted);
+  margin: 0.2rem 0 0;
+}
+
+.cv-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+}
+
+.cv-header-right a {
+  color: var(--cv-accent);
+  text-decoration: none;
+  font-size: 0.72rem;
+}
+
+.cv-header-right a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Sections ─── */
+
+.cv-section {
+  margin-bottom: var(--cv-gap);
+}
+
+.cv-section-last {
+  margin-bottom: 0;
+}
+
+.cv-section h2 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cv-muted);
+  margin: 0 0 0.3rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--cv-border);
+}
+
+/* ─── About ─── */
+
+.cv-about {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--cv-fg);
+  margin: 0;
+}
+
+/* ─── Skills ─── */
+
+.cv-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.15rem 2rem;
+}
+
+.cv-skill-group {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.cv-skill-label {
+  font-weight: 600;
+  min-width: 80px;
+  flex-shrink: 0;
+  color: var(--cv-fg);
+}
+
+.cv-skill-values {
+  color: var(--cv-muted);
+}
+
+/* ─── Experience ─── */
+
+.cv-job {
+  margin-bottom: 0.5rem;
+}
+
+.cv-job:last-child {
+  margin-bottom: 0;
+}
+
+.cv-job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cv-job-role {
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.cv-job-company {
+  font-size: 0.78rem;
+  color: var(--cv-fg);
+}
+
+.cv-job-period {
+  font-size: 0.68rem;
+  color: var(--cv-muted);
+  white-space: nowrap;
+}
+
+.cv-job-tech {
+  font-size: 0.66rem;
+  color: var(--cv-accent);
+  margin: 0 0 0.1rem;
+}
+
+.cv-job-highlights {
+  margin: 0;
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.cv-job-highlights li {
+  font-size: 0.7rem;
+  line-height: 1.35;
+  color: #374151;
+  margin-bottom: 0;
+}
+
+/* ─── Clients ─── */
+
+.cv-clients {
+  font-size: 0.72rem;
+  color: var(--cv-muted);
+  margin: 0;
+}
+
+/* ─── Print ─── */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .cv-page {
+    background: #fff;
+    min-height: auto;
+  }
+
+  .cv-sheet {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* Keep everything tight — no forced page breaks */
+  .cv-job,
+  .cv-section {
+    break-inside: auto;
+  }
+
+  @page {
+    margin: 0.8cm 1cm;
+    size: A4;
+  }
+}

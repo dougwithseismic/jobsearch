@@ -2,3 +2,6 @@ packages:
   - "apps/*"
   - "packages/*"
   - "packages/ashby-jobs/actor"
+  - "packages/recruitee-jobs/actor"
+  - "packages/breezyhr-jobs/actor"
+  - "packages/personio-jobs/actor"

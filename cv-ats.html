@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doug Silkstone - ATS CV</title>
+<style>
+  :root {
+    --ink: #111111;
+    --muted: #555555;
+    --border: #d9d9d9;
+    --surface: #ffffff;
+    --sans: Arial, Helvetica, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--ink);
+    background: #f5f5f5;
+    line-height: 1.45;
+  }
+
+  @page { size: A4; margin: 0.5in; }
+
+  @media print {
+    body { background: var(--surface); }
+    .page { margin: 0; box-shadow: none; width: auto; min-height: auto; }
+    .print-controls { display: none; }
+  }
+
+  .print-controls {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .print-btn {
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--ink);
+    background: var(--surface);
+    color: var(--ink);
+    font: 600 0.9rem var(--sans);
+    cursor: pointer;
+  }
+
+  .page {
+    width: 8.27in;
+    min-height: 11.69in;
+    margin: 1rem auto;
+    background: var(--surface);
+    box-shadow: 0 2px 18px rgba(0,0,0,0.08);
+    padding: 0.55in;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 0.25rem;
+  }
+
+  .headline {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .contact {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  .contact a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .section {
+    margin-top: 1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin: 0 0 0.45rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--border);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  p, li {
+    font-size: 0.94rem;
+  }
+
+  ul {
+    margin: 0.35rem 0 0.7rem 1.2rem;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.28rem;
+  }
+
+  .skills-list,
+  .additional-list {
+    margin-left: 1.2rem;
+  }
+
+  .role {
+    margin-bottom: 0.95rem;
+  }
+
+  .role-title {
+    font-weight: 700;
+    font-size: 0.98rem;
+  }
+
+  .role-meta {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin: 0.08rem 0 0.22rem;
+  }
+
+  .label {
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<div class="print-controls">
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="page">
+  <header>
+    <h1>Doug Silkstone</h1>
+    <div class="headline">Senior Engineer | Lead Full-Stack Engineer | TypeScript, React, Node.js, AI Products</div>
+    <div class="contact">
+      Prague, Czech Republic | Remote / Hybrid | Open to permanent roles<br>
+      <a href="mailto:doug@withseismic.com">doug@withseismic.com</a> | <a href="https://linkedin.com/in/dougsilkstone">linkedin.com/in/dougsilkstone</a> | <a href="https://github.com/dougwithseismic">github.com/dougwithseismic</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Professional Summary</h2>
+    <p>Full-stack engineer with 15 years of experience building and shipping production software across SaaS, marketplaces, growth systems, browser extensions, internal tools, and AI-assisted workflows. Strong hands-on depth in TypeScript, React, Next.js, Node.js, PostgreSQL, testing, cloud infrastructure, system design, and technical architecture. Experience leading small teams, mentoring engineers, partnering with product and design, and owning delivery from prototype through production. Targeting Senior Engineer and Lead Engineer roles.</p>
+  </section>
+
+  <section class="section">
+    <h2>Technical Skills</h2>
+    <ul class="skills-list">
+      <li><span class="label">Languages:</span> TypeScript, JavaScript, Python, C++, Go</li>
+      <li><span class="label">Frontend:</span> React, Next.js, TanStack, Tailwind CSS, Svelte, HTML, CSS</li>
+      <li><span class="label">Backend:</span> Node.js, Hono, Express, NestJS, FastAPI, GraphQL, REST APIs, Drizzle ORM</li>
+      <li><span class="label">Databases and Infrastructure:</span> PostgreSQL, Redis, AWS, GCP, Docker, Kubernetes, Terraform</li>
+      <li><span class="label">Testing and Quality:</span> Vitest, Jest, React Testing Library, Playwright, Cypress, observability, performance optimization</li>
+      <li><span class="label">AI and Automation:</span> LLM agents, RAG, MCP servers, browser automation, Playwright, Puppeteer, workflow tooling</li>
+      <li><span class="label">Leadership:</span> System design, architecture, mentoring, code review, hiring, cross-functional delivery</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Professional Experience</h2>
+
+    <div class="role">
+      <div class="role-title">Senior Engineer / Engineering Lead</div>
+      <div class="role-meta">WithSeismic | Prague, Czech Republic / Remote | 2016 - Present</div>
+      <ul>
+        <li>Embedded as a senior hands-on engineer inside client teams, owning architecture, delivery, technical direction, and mentoring across product engineering engagements.</li>
+        <li>Led and built Contra's Indy.ai Chrome Extension, turning 35,000+ users into a distributed opportunity-finding network using LLM workflows and driving a 2x increase in marketplace inventory.</li>
+        <li>Built browser automation and prospecting systems with proxy rotation, rate limiting, and CRM integration for growth and sales teams.</li>
+        <li>Delivered component libraries, design-system workflows, and monorepo tooling using React, MUI, Storybook, Yarn workspaces, and Turborepo.</li>
+        <li>Shipped growth and performance tooling for clients including Sky and The Motley Fool, including automation across multi-million-dollar advertising budgets.</li>
+        <li>Worked directly with founders, product managers, designers, and engineers to take products from prototype to production.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-title">Product Engineer (Side Project)</div>
+      <div class="role-meta">DinnersWithFriends.co.uk | Remote | Nov 2024 - Present</div>
+      <ul>
+        <li>Built and operate the full product stack for a social-events platform, including booking flows, CMS tooling, payments, analytics, and operations tooling.</li>
+        <li>Implemented a Stripe Connect merchant-of-record setup to support a franchise-style operating model.</li>
+        <li>Added SEO, lifecycle email, queue-backed workflows, revenue dashboards, and LLM-powered admin tooling.</li>
+        <li>Supported 20+ events and 250+ guests in 2025.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-title">Founding Engineer</div>
+      <div class="role-meta">getBenson.com | Remote | Mar 2020 - Jan 2023</div>
+      <ul>
+        <li>Built a SaaS platform that detected and blocked web extensions from leaking discount codes, protecting 25 million monthly sessions across 500+ stores.</li>
+        <li>Designed a GraphQL API and real-time analytics dashboards for e-commerce teams; onboarded 80+ brands.</li>
+        <li>Rewrote the MVP into a production-grade platform with strict TypeScript, stronger test coverage, and observability.</li>
+        <li>Commercial exit completed in 2023.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-title">Founding Engineer</div>
+      <div class="role-meta">Vouchernaut.com | Remote | Jan 2016 - Nov 2022</div>
+      <ul>
+        <li>Built and scaled an automated voucher platform to 250,000 sessions per month across 100,000+ brands.</li>
+        <li>Owned product, automation infrastructure, and monetization; scaled to $100k ARR and sold in 2021.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-title">Lead Growth Engineer</div>
+      <div class="role-meta">Patrianna Ltd | Remote | Nov 2022 - Jul 2023</div>
+      <ul>
+        <li>Led a greenfield in-house game studio for a top-three social casino product, scaling from zero to 1 million players.</li>
+        <li>Architected and shipped five high-stakes social casino games using React and modern frontend tooling.</li>
+        <li>Hired and led a 9-person team across frontend, game development, and QA.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-title">Head of Digital</div>
+      <div class="role-meta">Reach Robotics | Bristol, United Kingdom | Nov 2016 - May 2018</div>
+      <ul>
+        <li>Built the e-commerce platform and digital stack for an AR robot product launched in Apple Stores globally.</li>
+        <li>Led go-to-market execution and hired cross-functional support across digital delivery.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-title">Performance Marketing and Automation Engineer</div>
+      <div class="role-meta">Vouchercloud (later acquired by Groupon) | United Kingdom | Nov 2014 - Nov 2016</div>
+      <ul>
+        <li>Managed multi-million-pound paid search programs across 15 international sites.</li>
+        <li>Built React-based internal tools that saved 240 hours per month and reduced SEM team overhead by 40 percent.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Selected Projects</h2>
+    <ul>
+      <li><span class="label">Promptheus:</span> Voice-to-ChatGPT Chrome extension with 30,000+ users, sold in January 2024.</li>
+      <li><span class="label">Open Source:</span> Contributor to TanStack and Mastra AI.</li>
+      <li><span class="label">S2 Framework:</span> C++ and Python reinforcement learning project for Counter-Strike using PPO and transformer-based models.</li>
+      <li><span class="label">chrome-ext-template:</span> Open-source React and Tailwind Chrome extension starter.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Awards and Recognition</h2>
+    <ul class="additional-list">
+      <li>Performance Marketing Award 2016, Most Effective Cross-Channel Campaign (NOW TV)</li>
+      <li>Performance Marketing Award 2017, Most Creative Campaign (TOPMAN)</li>
+      <li>#1 Product Hunt Product of the Week for Indy.ai Chrome extension for Contra</li>
+      <li>Subject contributor to MIT Generative AI and LLM course, reaching 50,000+ students</li>
+      <li>Top 1% Contra freelancer with 5.0/5.0 rating</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Additional Information</h2>
+    <ul class="additional-list">
+      <li>Clients include Contra, Framer, The Motley Fool, Sky, STRV, MIT, and Techstars-backed startups.</li>
+      <li>Portfolio and case studies: <a href="https://withseismic.com">withseismic.com</a></li>
+    </ul>
+  </section>
+</div>
+
+</body>
+</html>

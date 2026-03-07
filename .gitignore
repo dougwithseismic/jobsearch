@@ -40,4 +40,11 @@ yarn-error.log*
 # Scraped data (large JSON/CSV files)
 data/ashby/
 packages/ashby-jobs-tui/ashby-data/
+packages/ashby-jobs/ashby-data/
 packages/ashby-jobs/actor/storage/
+packages/hn-jobs/hn-data/
+scripts/results/
+scripts/job-hunt-results.json
+ashby-*.csv
+hn-jobs.*
+hn-scored.csv

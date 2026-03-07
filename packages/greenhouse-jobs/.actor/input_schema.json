@@ -1,0 +1,78 @@
+{
+  "title": "Greenhouse Jobs Scraper",
+  "description": "Discover, scrape, and search jobs from thousands of companies using Greenhouse as their ATS. Auto-discovers companies — no manual URL input needed.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "How to run the scraper:\n- 'all' — Auto-discover ALL companies and scrape every job board. Zero config.\n- 'companies' — Scrape only the company slugs you specify.\n- 'search' — Search a specific company's jobs by keyword (fast, single API call).",
+      "editor": "select",
+      "enum": ["all", "companies", "search"],
+      "default": "all",
+      "prefill": "all",
+      "sectionCaption": "Scraping Mode",
+      "sectionDescription": "Choose how you want to discover and scrape Greenhouse job boards."
+    },
+    "companies": {
+      "title": "Company Slugs (Board Tokens)",
+      "type": "array",
+      "description": "Greenhouse board tokens to scrape. Used in 'companies' and 'search' modes.\n\nThe token is the path segment in boards.greenhouse.io/{token}. Examples: 'stripe', 'airbnb', 'cloudflare', 'figma'.\n\nNot sure of the token? Run in 'all' mode first — the output includes every slug.",
+      "editor": "stringList",
+      "default": [],
+      "sectionCaption": "Target Companies",
+      "sectionDescription": "Specify which companies to scrape. Leave empty for 'all' mode."
+    },
+    "locationFilter": {
+      "title": "Location Filter",
+      "type": "string",
+      "description": "Regex pattern to match job locations.\n\nExamples:\n- 'europe|germany|uk|france' — European jobs\n- 'remote' — Any location containing 'remote'\n- 'new york|san francisco|austin' — US tech hubs\n- 'prague|czech' — Specific city/country",
+      "editor": "textfield",
+      "default": ""
+    },
+    "departmentFilter": {
+      "title": "Department Filter",
+      "type": "string",
+      "description": "Regex pattern to match departments.\n\nExamples:\n- 'engineering|product' — Tech roles\n- 'sales|marketing|growth' — Go-to-market\n- 'design|creative' — Design teams\n- 'data|machine.learning|ai' — Data/ML roles",
+      "editor": "textfield",
+      "default": ""
+    },
+    "officeFilter": {
+      "title": "Office Filter",
+      "type": "string",
+      "description": "Regex pattern to match office names.\n\nExamples:\n- 'berlin|london|amsterdam' — European offices\n- 'remote' — Remote offices\n- 'new york|san francisco' — US offices",
+      "editor": "textfield",
+      "default": ""
+    },
+    "keywordFilter": {
+      "title": "Title/Keyword Filter",
+      "type": "string",
+      "description": "Regex pattern to match job titles.\n\nExamples:\n- 'senior|staff|lead|principal' — Senior roles\n- 'full.?stack|fullstack' — Full-stack engineers\n- 'react|typescript|node' — Tech-specific\n- 'founding|head.of|vp|director' — Leadership\n- 'intern|junior|entry' — Entry-level",
+      "editor": "textfield",
+      "default": ""
+    },
+    "includeContent": {
+      "title": "Include Full Descriptions",
+      "type": "boolean",
+      "description": "Include the full HTML job description in output. Increases dataset size significantly (~10x). Default: off to keep results lean.",
+      "default": false
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "description": "Number of parallel API requests. Higher = faster scraping but more memory. Recommended: 10 for full scrape, 5 for testing.",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "maxCompanies": {
+      "title": "Max Companies",
+      "type": "integer",
+      "description": "Limit the number of companies to scrape. 0 = no limit (scrape all). Useful for testing or staying within budget.",
+      "default": 0,
+      "minimum": 0
+    }
+  },
+  "required": ["mode"]
+}

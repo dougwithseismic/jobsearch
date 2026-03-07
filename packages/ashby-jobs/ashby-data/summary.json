@@ -1,0 +1,4162 @@
+{
+  "scrapedAt": "2026-03-06T12:54:17.152Z",
+  "totalCompanies": 831,
+  "totalJobs": 13933,
+  "companies": [
+    {
+      "company": "openai",
+      "slug": "openai",
+      "jobCount": 553
+    },
+    {
+      "company": "airwallex",
+      "slug": "airwallex",
+      "jobCount": 602
+    },
+    {
+      "company": "snowflake",
+      "slug": "snowflake",
+      "jobCount": 375
+    },
+    {
+      "company": "Crusoe",
+      "slug": "Crusoe",
+      "jobCount": 244
+    },
+    {
+      "company": "crusoe",
+      "slug": "crusoe",
+      "jobCount": 244
+    },
+    {
+      "company": "roadsurfer.com",
+      "slug": "roadsurfer.com",
+      "jobCount": 14
+    },
+    {
+      "company": "deel",
+      "slug": "deel",
+      "jobCount": 273
+    },
+    {
+      "company": "Deel",
+      "slug": "Deel",
+      "jobCount": 273
+    },
+    {
+      "company": "everai",
+      "slug": "everai",
+      "jobCount": 184
+    },
+    {
+      "company": "deliveroo",
+      "slug": "deliveroo",
+      "jobCount": 61
+    },
+    {
+      "company": "truelogic",
+      "slug": "truelogic",
+      "jobCount": 203
+    },
+    {
+      "company": "harvey",
+      "slug": "harvey",
+      "jobCount": 213
+    },
+    {
+      "company": "vanta",
+      "slug": "vanta",
+      "jobCount": 131
+    },
+    {
+      "company": "Notion",
+      "slug": "Notion",
+      "jobCount": 153
+    },
+    {
+      "company": "heidihealth.com.au",
+      "slug": "heidihealth.com.au",
+      "jobCount": 142
+    },
+    {
+      "company": "Sierra",
+      "slug": "Sierra",
+      "jobCount": 105
+    },
+    {
+      "company": "dandy",
+      "slug": "dandy",
+      "jobCount": 81
+    },
+    {
+      "company": "kraken.com",
+      "slug": "kraken.com",
+      "jobCount": 101
+    },
+    {
+      "company": "ramp",
+      "slug": "ramp",
+      "jobCount": 98
+    },
+    {
+      "company": "cohere",
+      "slug": "cohere",
+      "jobCount": 125
+    },
+    {
+      "company": "zip",
+      "slug": "zip",
+      "jobCount": 114
+    },
+    {
+      "company": "delinea",
+      "slug": "delinea",
+      "jobCount": 109
+    },
+    {
+      "company": "elevenlabs",
+      "slug": "elevenlabs",
+      "jobCount": 105
+    },
+    {
+      "company": "ElevenLabs",
+      "slug": "ElevenLabs",
+      "jobCount": 105
+    },
+    {
+      "company": "the-exploration-company",
+      "slug": "the-exploration-company",
+      "jobCount": 95
+    },
+    {
+      "company": "deepl",
+      "slug": "deepl",
+      "jobCount": 100
+    },
+    {
+      "company": "DeepL",
+      "slug": "DeepL",
+      "jobCount": 100
+    },
+    {
+      "company": "alan",
+      "slug": "alan",
+      "jobCount": 60
+    },
+    {
+      "company": "decagon",
+      "slug": "decagon",
+      "jobCount": 62
+    },
+    {
+      "company": "mapbox",
+      "slug": "mapbox",
+      "jobCount": 83
+    },
+    {
+      "company": "formenergy",
+      "slug": "formenergy",
+      "jobCount": 79
+    },
+    {
+      "company": "iwoca.co.uk",
+      "slug": "iwoca.co.uk",
+      "jobCount": 24
+    },
+    {
+      "company": "replit",
+      "slug": "replit",
+      "jobCount": 79
+    },
+    {
+      "company": "Flock Safety",
+      "slug": "Flock Safety",
+      "jobCount": 77
+    },
+    {
+      "company": "lpadesignstudios",
+      "slug": "lpadesignstudios",
+      "jobCount": 76
+    },
+    {
+      "company": "SiteMinder",
+      "slug": "SiteMinder",
+      "jobCount": 44
+    },
+    {
+      "company": "siteminder",
+      "slug": "siteminder",
+      "jobCount": 44
+    },
+    {
+      "company": "ema",
+      "slug": "ema",
+      "jobCount": 65
+    },
+    {
+      "company": "satispay",
+      "slug": "satispay",
+      "jobCount": 29
+    },
+    {
+      "company": "1password",
+      "slug": "1password",
+      "jobCount": 46
+    },
+    {
+      "company": "abridge",
+      "slug": "abridge",
+      "jobCount": 63
+    },
+    {
+      "company": "Abridge",
+      "slug": "Abridge",
+      "jobCount": 63
+    },
+    {
+      "company": "faculty",
+      "slug": "faculty",
+      "jobCount": 55
+    },
+    {
+      "company": "Ashby",
+      "slug": "Ashby",
+      "jobCount": 61
+    },
+    {
+      "company": "ashby",
+      "slug": "ashby",
+      "jobCount": 61
+    },
+    {
+      "company": "docker",
+      "slug": "docker",
+      "jobCount": 61
+    },
+    {
+      "company": "Rothys",
+      "slug": "Rothys",
+      "jobCount": 1
+    },
+    {
+      "company": "claylabs",
+      "slug": "claylabs",
+      "jobCount": 49
+    },
+    {
+      "company": "ruby-labs",
+      "slug": "ruby-labs",
+      "jobCount": 38
+    },
+    {
+      "company": "almedia",
+      "slug": "almedia",
+      "jobCount": 27
+    },
+    {
+      "company": "g2i",
+      "slug": "g2i",
+      "jobCount": 53
+    },
+    {
+      "company": "hawkeyeinnovations",
+      "slug": "hawkeyeinnovations",
+      "jobCount": 51
+    },
+    {
+      "company": "auditboard",
+      "slug": "auditboard",
+      "jobCount": 28
+    },
+    {
+      "company": "d-matrix",
+      "slug": "d-matrix",
+      "jobCount": 52
+    },
+    {
+      "company": "d-Matrix",
+      "slug": "d-Matrix",
+      "jobCount": 52
+    },
+    {
+      "company": "lendable",
+      "slug": "lendable",
+      "jobCount": 43
+    },
+    {
+      "company": "rain",
+      "slug": "rain",
+      "jobCount": 28
+    },
+    {
+      "company": "serverobotics",
+      "slug": "serverobotics",
+      "jobCount": 52
+    },
+    {
+      "company": "mollie",
+      "slug": "mollie",
+      "jobCount": 34
+    },
+    {
+      "company": "A1 Garage Door Service",
+      "slug": "A1 Garage Door Service",
+      "jobCount": 45
+    },
+    {
+      "company": "ironcladhq",
+      "slug": "ironcladhq",
+      "jobCount": 31
+    },
+    {
+      "company": "mach",
+      "slug": "mach",
+      "jobCount": 49
+    },
+    {
+      "company": "range",
+      "slug": "range",
+      "jobCount": 33
+    },
+    {
+      "company": "eightsleep",
+      "slug": "eightsleep",
+      "jobCount": 46
+    },
+    {
+      "company": "Hippocratic AI",
+      "slug": "Hippocratic AI",
+      "jobCount": 40
+    },
+    {
+      "company": "hippocratic ai",
+      "slug": "hippocratic ai",
+      "jobCount": 40
+    },
+    {
+      "company": "NorthwoodSpace",
+      "slug": "NorthwoodSpace",
+      "jobCount": 44
+    },
+    {
+      "company": "northwoodspace",
+      "slug": "northwoodspace",
+      "jobCount": 44
+    },
+    {
+      "company": "tandem-health",
+      "slug": "tandem-health",
+      "jobCount": 37
+    },
+    {
+      "company": "cognition",
+      "slug": "cognition",
+      "jobCount": 47
+    },
+    {
+      "company": "baseten",
+      "slug": "baseten",
+      "jobCount": 46
+    },
+    {
+      "company": "silver",
+      "slug": "silver",
+      "jobCount": 44
+    },
+    {
+      "company": "Silver",
+      "slug": "Silver",
+      "jobCount": 44
+    },
+    {
+      "company": "M-KOPA",
+      "slug": "M-KOPA",
+      "jobCount": 8
+    },
+    {
+      "company": "mebe",
+      "slug": "mebe",
+      "jobCount": 1
+    },
+    {
+      "company": "speak",
+      "slug": "speak",
+      "jobCount": 23
+    },
+    {
+      "company": "Speak",
+      "slug": "Speak",
+      "jobCount": 23
+    },
+    {
+      "company": "Braintrust",
+      "slug": "Braintrust",
+      "jobCount": 34
+    },
+    {
+      "company": "chainalysis-careers",
+      "slug": "chainalysis-careers",
+      "jobCount": 28
+    },
+    {
+      "company": "skydropx",
+      "slug": "skydropx",
+      "jobCount": 15
+    },
+    {
+      "company": "Skydropx",
+      "slug": "Skydropx",
+      "jobCount": 15
+    },
+    {
+      "company": "n8n",
+      "slug": "n8n",
+      "jobCount": 43
+    },
+    {
+      "company": "oneapp",
+      "slug": "oneapp",
+      "jobCount": 33
+    },
+    {
+      "company": "twelve-labs",
+      "slug": "twelve-labs",
+      "jobCount": 42
+    },
+    {
+      "company": "rogo",
+      "slug": "rogo",
+      "jobCount": 26
+    },
+    {
+      "company": "Rogo",
+      "slug": "Rogo",
+      "jobCount": 26
+    },
+    {
+      "company": "solace",
+      "slug": "solace",
+      "jobCount": 18
+    },
+    {
+      "company": "blp-digital",
+      "slug": "blp-digital",
+      "jobCount": 38
+    },
+    {
+      "company": "Deepgram",
+      "slug": "Deepgram",
+      "jobCount": 41
+    },
+    {
+      "company": "deepgram",
+      "slug": "deepgram",
+      "jobCount": 41
+    },
+    {
+      "company": "directive",
+      "slug": "directive",
+      "jobCount": 39
+    },
+    {
+      "company": "tarro",
+      "slug": "tarro",
+      "jobCount": 39
+    },
+    {
+      "company": "suno",
+      "slug": "suno",
+      "jobCount": 33
+    },
+    {
+      "company": "fieldguide",
+      "slug": "fieldguide",
+      "jobCount": 40
+    },
+    {
+      "company": "junipersquare",
+      "slug": "junipersquare",
+      "jobCount": 23
+    },
+    {
+      "company": "multiverse",
+      "slug": "multiverse",
+      "jobCount": 24
+    },
+    {
+      "company": "Promise",
+      "slug": "Promise",
+      "jobCount": 32
+    },
+    {
+      "company": "9fin",
+      "slug": "9fin",
+      "jobCount": 19
+    },
+    {
+      "company": "candidhealth",
+      "slug": "candidhealth",
+      "jobCount": 29
+    },
+    {
+      "company": "moss",
+      "slug": "moss",
+      "jobCount": 13
+    },
+    {
+      "company": "patreon",
+      "slug": "patreon",
+      "jobCount": 33
+    },
+    {
+      "company": "writer",
+      "slug": "writer",
+      "jobCount": 23
+    },
+    {
+      "company": "betterup",
+      "slug": "betterup",
+      "jobCount": 21
+    },
+    {
+      "company": "horizon3ai",
+      "slug": "horizon3ai",
+      "jobCount": 37
+    },
+    {
+      "company": "omnea",
+      "slug": "omnea",
+      "jobCount": 30
+    },
+    {
+      "company": "sosafe",
+      "slug": "sosafe",
+      "jobCount": 24
+    },
+    {
+      "company": "trainline",
+      "slug": "trainline",
+      "jobCount": 25
+    },
+    {
+      "company": "welltech",
+      "slug": "welltech",
+      "jobCount": 15
+    },
+    {
+      "company": "StandardBots",
+      "slug": "StandardBots",
+      "jobCount": 35
+    },
+    {
+      "company": "Hyperexponential",
+      "slug": "Hyperexponential",
+      "jobCount": 30
+    },
+    {
+      "company": "menlosecurity",
+      "slug": "menlosecurity",
+      "jobCount": 31
+    },
+    {
+      "company": "partly.com",
+      "slug": "partly.com",
+      "jobCount": 35
+    },
+    {
+      "company": "supabase",
+      "slug": "supabase",
+      "jobCount": 35
+    },
+    {
+      "company": "cursor",
+      "slug": "cursor",
+      "jobCount": 34
+    },
+    {
+      "company": "everfield",
+      "slug": "everfield",
+      "jobCount": 32
+    },
+    {
+      "company": "joko",
+      "slug": "joko",
+      "jobCount": 26
+    },
+    {
+      "company": "playson",
+      "slug": "playson",
+      "jobCount": 22
+    },
+    {
+      "company": "statista",
+      "slug": "statista",
+      "jobCount": 21
+    },
+    {
+      "company": "the-global-talent-co",
+      "slug": "the-global-talent-co",
+      "jobCount": 3
+    },
+    {
+      "company": "Weave",
+      "slug": "Weave",
+      "jobCount": 34
+    },
+    {
+      "company": "homebase",
+      "slug": "homebase",
+      "jobCount": 22
+    },
+    {
+      "company": "onebrief",
+      "slug": "onebrief",
+      "jobCount": 33
+    },
+    {
+      "company": "permitflow",
+      "slug": "permitflow",
+      "jobCount": 25
+    },
+    {
+      "company": "toogeza",
+      "slug": "toogeza",
+      "jobCount": 11
+    },
+    {
+      "company": "wayflyer",
+      "slug": "wayflyer",
+      "jobCount": 13
+    },
+    {
+      "company": "cartesia",
+      "slug": "cartesia",
+      "jobCount": 32
+    },
+    {
+      "company": "lyric",
+      "slug": "lyric",
+      "jobCount": 26
+    },
+    {
+      "company": "Local Infusion",
+      "slug": "Local Infusion",
+      "jobCount": 5
+    },
+    {
+      "company": "Levelpath",
+      "slug": "Levelpath",
+      "jobCount": 29
+    },
+    {
+      "company": "levelpath",
+      "slug": "levelpath",
+      "jobCount": 29
+    },
+    {
+      "company": "modal",
+      "slug": "modal",
+      "jobCount": 31
+    },
+    {
+      "company": "sardine",
+      "slug": "sardine",
+      "jobCount": 31
+    },
+    {
+      "company": "span",
+      "slug": "span",
+      "jobCount": 31
+    },
+    {
+      "company": "pylon-labs",
+      "slug": "pylon-labs",
+      "jobCount": 16
+    },
+    {
+      "company": "relay",
+      "slug": "relay",
+      "jobCount": 30
+    },
+    {
+      "company": "arch.co",
+      "slug": "arch.co",
+      "jobCount": 15
+    },
+    {
+      "company": "assured",
+      "slug": "assured",
+      "jobCount": 29
+    },
+    {
+      "company": "steadily",
+      "slug": "steadily",
+      "jobCount": 20
+    },
+    {
+      "company": "Antares",
+      "slug": "Antares",
+      "jobCount": 28
+    },
+    {
+      "company": "Cyberhaven",
+      "slug": "Cyberhaven",
+      "jobCount": 22
+    },
+    {
+      "company": "cyberhaven",
+      "slug": "cyberhaven",
+      "jobCount": 22
+    },
+    {
+      "company": "frontcareers",
+      "slug": "frontcareers",
+      "jobCount": 23
+    },
+    {
+      "company": "lakera.ai",
+      "slug": "lakera.ai",
+      "jobCount": 19
+    },
+    {
+      "company": "tandem",
+      "slug": "tandem",
+      "jobCount": 28
+    },
+    {
+      "company": "Tabs",
+      "slug": "Tabs",
+      "jobCount": 20
+    },
+    {
+      "company": "zapier",
+      "slug": "zapier",
+      "jobCount": 21
+    },
+    {
+      "company": "hackerone",
+      "slug": "hackerone",
+      "jobCount": 25
+    },
+    {
+      "company": "incident",
+      "slug": "incident",
+      "jobCount": 27
+    },
+    {
+      "company": "keyrock",
+      "slug": "keyrock",
+      "jobCount": 24
+    },
+    {
+      "company": "Keyrock",
+      "slug": "Keyrock",
+      "jobCount": 24
+    },
+    {
+      "company": "mural",
+      "slug": "mural",
+      "jobCount": 20
+    },
+    {
+      "company": "taptapsend",
+      "slug": "taptapsend",
+      "jobCount": 12
+    },
+    {
+      "company": "TaptapSend",
+      "slug": "TaptapSend",
+      "jobCount": 12
+    },
+    {
+      "company": "tennr",
+      "slug": "tennr",
+      "jobCount": 23
+    },
+    {
+      "company": "traba",
+      "slug": "traba",
+      "jobCount": 23
+    },
+    {
+      "company": "typescouts",
+      "slug": "typescouts",
+      "jobCount": 7
+    },
+    {
+      "company": "anrok",
+      "slug": "anrok",
+      "jobCount": 26
+    },
+    {
+      "company": "blue-energy",
+      "slug": "blue-energy",
+      "jobCount": 26
+    },
+    {
+      "company": "Nivoda",
+      "slug": "Nivoda",
+      "jobCount": 11
+    },
+    {
+      "company": "nivoda",
+      "slug": "nivoda",
+      "jobCount": 11
+    },
+    {
+      "company": "sanity",
+      "slug": "sanity",
+      "jobCount": 24
+    },
+    {
+      "company": "Tremendous",
+      "slug": "Tremendous",
+      "jobCount": 9
+    },
+    {
+      "company": "vendelux",
+      "slug": "vendelux",
+      "jobCount": 26
+    },
+    {
+      "company": "bunch",
+      "slug": "bunch",
+      "jobCount": 17
+    },
+    {
+      "company": "distyl",
+      "slug": "distyl",
+      "jobCount": 19
+    },
+    {
+      "company": "Distyl",
+      "slug": "Distyl",
+      "jobCount": 19
+    },
+    {
+      "company": "focused",
+      "slug": "focused",
+      "jobCount": 22
+    },
+    {
+      "company": "capimoney",
+      "slug": "capimoney",
+      "jobCount": 15
+    },
+    {
+      "company": "cruxclimate",
+      "slug": "cruxclimate",
+      "jobCount": 19
+    },
+    {
+      "company": "dust",
+      "slug": "dust",
+      "jobCount": 24
+    },
+    {
+      "company": "foundry-for-good",
+      "slug": "foundry-for-good",
+      "jobCount": 24
+    },
+    {
+      "company": "hiive",
+      "slug": "hiive",
+      "jobCount": 13
+    },
+    {
+      "company": "metaview",
+      "slug": "metaview",
+      "jobCount": 23
+    },
+    {
+      "company": "niramedical",
+      "slug": "niramedical",
+      "jobCount": 3
+    },
+    {
+      "company": "parafin",
+      "slug": "parafin",
+      "jobCount": 18
+    },
+    {
+      "company": "stedi",
+      "slug": "stedi",
+      "jobCount": 24
+    },
+    {
+      "company": "Stedi",
+      "slug": "Stedi",
+      "jobCount": 24
+    },
+    {
+      "company": "talentful",
+      "slug": "talentful",
+      "jobCount": 4
+    },
+    {
+      "company": "kin",
+      "slug": "kin",
+      "jobCount": 17
+    },
+    {
+      "company": "numeric",
+      "slug": "numeric",
+      "jobCount": 23
+    },
+    {
+      "company": "paddle",
+      "slug": "paddle",
+      "jobCount": 23
+    },
+    {
+      "company": "prompt",
+      "slug": "prompt",
+      "jobCount": 23
+    },
+    {
+      "company": "rilla",
+      "slug": "rilla",
+      "jobCount": 23
+    },
+    {
+      "company": "vetcove",
+      "slug": "vetcove",
+      "jobCount": 23
+    },
+    {
+      "company": "Vetcove",
+      "slug": "Vetcove",
+      "jobCount": 23
+    },
+    {
+      "company": "adaptivesecurity",
+      "slug": "adaptivesecurity",
+      "jobCount": 14
+    },
+    {
+      "company": "altimate",
+      "slug": "altimate",
+      "jobCount": 21
+    },
+    {
+      "company": "atomicsemi",
+      "slug": "atomicsemi",
+      "jobCount": 22
+    },
+    {
+      "company": "character",
+      "slug": "character",
+      "jobCount": 22
+    },
+    {
+      "company": "cryptio",
+      "slug": "cryptio",
+      "jobCount": 18
+    },
+    {
+      "company": "lgads",
+      "slug": "lgads",
+      "jobCount": 18
+    },
+    {
+      "company": "numeral",
+      "slug": "numeral",
+      "jobCount": 21
+    },
+    {
+      "company": "paradox",
+      "slug": "paradox",
+      "jobCount": 21
+    },
+    {
+      "company": "spellbook.legal",
+      "slug": "spellbook.legal",
+      "jobCount": 11
+    },
+    {
+      "company": "Talos-Trading",
+      "slug": "Talos-Trading",
+      "jobCount": 22
+    },
+    {
+      "company": "virtahealth",
+      "slug": "virtahealth",
+      "jobCount": 5
+    },
+    {
+      "company": "AeroVect",
+      "slug": "AeroVect",
+      "jobCount": 17
+    },
+    {
+      "company": "biofire",
+      "slug": "biofire",
+      "jobCount": 21
+    },
+    {
+      "company": "Cape",
+      "slug": "Cape",
+      "jobCount": 21
+    },
+    {
+      "company": "conductorone",
+      "slug": "conductorone",
+      "jobCount": 21
+    },
+    {
+      "company": "gecko-robotics",
+      "slug": "gecko-robotics",
+      "jobCount": 16
+    },
+    {
+      "company": "linear",
+      "slug": "linear",
+      "jobCount": 21
+    },
+    {
+      "company": "Linear",
+      "slug": "Linear",
+      "jobCount": 21
+    },
+    {
+      "company": "Lynk",
+      "slug": "Lynk",
+      "jobCount": 21
+    },
+    {
+      "company": "Nash",
+      "slug": "Nash",
+      "jobCount": 17
+    },
+    {
+      "company": "padlet",
+      "slug": "padlet",
+      "jobCount": 21
+    },
+    {
+      "company": "phantom",
+      "slug": "phantom",
+      "jobCount": 17
+    },
+    {
+      "company": "percona",
+      "slug": "percona",
+      "jobCount": 21
+    },
+    {
+      "company": "real",
+      "slug": "real",
+      "jobCount": 13
+    },
+    {
+      "company": "Resolve AI",
+      "slug": "Resolve AI",
+      "jobCount": 21
+    },
+    {
+      "company": "darkroom",
+      "slug": "darkroom",
+      "jobCount": 17
+    },
+    {
+      "company": "heyjobs",
+      "slug": "heyjobs",
+      "jobCount": 8
+    },
+    {
+      "company": "kittl",
+      "slug": "kittl",
+      "jobCount": 20
+    },
+    {
+      "company": "middesk",
+      "slug": "middesk",
+      "jobCount": 14
+    },
+    {
+      "company": "orb",
+      "slug": "orb",
+      "jobCount": 20
+    },
+    {
+      "company": "PrimeIntellect",
+      "slug": "PrimeIntellect",
+      "jobCount": 17
+    },
+    {
+      "company": "sequence",
+      "slug": "sequence",
+      "jobCount": 20
+    },
+    {
+      "company": "siro",
+      "slug": "siro",
+      "jobCount": 12
+    },
+    {
+      "company": "Siro",
+      "slug": "Siro",
+      "jobCount": 12
+    },
+    {
+      "company": "TerraFirma",
+      "slug": "TerraFirma",
+      "jobCount": 20
+    },
+    {
+      "company": "airspace-intelligence.com",
+      "slug": "airspace-intelligence.com",
+      "jobCount": 19
+    },
+    {
+      "company": "anglehealth",
+      "slug": "anglehealth",
+      "jobCount": 9
+    },
+    {
+      "company": "Cambly",
+      "slug": "Cambly",
+      "jobCount": 7
+    },
+    {
+      "company": "clearbank",
+      "slug": "clearbank",
+      "jobCount": 7
+    },
+    {
+      "company": "factory",
+      "slug": "factory",
+      "jobCount": 18
+    },
+    {
+      "company": "gorgias",
+      "slug": "gorgias",
+      "jobCount": 12
+    },
+    {
+      "company": "lindushealth",
+      "slug": "lindushealth",
+      "jobCount": 6
+    },
+    {
+      "company": "loopio",
+      "slug": "loopio",
+      "jobCount": 15
+    },
+    {
+      "company": "livekit",
+      "slug": "livekit",
+      "jobCount": 19
+    },
+    {
+      "company": "omniscient",
+      "slug": "omniscient",
+      "jobCount": 5
+    },
+    {
+      "company": "posthog",
+      "slug": "posthog",
+      "jobCount": 19
+    },
+    {
+      "company": "pplwise",
+      "slug": "pplwise",
+      "jobCount": 13
+    },
+    {
+      "company": "singular",
+      "slug": "singular",
+      "jobCount": 13
+    },
+    {
+      "company": "zefir",
+      "slug": "zefir",
+      "jobCount": 10
+    },
+    {
+      "company": "magicschool",
+      "slug": "magicschool",
+      "jobCount": 4
+    },
+    {
+      "company": "method",
+      "slug": "method",
+      "jobCount": 15
+    },
+    {
+      "company": "taxfix.com",
+      "slug": "taxfix.com",
+      "jobCount": 18
+    },
+    {
+      "company": "wrapbook",
+      "slug": "wrapbook",
+      "jobCount": 13
+    },
+    {
+      "company": "brigit",
+      "slug": "brigit",
+      "jobCount": 15
+    },
+    {
+      "company": "corti",
+      "slug": "corti",
+      "jobCount": 17
+    },
+    {
+      "company": "forum-ventures",
+      "slug": "forum-ventures",
+      "jobCount": 14
+    },
+    {
+      "company": "rula",
+      "slug": "rula",
+      "jobCount": 11
+    },
+    {
+      "company": "rossum.ai",
+      "slug": "rossum.ai",
+      "jobCount": 9
+    },
+    {
+      "company": "solink",
+      "slug": "solink",
+      "jobCount": 9
+    },
+    {
+      "company": "astronomer",
+      "slug": "astronomer",
+      "jobCount": 16
+    },
+    {
+      "company": "astera",
+      "slug": "astera",
+      "jobCount": 15
+    },
+    {
+      "company": "Blacksmith Agency",
+      "slug": "Blacksmith Agency",
+      "jobCount": 11
+    },
+    {
+      "company": "bland",
+      "slug": "bland",
+      "jobCount": 14
+    },
+    {
+      "company": "doss",
+      "slug": "doss",
+      "jobCount": 14
+    },
+    {
+      "company": "join9am",
+      "slug": "join9am",
+      "jobCount": 1
+    },
+    {
+      "company": "Juicebox",
+      "slug": "Juicebox",
+      "jobCount": 11
+    },
+    {
+      "company": "MaticRobots",
+      "slug": "MaticRobots",
+      "jobCount": 16
+    },
+    {
+      "company": "procurify",
+      "slug": "procurify",
+      "jobCount": 15
+    },
+    {
+      "company": "protege",
+      "slug": "protege",
+      "jobCount": 9
+    },
+    {
+      "company": "synthflow",
+      "slug": "synthflow",
+      "jobCount": 11
+    },
+    {
+      "company": "tonal",
+      "slug": "tonal",
+      "jobCount": 10
+    },
+    {
+      "company": "basis-ai",
+      "slug": "basis-ai",
+      "jobCount": 11
+    },
+    {
+      "company": "bureau",
+      "slug": "bureau",
+      "jobCount": 11
+    },
+    {
+      "company": "chronospherejobs",
+      "slug": "chronospherejobs",
+      "jobCount": 15
+    },
+    {
+      "company": "cogent-security",
+      "slug": "cogent-security",
+      "jobCount": 8
+    },
+    {
+      "company": "column",
+      "slug": "column",
+      "jobCount": 15
+    },
+    {
+      "company": "creditgenie",
+      "slug": "creditgenie",
+      "jobCount": 14
+    },
+    {
+      "company": "first-resonance",
+      "slug": "first-resonance",
+      "jobCount": 15
+    },
+    {
+      "company": "finary",
+      "slug": "finary",
+      "jobCount": 8
+    },
+    {
+      "company": "flosports",
+      "slug": "flosports",
+      "jobCount": 10
+    },
+    {
+      "company": "flux",
+      "slug": "flux",
+      "jobCount": 15
+    },
+    {
+      "company": "fullstory",
+      "slug": "fullstory",
+      "jobCount": 12
+    },
+    {
+      "company": "granola",
+      "slug": "granola",
+      "jobCount": 9
+    },
+    {
+      "company": "immersivelabs",
+      "slug": "immersivelabs",
+      "jobCount": 11
+    },
+    {
+      "company": "liveflow",
+      "slug": "liveflow",
+      "jobCount": 12
+    },
+    {
+      "company": "maybern",
+      "slug": "maybern",
+      "jobCount": 15
+    },
+    {
+      "company": "nabla",
+      "slug": "nabla",
+      "jobCount": 15
+    },
+    {
+      "company": "Nautilus Biotechnology",
+      "slug": "Nautilus Biotechnology",
+      "jobCount": 14
+    },
+    {
+      "company": "Normal Computing AI",
+      "slug": "Normal Computing AI",
+      "jobCount": 15
+    },
+    {
+      "company": "osmo",
+      "slug": "osmo",
+      "jobCount": 6
+    },
+    {
+      "company": "Phil",
+      "slug": "Phil",
+      "jobCount": 8
+    },
+    {
+      "company": "rescale",
+      "slug": "rescale",
+      "jobCount": 15
+    },
+    {
+      "company": "unit",
+      "slug": "unit",
+      "jobCount": 11
+    },
+    {
+      "company": "Vori",
+      "slug": "Vori",
+      "jobCount": 10
+    },
+    {
+      "company": "alembic",
+      "slug": "alembic",
+      "jobCount": 14
+    },
+    {
+      "company": "cantina",
+      "slug": "cantina",
+      "jobCount": 9
+    },
+    {
+      "company": "cocodelivery",
+      "slug": "cocodelivery",
+      "jobCount": 11
+    },
+    {
+      "company": "datasnipper.com",
+      "slug": "datasnipper.com",
+      "jobCount": 7
+    },
+    {
+      "company": "flaglerhealth",
+      "slug": "flaglerhealth",
+      "jobCount": 14
+    },
+    {
+      "company": "fitt",
+      "slug": "fitt",
+      "jobCount": 5
+    },
+    {
+      "company": "infisical",
+      "slug": "infisical",
+      "jobCount": 14
+    },
+    {
+      "company": "nectar-social",
+      "slug": "nectar-social",
+      "jobCount": 14
+    },
+    {
+      "company": "netboxlabs",
+      "slug": "netboxlabs",
+      "jobCount": 14
+    },
+    {
+      "company": "nexus.xyz",
+      "slug": "nexus.xyz",
+      "jobCount": 14
+    },
+    {
+      "company": "rundoo",
+      "slug": "rundoo",
+      "jobCount": 14
+    },
+    {
+      "company": "siena",
+      "slug": "siena",
+      "jobCount": 12
+    },
+    {
+      "company": "sleeper",
+      "slug": "sleeper",
+      "jobCount": 12
+    },
+    {
+      "company": "starpath.space",
+      "slug": "starpath.space",
+      "jobCount": 13
+    },
+    {
+      "company": "adthena",
+      "slug": "adthena",
+      "jobCount": 13
+    },
+    {
+      "company": "adaptive-ml",
+      "slug": "adaptive-ml",
+      "jobCount": 10
+    },
+    {
+      "company": "atticus",
+      "slug": "atticus",
+      "jobCount": 7
+    },
+    {
+      "company": "centralhq",
+      "slug": "centralhq",
+      "jobCount": 13
+    },
+    {
+      "company": "console",
+      "slug": "console",
+      "jobCount": 9
+    },
+    {
+      "company": "graphite",
+      "slug": "graphite",
+      "jobCount": 13
+    },
+    {
+      "company": "Graphite",
+      "slug": "Graphite",
+      "jobCount": 13
+    },
+    {
+      "company": "graymatter-robotics",
+      "slug": "graymatter-robotics",
+      "jobCount": 13
+    },
+    {
+      "company": "haydenai",
+      "slug": "haydenai",
+      "jobCount": 10
+    },
+    {
+      "company": "hiya",
+      "slug": "hiya",
+      "jobCount": 8
+    },
+    {
+      "company": "Improbable",
+      "slug": "Improbable",
+      "jobCount": 10
+    },
+    {
+      "company": "ideogram",
+      "slug": "ideogram",
+      "jobCount": 13
+    },
+    {
+      "company": "knot",
+      "slug": "knot",
+      "jobCount": 8
+    },
+    {
+      "company": "leandata",
+      "slug": "leandata",
+      "jobCount": 7
+    },
+    {
+      "company": "LeanTech",
+      "slug": "LeanTech",
+      "jobCount": 9
+    },
+    {
+      "company": "leantech",
+      "slug": "leantech",
+      "jobCount": 9
+    },
+    {
+      "company": "marshmallow",
+      "slug": "marshmallow",
+      "jobCount": 5
+    },
+    {
+      "company": "monarchmoney",
+      "slug": "monarchmoney",
+      "jobCount": 11
+    },
+    {
+      "company": "n1",
+      "slug": "n1",
+      "jobCount": 11
+    },
+    {
+      "company": "partiful",
+      "slug": "partiful",
+      "jobCount": 7
+    },
+    {
+      "company": "pinecone",
+      "slug": "pinecone",
+      "jobCount": 13
+    },
+    {
+      "company": "photoroom",
+      "slug": "photoroom",
+      "jobCount": 9
+    },
+    {
+      "company": "picogrid",
+      "slug": "picogrid",
+      "jobCount": 11
+    },
+    {
+      "company": "posh",
+      "slug": "posh",
+      "jobCount": 9
+    },
+    {
+      "company": "realitydefender",
+      "slug": "realitydefender",
+      "jobCount": 13
+    },
+    {
+      "company": "trunk tools",
+      "slug": "trunk tools",
+      "jobCount": 13
+    },
+    {
+      "company": "Trunk Tools",
+      "slug": "Trunk Tools",
+      "jobCount": 13
+    },
+    {
+      "company": "virtuous",
+      "slug": "virtuous",
+      "jobCount": 13
+    },
+    {
+      "company": "withpulley",
+      "slug": "withpulley",
+      "jobCount": 12
+    },
+    {
+      "company": "Acorns",
+      "slug": "Acorns",
+      "jobCount": 8
+    },
+    {
+      "company": "arcade",
+      "slug": "arcade",
+      "jobCount": 12
+    },
+    {
+      "company": "arago",
+      "slug": "arago",
+      "jobCount": 12
+    },
+    {
+      "company": "chaidiscovery",
+      "slug": "chaidiscovery",
+      "jobCount": 10
+    },
+    {
+      "company": "cradlebio",
+      "slug": "cradlebio",
+      "jobCount": 12
+    },
+    {
+      "company": "extend",
+      "slug": "extend",
+      "jobCount": 12
+    },
+    {
+      "company": "get-ivy",
+      "slug": "get-ivy",
+      "jobCount": 5
+    },
+    {
+      "company": "gorilla",
+      "slug": "gorilla",
+      "jobCount": 7
+    },
+    {
+      "company": "Graphitehq",
+      "slug": "Graphitehq",
+      "jobCount": 4
+    },
+    {
+      "company": "hcompany",
+      "slug": "hcompany",
+      "jobCount": 8
+    },
+    {
+      "company": "heirloomcarbon",
+      "slug": "heirloomcarbon",
+      "jobCount": 12
+    },
+    {
+      "company": "humaans",
+      "slug": "humaans",
+      "jobCount": 12
+    },
+    {
+      "company": "lightspark",
+      "slug": "lightspark",
+      "jobCount": 12
+    },
+    {
+      "company": "luminai",
+      "slug": "luminai",
+      "jobCount": 12
+    },
+    {
+      "company": "miter",
+      "slug": "miter",
+      "jobCount": 12
+    },
+    {
+      "company": "motion",
+      "slug": "motion",
+      "jobCount": 12
+    },
+    {
+      "company": "newfront",
+      "slug": "newfront",
+      "jobCount": 11
+    },
+    {
+      "company": "notable",
+      "slug": "notable",
+      "jobCount": 7
+    },
+    {
+      "company": "Paradigm",
+      "slug": "Paradigm",
+      "jobCount": 3
+    },
+    {
+      "company": "patch.io",
+      "slug": "patch.io",
+      "jobCount": 12
+    },
+    {
+      "company": "plasmidsaurus",
+      "slug": "plasmidsaurus",
+      "jobCount": 5
+    },
+    {
+      "company": "Pocus",
+      "slug": "Pocus",
+      "jobCount": 10
+    },
+    {
+      "company": "pylon",
+      "slug": "pylon",
+      "jobCount": 12
+    },
+    {
+      "company": "radai",
+      "slug": "radai",
+      "jobCount": 12
+    },
+    {
+      "company": "se3",
+      "slug": "se3",
+      "jobCount": 11
+    },
+    {
+      "company": "ShortStory",
+      "slug": "ShortStory",
+      "jobCount": 5
+    },
+    {
+      "company": "southgeeks",
+      "slug": "southgeeks",
+      "jobCount": 12
+    },
+    {
+      "company": "The Zebra",
+      "slug": "The Zebra",
+      "jobCount": 10
+    },
+    {
+      "company": "The Browser Company",
+      "slug": "The Browser Company",
+      "jobCount": 12
+    },
+    {
+      "company": "withclutch",
+      "slug": "withclutch",
+      "jobCount": 12
+    },
+    {
+      "company": "Abound",
+      "slug": "Abound",
+      "jobCount": 6
+    },
+    {
+      "company": "abound",
+      "slug": "abound",
+      "jobCount": 6
+    },
+    {
+      "company": "Anagram",
+      "slug": "Anagram",
+      "jobCount": 7
+    },
+    {
+      "company": "anagram",
+      "slug": "anagram",
+      "jobCount": 7
+    },
+    {
+      "company": "antimetal",
+      "slug": "antimetal",
+      "jobCount": 11
+    },
+    {
+      "company": "burklandassociates",
+      "slug": "burklandassociates",
+      "jobCount": 3
+    },
+    {
+      "company": "cloudscaler",
+      "slug": "cloudscaler",
+      "jobCount": 7
+    },
+    {
+      "company": "Doppel",
+      "slug": "Doppel",
+      "jobCount": 11
+    },
+    {
+      "company": "fiddler-ai",
+      "slug": "fiddler-ai",
+      "jobCount": 11
+    },
+    {
+      "company": "GPTZero",
+      "slug": "GPTZero",
+      "jobCount": 11
+    },
+    {
+      "company": "homebound",
+      "slug": "homebound",
+      "jobCount": 9
+    },
+    {
+      "company": "Homebound",
+      "slug": "Homebound",
+      "jobCount": 9
+    },
+    {
+      "company": "jimdo.com",
+      "slug": "jimdo.com",
+      "jobCount": 6
+    },
+    {
+      "company": "Kombo",
+      "slug": "Kombo",
+      "jobCount": 11
+    },
+    {
+      "company": "lazer",
+      "slug": "lazer",
+      "jobCount": 11
+    },
+    {
+      "company": "lightning",
+      "slug": "lightning",
+      "jobCount": 11
+    },
+    {
+      "company": "madhive",
+      "slug": "madhive",
+      "jobCount": 6
+    },
+    {
+      "company": "magic.dev",
+      "slug": "magic.dev",
+      "jobCount": 10
+    },
+    {
+      "company": "Neon",
+      "slug": "Neon",
+      "jobCount": 11
+    },
+    {
+      "company": "Prelude",
+      "slug": "Prelude",
+      "jobCount": 7
+    },
+    {
+      "company": "primer",
+      "slug": "primer",
+      "jobCount": 3
+    },
+    {
+      "company": "ravio",
+      "slug": "ravio",
+      "jobCount": 4
+    },
+    {
+      "company": "restream",
+      "slug": "restream",
+      "jobCount": 9
+    },
+    {
+      "company": "Restream",
+      "slug": "Restream",
+      "jobCount": 9
+    },
+    {
+      "company": "sift",
+      "slug": "sift",
+      "jobCount": 6
+    },
+    {
+      "company": "Solana Foundation",
+      "slug": "Solana Foundation",
+      "jobCount": 9
+    },
+    {
+      "company": "spacecurve",
+      "slug": "spacecurve",
+      "jobCount": 11
+    },
+    {
+      "company": "stacks",
+      "slug": "stacks",
+      "jobCount": 8
+    },
+    {
+      "company": "titan",
+      "slug": "titan",
+      "jobCount": 7
+    },
+    {
+      "company": "vantage",
+      "slug": "vantage",
+      "jobCount": 11
+    },
+    {
+      "company": "windranger",
+      "slug": "windranger",
+      "jobCount": 7
+    },
+    {
+      "company": "yobi",
+      "slug": "yobi",
+      "jobCount": 11
+    },
+    {
+      "company": "aleph",
+      "slug": "aleph",
+      "jobCount": 10
+    },
+    {
+      "company": "alloyenterprises",
+      "slug": "alloyenterprises",
+      "jobCount": 10
+    },
+    {
+      "company": "Anima",
+      "slug": "Anima",
+      "jobCount": 5
+    },
+    {
+      "company": "atroposhealth",
+      "slug": "atroposhealth",
+      "jobCount": 10
+    },
+    {
+      "company": "AtroposHealth",
+      "slug": "AtroposHealth",
+      "jobCount": 10
+    },
+    {
+      "company": "atob",
+      "slug": "atob",
+      "jobCount": 10
+    },
+    {
+      "company": "benepass",
+      "slug": "benepass",
+      "jobCount": 6
+    },
+    {
+      "company": "Bounce",
+      "slug": "Bounce",
+      "jobCount": 5
+    },
+    {
+      "company": "braiins",
+      "slug": "braiins",
+      "jobCount": 7
+    },
+    {
+      "company": "Braiins",
+      "slug": "Braiins",
+      "jobCount": 7
+    },
+    {
+      "company": "casa",
+      "slug": "casa",
+      "jobCount": 3
+    },
+    {
+      "company": "chestnut",
+      "slug": "chestnut",
+      "jobCount": 10
+    },
+    {
+      "company": "Coframe",
+      "slug": "Coframe",
+      "jobCount": 10
+    },
+    {
+      "company": "cointracker",
+      "slug": "cointracker",
+      "jobCount": 5
+    },
+    {
+      "company": "comulate",
+      "slug": "comulate",
+      "jobCount": 10
+    },
+    {
+      "company": "DatologyAI",
+      "slug": "DatologyAI",
+      "jobCount": 10
+    },
+    {
+      "company": "expa",
+      "slug": "expa",
+      "jobCount": 1
+    },
+    {
+      "company": "fathom.video",
+      "slug": "fathom.video",
+      "jobCount": 9
+    },
+    {
+      "company": "freed",
+      "slug": "freed",
+      "jobCount": 7
+    },
+    {
+      "company": "hive.co",
+      "slug": "hive.co",
+      "jobCount": 7
+    },
+    {
+      "company": "li.fi",
+      "slug": "li.fi",
+      "jobCount": 9
+    },
+    {
+      "company": "Magical",
+      "slug": "Magical",
+      "jobCount": 8
+    },
+    {
+      "company": "maximustribe",
+      "slug": "maximustribe",
+      "jobCount": 9
+    },
+    {
+      "company": "panoptyc",
+      "slug": "panoptyc",
+      "jobCount": 6
+    },
+    {
+      "company": "Panoptyc",
+      "slug": "Panoptyc",
+      "jobCount": 6
+    },
+    {
+      "company": "Perchwell",
+      "slug": "Perchwell",
+      "jobCount": 10
+    },
+    {
+      "company": "sfcompute",
+      "slug": "sfcompute",
+      "jobCount": 10
+    },
+    {
+      "company": "sonio",
+      "slug": "sonio",
+      "jobCount": 7
+    },
+    {
+      "company": "sydecar",
+      "slug": "sydecar",
+      "jobCount": 8
+    },
+    {
+      "company": "yepoda",
+      "slug": "yepoda",
+      "jobCount": 2
+    },
+    {
+      "company": "zefr",
+      "slug": "zefr",
+      "jobCount": 6
+    },
+    {
+      "company": "aurorasolar",
+      "slug": "aurorasolar",
+      "jobCount": 9
+    },
+    {
+      "company": "Blacksmith",
+      "slug": "Blacksmith",
+      "jobCount": 6
+    },
+    {
+      "company": "Coder",
+      "slug": "Coder",
+      "jobCount": 9
+    },
+    {
+      "company": "Conduit",
+      "slug": "Conduit",
+      "jobCount": 9
+    },
+    {
+      "company": "cosuno",
+      "slug": "cosuno",
+      "jobCount": 5
+    },
+    {
+      "company": "cytora.com",
+      "slug": "cytora.com",
+      "jobCount": 8
+    },
+    {
+      "company": "dosespot",
+      "slug": "dosespot",
+      "jobCount": 9
+    },
+    {
+      "company": "dune",
+      "slug": "dune",
+      "jobCount": 9
+    },
+    {
+      "company": "ellipsislabs",
+      "slug": "ellipsislabs",
+      "jobCount": 9
+    },
+    {
+      "company": "firsthand",
+      "slug": "firsthand",
+      "jobCount": 4
+    },
+    {
+      "company": "freshpaint",
+      "slug": "freshpaint",
+      "jobCount": 9
+    },
+    {
+      "company": "govdash",
+      "slug": "govdash",
+      "jobCount": 8
+    },
+    {
+      "company": "hellobrightline",
+      "slug": "hellobrightline",
+      "jobCount": 2
+    },
+    {
+      "company": "jellyfish",
+      "slug": "jellyfish",
+      "jobCount": 9
+    },
+    {
+      "company": "Jellyfish",
+      "slug": "Jellyfish",
+      "jobCount": 9
+    },
+    {
+      "company": "kaizenlabs",
+      "slug": "kaizenlabs",
+      "jobCount": 8
+    },
+    {
+      "company": "kognitos",
+      "slug": "kognitos",
+      "jobCount": 6
+    },
+    {
+      "company": "moego",
+      "slug": "moego",
+      "jobCount": 7
+    },
+    {
+      "company": "monad.foundation",
+      "slug": "monad.foundation",
+      "jobCount": 9
+    },
+    {
+      "company": "mystenlabs",
+      "slug": "mystenlabs",
+      "jobCount": 8
+    },
+    {
+      "company": "oplabs",
+      "slug": "oplabs",
+      "jobCount": 9
+    },
+    {
+      "company": "primer.io",
+      "slug": "primer.io",
+      "jobCount": 9
+    },
+    {
+      "company": "quora",
+      "slug": "quora",
+      "jobCount": 9
+    },
+    {
+      "company": "rasa",
+      "slug": "rasa",
+      "jobCount": 6
+    },
+    {
+      "company": "squint.ai",
+      "slug": "squint.ai",
+      "jobCount": 9
+    },
+    {
+      "company": "summation",
+      "slug": "summation",
+      "jobCount": 7
+    },
+    {
+      "company": "tesslcareers",
+      "slug": "tesslcareers",
+      "jobCount": 9
+    },
+    {
+      "company": "Trexo Robotics",
+      "slug": "Trexo Robotics",
+      "jobCount": 7
+    },
+    {
+      "company": "Voldex",
+      "slug": "Voldex",
+      "jobCount": 9
+    },
+    {
+      "company": "vooma",
+      "slug": "vooma",
+      "jobCount": 9
+    },
+    {
+      "company": "voldex",
+      "slug": "voldex",
+      "jobCount": 9
+    },
+    {
+      "company": "workyard",
+      "slug": "workyard",
+      "jobCount": 5
+    },
+    {
+      "company": "worldly",
+      "slug": "worldly",
+      "jobCount": 6
+    },
+    {
+      "company": "Zania",
+      "slug": "Zania",
+      "jobCount": 9
+    },
+    {
+      "company": "0g",
+      "slug": "0g",
+      "jobCount": 6
+    },
+    {
+      "company": "ankorstore",
+      "slug": "ankorstore",
+      "jobCount": 6
+    },
+    {
+      "company": "Ankorstore",
+      "slug": "Ankorstore",
+      "jobCount": 6
+    },
+    {
+      "company": "bedrock",
+      "slug": "bedrock",
+      "jobCount": 6
+    },
+    {
+      "company": "Ben",
+      "slug": "Ben",
+      "jobCount": 6
+    },
+    {
+      "company": "chilipiper",
+      "slug": "chilipiper",
+      "jobCount": 8
+    },
+    {
+      "company": "Close",
+      "slug": "Close",
+      "jobCount": 8
+    },
+    {
+      "company": "comind",
+      "slug": "comind",
+      "jobCount": 7
+    },
+    {
+      "company": "coreplan",
+      "slug": "coreplan",
+      "jobCount": 7
+    },
+    {
+      "company": "coursecareers",
+      "slug": "coursecareers",
+      "jobCount": 2
+    },
+    {
+      "company": "cubesoftware",
+      "slug": "cubesoftware",
+      "jobCount": 8
+    },
+    {
+      "company": "Fourier",
+      "slug": "Fourier",
+      "jobCount": 8
+    },
+    {
+      "company": "Healthtech-1",
+      "slug": "Healthtech-1",
+      "jobCount": 8
+    },
+    {
+      "company": "Jasper AI",
+      "slug": "Jasper AI",
+      "jobCount": 3
+    },
+    {
+      "company": "klue",
+      "slug": "klue",
+      "jobCount": 4
+    },
+    {
+      "company": "lemon-markets",
+      "slug": "lemon-markets",
+      "jobCount": 6
+    },
+    {
+      "company": "llamaindex",
+      "slug": "llamaindex",
+      "jobCount": 8
+    },
+    {
+      "company": "moxie",
+      "slug": "moxie",
+      "jobCount": 5
+    },
+    {
+      "company": "Moxie",
+      "slug": "Moxie",
+      "jobCount": 5
+    },
+    {
+      "company": "networkright",
+      "slug": "networkright",
+      "jobCount": 2
+    },
+    {
+      "company": "parabola-io",
+      "slug": "parabola-io",
+      "jobCount": 8
+    },
+    {
+      "company": "peek",
+      "slug": "peek",
+      "jobCount": 5
+    },
+    {
+      "company": "polygon-labs",
+      "slug": "polygon-labs",
+      "jobCount": 7
+    },
+    {
+      "company": "primary",
+      "slug": "primary",
+      "jobCount": 4
+    },
+    {
+      "company": "propelus",
+      "slug": "propelus",
+      "jobCount": 6
+    },
+    {
+      "company": "quicknode",
+      "slug": "quicknode",
+      "jobCount": 8
+    },
+    {
+      "company": "remi",
+      "slug": "remi",
+      "jobCount": 3
+    },
+    {
+      "company": "robin-ai",
+      "slug": "robin-ai",
+      "jobCount": 7
+    },
+    {
+      "company": "secfix",
+      "slug": "secfix",
+      "jobCount": 4
+    },
+    {
+      "company": "Sona",
+      "slug": "Sona",
+      "jobCount": 4
+    },
+    {
+      "company": "starbridge",
+      "slug": "starbridge",
+      "jobCount": 6
+    },
+    {
+      "company": "sweedpos.com",
+      "slug": "sweedpos.com",
+      "jobCount": 8
+    },
+    {
+      "company": "thirstysprout",
+      "slug": "thirstysprout",
+      "jobCount": 8
+    },
+    {
+      "company": "v7labs.com",
+      "slug": "v7labs.com",
+      "jobCount": 6
+    },
+    {
+      "company": "wheel",
+      "slug": "wheel",
+      "jobCount": 5
+    },
+    {
+      "company": "Adaptive",
+      "slug": "Adaptive",
+      "jobCount": 5
+    },
+    {
+      "company": "august-health",
+      "slug": "august-health",
+      "jobCount": 3
+    },
+    {
+      "company": "birdie",
+      "slug": "birdie",
+      "jobCount": 5
+    },
+    {
+      "company": "caribou",
+      "slug": "caribou",
+      "jobCount": 4
+    },
+    {
+      "company": "centreforeffectivealtruism",
+      "slug": "centreforeffectivealtruism",
+      "jobCount": 1
+    },
+    {
+      "company": "cinder",
+      "slug": "cinder",
+      "jobCount": 7
+    },
+    {
+      "company": "comun",
+      "slug": "comun",
+      "jobCount": 5
+    },
+    {
+      "company": "compound",
+      "slug": "compound",
+      "jobCount": 4
+    },
+    {
+      "company": "complete",
+      "slug": "complete",
+      "jobCount": 5
+    },
+    {
+      "company": "double-the-donation",
+      "slug": "double-the-donation",
+      "jobCount": 7
+    },
+    {
+      "company": "ekumenlabs",
+      "slug": "ekumenlabs",
+      "jobCount": 7
+    },
+    {
+      "company": "feathr",
+      "slug": "feathr",
+      "jobCount": 7
+    },
+    {
+      "company": "firstbaseio",
+      "slug": "firstbaseio",
+      "jobCount": 3
+    },
+    {
+      "company": "found",
+      "slug": "found",
+      "jobCount": 7
+    },
+    {
+      "company": "GravityClimate",
+      "slug": "GravityClimate",
+      "jobCount": 6
+    },
+    {
+      "company": "hedra",
+      "slug": "hedra",
+      "jobCount": 7
+    },
+    {
+      "company": "kognity",
+      "slug": "kognity",
+      "jobCount": 7
+    },
+    {
+      "company": "lucidlink",
+      "slug": "lucidlink",
+      "jobCount": 7
+    },
+    {
+      "company": "mach9",
+      "slug": "mach9",
+      "jobCount": 6
+    },
+    {
+      "company": "matia",
+      "slug": "matia",
+      "jobCount": 7
+    },
+    {
+      "company": "mazedesign",
+      "slug": "mazedesign",
+      "jobCount": 2
+    },
+    {
+      "company": "New Story",
+      "slug": "New Story",
+      "jobCount": 2
+    },
+    {
+      "company": "nirvana",
+      "slug": "nirvana",
+      "jobCount": 5
+    },
+    {
+      "company": "Opal",
+      "slug": "Opal",
+      "jobCount": 7
+    },
+    {
+      "company": "opal",
+      "slug": "opal",
+      "jobCount": 7
+    },
+    {
+      "company": "Oso",
+      "slug": "Oso",
+      "jobCount": 7
+    },
+    {
+      "company": "palup",
+      "slug": "palup",
+      "jobCount": 5
+    },
+    {
+      "company": "patlytics",
+      "slug": "patlytics",
+      "jobCount": 4
+    },
+    {
+      "company": "Railway",
+      "slug": "Railway",
+      "jobCount": 7
+    },
+    {
+      "company": "rocketsciencegg",
+      "slug": "rocketsciencegg",
+      "jobCount": 6
+    },
+    {
+      "company": "space44",
+      "slug": "space44",
+      "jobCount": 7
+    },
+    {
+      "company": "stream",
+      "slug": "stream",
+      "jobCount": 7
+    },
+    {
+      "company": "teleskope",
+      "slug": "teleskope",
+      "jobCount": 7
+    },
+    {
+      "company": "thera",
+      "slug": "thera",
+      "jobCount": 2
+    },
+    {
+      "company": "tldr.tech",
+      "slug": "tldr.tech",
+      "jobCount": 7
+    },
+    {
+      "company": "twelve",
+      "slug": "twelve",
+      "jobCount": 6
+    },
+    {
+      "company": "vanilla",
+      "slug": "vanilla",
+      "jobCount": 6
+    },
+    {
+      "company": "vidmob",
+      "slug": "vidmob",
+      "jobCount": 7
+    },
+    {
+      "company": "what3words",
+      "slug": "what3words",
+      "jobCount": 7
+    },
+    {
+      "company": "workerbase",
+      "slug": "workerbase",
+      "jobCount": 6
+    },
+    {
+      "company": "Zello",
+      "slug": "Zello",
+      "jobCount": 6
+    },
+    {
+      "company": "AlephAlpha",
+      "slug": "AlephAlpha",
+      "jobCount": 4
+    },
+    {
+      "company": "artafinance",
+      "slug": "artafinance",
+      "jobCount": 5
+    },
+    {
+      "company": "asymmetric.re",
+      "slug": "asymmetric.re",
+      "jobCount": 5
+    },
+    {
+      "company": "Aven",
+      "slug": "Aven",
+      "jobCount": 3
+    },
+    {
+      "company": "bullpen-talent",
+      "slug": "bullpen-talent",
+      "jobCount": 2
+    },
+    {
+      "company": "comity",
+      "slug": "comity",
+      "jobCount": 4
+    },
+    {
+      "company": "cyber.Fund",
+      "slug": "cyber.Fund",
+      "jobCount": 2
+    },
+    {
+      "company": "dispatch",
+      "slug": "dispatch",
+      "jobCount": 5
+    },
+    {
+      "company": "electronx",
+      "slug": "electronx",
+      "jobCount": 3
+    },
+    {
+      "company": "eli",
+      "slug": "eli",
+      "jobCount": 3
+    },
+    {
+      "company": "enode",
+      "slug": "enode",
+      "jobCount": 6
+    },
+    {
+      "company": "eventualcomputing",
+      "slug": "eventualcomputing",
+      "jobCount": 6
+    },
+    {
+      "company": "finalis",
+      "slug": "finalis",
+      "jobCount": 2
+    },
+    {
+      "company": "Hang",
+      "slug": "Hang",
+      "jobCount": 4
+    },
+    {
+      "company": "julius",
+      "slug": "julius",
+      "jobCount": 4
+    },
+    {
+      "company": "kustomer",
+      "slug": "kustomer",
+      "jobCount": 4
+    },
+    {
+      "company": "layerfi",
+      "slug": "layerfi",
+      "jobCount": 6
+    },
+    {
+      "company": "Kustomer",
+      "slug": "Kustomer",
+      "jobCount": 4
+    },
+    {
+      "company": "lightdash",
+      "slug": "lightdash",
+      "jobCount": 6
+    },
+    {
+      "company": "medely",
+      "slug": "medely",
+      "jobCount": 3
+    },
+    {
+      "company": "nomic.ai",
+      "slug": "nomic.ai",
+      "jobCount": 5
+    },
+    {
+      "company": "northflank.com",
+      "slug": "northflank.com",
+      "jobCount": 6
+    },
+    {
+      "company": "omi",
+      "slug": "omi",
+      "jobCount": 4
+    },
+    {
+      "company": "OpenSea",
+      "slug": "OpenSea",
+      "jobCount": 5
+    },
+    {
+      "company": "opensea",
+      "slug": "opensea",
+      "jobCount": 5
+    },
+    {
+      "company": "parity",
+      "slug": "parity",
+      "jobCount": 6
+    },
+    {
+      "company": "plane",
+      "slug": "plane",
+      "jobCount": 6
+    },
+    {
+      "company": "Protex AI",
+      "slug": "Protex AI",
+      "jobCount": 6
+    },
+    {
+      "company": "provable",
+      "slug": "provable",
+      "jobCount": 6
+    },
+    {
+      "company": "remberg",
+      "slug": "remberg",
+      "jobCount": 4
+    },
+    {
+      "company": "Stora",
+      "slug": "Stora",
+      "jobCount": 6
+    },
+    {
+      "company": "tracebit",
+      "slug": "tracebit",
+      "jobCount": 6
+    },
+    {
+      "company": "Unlearn",
+      "slug": "Unlearn",
+      "jobCount": 4
+    },
+    {
+      "company": "unlearn",
+      "slug": "unlearn",
+      "jobCount": 4
+    },
+    {
+      "company": "yondr",
+      "slug": "yondr",
+      "jobCount": 2
+    },
+    {
+      "company": "aclima",
+      "slug": "aclima",
+      "jobCount": 5
+    },
+    {
+      "company": "airgarage",
+      "slug": "airgarage",
+      "jobCount": 5
+    },
+    {
+      "company": "aro.homes",
+      "slug": "aro.homes",
+      "jobCount": 5
+    },
+    {
+      "company": "beamery",
+      "slug": "beamery",
+      "jobCount": 5
+    },
+    {
+      "company": "checkly",
+      "slug": "checkly",
+      "jobCount": 5
+    },
+    {
+      "company": "choco",
+      "slug": "choco",
+      "jobCount": 5
+    },
+    {
+      "company": "cleric",
+      "slug": "cleric",
+      "jobCount": 5
+    },
+    {
+      "company": "Cleric",
+      "slug": "Cleric",
+      "jobCount": 5
+    },
+    {
+      "company": "cubist",
+      "slug": "cubist",
+      "jobCount": 3
+    },
+    {
+      "company": "CylinderHealth",
+      "slug": "CylinderHealth",
+      "jobCount": 1
+    },
+    {
+      "company": "cylinderhealth",
+      "slug": "cylinderhealth",
+      "jobCount": 1
+    },
+    {
+      "company": "Deepnote",
+      "slug": "Deepnote",
+      "jobCount": 3
+    },
+    {
+      "company": "DoubleZero",
+      "slug": "DoubleZero",
+      "jobCount": 4
+    },
+    {
+      "company": "ello",
+      "slug": "ello",
+      "jobCount": 3
+    },
+    {
+      "company": "ernest",
+      "slug": "ernest",
+      "jobCount": 3
+    },
+    {
+      "company": "filmhub",
+      "slug": "filmhub",
+      "jobCount": 3
+    },
+    {
+      "company": "finvest",
+      "slug": "finvest",
+      "jobCount": 3
+    },
+    {
+      "company": "firststreet",
+      "slug": "firststreet",
+      "jobCount": 2
+    },
+    {
+      "company": "Foresight Diagnostics Inc.",
+      "slug": "Foresight Diagnostics Inc.",
+      "jobCount": 3
+    },
+    {
+      "company": "further",
+      "slug": "further",
+      "jobCount": 5
+    },
+    {
+      "company": "Freeplay",
+      "slug": "Freeplay",
+      "jobCount": 5
+    },
+    {
+      "company": "gamechanger",
+      "slug": "gamechanger",
+      "jobCount": 4
+    },
+    {
+      "company": "genmo",
+      "slug": "genmo",
+      "jobCount": 4
+    },
+    {
+      "company": "gradient",
+      "slug": "gradient",
+      "jobCount": 4
+    },
+    {
+      "company": "gridverify",
+      "slug": "gridverify",
+      "jobCount": 5
+    },
+    {
+      "company": "intrinsic-safety",
+      "slug": "intrinsic-safety",
+      "jobCount": 4
+    },
+    {
+      "company": "Jump",
+      "slug": "Jump",
+      "jobCount": 3
+    },
+    {
+      "company": "letta",
+      "slug": "letta",
+      "jobCount": 5
+    },
+    {
+      "company": "lassie",
+      "slug": "lassie",
+      "jobCount": 5
+    },
+    {
+      "company": "limble",
+      "slug": "limble",
+      "jobCount": 5
+    },
+    {
+      "company": "lucra-sports",
+      "slug": "lucra-sports",
+      "jobCount": 4
+    },
+    {
+      "company": "m13",
+      "slug": "m13",
+      "jobCount": 4
+    },
+    {
+      "company": "mobbin.com",
+      "slug": "mobbin.com",
+      "jobCount": 2
+    },
+    {
+      "company": "montecarlodata",
+      "slug": "montecarlodata",
+      "jobCount": 5
+    },
+    {
+      "company": "MUBI",
+      "slug": "MUBI",
+      "jobCount": 2
+    },
+    {
+      "company": "novel",
+      "slug": "novel",
+      "jobCount": 3
+    },
+    {
+      "company": "omafertility",
+      "slug": "omafertility",
+      "jobCount": 2
+    },
+    {
+      "company": "p2p.org",
+      "slug": "p2p.org",
+      "jobCount": 2
+    },
+    {
+      "company": "pagos",
+      "slug": "pagos",
+      "jobCount": 5
+    },
+    {
+      "company": "Pagos",
+      "slug": "Pagos",
+      "jobCount": 5
+    },
+    {
+      "company": "phoenix",
+      "slug": "phoenix",
+      "jobCount": 1
+    },
+    {
+      "company": "Pivot",
+      "slug": "Pivot",
+      "jobCount": 5
+    },
+    {
+      "company": "pirros",
+      "slug": "pirros",
+      "jobCount": 5
+    },
+    {
+      "company": "quilter",
+      "slug": "quilter",
+      "jobCount": 5
+    },
+    {
+      "company": "reka",
+      "slug": "reka",
+      "jobCount": 5
+    },
+    {
+      "company": "rerun",
+      "slug": "rerun",
+      "jobCount": 5
+    },
+    {
+      "company": "river",
+      "slug": "river",
+      "jobCount": 4
+    },
+    {
+      "company": "runway",
+      "slug": "runway",
+      "jobCount": 4
+    },
+    {
+      "company": "Runway",
+      "slug": "Runway",
+      "jobCount": 4
+    },
+    {
+      "company": "seismic-change.com",
+      "slug": "seismic-change.com",
+      "jobCount": 2
+    },
+    {
+      "company": "screenverse",
+      "slug": "screenverse",
+      "jobCount": 1
+    },
+    {
+      "company": "shiftkey",
+      "slug": "shiftkey",
+      "jobCount": 3
+    },
+    {
+      "company": "Shiftkey",
+      "slug": "Shiftkey",
+      "jobCount": 3
+    },
+    {
+      "company": "sensmore",
+      "slug": "sensmore",
+      "jobCount": 5
+    },
+    {
+      "company": "Speakeasy",
+      "slug": "Speakeasy",
+      "jobCount": 5
+    },
+    {
+      "company": "stytch",
+      "slug": "stytch",
+      "jobCount": 5
+    },
+    {
+      "company": "toms",
+      "slug": "toms",
+      "jobCount": 1
+    },
+    {
+      "company": "trucksmarter",
+      "slug": "trucksmarter",
+      "jobCount": 5
+    },
+    {
+      "company": "upflow",
+      "slug": "upflow",
+      "jobCount": 5
+    },
+    {
+      "company": "unicourt",
+      "slug": "unicourt",
+      "jobCount": 5
+    },
+    {
+      "company": "unit410",
+      "slug": "unit410",
+      "jobCount": 5
+    },
+    {
+      "company": "Vic.ai",
+      "slug": "Vic.ai",
+      "jobCount": 5
+    },
+    {
+      "company": "walrusfi",
+      "slug": "walrusfi",
+      "jobCount": 3
+    },
+    {
+      "company": "wagmo",
+      "slug": "wagmo",
+      "jobCount": 2
+    },
+    {
+      "company": "witnessai",
+      "slug": "witnessai",
+      "jobCount": 4
+    },
+    {
+      "company": "WitnessAI",
+      "slug": "WitnessAI",
+      "jobCount": 4
+    },
+    {
+      "company": "woflow",
+      "slug": "woflow",
+      "jobCount": 5
+    },
+    {
+      "company": "ycombinator",
+      "slug": "ycombinator",
+      "jobCount": 4
+    },
+    {
+      "company": "airtasker",
+      "slug": "airtasker",
+      "jobCount": 3
+    },
+    {
+      "company": "binti",
+      "slug": "binti",
+      "jobCount": 4
+    },
+    {
+      "company": "blockworks",
+      "slug": "blockworks",
+      "jobCount": 3
+    },
+    {
+      "company": "Blockworks",
+      "slug": "Blockworks",
+      "jobCount": 3
+    },
+    {
+      "company": "boon",
+      "slug": "boon",
+      "jobCount": 4
+    },
+    {
+      "company": "bunkerhillhealth",
+      "slug": "bunkerhillhealth",
+      "jobCount": 3
+    },
+    {
+      "company": "clerk",
+      "slug": "clerk",
+      "jobCount": 4
+    },
+    {
+      "company": "cloudtrucks",
+      "slug": "cloudtrucks",
+      "jobCount": 2
+    },
+    {
+      "company": "Conception",
+      "slug": "Conception",
+      "jobCount": 1
+    },
+    {
+      "company": "Dapster",
+      "slug": "Dapster",
+      "jobCount": 4
+    },
+    {
+      "company": "davidenergy",
+      "slug": "davidenergy",
+      "jobCount": 2
+    },
+    {
+      "company": "edited",
+      "slug": "edited",
+      "jobCount": 4
+    },
+    {
+      "company": "electricair",
+      "slug": "electricair",
+      "jobCount": 2
+    },
+    {
+      "company": "espresso",
+      "slug": "espresso",
+      "jobCount": 4
+    },
+    {
+      "company": "Ferovinum",
+      "slug": "Ferovinum",
+      "jobCount": 3
+    },
+    {
+      "company": "GitBook",
+      "slug": "GitBook",
+      "jobCount": 3
+    },
+    {
+      "company": "gohenry",
+      "slug": "gohenry",
+      "jobCount": 1
+    },
+    {
+      "company": "invert",
+      "slug": "invert",
+      "jobCount": 4
+    },
+    {
+      "company": "Lorikeet",
+      "slug": "Lorikeet",
+      "jobCount": 3
+    },
+    {
+      "company": "NextPatient",
+      "slug": "NextPatient",
+      "jobCount": 4
+    },
+    {
+      "company": "offdeal",
+      "slug": "offdeal",
+      "jobCount": 4
+    },
+    {
+      "company": "Parkade",
+      "slug": "Parkade",
+      "jobCount": 2
+    },
+    {
+      "company": "Post",
+      "slug": "Post",
+      "jobCount": 3
+    },
+    {
+      "company": "proofofplay",
+      "slug": "proofofplay",
+      "jobCount": 4
+    },
+    {
+      "company": "reach",
+      "slug": "reach",
+      "jobCount": 4
+    },
+    {
+      "company": "Replicant",
+      "slug": "Replicant",
+      "jobCount": 1
+    },
+    {
+      "company": "RWA.xyz",
+      "slug": "RWA.xyz",
+      "jobCount": 3
+    },
+    {
+      "company": "scalemath",
+      "slug": "scalemath",
+      "jobCount": 2
+    },
+    {
+      "company": "standardfleet",
+      "slug": "standardfleet",
+      "jobCount": 4
+    },
+    {
+      "company": "syndica",
+      "slug": "syndica",
+      "jobCount": 4
+    },
+    {
+      "company": "terminal-industries",
+      "slug": "terminal-industries",
+      "jobCount": 3
+    },
+    {
+      "company": "theydo",
+      "slug": "theydo",
+      "jobCount": 3
+    },
+    {
+      "company": "trilitech",
+      "slug": "trilitech",
+      "jobCount": 4
+    },
+    {
+      "company": "wander",
+      "slug": "wander",
+      "jobCount": 4
+    },
+    {
+      "company": "zayzoon",
+      "slug": "zayzoon",
+      "jobCount": 4
+    },
+    {
+      "company": "acquird",
+      "slug": "acquird",
+      "jobCount": 3
+    },
+    {
+      "company": "Arbor",
+      "slug": "Arbor",
+      "jobCount": 2
+    },
+    {
+      "company": "arbor",
+      "slug": "arbor",
+      "jobCount": 2
+    },
+    {
+      "company": "apron",
+      "slug": "apron",
+      "jobCount": 2
+    },
+    {
+      "company": "axiom",
+      "slug": "axiom",
+      "jobCount": 3
+    },
+    {
+      "company": "Bastion",
+      "slug": "Bastion",
+      "jobCount": 2
+    },
+    {
+      "company": "blockdaemon",
+      "slug": "blockdaemon",
+      "jobCount": 3
+    },
+    {
+      "company": "blueberrypediatrics",
+      "slug": "blueberrypediatrics",
+      "jobCount": 3
+    },
+    {
+      "company": "blumen",
+      "slug": "blumen",
+      "jobCount": 3
+    },
+    {
+      "company": "brm.ai",
+      "slug": "brm.ai",
+      "jobCount": 2
+    },
+    {
+      "company": "certn",
+      "slug": "certn",
+      "jobCount": 1
+    },
+    {
+      "company": "coalesce",
+      "slug": "coalesce",
+      "jobCount": 3
+    },
+    {
+      "company": "convex-dev",
+      "slug": "convex-dev",
+      "jobCount": 3
+    },
+    {
+      "company": "dourolabs.xyz",
+      "slug": "dourolabs.xyz",
+      "jobCount": 3
+    },
+    {
+      "company": "DubClub",
+      "slug": "DubClub",
+      "jobCount": 2
+    },
+    {
+      "company": "Empo Health",
+      "slug": "Empo Health",
+      "jobCount": 3
+    },
+    {
+      "company": "equi",
+      "slug": "equi",
+      "jobCount": 3
+    },
+    {
+      "company": "finally",
+      "slug": "finally",
+      "jobCount": 2
+    },
+    {
+      "company": "finmid.com",
+      "slug": "finmid.com",
+      "jobCount": 1
+    },
+    {
+      "company": "firstround",
+      "slug": "firstround",
+      "jobCount": 2
+    },
+    {
+      "company": "fortytwo",
+      "slug": "fortytwo",
+      "jobCount": 3
+    },
+    {
+      "company": "flashbots.net",
+      "slug": "flashbots.net",
+      "jobCount": 3
+    },
+    {
+      "company": "forma",
+      "slug": "forma",
+      "jobCount": 3
+    },
+    {
+      "company": "gooddata",
+      "slug": "gooddata",
+      "jobCount": 3
+    },
+    {
+      "company": "gruntwork",
+      "slug": "gruntwork",
+      "jobCount": 3
+    },
+    {
+      "company": "Gruntwork",
+      "slug": "Gruntwork",
+      "jobCount": 3
+    },
+    {
+      "company": "iacollaborative",
+      "slug": "iacollaborative",
+      "jobCount": 2
+    },
+    {
+      "company": "hyperbolic",
+      "slug": "hyperbolic",
+      "jobCount": 3
+    },
+    {
+      "company": "Influxdata",
+      "slug": "Influxdata",
+      "jobCount": 3
+    },
+    {
+      "company": "influxdata",
+      "slug": "influxdata",
+      "jobCount": 3
+    },
+    {
+      "company": "magiceden",
+      "slug": "magiceden",
+      "jobCount": 3
+    },
+    {
+      "company": "materialsecurity",
+      "slug": "materialsecurity",
+      "jobCount": 3
+    },
+    {
+      "company": "medscout",
+      "slug": "medscout",
+      "jobCount": 3
+    },
+    {
+      "company": "moderntreasury",
+      "slug": "moderntreasury",
+      "jobCount": 2
+    },
+    {
+      "company": "MotherDuck",
+      "slug": "MotherDuck",
+      "jobCount": 3
+    },
+    {
+      "company": "OpsLevel",
+      "slug": "OpsLevel",
+      "jobCount": 3
+    },
+    {
+      "company": "output",
+      "slug": "output",
+      "jobCount": 1
+    },
+    {
+      "company": "prime",
+      "slug": "prime",
+      "jobCount": 3
+    },
+    {
+      "company": "probablygenetic",
+      "slug": "probablygenetic",
+      "jobCount": 3
+    },
+    {
+      "company": "puzzle.io",
+      "slug": "puzzle.io",
+      "jobCount": 2
+    },
+    {
+      "company": "resq",
+      "slug": "resq",
+      "jobCount": 3
+    },
+    {
+      "company": "Sahara",
+      "slug": "Sahara",
+      "jobCount": 1
+    },
+    {
+      "company": "salesape-ai",
+      "slug": "salesape-ai",
+      "jobCount": 3
+    },
+    {
+      "company": "scaler",
+      "slug": "scaler",
+      "jobCount": 2
+    },
+    {
+      "company": "Sensat",
+      "slug": "Sensat",
+      "jobCount": 3
+    },
+    {
+      "company": "succinct",
+      "slug": "succinct",
+      "jobCount": 3
+    },
+    {
+      "company": "tensec",
+      "slug": "tensec",
+      "jobCount": 2
+    },
+    {
+      "company": "ternary",
+      "slug": "ternary",
+      "jobCount": 3
+    },
+    {
+      "company": "texture",
+      "slug": "texture",
+      "jobCount": 3
+    },
+    {
+      "company": "TonicAI",
+      "slug": "TonicAI",
+      "jobCount": 3
+    },
+    {
+      "company": "tracer",
+      "slug": "tracer",
+      "jobCount": 3
+    },
+    {
+      "company": "top-hat",
+      "slug": "top-hat",
+      "jobCount": 3
+    },
+    {
+      "company": "winona",
+      "slug": "winona",
+      "jobCount": 1
+    },
+    {
+      "company": "Winona",
+      "slug": "Winona",
+      "jobCount": 1
+    },
+    {
+      "company": "windmill",
+      "slug": "windmill",
+      "jobCount": 3
+    },
+    {
+      "company": "astral",
+      "slug": "astral",
+      "jobCount": 2
+    },
+    {
+      "company": "ataraxis-ai",
+      "slug": "ataraxis-ai",
+      "jobCount": 1
+    },
+    {
+      "company": "atrato",
+      "slug": "atrato",
+      "jobCount": 2
+    },
+    {
+      "company": "avra",
+      "slug": "avra",
+      "jobCount": 1
+    },
+    {
+      "company": "Bifrost",
+      "slug": "Bifrost",
+      "jobCount": 2
+    },
+    {
+      "company": "Boost",
+      "slug": "Boost",
+      "jobCount": 1
+    },
+    {
+      "company": "boost",
+      "slug": "boost",
+      "jobCount": 1
+    },
+    {
+      "company": "cargado",
+      "slug": "cargado",
+      "jobCount": 1
+    },
+    {
+      "company": "castle",
+      "slug": "castle",
+      "jobCount": 2
+    },
+    {
+      "company": "Catio",
+      "slug": "Catio",
+      "jobCount": 2
+    },
+    {
+      "company": "continua",
+      "slug": "continua",
+      "jobCount": 2
+    },
+    {
+      "company": "cow-dao",
+      "slug": "cow-dao",
+      "jobCount": 1
+    },
+    {
+      "company": "credo.ai",
+      "slug": "credo.ai",
+      "jobCount": 1
+    },
+    {
+      "company": "day9",
+      "slug": "day9",
+      "jobCount": 2
+    },
+    {
+      "company": "Diagrid",
+      "slug": "Diagrid",
+      "jobCount": 2
+    },
+    {
+      "company": "doppler",
+      "slug": "doppler",
+      "jobCount": 2
+    },
+    {
+      "company": "ecosia.org",
+      "slug": "ecosia.org",
+      "jobCount": 2
+    },
+    {
+      "company": "empora",
+      "slug": "empora",
+      "jobCount": 2
+    },
+    {
+      "company": "endgame",
+      "slug": "endgame",
+      "jobCount": 1
+    },
+    {
+      "company": "ens-labs",
+      "slug": "ens-labs",
+      "jobCount": 2
+    },
+    {
+      "company": "ethglobal",
+      "slug": "ethglobal",
+      "jobCount": 2
+    },
+    {
+      "company": "finch",
+      "slug": "finch",
+      "jobCount": 2
+    },
+    {
+      "company": "futurefitai",
+      "slug": "futurefitai",
+      "jobCount": 2
+    },
+    {
+      "company": "gardens",
+      "slug": "gardens",
+      "jobCount": 2
+    },
+    {
+      "company": "geobrowser",
+      "slug": "geobrowser",
+      "jobCount": 2
+    },
+    {
+      "company": "granular-energy.com",
+      "slug": "granular-energy.com",
+      "jobCount": 2
+    },
+    {
+      "company": "goodparty",
+      "slug": "goodparty",
+      "jobCount": 2
+    },
+    {
+      "company": "gravitysketch",
+      "slug": "gravitysketch",
+      "jobCount": 2
+    },
+    {
+      "company": "groundnews",
+      "slug": "groundnews",
+      "jobCount": 2
+    },
+    {
+      "company": "happyscribe.com",
+      "slug": "happyscribe.com",
+      "jobCount": 2
+    },
+    {
+      "company": "Hartbeat",
+      "slug": "Hartbeat",
+      "jobCount": 1
+    },
+    {
+      "company": "healthsherpa",
+      "slug": "healthsherpa",
+      "jobCount": 1
+    },
+    {
+      "company": "humanitec",
+      "slug": "humanitec",
+      "jobCount": 2
+    },
+    {
+      "company": "Hyperliquid Labs",
+      "slug": "Hyperliquid Labs",
+      "jobCount": 2
+    },
+    {
+      "company": "iverify",
+      "slug": "iverify",
+      "jobCount": 1
+    },
+    {
+      "company": "joor",
+      "slug": "joor",
+      "jobCount": 1
+    },
+    {
+      "company": "keep",
+      "slug": "keep",
+      "jobCount": 2
+    },
+    {
+      "company": "Keep",
+      "slug": "Keep",
+      "jobCount": 2
+    },
+    {
+      "company": "kiln.fi",
+      "slug": "kiln.fi",
+      "jobCount": 2
+    },
+    {
+      "company": "Kojo",
+      "slug": "Kojo",
+      "jobCount": 2
+    },
+    {
+      "company": "konvu",
+      "slug": "konvu",
+      "jobCount": 2
+    },
+    {
+      "company": "miri",
+      "slug": "miri",
+      "jobCount": 2
+    },
+    {
+      "company": "moonvalley-ai",
+      "slug": "moonvalley-ai",
+      "jobCount": 2
+    },
+    {
+      "company": "mosey",
+      "slug": "mosey",
+      "jobCount": 2
+    },
+    {
+      "company": "nexus-marketing",
+      "slug": "nexus-marketing",
+      "jobCount": 2
+    },
+    {
+      "company": "nomic",
+      "slug": "nomic",
+      "jobCount": 2
+    },
+    {
+      "company": "noetica",
+      "slug": "noetica",
+      "jobCount": 1
+    },
+    {
+      "company": "outerbounds",
+      "slug": "outerbounds",
+      "jobCount": 2
+    },
+    {
+      "company": "polaranalytics",
+      "slug": "polaranalytics",
+      "jobCount": 2
+    },
+    {
+      "company": "procurementsciences",
+      "slug": "procurementsciences",
+      "jobCount": 2
+    },
+    {
+      "company": "ready",
+      "slug": "ready",
+      "jobCount": 1
+    },
+    {
+      "company": "readme",
+      "slug": "readme",
+      "jobCount": 2
+    },
+    {
+      "company": "Remedy Scientific",
+      "slug": "Remedy Scientific",
+      "jobCount": 2
+    },
+    {
+      "company": "rose rocket",
+      "slug": "rose rocket",
+      "jobCount": 2
+    },
+    {
+      "company": "rootglobal",
+      "slug": "rootglobal",
+      "jobCount": 2
+    },
+    {
+      "company": "seconddinner",
+      "slug": "seconddinner",
+      "jobCount": 2
+    },
+    {
+      "company": "SecondDinner",
+      "slug": "SecondDinner",
+      "jobCount": 2
+    },
+    {
+      "company": "seqera.io",
+      "slug": "seqera.io",
+      "jobCount": 2
+    },
+    {
+      "company": "seriesai",
+      "slug": "seriesai",
+      "jobCount": 2
+    },
+    {
+      "company": "sound.xyz",
+      "slug": "sound.xyz",
+      "jobCount": 2
+    },
+    {
+      "company": "speckle",
+      "slug": "speckle",
+      "jobCount": 2
+    },
+    {
+      "company": "Speckle",
+      "slug": "Speckle",
+      "jobCount": 2
+    },
+    {
+      "company": "stickermule",
+      "slug": "stickermule",
+      "jobCount": 2
+    },
+    {
+      "company": "Sui Foundation",
+      "slug": "Sui Foundation",
+      "jobCount": 2
+    },
+    {
+      "company": "sui foundation",
+      "slug": "sui foundation",
+      "jobCount": 2
+    },
+    {
+      "company": "tango",
+      "slug": "tango",
+      "jobCount": 2
+    },
+    {
+      "company": "timely",
+      "slug": "timely",
+      "jobCount": 2
+    },
+    {
+      "company": "WA.Technology",
+      "slug": "WA.Technology",
+      "jobCount": 2
+    },
+    {
+      "company": "zed",
+      "slug": "zed",
+      "jobCount": 2
+    },
+    {
+      "company": "aescape",
+      "slug": "aescape",
+      "jobCount": 1
+    },
+    {
+      "company": "allinbits",
+      "slug": "allinbits",
+      "jobCount": 1
+    },
+    {
+      "company": "anterior",
+      "slug": "anterior",
+      "jobCount": 1
+    },
+    {
+      "company": "apexgrowth",
+      "slug": "apexgrowth",
+      "jobCount": 1
+    },
+    {
+      "company": "bedrockocean",
+      "slug": "bedrockocean",
+      "jobCount": 1
+    },
+    {
+      "company": "believer",
+      "slug": "believer",
+      "jobCount": 1
+    },
+    {
+      "company": "biconomy",
+      "slug": "biconomy",
+      "jobCount": 1
+    },
+    {
+      "company": "clarisights",
+      "slug": "clarisights",
+      "jobCount": 1
+    },
+    {
+      "company": "Citizen",
+      "slug": "Citizen",
+      "jobCount": 1
+    },
+    {
+      "company": "Coperniq",
+      "slug": "Coperniq",
+      "jobCount": 1
+    },
+    {
+      "company": "daydream-ai",
+      "slug": "daydream-ai",
+      "jobCount": 1
+    },
+    {
+      "company": "FloatMe",
+      "slug": "FloatMe",
+      "jobCount": 1
+    },
+    {
+      "company": "garden",
+      "slug": "garden",
+      "jobCount": 1
+    },
+    {
+      "company": "goldsky",
+      "slug": "goldsky",
+      "jobCount": 1
+    },
+    {
+      "company": "Goodship",
+      "slug": "Goodship",
+      "jobCount": 1
+    },
+    {
+      "company": "grapevine",
+      "slug": "grapevine",
+      "jobCount": 1
+    },
+    {
+      "company": "guidelabs.ai",
+      "slug": "guidelabs.ai",
+      "jobCount": 1
+    },
+    {
+      "company": "hotspexmedia",
+      "slug": "hotspexmedia",
+      "jobCount": 1
+    },
+    {
+      "company": "impulse",
+      "slug": "impulse",
+      "jobCount": 1
+    },
+    {
+      "company": "knock",
+      "slug": "knock",
+      "jobCount": 1
+    },
+    {
+      "company": "linera.io",
+      "slug": "linera.io",
+      "jobCount": 1
+    },
+    {
+      "company": "machinify",
+      "slug": "machinify",
+      "jobCount": 1
+    },
+    {
+      "company": "maihem",
+      "slug": "maihem",
+      "jobCount": 1
+    },
+    {
+      "company": "mondoo",
+      "slug": "mondoo",
+      "jobCount": 1
+    },
+    {
+      "company": "mui",
+      "slug": "mui",
+      "jobCount": 1
+    },
+    {
+      "company": "MUI",
+      "slug": "MUI",
+      "jobCount": 1
+    },
+    {
+      "company": "nomic.foundation",
+      "slug": "nomic.foundation",
+      "jobCount": 1
+    },
+    {
+      "company": "orita",
+      "slug": "orita",
+      "jobCount": 1
+    },
+    {
+      "company": "Passthrough",
+      "slug": "Passthrough",
+      "jobCount": 1
+    },
+    {
+      "company": "phasebiolabs",
+      "slug": "phasebiolabs",
+      "jobCount": 1
+    },
+    {
+      "company": "Pocket Worlds",
+      "slug": "Pocket Worlds",
+      "jobCount": 1
+    },
+    {
+      "company": "quant-aq",
+      "slug": "quant-aq",
+      "jobCount": 1
+    },
+    {
+      "company": "replicated",
+      "slug": "replicated",
+      "jobCount": 1
+    },
+    {
+      "company": "rutter",
+      "slug": "rutter",
+      "jobCount": 1
+    },
+    {
+      "company": "routefusion",
+      "slug": "routefusion",
+      "jobCount": 1
+    },
+    {
+      "company": "Searchstax",
+      "slug": "Searchstax",
+      "jobCount": 1
+    },
+    {
+      "company": "SlingshotAI",
+      "slug": "SlingshotAI",
+      "jobCount": 1
+    },
+    {
+      "company": "smallstep",
+      "slug": "smallstep",
+      "jobCount": 1
+    },
+    {
+      "company": "strange-loop-labs",
+      "slug": "strange-loop-labs",
+      "jobCount": 1
+    },
+    {
+      "company": "stotles.com",
+      "slug": "stotles.com",
+      "jobCount": 1
+    },
+    {
+      "company": "tealhq",
+      "slug": "tealhq",
+      "jobCount": 1
+    },
+    {
+      "company": "threev.ai",
+      "slug": "threev.ai",
+      "jobCount": 1
+    },
+    {
+      "company": "voladynamics",
+      "slug": "voladynamics",
+      "jobCount": 1
+    },
+    {
+      "company": "withco",
+      "slug": "withco",
+      "jobCount": 1
+    }
+  ]
+}

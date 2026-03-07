@@ -1,0 +1,12 @@
+{
+  "actorKeyValueStoreSchemaVersion": 1,
+  "title": "Lever Jobs Scraper Store",
+  "collections": {
+    "summary": {
+      "title": "Run Summary",
+      "description": "Summary of the scrape run including total companies, total jobs, filters applied, elapsed time, and top companies by job count.",
+      "keyPrefix": "SUMMARY",
+      "contentTypes": ["application/json"]
+    }
+  }
+}

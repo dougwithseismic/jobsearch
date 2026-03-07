@@ -1,0 +1,55 @@
+{
+  "name": "breezyhr-jobs",
+  "version": "1.0.0",
+  "description": "Discover and scrape every job posted on BreezyHR-powered job boards",
+  "type": "module",
+  "bin": {
+    "breezyhr-jobs": "./bin/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "cli": "tsx bin/cli.ts",
+    "check-types": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "breezyhr",
+    "breezy",
+    "jobs",
+    "scraper",
+    "job-board",
+    "careers",
+    "hiring",
+    "ats"
+  ],
+  "author": "Doug Silkstone",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dougwithseismic/jobsearch",
+    "directory": "packages/breezyhr-jobs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

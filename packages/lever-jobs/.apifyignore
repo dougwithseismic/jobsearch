@@ -1,0 +1,7 @@
+node_modules
+dist
+.git
+*.md
+*.test.ts
+__tests__
+lever-data

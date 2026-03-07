@@ -1,0 +1,9 @@
+node_modules
+actor/node_modules
+actor/storage
+actor/dist
+dist
+bin
+src/__tests__
+.git
+*.test.ts

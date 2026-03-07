@@ -1,0 +1,78 @@
+{
+  "title": "Breezy HR Jobs Scraper",
+  "description": "Discover, scrape, and search jobs from companies using BreezyHR as their ATS. Auto-discovers companies — no manual URL input needed.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "How to run the scraper:\n- 'all' — Auto-discover ALL companies and scrape every job board. Zero config.\n- 'companies' — Scrape only the company slugs you specify.\n- 'search' — Search a specific company's jobs by keyword (fast, single API call).",
+      "editor": "select",
+      "enum": ["all", "companies", "search"],
+      "default": "all",
+      "prefill": "all",
+      "sectionCaption": "Scraping Mode",
+      "sectionDescription": "Choose how you want to discover and scrape BreezyHR job boards."
+    },
+    "companies": {
+      "title": "Company Slugs (Subdomains)",
+      "type": "array",
+      "description": "BreezyHR company subdomains to scrape. Used in 'companies' and 'search' modes.\n\nThe slug is the subdomain in {slug}.breezy.hr. Examples: 'hubstaff', 'attentive', 'breezy'.\n\nNot sure of the slug? Run in 'all' mode first — the output includes every slug.",
+      "editor": "stringList",
+      "default": [],
+      "sectionCaption": "Target Companies",
+      "sectionDescription": "Specify which companies to scrape. Leave empty for 'all' mode."
+    },
+    "locationFilter": {
+      "title": "Location Filter",
+      "type": "string",
+      "description": "Regex pattern to match job locations.\n\nExamples:\n- 'europe|germany|uk|france' — European jobs\n- 'remote' — Any location containing 'remote'\n- 'new york|san francisco|austin' — US tech hubs\n- 'prague|czech' — Specific city/country",
+      "editor": "textfield",
+      "default": ""
+    },
+    "departmentFilter": {
+      "title": "Department Filter",
+      "type": "string",
+      "description": "Regex pattern to match departments.\n\nExamples:\n- 'engineering|product' — Tech roles\n- 'sales|marketing|growth' — Go-to-market\n- 'design|creative' — Design teams\n- 'data|machine.learning|ai' — Data/ML roles",
+      "editor": "textfield",
+      "default": ""
+    },
+    "keywordFilter": {
+      "title": "Title/Keyword Filter",
+      "type": "string",
+      "description": "Regex pattern to match job titles.\n\nExamples:\n- 'senior|staff|lead|principal' — Senior roles\n- 'full.?stack|fullstack' — Full-stack engineers\n- 'react|typescript|node' — Tech-specific\n- 'founding|head.of|vp|director' — Leadership\n- 'intern|junior|entry' — Entry-level",
+      "editor": "textfield",
+      "default": ""
+    },
+    "salaryFilter": {
+      "title": "Salary Filter",
+      "type": "string",
+      "description": "Regex pattern to match salary fields.\n\nExamples:\n- '\\$1[0-9]{2},000' — $100k+ salaries\n- 'yr|year' — Annual salary listings\n- '\\$' — Any job with a salary listed",
+      "editor": "textfield",
+      "default": ""
+    },
+    "remoteOnly": {
+      "title": "Remote Only",
+      "type": "boolean",
+      "description": "Only return jobs marked as remote in BreezyHR. Default: off.",
+      "default": false
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "description": "Number of parallel API requests. Higher = faster scraping but more memory. Recommended: 10 for full scrape, 5 for testing.",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "maxCompanies": {
+      "title": "Max Companies",
+      "type": "integer",
+      "description": "Limit the number of companies to scrape. 0 = no limit (scrape all). Useful for testing or staying within budget.",
+      "default": 0,
+      "minimum": 0
+    }
+  },
+  "required": ["mode"]
+}

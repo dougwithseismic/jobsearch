@@ -921,3 +921,48 @@ The OSS PR strategy was a bust. The Slonik and ray.so contributions were well-ex
 The uncommitted CV work suggests Doug has been iterating on self-presentation — also important, but less urgent than execution. The CV page, the tailored variants, the HTML exports — these are tools for applying. The applying itself still needs to happen.
 
 ---
+
+## Session 46 — March 7, 2026: The ATS Dragnet & First Applications
+
+**What happened:** Built and deployed 8 ATS scraper packages (Ashby, Greenhouse, Lever, SmartRecruiters, Workable, Recruitee, BreezyHR, Personio), each with Common Crawl discovery to auto-find every company using that platform. Ran full discovery mode across all 8 — scraped **250,000+ job listings** from **3,500+ companies**, filtered down to **2,652 matching roles** for Doug's profile (founding/lead/senior full-stack/product/growth engineer, Europe or remote, last 30 days). Then scraped 2 months of HN "Who is Hiring" threads, pulling another **186 filtered matches**.
+
+**The numbers:**
+| ATS Platform | Companies Discovered | Active | Total Jobs | Matches |
+|---|---|---|---|---|
+| Greenhouse | 1,700 | 537 | 31,926 | 1,034 |
+| Lever | 2,515 | 1,165 | 39,737 | 480 |
+| Ashby | 1,325 | — | 18,140 | 732 |
+| SmartRecruiters | 819 | 612 | 153,594 | 271 |
+| BreezyHR | 2,645 | 683 | 14,842 | 77 |
+| Workable | 864 | 58 | 1,396 | 26 |
+| Personio | 711 | 175 | 2,525 | 23 |
+| Recruitee | 1,211 | 102 | 1,636 | 9 |
+| **HN Who is Hiring** | — | — | 699 | 186 |
+| **Total** | **~11,790** | **~3,300** | **~264,000** | **2,838** |
+
+**The honest finding:** 2,652 ATS matches sounds impressive until you filter for *founding engineer type roles accessible to someone who can't get a look-in on traditional hiring*. Across all 8 platforms: **3 genuine founding engineer roles** in Europe. The ATS boards are dominated by established companies posting through HR departments. The people who'd hire Doug — tiny teams, pre-seed, need a generalist who builds everything — mostly don't use formal ATS platforms.
+
+HN was the goldmine. 186 matches from just 2 months, with 15+ genuinely interesting EU-remote roles from small teams posting directly. Founders writing their own job posts, not recruiters.
+
+**Top picks identified:**
+1. **Matcha.fm** — Founding Growth Fullstack Engineer (EU remote) — literally Doug's title
+2. **Merantix** — Founding Engineer @ Stealth AI Recruiting Venture (Berlin) — legit AI venture studio
+3. **Mozart AI** — Full-Stack Engineers (London) — music + AI, the dream vertical
+4. **Topi** — Head of Engineering (Berlin) — hands-on, AI-driven
+5. **Moyai** — Founding Product Engineer (Amsterdam)
+
+**Applications submitted:** Matcha.fm, Merantix, Mozart AI. Three different angles — growth engineering, founding/AI, passion fit.
+
+**Infrastructure built this session:**
+- 2 new scraper packages (BreezyHR: 94 tests, Personio: 110 tests)
+- All 8 packages pushed to Apify as actors
+- `scripts/merge-results.ts` — unified CSV merger across all platforms
+- `scripts/filter-hn.ts` — HN-specific filtering for founding/early-stage roles
+- 7 individual hunt scripts with full Common Crawl discovery
+- `packages/awesome-jobs-scraper/TODO.md` — plan for unified orchestrator package
+
+**Key insight:** The job search infrastructure is now genuinely powerful — we can discover and scrape every company on 8 major ATS platforms automatically. But for Doug's specific profile (founding engineer, generalist, small team), the best roles aren't on ATS boards. They're on HN, Twitter, and through direct outreach. The scrapers are great for monitoring the market at scale; the applications that matter come from the places where founders post directly.
+
+**The shift:** After 18 days of infrastructure-building paralysis, three applications went out today. Not through the "demonstrate, don't apply" strategy. Not through OSS PRs or clever indirection. Just... applying. Sometimes the simplest thing is the hardest thing to start.
+
+---

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doug Silkstone — Senior / Lead Full-Stack Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --ink-soft: #2a2a2a;
+    --ink-muted: #5a5a5a;
+    --ink-light: #8a8a8a;
+    --accent: #1a56db;
+    --accent-soft: #e8effc;
+    --surface: #ffffff;
+    --surface-warm: #fafaf8;
+    --border: #e2e2de;
+    --border-light: #eeeeea;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+  html { font-size: 15px; }
+  body { font-family: var(--sans); color: var(--ink-soft); background: #e8e8e4; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+
+  @media print {
+    html { font-size: 13.5px; }
+    body { background: white; }
+    .page { box-shadow: none !important; margin: 0 !important; }
+    .print-controls { display: none !important; }
+    .page + .page { page-break-before: always; }
+  }
+
+  .print-controls { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 100; }
+  .print-btn {
+    font-family: var(--sans); font-size: 0.85rem; font-weight: 600;
+    padding: 0.6rem 1.4rem; border: none; border-radius: 8px; cursor: pointer;
+    background: var(--ink); color: white; box-shadow: 0 2px 12px rgba(0,0,0,0.2); transition: all 0.2s;
+  }
+  .print-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+
+  .page { width: 210mm; min-height: 297mm; margin: 2rem auto; background: var(--surface); box-shadow: 0 4px 40px rgba(0,0,0,0.12); overflow: hidden; }
+  .page-inner { padding: 2.2rem 2.4rem 1.8rem; }
+
+  /* Header */
+  .header { display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding-bottom: 1.1rem; border-bottom: 2.5px solid var(--ink); margin-bottom: 1rem; }
+  .header-name { font-family: var(--serif); font-size: 2.4rem; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; }
+  .header-title { font-size: 0.86rem; font-weight: 500; color: var(--ink-muted); margin-top: 0.25rem; }
+  .header-contact { text-align: right; display: flex; flex-direction: column; justify-content: center; gap: 0.12rem; }
+  .header-contact a, .header-contact span { font-size: 0.73rem; color: var(--ink-muted); text-decoration: none; display: block; }
+  .contact-row { display: flex; justify-content: flex-end; gap: 0.85rem; margin-top: 0.12rem; }
+  .contact-row a { font-size: 0.7rem; font-weight: 500; color: var(--accent); text-decoration: none; }
+
+  /* Sections */
+  .section { margin-bottom: 1rem; }
+  .section-title { font-family: var(--sans); font-size: 0.63rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); padding-bottom: 0.28rem; border-bottom: 1px solid var(--border); margin-bottom: 0.55rem; }
+
+  .summary { font-size: 0.82rem; line-height: 1.6; color: var(--ink-soft); }
+
+  /* Fit */
+  .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; }
+  .fit-item { padding: 0.15rem 0; }
+  .fit-title { font-size: 0.7rem; font-weight: 700; color: var(--ink); margin-bottom: 0.08rem; }
+  .fit-copy { font-size: 0.72rem; color: var(--ink-muted); line-height: 1.45; }
+
+  /* Skills */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.18rem 1.2rem; }
+  .skill-row { display: flex; gap: 0.4rem; padding: 0.12rem 0; }
+  .skill-label { font-size: 0.7rem; font-weight: 700; color: var(--ink); white-space: nowrap; min-width: 5.5rem; }
+  .skill-value { font-size: 0.7rem; color: var(--ink-muted); line-height: 1.4; }
+
+  /* Roles */
+  .role { margin-bottom: 0.7rem; }
+  .role:last-child { margin-bottom: 0; }
+  .role-header { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 1rem; margin-bottom: 0.12rem; }
+  .role-title { font-size: 0.82rem; font-weight: 700; color: var(--ink); }
+  .role-company { font-weight: 400; color: var(--ink-muted); }
+  .role-dates { font-size: 0.68rem; font-family: var(--mono); color: var(--ink-light); white-space: nowrap; }
+  .role-tech { font-size: 0.65rem; font-family: var(--mono); color: var(--accent); margin-bottom: 0.18rem; opacity: 0.8; }
+  .role-summary { font-size: 0.75rem; color: var(--ink-muted); margin-bottom: 0.18rem; line-height: 1.5; }
+  .role-bullets { list-style: none; padding: 0; }
+  .role-bullets li { font-size: 0.75rem; color: var(--ink-soft); padding-left: 0.85rem; position: relative; margin-bottom: 0.1rem; line-height: 1.5; }
+  .role-bullets li::before { content: ''; position: absolute; left: 0.1rem; top: 0.48rem; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; }
+  .metric { font-weight: 600; color: var(--ink); }
+
+  /* Page 2 */
+  .page-2 .page-inner { padding-top: 1.8rem; }
+  .page-2-header { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 0.45rem; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+  .page-2-name { font-family: var(--serif); font-size: 1rem; color: var(--ink); }
+  .page-2-label { font-size: 0.63rem; color: var(--ink-light); }
+  .compact-role { margin-bottom: 0.5rem; }
+
+  /* OSS */
+  .oss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem 0.85rem; }
+  .oss-item { padding: 0.25rem 0; }
+  .oss-name { font-size: 0.73rem; font-weight: 600; color: var(--ink); font-family: var(--mono); }
+  .oss-stars { font-size: 0.62rem; font-weight: 600; color: var(--accent); background: var(--accent-soft); padding: 0.06rem 0.28rem; border-radius: 3px; }
+  .oss-desc { font-size: 0.68rem; color: var(--ink-muted); line-height: 1.4; margin-top: 0.08rem; }
+
+  /* Recognition */
+  .recognition-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.1rem 1.2rem; list-style: none; }
+  .recognition-list li { font-size: 0.73rem; color: var(--ink-soft); padding-left: 0.8rem; position: relative; line-height: 1.5; }
+  .recognition-list li::before { content: ''; position: absolute; left: 0; top: 0.46rem; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; }
+
+  .page-footer { margin-top: 0.7rem; padding-top: 0.5rem; border-top: 1px solid var(--border); text-align: center; font-size: 0.63rem; color: var(--ink-light); }
+  .page-footer a { color: var(--accent); text-decoration: none; }
+
+  /* Timeline legend */
+  .timeline-legend { display: flex; gap: 0.9rem; margin-top: 0.35rem; padding-top: 0.3rem; border-top: 1px solid var(--border-light); flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 0.25rem; font-size: 0.58rem; color: var(--ink-light); }
+  .legend-dot { width: 7px; height: 7px; border-radius: 50%; }
+
+  /* Testimonials */
+  .testimonial { border-left: 2px solid var(--border); padding: 0.3rem 0 0.3rem 0.65rem; }
+  .testimonial-text { font-size: 0.72rem; color: var(--ink-muted); font-style: italic; line-height: 1.55; }
+  .testimonial-attr { font-size: 0.62rem; color: var(--ink-light); margin-top: 0.15rem; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="print-controls">
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<!-- ========== PAGE 1 ========== -->
+<div class="page">
+  <div class="page-inner">
+
+    <header class="header">
+      <div>
+        <h1 class="header-name">Doug Silkstone</h1>
+        <p class="header-title">Senior / Lead Full-Stack Engineer &middot; TypeScript, React, Node, AI products</p>
+      </div>
+      <div class="header-contact">
+        <span>Prague, CZ &middot; Remote / Hybrid &middot; Open to permanent roles</span>
+        <a href="mailto:doug@withseismic.com">doug@withseismic.com</a>
+        <div class="contact-row">
+          <a href="https://github.com/dougwithseismic">GitHub</a>
+          <a href="https://linkedin.com/in/dougsilkstone">LinkedIn</a>
+          <a href="https://contra.com/doug_silkstone/work">Portfolio</a>
+          <a href="https://clutch.co/profile/doug-silkstone-full-stack-engineering">Clutch</a>
+          <a href="https://withseismic.com">withseismic.com</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <p class="summary">Full-stack engineer with 15 years shipping production web products across SaaS, marketplaces, growth tooling, and AI-assisted workflows. Strong hands-on depth in TypeScript, React, Next.js, Node, and Postgres, plus experience leading small teams, mentoring engineers, and owning delivery with product and design. Looking for senior or lead engineering roles where product judgment and execution speed matter.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What I Bring</h2>
+      <div class="fit-grid">
+        <div class="fit-item">
+          <div class="fit-title">Hands-on full-stack delivery</div>
+          <p class="fit-copy">Production depth across TypeScript, React, Next.js, Node, Postgres, testing, and cloud deployment.</p>
+        </div>
+        <div class="fit-item">
+          <div class="fit-title">Lead-level ownership</div>
+          <p class="fit-copy">Comfortable owning architecture, delivery quality, release pace, and technical direction without losing hands-on output.</p>
+        </div>
+        <div class="fit-item">
+          <div class="fit-title">Product-minded execution</div>
+          <p class="fit-copy">Strong at converting vague goals into shipped software with product, design, and commercial constraints in view.</p>
+        </div>
+        <div class="fit-item">
+          <div class="fit-title">AI and automation experience</div>
+          <p class="fit-copy">Recent work includes LLM workflows, agent tooling, browser automation, and internal products that augment human teams.</p>
+        </div>
+        <div class="fit-item">
+          <div class="fit-title">Team support and mentoring</div>
+          <p class="fit-copy">Led small teams, hired engineers, and improved delivery standards through better tooling, testing, and review quality.</p>
+        </div>
+        <div class="fit-item">
+          <div class="fit-title">High-trust stakeholder work</div>
+          <p class="fit-copy">Used to working directly with founders, heads of product, and senior leadership in fast-moving environments.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row"><span class="skill-label">Languages</span><span class="skill-value">TypeScript, Python, C&#43;&#43;, Go</span></div>
+        <div class="skill-row"><span class="skill-label">AI / ML</span><span class="skill-value">LLM agents, Mastra, MCP servers, RAG, RL (PPO)</span></div>
+        <div class="skill-row"><span class="skill-label">Frontend</span><span class="skill-value">React (8yr), Next.js, TanStack, Tailwind, Svelte</span></div>
+        <div class="skill-row"><span class="skill-label">Testing</span><span class="skill-value">Vitest, Jest, RTL, Playwright, Cypress</span></div>
+        <div class="skill-row"><span class="skill-label">Backend</span><span class="skill-value">Node, Hono, Express, NestJS, FastAPI, Drizzle</span></div>
+        <div class="skill-row"><span class="skill-label">Observability</span><span class="skill-value">Datadog, Sentry, Prometheus, Grafana</span></div>
+        <div class="skill-row"><span class="skill-label">Infra</span><span class="skill-value">AWS, GCP, K8s, Docker, Terraform, Postgres, Redis</span></div>
+        <div class="skill-row"><span class="skill-label">Specialisms</span><span class="skill-value">Chrome MV3, Playwright, Puppeteer, Stripe, Shopify</span></div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Senior Engineer & Engineering Lead <span class="role-company">— WithSeismic</span></div>
+          <span class="role-dates">2016 – Present</span>
+        </div>
+        <div class="role-tech">TypeScript &middot; React &middot; Next.js &middot; Node &middot; Python &middot; C&#43;&#43; &middot; AWS &middot; GCP &middot; Postgres</div>
+        <p class="role-summary">Independent product engineering practice. Embedded as a senior hands-on engineer inside client teams, owning architecture, delivery, and mentoring across web platforms, growth systems, internal tools, and AI-enabled products.</p>
+        <ul class="role-bullets">
+          <li>Led and built Contra's Indy.ai Chrome Extension: turned <span class="metric">35,000+ users</span> into a distributed opportunity-finding network using LLM workflows to identify hiring signals; drove a <span class="metric">2× increase in marketplace inventory</span></li>
+          <li>Delivered component libraries, design-system workflows, and monorepo tooling using MUI, Storybook, Yarn workspaces, and Turborepo</li>
+          <li>Built browser automation and prospecting systems with proxy rotation, rate limiting, and CRM integration for growth and sales teams</li>
+          <li>Shipped performance and growth tooling for clients including Sky and The Motley Fool, including automation over <span class="metric">multi-million-dollar ad budgets</span></li>
+          <li>Worked directly with founders, PMs, and designers to take products from prototype to production while mentoring engineers on quality and delivery</li>
+          <li>Clients include Contra, Sky, Framer, The Motley Fool, STRV, MIT, and Techstars-backed startups</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Product Engineer <span class="role-company">— DinnersWithFriends.co.uk (side project)</span></div>
+          <span class="role-dates">Nov 2024 – Present</span>
+        </div>
+        <div class="role-tech">TypeScript &middot; React &middot; Next.js &middot; Hono &middot; Postgres &middot; GCP</div>
+        <ul class="role-bullets">
+          <li>Built and operate the full product stack for a social-events platform, covering booking flows, CMS tooling, analytics, operations, and payments</li>
+          <li>Implemented a complex <span class="metric">Stripe Connect</span> merchant-of-record setup to support a franchise-style operating model</li>
+          <li>Added SEO, lifecycle email, queue-backed workflows, revenue dashboards, and <span class="metric">LLM-powered admin tooling</span>; supported <span class="metric">20+ events</span> and <span class="metric">250+ guests</span> in 2025</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Founding Engineer <span class="role-company">— getBenson.com</span></div>
+          <span class="role-dates">Mar 2020 – Jan 2023</span>
+        </div>
+        <div class="role-tech">TypeScript &middot; React &middot; Next.js &middot; Node &middot; Express &middot; GraphQL &middot; Postgres &middot; Datadog</div>
+        <ul class="role-bullets">
+          <li>Built a SaaS platform that detected and blocked web extensions from leaking discount codes, protecting <span class="metric">25M monthly sessions</span> across <span class="metric">500+ stores</span></li>
+          <li>Designed a GraphQL API and real-time analytics dashboards for e-commerce teams; onboarded <span class="metric">80+ brands</span></li>
+          <li>Rewrote the MVP into a production-grade platform with strict TypeScript, stronger test coverage, and observability; commercially exited in 2023</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Founding Engineer <span class="role-company">— Vouchernaut.com</span></div>
+          <span class="role-dates">Jan 2016 – Nov 2022</span>
+        </div>
+        <div class="role-tech">TypeScript &middot; Next.js &middot; Node &middot; Puppeteer &middot; Postgres</div>
+        <ul class="role-bullets">
+          <li>Built and scaled an automated voucher platform to <span class="metric">250k sessions/month</span> across <span class="metric">100,000+ brands</span></li>
+          <li>Owned product, scraping/automation infrastructure, and monetisation; scaled to <span class="metric">$100k ARR</span> and sold in 2021</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+<!-- ========== PAGE 2 ========== -->
+<div class="page page-2">
+  <div class="page-inner">
+
+    <div class="page-2-header">
+      <span class="page-2-name">Doug Silkstone</span>
+      <span class="page-2-label">Page 2 of 2</span>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">More Experience</h2>
+
+      <div class="compact-role">
+        <div class="role-header">
+          <div class="role-title">Lead Growth Engineer <span class="role-company">— Patrianna Ltd</span></div>
+          <span class="role-dates">Nov 2022 – Jul 2023</span>
+        </div>
+        <div class="role-tech">TypeScript &middot; React &middot; Next.js &middot; Redux &middot; Postgres &middot; Datadog</div>
+        <ul class="role-bullets">
+          <li>Led greenfield in-house Game Studio for top-three social casino — <span class="metric">zero to 1M players</span></li>
+          <li>Architected and shipped five high-stakes social casino games using React, optimised for millions of concurrent players</li>
+          <li>Hired and led <span class="metric">9-member team</span> across frontend, game development, and QA</li>
+        </ul>
+      </div>
+
+      <div class="compact-role">
+        <div class="role-header">
+          <div class="role-title">Head of Digital <span class="role-company">— Reach Robotics</span></div>
+          <span class="role-dates">Nov 2016 – May 2018</span>
+        </div>
+        <ul class="role-bullets">
+          <li>Go-to-market for AR robot <span class="metric">launched in Apple Stores globally</span>. Built e-commerce platform and full martech stack. Hired and led cross-functional team</li>
+          <li>Won <span class="metric">Performance Marketing Award</span> for Most Creative Performance Campaign</li>
+        </ul>
+      </div>
+
+      <div class="compact-role">
+        <div class="role-header">
+          <div class="role-title">Performance Marketing & Automation <span class="role-company">— Vouchercloud (now Groupon)</span></div>
+          <span class="role-dates">Nov 2014 – Nov 2016</span>
+        </div>
+        <ul class="role-bullets">
+          <li>Managed <span class="metric">multi-million-pound</span> paid search across 15 international sites. Built React tools saving <span class="metric">240 hrs/month</span>, cutting SEM team overhead by <span class="metric">40%</span></li>
+          <li>Company <span class="metric">acquired by NASDAQ-listed Groupon</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Open Source -->
+    <section class="section">
+      <h2 class="section-title">Selected Projects & Open Source</h2>
+      <div class="oss-grid">
+        <div class="oss-item"><div><span class="oss-name">TanStack</span> <span class="oss-stars">112k+ stars</span><div class="oss-desc">Contributor — Query, Router, Start</div></div></div>
+        <div class="oss-item"><div><span class="oss-name">Mastra AI</span> <span class="oss-stars">19k stars</span><div class="oss-desc">Contributor — TypeScript AI agent framework</div></div></div>
+        <div class="oss-item"><div><span class="oss-name">S2 Framework</span> <span class="oss-stars">C&#43;&#43; / Python</span><div class="oss-desc">Self-learning AI for Counter-Strike — RL (PPO), 50K-param transformer</div></div></div>
+        <div class="oss-item"><div><span class="oss-name">Promptheus</span> <span class="oss-stars">Exited '24</span><div class="oss-desc">Voice-to-ChatGPT Chrome extension. 30k+ users. Sold Jan 2024</div></div></div>
+        <div class="oss-item"><div><span class="oss-name">chrome-ext-template</span> <span class="oss-stars">73 stars</span><div class="oss-desc">Zero-config React + Tailwind Chrome Extension starter</div></div></div>
+        <div class="oss-item"><div><span class="oss-name">YouTube</span> <span class="oss-stars">@dougsilkstone</span><div class="oss-desc">Teaching operator engineering and agentic workflows</div></div></div>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="section">
+      <h2 class="section-title">Selected Recognition</h2>
+      <ul class="recognition-list">
+        <li><span class="metric">Performance Marketing Award 2016</span> — Most Effective Cross-Channel Campaign (NOW TV)</li>
+        <li><span class="metric">Performance Marketing Award 2017</span> — Most Creative Campaign (TOPMAN)</li>
+        <li><span class="metric">#1 Product Hunt Product of the Week</span> — Indy.ai Chrome extension for Contra</li>
+        <li>MIT Generative AI & LLM course — subject contributor, <span class="metric">50,000+ students</span></li>
+        <li><a href="https://contra.com/doug_silkstone/work" style="color:var(--accent);text-decoration:none;"><span class="metric">Top 1% Contra freelancer</span></a> — 5.0/5.0 rating</li>
+        <li><span class="metric">Awwwards Honorable Mention</span> — <a href="https://ctxdc.com" style="color:var(--accent);text-decoration:none;">ctxdc.com</a>, Conway's Game of Life interface</li>
+      </ul>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <h2 class="section-title">Selected Feedback</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;">
+        <div class="testimonial">
+          <p class="testimonial-text">"They're smart, fast, and trustworthy! Took our broken prototype to a revenue-generating platform."</p>
+          <p class="testimonial-attr">Shelby Stevens, Founder — Snacker.ai</p>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-text">"Doug was incredible to work with. He operated quickly & efficiently, and even proposed ways to improve the feature to exceed our expectations. 10/10!"</p>
+          <p class="testimonial-attr">Allison Nulty, Head of Product — Contra</p>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-text">"Doug is a pro. I'd hire him again for any future marketing & technology initiatives."</p>
+          <p class="testimonial-attr">Brian Tighe, Head Of Technology — The Motley Fool</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notable Clients -->
+    <section class="section">
+      <h2 class="section-title">Notable Clients</h2>
+      <p style="font-size:0.78rem;color:var(--ink-soft);line-height:1.6;">Contra &middot; Framer (Official Partner) &middot; The Motley Fool &middot; Groupon &middot; Sky &middot; MIT &middot; Techstars-backed startups</p>
+    </section>
+
+    <div class="page-footer">
+      References & case studies available at <a href="https://withseismic.com">withseismic.com</a> &middot; doug@withseismic.com
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

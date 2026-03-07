@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doug Silkstone — Lead Full-Stack Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --ink-soft: #2a2a2a;
+    --ink-muted: #5a5a5a;
+    --ink-light: #8a8a8a;
+    --accent: #1a56db;
+    --accent-soft: #e8effc;
+    --surface: #ffffff;
+    --surface-warm: #fafaf8;
+    --border: #e2e2de;
+    --border-light: #eeeeea;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+  html { font-size: 15px; }
+  body { font-family: var(--sans); color: var(--ink-soft); background: #e8e8e4; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+
+  @media print {
+    html { font-size: 13.5px; }
+    body { background: white; }
+    .page { box-shadow: none !important; margin: 0 !important; }
+    .print-controls { display: none !important; }
+    .page + .page { page-break-before: always; }
+  }
+
+  .print-controls { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 100; }
+  .print-btn {
+    font-family: var(--sans); font-size: 0.85rem; font-weight: 600;
+    padding: 0.6rem 1.4rem; border: none; border-radius: 8px; cursor: pointer;
+    background: var(--ink); color: white; box-shadow: 0 2px 12px rgba(0,0,0,0.2); transition: all 0.2s;
+  }
+  .print-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+
+  .page { width: 210mm; min-height: 297mm; margin: 2rem auto; background: var(--surface); box-shadow: 0 4px 40px rgba(0,0,0,0.12); overflow: hidden; }
+  .page-inner { padding: 2.2rem 2.4rem 1.8rem; }
+
+  /* Header */
+  .header { display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding-bottom: 1.1rem; border-bottom: 2.5px solid var(--ink); margin-bottom: 1rem; }
+  .header-name { font-family: var(--serif); font-size: 2.4rem; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; }
+  .header-title { font-size: 0.86rem; font-weight: 500; color: var(--ink-muted); margin-top: 0.25rem; }
+  .header-contact { text-align: right; display: flex; flex-direction: column; justify-content: center; gap: 0.12rem; }
+  .header-contact a, .header-contact span { font-size: 0.73rem; color: var(--ink-muted); text-decoration: none; display: block; }
+  .contact-row { display: flex; justify-content: flex-end; gap: 0.85rem; margin-top: 0.12rem; }
+  .contact-row a { font-size: 0.7rem; font-weight: 500; color: var(--accent); text-decoration: none; }
+
+  /* Sections */
+  .section { margin-bottom: 1rem; }
+  .section-title { font-family: var(--sans); font-size: 0.63rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); padding-bottom: 0.28rem; border-bottom: 1px solid var(--border); margin-bottom: 0.55rem; }
+
+  .summary { font-size: 0.82rem; line-height: 1.6; color: var(--ink-soft); }
+
+  /* Skills */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.18rem 1.2rem; }
+  .skill-row { display: flex; gap: 0.4rem; padding: 0.12rem 0; }
+  .skill-label { font-size: 0.7rem; font-weight: 700; color: var(--ink); white-space: nowrap; min-width: 5.5rem; }
+  .skill-value { font-size: 0.7rem; color: var(--ink-muted); line-height: 1.4; }
+
+  /* Roles */
+  .role { margin-bottom: 0.7rem; }
+  .role:last-child { margin-bottom: 0; }
+  .role-header { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 1rem; margin-bottom: 0.12rem; }
+  .role-title { font-size: 0.82rem; font-weight: 700; color: var(--ink); }
+  .role-company { font-weight: 400; color: var(--ink-muted); }
+  .role-dates { font-size: 0.68rem; font-family: var(--mono); color: var(--ink-light); white-space: nowrap; }
+  .role-tech { font-size: 0.65rem; font-family: var(--mono); color: var(--accent); margin-bottom: 0.18rem; opacity: 0.8; }
+  .role-summary { font-size: 0.75rem; color: var(--ink-muted); margin-bottom: 0.18rem; line-height: 1.5; }
+  .role-bullets { list-style: none; padding: 0; }
+  .role-bullets li { font-size: 0.75rem; color: var(--ink-soft); padding-left: 0.85rem; position: relative; margin-bottom: 0.1rem; line-height: 1.5; }
+  .role-bullets li::before { content: ''; position: absolute; left: 0.1rem; top: 0.48rem; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; }
+  .metric { font-weight: 600; color: var(--ink); }
+
+  /* Page 2 */
+  .page-2 .page-inner { padding-top: 1.8rem; }
+  .page-2-header { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 0.45rem; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+  .page-2-name { font-family: var(--serif); font-size: 1rem; color: var(--ink); }
+  .page-2-label { font-size: 0.63rem; color: var(--ink-light); }
+  .compact-role { margin-bottom: 0.5rem; }
+
+  /* OSS */
+  .oss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem 0.85rem; }
+  .oss-item { padding: 0.25rem 0; }
+  .oss-name { font-size: 0.73rem; font-weight: 600; color: var(--ink); font-family: var(--mono); }
+  .oss-stars { font-size: 0.62rem; font-weight: 600; color: var(--accent); background: var(--accent-soft); padding: 0.06rem 0.28rem; border-radius: 3px; }
+  .oss-desc { font-size: 0.68rem; color: var(--ink-muted); line-height: 1.4; margin-top: 0.08rem; }
+
+  /* Recognition */
+  .recognition-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.1rem 1.2rem; list-style: none; }
+  .recognition-list li { font-size: 0.73rem; color: var(--ink-soft); padding-left: 0.8rem; position: relative; line-height: 1.5; }
+  .recognition-list li::before { content: ''; position: absolute; left: 0; top: 0.46rem; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; }
+
+  .page-footer { margin-top: 0.7rem; padding-top: 0.5rem; border-top: 1px solid var(--border); text-align: center; font-size: 0.63rem; color: var(--ink-light); }
+  .page-footer a { color: var(--accent); text-decoration: none; }
+
+  /* Timeline legend */
+  .timeline-legend { display: flex; gap: 0.9rem; margin-top: 0.35rem; padding-top: 0.3rem; border-top: 1px solid var(--border-light); flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 0.25rem; font-size: 0.58rem; color: var(--ink-light); }
+  .legend-dot { width: 7px; height: 7px; border-radius: 50%; }
+
+  /* Testimonials */
+  .testimonial { border-left: 2px solid var(--border); padding: 0.3rem 0 0.3rem 0.65rem; }
+  .testimonial-text { font-size: 0.72rem; color: var(--ink-muted); font-style: italic; line-height: 1.55; }
+  .testimonial-attr { font-size: 0.62rem; color: var(--ink-light); margin-top: 0.15rem; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="print-controls">
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<!-- ========== PAGE 1 ========== -->
+<div class="page">
+  <div class="page-inner">
+
+    <header class="header">
+      <div>
+        <h1 class="header-name">Doug Silkstone</h1>
+        <p class="header-title">Lead Full-Stack Engineer &middot; 15 years &middot; 3 exits</p>
+      </div>
+      <div class="header-contact">
+        <span>Prague, CZ &middot; Remote / Hybrid</span>
+        <a href="mailto:doug@withseismic.com">doug@withseismic.com</a>
+        <div class="contact-row">
+          <a href="https://github.com/dougwithseismic">GitHub</a>
+          <a href="https://linkedin.com/in/dougsilkstone">LinkedIn</a>
+          <a href="https://contra.com/doug_silkstone/work">Portfolio</a>
+          <a href="https://clutch.co/profile/doug-silkstone-full-stack-engineering">Clutch</a>
+          <a href="https://withseismic.com">withseismic.com</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <p class="summary">I build products and the teams around them. 15 years shipping production systems — mostly TypeScript/React, increasingly C++ and Python. Founded and sold three products as a solo engineer. Ran a consultancy for a decade serving companies like Contra, Sky, and The Motley Fool. Most recent work is in LLM tooling and agentic workflows, featured in MIT's Generative AI course.</p>
+    </section>
+
+    <!-- GIT TIMELINE -->
+    <section class="section">
+      <h2 class="section-title">Career Timeline</h2>
+
+      <svg viewBox="0 0 740 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; margin-top: 2px;">
+        <!-- Year labels + grid -->
+        <g font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#8a8a8a" text-anchor="middle">
+          <text x="78" y="14" font-size="7" fill="#b0b0b0">'14</text><text x="100" y="14">2015</text><text x="156" y="14">2016</text><text x="213" y="14">2017</text>
+          <text x="269" y="14">2018</text><text x="326" y="14">2019</text><text x="382" y="14">2020</text>
+          <text x="438" y="14">2021</text><text x="495" y="14">2022</text><text x="551" y="14">2023</text>
+          <text x="608" y="14">2024</text><text x="664" y="14">2025</text><text x="720" y="14">2026</text>
+        </g>
+        <g stroke="#eeeeea" stroke-width="0.5">
+          <line x1="100" y1="20" x2="100" y2="230"/><line x1="156" y1="20" x2="156" y2="230"/>
+          <line x1="213" y1="20" x2="213" y2="230"/><line x1="269" y1="20" x2="269" y2="230"/>
+          <line x1="326" y1="20" x2="326" y2="230"/><line x1="382" y1="20" x2="382" y2="230"/>
+          <line x1="438" y1="20" x2="438" y2="230"/><line x1="495" y1="20" x2="495" y2="230"/>
+          <line x1="551" y1="20" x2="551" y2="230"/><line x1="608" y1="20" x2="608" y2="230"/>
+          <line x1="664" y1="20" x2="664" y2="230"/><line x1="720" y1="20" x2="720" y2="230"/>
+        </g>
+        <line x1="100" y1="20" x2="720" y2="20" stroke="#e2e2de" stroke-width="1"/>
+
+        <!-- Row labels -->
+        <g font-family="'DM Sans', sans-serif" font-size="9" fill="#2a2a2a" text-anchor="end">
+          <text x="93" y="42" font-weight="700">WithSeismic</text>
+          <text x="93" y="72" font-weight="600">Vouchernaut</text>
+          <text x="93" y="102" font-weight="600">Reach Robotics</text>
+          <text x="93" y="132" font-weight="600">getBenson</text>
+          <text x="93" y="162" font-weight="600">Patrianna</text>
+          <text x="93" y="192" font-weight="600">Promptheus</text>
+          <text x="93" y="222" font-weight="600">DWF</text>
+        </g>
+
+        <!-- Subtle row zebra -->
+        <rect x="100" y="25" width="620" height="28" fill="#fafaf8" rx="0"/>
+        <rect x="100" y="85" width="620" height="28" fill="#fafaf8" rx="0"/>
+        <rect x="100" y="145" width="620" height="28" fill="#fafaf8" rx="0"/>
+        <rect x="100" y="175" width="620" height="28" fill="#fafaf8" rx="0" opacity="0"/>
+        <rect x="100" y="205" width="620" height="28" fill="#fafaf8" rx="0"/>
+
+        <!-- Fork lines (dashed connectors from main trunk) -->
+        <g stroke-dasharray="3,2" stroke-width="1.2" fill="none" opacity="0.35">
+          <path d="M 156 46 C 156 56, 156 56, 156 64" stroke="#e05d44"/>
+          <path d="M 203 46 C 203 70, 203 85, 203 94" stroke="#8b5cf6"/>
+          <path d="M 391 46 C 391 80, 391 110, 391 124" stroke="#0e9f6e"/>
+          <path d="M 510 46 C 510 100, 510 140, 510 154" stroke="#ec4899"/>
+          <path d="M 547 46 C 547 120, 547 170, 547 184" stroke="#f59e0b"/>
+          <path d="M 655 46 C 655 150, 655 200, 655 214" stroke="#14b8a6"/>
+        </g>
+
+        <!-- Merge-back lines (solid, returning to trunk) -->
+        <g stroke-width="1.2" fill="none" opacity="0.25">
+          <path d="M 438 68 C 442 56, 442 48, 442 46" stroke="#e05d44"/>
+          <path d="M 288 98 C 290 68, 290 48, 290 46" stroke="#8b5cf6"/>
+          <path d="M 551 128 C 553 80, 553 48, 553 46" stroke="#0e9f6e"/>
+          <path d="M 542 158 C 544 100, 544 48, 544 46" stroke="#ec4899"/>
+          <path d="M 611 188 C 613 120, 613 48, 613 46" stroke="#f59e0b"/>
+        </g>
+
+        <!-- BRANCH BARS -->
+        <!-- Vouchercloud Nov 2014-Nov 2016 -->
+        <rect x="95" y="35" width="108" height="8" rx="4" fill="#06b6d4" opacity="0.6"/>
+        <circle cx="95" cy="39" r="4" fill="#06b6d4" stroke="white" stroke-width="1.5"/>
+        <circle cx="203" cy="39" r="4" fill="#06b6d4" stroke="white" stroke-width="1.5"/>
+        <g transform="translate(185,26)"><rect width="24" height="10" rx="2" fill="white" stroke="#06b6d4" stroke-width="1"/><text x="12" y="7.5" font-family="'JetBrains Mono',monospace" font-size="5.5" font-weight="700" fill="#06b6d4" text-anchor="middle">ACQ</text></g>
+
+        <!-- WithSeismic 2016-present (main) -->
+        <rect x="156" y="35" width="560" height="8" rx="4" fill="#1a56db"/>
+        <circle cx="156" cy="39" r="5" fill="#1a56db" stroke="white" stroke-width="2"/>
+        <polygon points="716,39 710,34.5 710,43.5" fill="#1a56db"/>
+
+        <!-- Client commits on trunk -->
+        <g>
+          <circle cx="320" cy="39" r="3" fill="white" stroke="#1a56db" stroke-width="1.8"/>
+          <circle cx="390" cy="39" r="3" fill="white" stroke="#1a56db" stroke-width="1.8"/>
+          <circle cx="608" cy="39" r="3" fill="white" stroke="#1a56db" stroke-width="1.8"/>
+          <circle cx="645" cy="39" r="3" fill="white" stroke="#1a56db" stroke-width="1.8"/>
+          <circle cx="680" cy="39" r="3" fill="white" stroke="#1a56db" stroke-width="1.8"/>
+        </g>
+        <g font-family="'DM Sans',sans-serif" font-size="6" fill="#1a56db" font-weight="500">
+          <text x="320" y="30" text-anchor="middle">Motley Fool</text>
+          <text x="390" y="30" text-anchor="middle">Sky / Framer</text>
+          <text x="608" y="30" text-anchor="middle">Contra</text>
+          <text x="645" y="30" text-anchor="middle">STRV</text>
+          <text x="680" y="30" text-anchor="middle">MIT</text>
+        </g>
+
+        <!-- Vouchernaut 2016-2021 -->
+        <rect x="156" y="65" width="282" height="8" rx="4" fill="#e05d44"/>
+        <circle cx="156" cy="69" r="4.5" fill="#e05d44" stroke="white" stroke-width="2"/>
+        <circle cx="438" cy="69" r="4.5" fill="#e05d44" stroke="white" stroke-width="2"/>
+        <g transform="translate(420,59)"><rect width="24" height="10" rx="2" fill="white" stroke="#e05d44" stroke-width="1.5"/><text x="12" y="7.5" font-family="'JetBrains Mono',monospace" font-size="5.5" font-weight="700" fill="#e05d44" text-anchor="middle">EXIT</text></g>
+
+        <!-- Reach Robotics Nov 2016-May 2018 -->
+        <rect x="203" y="95" width="85" height="8" rx="4" fill="#8b5cf6"/>
+        <circle cx="203" cy="99" r="4.5" fill="#8b5cf6" stroke="white" stroke-width="2"/>
+        <circle cx="288" cy="99" r="4.5" fill="#8b5cf6" stroke="white" stroke-width="2"/>
+
+        <!-- getBenson Mar 2020-Jan 2023 -->
+        <rect x="391" y="125" width="160" height="8" rx="4" fill="#0e9f6e"/>
+        <circle cx="391" cy="129" r="4.5" fill="#0e9f6e" stroke="white" stroke-width="2"/>
+        <circle cx="551" cy="129" r="4.5" fill="#0e9f6e" stroke="white" stroke-width="2"/>
+        <g transform="translate(534,119)"><rect width="24" height="10" rx="2" fill="white" stroke="#0e9f6e" stroke-width="1.5"/><text x="12" y="7.5" font-family="'JetBrains Mono',monospace" font-size="5.5" font-weight="700" fill="#0e9f6e" text-anchor="middle">EXIT</text></g>
+
+        <!-- Patrianna Nov 2022-Jul 2023 -->
+        <rect x="510" y="155" width="36" height="8" rx="4" fill="#ec4899"/>
+        <circle cx="510" cy="159" r="4" fill="#ec4899" stroke="white" stroke-width="1.5"/>
+        <circle cx="546" cy="159" r="4" fill="#ec4899" stroke="white" stroke-width="1.5"/>
+
+        <!-- Promptheus Dec 2022-Jan 2024 -->
+        <rect x="547" y="185" width="64" height="8" rx="4" fill="#f59e0b"/>
+        <circle cx="547" cy="189" r="4.5" fill="#f59e0b" stroke="white" stroke-width="2"/>
+        <circle cx="611" cy="189" r="4.5" fill="#f59e0b" stroke="white" stroke-width="2"/>
+        <g transform="translate(593,179)"><rect width="24" height="10" rx="2" fill="white" stroke="#f59e0b" stroke-width="1.5"/><text x="12" y="7.5" font-family="'JetBrains Mono',monospace" font-size="5.5" font-weight="700" fill="#f59e0b" text-anchor="middle">EXIT</text></g>
+
+        <!-- DWF Nov 2024-present -->
+        <rect x="655" y="215" width="61" height="8" rx="4" fill="#14b8a6"/>
+        <circle cx="655" cy="219" r="4.5" fill="#14b8a6" stroke="white" stroke-width="2"/>
+        <polygon points="716,219 710,214.5 710,223.5" fill="#14b8a6"/>
+
+        <!-- Vouchercloud small label -->
+        <text x="93" y="52" font-family="'DM Sans',sans-serif" font-size="7" fill="#8a8a8a" text-anchor="end" font-style="italic">Vouchercloud</text>
+      </svg>
+
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row"><span class="skill-label">Languages</span><span class="skill-value">TypeScript, Python, C&#43;&#43;, Go</span></div>
+        <div class="skill-row"><span class="skill-label">AI / ML</span><span class="skill-value">LLM agents, Mastra, MCP servers, RAG, RL (PPO)</span></div>
+        <div class="skill-row"><span class="skill-label">Frontend</span><span class="skill-value">React (8yr), Next.js, TanStack, Tailwind, Svelte</span></div>
+        <div class="skill-row"><span class="skill-label">Testing</span><span class="skill-value">Vitest, Jest, RTL, Playwright, Cypress</span></div>
+        <div class="skill-row"><span class="skill-label">Backend</span><span class="skill-value">Node, Hono, Express, NestJS, FastAPI, Drizzle</span></div>
+        <div class="skill-row"><span class="skill-label">Observability</span><span class="skill-value">Datadog, Sentry, Prometheus, Grafana</span></div>
+        <div class="skill-row"><span class="skill-label">Infra</span><span class="skill-value">AWS, GCP, K8s, Docker, Terraform, Postgres, Redis</span></div>
+        <div class="skill-row"><span class="skill-label">Specialisms</span><span class="skill-value">Chrome MV3, Playwright, Puppeteer, Stripe, Shopify</span></div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Founder & Lead Engineer <span class="role-company">— WithSeismic</span></div>
+          <span class="role-dates">2016 – Present</span>
+        </div>
+        <div class="role-tech">TypeScript &middot; React &middot; Next.js &middot; Node &middot; Python &middot; C&#43;&#43; &middot; AWS &middot; GCP &middot; Postgres</div>
+        <p class="role-summary">Longstanding engineering consultancy — over 100 projects delivered in the last 10 years. Led teams of hired engineers and designers across client engagements, with active management of delivery, architecture, and mentorship.</p>
+        <ul class="role-bullets">
+          <li>Built Contra's Indy.ai Chrome Extension: turned <span class="metric">35,000+ users</span> into a distributed opportunity-finding network using LLM workflows to identify hiring signals; <span class="metric">2× increase in marketplace inventory</span>. <span class="metric">#1 Product Hunt Product of the Week</span></li>
+          <li>Component library development (MUI + Storybook) and monorepo management (Yarn workspaces, Turborepo)</li>
+          <li>Built custom Chrome extension for prospect data collection with proxy rotation, rate limiting, and CRM integration</li>
+          <li>Won <span class="metric">Performance Marketing Award 2016</span> (NOW TV, cross-channel) and <span class="metric">2017</span> (TOPMAN, NLP chatbots on Messenger)</li>
+          <li>Motley Fool PPC automation managing <span class="metric">multi-million-dollar budget</span>. Growth Society benchmarking across <span class="metric">UK's top 200 brands</span></li>
+          <li>Clients include Contra, Sky, Framer, The Motley Fool, STRV, MIT, and Techstars-backed startups</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Technical Founder <span class="role-company">— DinnersWithFriends.co.uk</span></div>
+          <span class="role-dates">Nov 2024 – Present</span>
+        </div>
+        <div class="role-tech">TypeScript &middot; React &middot; Next.js &middot; Hono &middot; Postgres &middot; GCP</div>
+        <ul class="role-bullets">
+          <li>Designed, developed, and own all aspects of digital for a platform matching people for no-expectation evenings of good conversation. <span class="metric">20+ events</span> in 2025, <span class="metric">250+ guests</span>. Tipped as the South West of England's newest in-trend experience</li>
+          <li>Implemented complex merchant-of-record setup using <span class="metric">Stripe Connect</span> to support franchise model and growth</li>
+          <li>Heavily SEO-optimised with product/market analytics, email automation (transactional + marketing), messaging queues, revenue dashboards, and <span class="metric">LLM-powered workflows</span> in the admin panel</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Founder & Lead Engineer <span class="role-company">— getBenson.com</span></div>
+          <span class="role-dates">Mar 2020 – Jan 2023</span>
+        </div>
+        <div class="role-tech">TypeScript &middot; React &middot; Next.js &middot; Node &middot; Express &middot; GraphQL &middot; Postgres &middot; Datadog</div>
+        <ul class="role-bullets">
+          <li>Solo-founded SaaS that detected and blocked web extensions from leaking discount codes. Protected <span class="metric">25M monthly sessions</span> across <span class="metric">500+ stores</span></li>
+          <li>GraphQL API serving real-time analytics dashboards (Recharts); onboarded <span class="metric">80+ e-commerce brands</span> through C-suite technical sales</li>
+          <li>Rewrote MVP to production-grade with strict TypeScript and RTL coverage. <span class="metric">Commercially exited 2023</span></li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Founder & Lead Engineer <span class="role-company">— Vouchernaut.com</span></div>
+          <span class="role-dates">Jan 2016 – Nov 2022</span>
+        </div>
+        <div class="role-tech">TypeScript &middot; Next.js &middot; Node &middot; Puppeteer &middot; Postgres</div>
+        <ul class="role-bullets">
+          <li>Founded UK's fastest voucher platform: <span class="metric">250k sessions/month</span>, <span class="metric">100,000+ brands</span> automated, <span class="metric">90% profit margins</span></li>
+          <li>Scaled to <span class="metric">$100k ARR</span>. <span class="metric">Sold to PE investors 2021</span></li>
+        </ul>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+<!-- ========== PAGE 2 ========== -->
+<div class="page page-2">
+  <div class="page-inner">
+
+    <div class="page-2-header">
+      <span class="page-2-name">Doug Silkstone</span>
+      <span class="page-2-label">Page 2 of 2</span>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">More Experience</h2>
+
+      <div class="compact-role">
+        <div class="role-header">
+          <div class="role-title">Lead Growth Engineer <span class="role-company">— Patrianna Ltd</span></div>
+          <span class="role-dates">Nov 2022 – Jul 2023</span>
+        </div>
+        <div class="role-tech">TypeScript &middot; React &middot; Next.js &middot; Redux &middot; Postgres &middot; Datadog</div>
+        <ul class="role-bullets">
+          <li>Led greenfield in-house Game Studio for top-three social casino — <span class="metric">zero to 1M players</span></li>
+          <li>Architected and shipped five high-stakes social casino games using React, optimised for millions of concurrent players</li>
+          <li>Hired and led <span class="metric">9-member team</span> across frontend, game development, and QA</li>
+        </ul>
+      </div>
+
+      <div class="compact-role">
+        <div class="role-header">
+          <div class="role-title">Head of Digital <span class="role-company">— Reach Robotics</span></div>
+          <span class="role-dates">Nov 2016 – May 2018</span>
+        </div>
+        <ul class="role-bullets">
+          <li>Go-to-market for AR robot <span class="metric">launched in Apple Stores globally</span>. Built e-commerce platform and full martech stack. Hired and led cross-functional team</li>
+          <li>Won <span class="metric">Performance Marketing Award</span> for Most Creative Performance Campaign</li>
+        </ul>
+      </div>
+
+      <div class="compact-role">
+        <div class="role-header">
+          <div class="role-title">Performance Marketing & Automation <span class="role-company">— Vouchercloud (now Groupon)</span></div>
+          <span class="role-dates">Nov 2014 – Nov 2016</span>
+        </div>
+        <ul class="role-bullets">
+          <li>Managed <span class="metric">multi-million-pound</span> paid search across 15 international sites. Built React tools saving <span class="metric">240 hrs/month</span>, cutting SEM team overhead by <span class="metric">40%</span></li>
+          <li>Company <span class="metric">acquired by NASDAQ-listed Groupon</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Open Source -->
+    <section class="section">
+      <h2 class="section-title">Open Source & Projects</h2>
+      <div class="oss-grid">
+        <div class="oss-item"><div><span class="oss-name">TanStack</span> <span class="oss-stars">112k+ stars</span><div class="oss-desc">Contributor — Query, Router, Start</div></div></div>
+        <div class="oss-item"><div><span class="oss-name">Mastra AI</span> <span class="oss-stars">19k stars</span><div class="oss-desc">Contributor — TypeScript AI agent framework</div></div></div>
+        <div class="oss-item"><div><span class="oss-name">S2 Framework</span> <span class="oss-stars">C&#43;&#43; / Python</span><div class="oss-desc">Self-learning AI for Counter-Strike — RL (PPO), 50K-param transformer</div></div></div>
+        <div class="oss-item"><div><span class="oss-name">Promptheus</span> <span class="oss-stars">Exited '24</span><div class="oss-desc">Voice-to-ChatGPT Chrome extension. 30k+ users. Sold Jan 2024</div></div></div>
+        <div class="oss-item"><div><span class="oss-name">chrome-ext-template</span> <span class="oss-stars">73 stars</span><div class="oss-desc">Zero-config React + Tailwind Chrome Extension starter</div></div></div>
+        <div class="oss-item"><div><span class="oss-name">YouTube</span> <span class="oss-stars">@dougsilkstone</span><div class="oss-desc">Teaching operator engineering and agentic workflows</div></div></div>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="section">
+      <h2 class="section-title">Awards & Recognition</h2>
+      <ul class="recognition-list">
+        <li><span class="metric">Performance Marketing Award 2016</span> — Most Effective Cross-Channel Campaign (NOW TV)</li>
+        <li><span class="metric">Performance Marketing Award 2017</span> — Most Creative Campaign (TOPMAN)</li>
+        <li><span class="metric">#1 Product Hunt Product of the Week</span> — Indy.ai Chrome extension for Contra</li>
+        <li><span class="metric">Awwwards Honorable Mention</span> — <a href="https://ctxdc.com" style="color:var(--accent);text-decoration:none;">ctxdc.com</a>, Conway's Game of Life interface</li>
+        <li>MIT Generative AI & LLM course — subject contributor, <span class="metric">50,000+ students</span></li>
+        <li><a href="https://contra.com/doug_silkstone/work" style="color:var(--accent);text-decoration:none;"><span class="metric">Top 1% Contra freelancer</span></a> — 5.0/5.0 rating</li>
+      </ul>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <h2 class="section-title">References</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;">
+        <div class="testimonial">
+          <p class="testimonial-text">"They're smart, fast, and trustworthy! Took our broken prototype to a revenue-generating platform."</p>
+          <p class="testimonial-attr">Shelby Stevens, Founder — Snacker.ai</p>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-text">"Doug was incredible to work with. He operated quickly & efficiently, and even proposed ways to improve the feature to exceed our expectations. 10/10!"</p>
+          <p class="testimonial-attr">Allison Nulty, Head of Product — Contra</p>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-text">"Doug is a pro. I'd hire him again for any future marketing & technology initiatives."</p>
+          <p class="testimonial-attr">Brian Tighe, Head Of Technology — The Motley Fool</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notable Clients -->
+    <section class="section">
+      <h2 class="section-title">Notable Clients</h2>
+      <p style="font-size:0.78rem;color:var(--ink-soft);line-height:1.6;">Contra &middot; Framer (Official Partner) &middot; The Motley Fool &middot; Groupon &middot; Sky &middot; MIT &middot; Techstars-backed startups</p>
+    </section>
+
+    <div class="page-footer">
+      References & case studies available at <a href="https://withseismic.com">withseismic.com</a> &middot; doug@withseismic.com
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
