@@ -311,14 +311,19 @@ describe('scrapeCompany', () => {
   });
 
   it('returns null for non-ok responses', async () => {
-    mockFetch.mockResolvedValueOnce({
+    vi.useFakeTimers();
+    mockFetch.mockResolvedValue({
       ok: false,
       status: 500,
     });
 
-    const result = await scrapeCompany('broken');
+    const promise = scrapeCompany('broken');
+    await vi.advanceTimersByTimeAsync(30000);
+    const result = await promise;
     expect(result).toBeNull();
-  });
+    vi.useRealTimers();
+    mockFetch.mockReset();
+  }, 30000);
 
   it('returns null when no jobs exist', async () => {
     mockFetch.mockResolvedValueOnce({
@@ -367,7 +372,8 @@ describe('scrapeCompany', () => {
     const result = await promise;
     expect(result).toBeNull();
     vi.useRealTimers();
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('calls the correct URL with language parameter', async () => {
     mockFetch.mockResolvedValueOnce({
@@ -377,7 +383,7 @@ describe('scrapeCompany', () => {
     });
 
     await scrapeCompany('my-company');
-    expect(mockFetch).toHaveBeenCalledWith(
+    expect(mockFetch.mock.calls[0][0]).toBe(
       'https://my-company.jobs.personio.de/xml?language=en'
     );
   });
@@ -390,7 +396,7 @@ describe('scrapeCompany', () => {
     });
 
     await scrapeCompany('my-company', { language: 'de' });
-    expect(mockFetch).toHaveBeenCalledWith(
+    expect(mockFetch.mock.calls[0][0]).toBe(
       'https://my-company.jobs.personio.de/xml?language=de'
     );
   });
@@ -507,7 +513,7 @@ describe('scrapeAll', () => {
     });
 
     await scrapeAll(['test'], { concurrency: 1, language: 'de' });
-    expect(mockFetch).toHaveBeenCalledWith(
+    expect(mockFetch.mock.calls[0][0]).toBe(
       'https://test.jobs.personio.de/xml?language=de'
     );
   });
@@ -607,18 +613,23 @@ describe('discoverSlugs', () => {
   });
 
   it('handles HTTP errors gracefully', async () => {
+    vi.useFakeTimers();
     mockFetch.mockResolvedValue({
       ok: false,
       status: 500,
     });
 
-    const slugs = await discoverSlugs({
+    const promise = discoverSlugs({
       crawlIds: ['CC-TEST-2025-01'],
       knownSlugs: ['fallback'],
     });
 
+    await vi.advanceTimersByTimeAsync(30000);
+    const slugs = await promise;
     expect(slugs).toContain('fallback');
-  });
+    vi.useRealTimers();
+    mockFetch.mockReset();
+  }, 30000);
 
   it('calls onProgress callback', async () => {
     mockFetch.mockResolvedValue({
@@ -671,8 +682,6 @@ describe('discoverSlugs', () => {
       knownSlugs: [],
     });
 
-    expect(mockFetch).toHaveBeenCalledWith(
-      expect.stringContaining('*.jobs.personio.de/*')
-    );
+    expect(mockFetch.mock.calls[0][0]).toContain('*.jobs.personio.de/*');
   });
 });

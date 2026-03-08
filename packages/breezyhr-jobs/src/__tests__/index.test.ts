@@ -146,7 +146,7 @@ describe('scrapeCompany', () => {
   });
 
   it('returns null for non-ok responses', async () => {
-    mockFetch.mockResolvedValueOnce({
+    mockFetch.mockResolvedValue({
       ok: false,
       status: 500,
       headers: new Map(),
@@ -154,7 +154,8 @@ describe('scrapeCompany', () => {
 
     const result = await scrapeCompany('broken');
     expect(result).toBeNull();
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('returns null when no jobs exist', async () => {
     mockFetch.mockResolvedValueOnce({
@@ -204,11 +205,12 @@ describe('scrapeCompany', () => {
   });
 
   it('returns null on fetch error', async () => {
-    mockFetch.mockRejectedValueOnce(new Error('Network error'));
+    mockFetch.mockRejectedValue(new Error('Network error'));
 
     const result = await scrapeCompany('testco');
     expect(result).toBeNull();
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('calls the correct API URL', async () => {
     mockFetch.mockResolvedValueOnce({
@@ -219,7 +221,7 @@ describe('scrapeCompany', () => {
     });
 
     await scrapeCompany('my-company');
-    expect(mockFetch).toHaveBeenCalledWith(
+    expect(mockFetch.mock.calls[0][0]).toBe(
       'https://my-company.breezy.hr/json'
     );
   });
@@ -475,7 +477,8 @@ describe('discoverSlugs', () => {
     });
 
     expect(slugs).toContain('fallback');
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('calls onProgress callback', async () => {
     mockFetch.mockResolvedValue({
@@ -551,20 +554,22 @@ describe('discoverSlugs', () => {
     });
 
     expect(slugs).toContain('safe-slug');
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('uses default crawl IDs when not specified', async () => {
     mockFetch.mockResolvedValue({
       ok: true,
       text: async () => '',
+      json: async () => [{ id: 'CC-MAIN-2026-08' }, { id: 'CC-MAIN-2026-04' }, { id: 'CC-MAIN-2025-51' }],
     });
 
     const slugs = await discoverSlugs({
       knownSlugs: [],
     });
 
-    // Should have called fetch 3 times (one per default crawl ID)
-    expect(mockFetch).toHaveBeenCalledTimes(3);
+    // Should have called fetch 4 times (1 for collinfo.json + 3 for crawl indexes)
+    expect(mockFetch).toHaveBeenCalledTimes(4);
   });
 
   it('uses default known slugs when not specified', async () => {

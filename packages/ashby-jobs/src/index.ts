@@ -24,14 +24,68 @@ import type {
 } from "./types.js";
 import { searchResults } from "./filters.js";
 
+const MAX_RETRIES = 3;
+const BASE_DELAY_MS = 1000;
+const DEFAULT_TIMEOUT_MS = 30_000;
+const CC_TIMEOUT_MS = 120_000;
+
+async function fetchWithRetry(
+  url: string,
+  options?: { retries?: number; baseDelay?: number; timeoutMs?: number }
+): Promise<Response> {
+  const retries = options?.retries ?? MAX_RETRIES;
+  const baseDelay = options?.baseDelay ?? BASE_DELAY_MS;
+  const timeoutMs = options?.timeoutMs ?? DEFAULT_TIMEOUT_MS;
+
+  let lastError: Error | undefined;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) });
+      if (res.ok || (res.status >= 400 && res.status < 500 && res.status !== 429)) {
+        return res;
+      }
+      if (attempt < retries) {
+        const delay = res.status === 429
+          ? baseDelay * Math.pow(2, attempt) * 2
+          : baseDelay * Math.pow(2, attempt);
+        await new Promise((r) => setTimeout(r, delay + Math.random() * 500));
+        continue;
+      }
+      return res;
+    } catch (e) {
+      lastError = e instanceof Error ? e : new Error(String(e));
+      if (attempt < retries) {
+        const delay = baseDelay * Math.pow(2, attempt);
+        await new Promise((r) => setTimeout(r, delay + Math.random() * 500));
+        continue;
+      }
+    }
+  }
+  throw lastError ?? new Error(`fetchWithRetry failed for ${url}`);
+}
+
 const ASHBY_API = "https://api.ashbyhq.com/posting-api/job-board";
 const CC_INDEX = "https://index.commoncrawl.org";
 
-const DEFAULT_CRAWLS = [
-  "CC-MAIN-2025-08",
-  "CC-MAIN-2024-51",
-  "CC-MAIN-2024-42",
+const FALLBACK_CRAWLS = [
+  "CC-MAIN-2026-08",
+  "CC-MAIN-2026-04",
+  "CC-MAIN-2025-51",
 ];
+
+const CC_COLLINFO_URL = "https://index.commoncrawl.org/collinfo.json";
+
+async function getLatestCrawlIds(count = 3): Promise<string[]> {
+  try {
+    const res = await fetchWithRetry(CC_COLLINFO_URL, { timeoutMs: 10_000, retries: 1 });
+    if (!res.ok) return FALLBACK_CRAWLS;
+    const data = await res.json() as { id: string }[];
+    const ids = data.slice(0, count).map((d) => d.id);
+    return ids.length > 0 ? ids : FALLBACK_CRAWLS;
+  } catch {
+    return FALLBACK_CRAWLS;
+  }
+}
 
 const DEFAULT_KNOWN_SLUGS = [
   "openai", "Notion", "ramp", "deel", "linear", "cursor", "snowflake",
@@ -45,17 +99,19 @@ const DEFAULT_KNOWN_SLUGS = [
  */
 async function discoverSlugsFromIndex(
   crawlId: string,
+  indexNum: number,
+  totalIndexes: number,
   onProgress?: (message: string) => void
 ): Promise<Set<string>> {
   const slugs = new Set<string>();
   const url = `${CC_INDEX}/${crawlId}-index?url=jobs.ashbyhq.com/*&output=text&fl=url&limit=100000`;
 
-  onProgress?.(`Querying index ${DEFAULT_CRAWLS.indexOf(crawlId) + 1}/${DEFAULT_CRAWLS.length}...`);
+  onProgress?.(`Querying index ${indexNum}/${totalIndexes}...`);
 
   try {
-    const res = await fetch(url);
+    const res = await fetchWithRetry(url, { timeoutMs: CC_TIMEOUT_MS });
     if (!res.ok) {
-      onProgress?.(`Index ${DEFAULT_CRAWLS.indexOf(crawlId) + 1}: HTTP ${res.status}`);
+      onProgress?.(`Index ${indexNum}: HTTP ${res.status}`);
       return slugs;
     }
     const text = await res.text();
@@ -65,9 +121,9 @@ async function discoverSlugsFromIndex(
         slugs.add(decodeURIComponent(match[1]));
       }
     }
-    onProgress?.(`Index ${DEFAULT_CRAWLS.indexOf(crawlId) + 1}: found ${slugs.size} slugs`);
+    onProgress?.(`Index ${indexNum}: found ${slugs.size} slugs`);
   } catch (e) {
-    onProgress?.(`Index ${DEFAULT_CRAWLS.indexOf(crawlId) + 1}: error - ${e}`);
+    onProgress?.(`Index ${indexNum}: error - ${e}`);
   }
 
   return slugs;
@@ -82,14 +138,20 @@ async function discoverSlugsFromIndex(
 export async function discoverSlugs(
   options?: DiscoverOptions
 ): Promise<string[]> {
-  const crawlIds = options?.crawlIds ?? DEFAULT_CRAWLS;
   const knownSlugs = options?.knownSlugs ?? DEFAULT_KNOWN_SLUGS;
   const onProgress = options?.onProgress;
+
+  let crawlIds = options?.crawlIds;
+  if (!crawlIds) {
+    onProgress?.("Fetching latest crawl indexes...");
+    crawlIds = await getLatestCrawlIds(3);
+    onProgress?.(`Using indexes: ${crawlIds.join(", ")}`);
+  }
 
   onProgress?.(`Discovering company slugs (${crawlIds.length} indexes in parallel)...`);
 
   const results = await Promise.all(
-    crawlIds.map((crawl) => discoverSlugsFromIndex(crawl, onProgress))
+    crawlIds.map((crawl, i) => discoverSlugsFromIndex(crawl, i + 1, crawlIds!.length, onProgress))
   );
 
   const allSlugs = new Set<string>();
@@ -122,7 +184,7 @@ export async function scrapeCompany(
   const includeDescriptions = options?.includeDescriptions ?? false;
 
   try {
-    const res = await fetch(url);
+    const res = await fetchWithRetry(url);
     if (res.status === 404) return null;
     if (!res.ok) return null;
 

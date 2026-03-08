@@ -94,14 +94,16 @@ describe('scrapeCompany', () => {
   });
 
   it('returns null for non-ok responses', async () => {
-    mockFetch.mockResolvedValueOnce({
+    // Must return 500 for all retry attempts
+    mockFetch.mockResolvedValue({
       ok: false,
       status: 500,
     });
 
     const result = await scrapeCompany('broken');
     expect(result).toBeNull();
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('returns null when no jobs exist', async () => {
     mockFetch.mockResolvedValueOnce({
@@ -141,11 +143,13 @@ describe('scrapeCompany', () => {
   });
 
   it('returns null on fetch error', async () => {
-    mockFetch.mockRejectedValueOnce(new Error('Network error'));
+    // Must reject for all retry attempts
+    mockFetch.mockRejectedValue(new Error('Network error'));
 
     const result = await scrapeCompany('testco');
     expect(result).toBeNull();
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('calls the correct API URL without content', async () => {
     mockFetch.mockResolvedValueOnce({
@@ -155,7 +159,7 @@ describe('scrapeCompany', () => {
     });
 
     await scrapeCompany('my-company');
-    expect(mockFetch).toHaveBeenCalledWith(
+    expect(mockFetch.mock.calls[0][0]).toBe(
       'https://boards-api.greenhouse.io/v1/boards/my-company/jobs'
     );
   });
@@ -168,7 +172,7 @@ describe('scrapeCompany', () => {
     });
 
     await scrapeCompany('my-company', { includeContent: true });
-    expect(mockFetch).toHaveBeenCalledWith(
+    expect(mockFetch.mock.calls[0][0]).toBe(
       'https://boards-api.greenhouse.io/v1/boards/my-company/jobs?content=true'
     );
   });
@@ -331,7 +335,8 @@ describe('discoverSlugs', () => {
     });
 
     expect(slugs).toContain('fallback');
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('calls onProgress callback', async () => {
     mockFetch.mockResolvedValue({

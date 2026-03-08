@@ -41,14 +41,15 @@ describe('scrapeCompany', () => {
   });
 
   it('returns null for non-ok responses', async () => {
-    mockFetch.mockResolvedValueOnce({
+    mockFetch.mockResolvedValue({
       ok: false,
       status: 500,
     });
 
     const result = await scrapeCompany('broken');
     expect(result).toBeNull();
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('returns null when no jobs returned', async () => {
     mockFetch.mockResolvedValueOnce({
@@ -163,11 +164,12 @@ describe('scrapeCompany', () => {
   });
 
   it('returns null on fetch error', async () => {
-    mockFetch.mockRejectedValueOnce(new Error('Network error'));
+    mockFetch.mockRejectedValue(new Error('Network error'));
 
     const result = await scrapeCompany('testco');
     expect(result).toBeNull();
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('calls the correct API URL', async () => {
     mockFetch.mockResolvedValueOnce({
@@ -177,7 +179,7 @@ describe('scrapeCompany', () => {
     });
 
     await scrapeCompany('my-company');
-    expect(mockFetch).toHaveBeenCalledWith(
+    expect(mockFetch.mock.calls[0][0]).toBe(
       'https://api.smartrecruiters.com/v1/companies/my-company/postings?limit=100&offset=0'
     );
   });
@@ -364,7 +366,8 @@ describe('discoverSlugs', () => {
 
     // Should still return known slugs
     expect(slugs).toContain('fallback');
-  });
+    mockFetch.mockReset();
+  }, 30000);
 
   it('calls onProgress callback', async () => {
     mockFetch.mockResolvedValue({

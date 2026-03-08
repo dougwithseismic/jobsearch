@@ -27,11 +27,76 @@ import { searchResults } from "./filters.js";
 const GREENHOUSE_API = "https://boards-api.greenhouse.io/v1/boards";
 const CC_INDEX = "https://index.commoncrawl.org";
 
-const DEFAULT_CRAWLS = [
-  "CC-MAIN-2025-08",
-  "CC-MAIN-2024-51",
-  "CC-MAIN-2024-42",
+const MAX_RETRIES = 3;
+const BASE_DELAY_MS = 1000;
+const DEFAULT_TIMEOUT_MS = 30_000;
+const CC_TIMEOUT_MS = 120_000; // Common Crawl queries can be very slow
+
+/**
+ * Fetch with exponential backoff retry and per-request timeout.
+ * Retries on 429, 5xx, timeouts, and network errors.
+ * Does NOT retry 404 or 4xx (client errors).
+ */
+async function fetchWithRetry(
+  url: string,
+  options?: { retries?: number; baseDelay?: number; timeoutMs?: number }
+): Promise<Response> {
+  const retries = options?.retries ?? MAX_RETRIES;
+  const baseDelay = options?.baseDelay ?? BASE_DELAY_MS;
+  const timeoutMs = options?.timeoutMs ?? DEFAULT_TIMEOUT_MS;
+
+  let lastError: Error | undefined;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) });
+      // Don't retry client errors (except 429)
+      if (res.ok || (res.status >= 400 && res.status < 500 && res.status !== 429)) {
+        return res;
+      }
+      // Retryable: 429 or 5xx
+      if (attempt < retries) {
+        const delay = res.status === 429
+          ? baseDelay * Math.pow(2, attempt) * 2 // longer backoff for rate limits
+          : baseDelay * Math.pow(2, attempt);
+        await new Promise((r) => setTimeout(r, delay + Math.random() * 500));
+        continue;
+      }
+      return res; // exhausted retries, return last response
+    } catch (e) {
+      lastError = e instanceof Error ? e : new Error(String(e));
+      if (attempt < retries) {
+        const delay = baseDelay * Math.pow(2, attempt);
+        await new Promise((r) => setTimeout(r, delay + Math.random() * 500));
+        continue;
+      }
+    }
+  }
+  throw lastError ?? new Error(`fetchWithRetry failed for ${url}`);
+}
+
+const FALLBACK_CRAWLS = [
+  "CC-MAIN-2026-08",
+  "CC-MAIN-2026-04",
+  "CC-MAIN-2025-51",
 ];
+
+const CC_COLLINFO_URL = "https://index.commoncrawl.org/collinfo.json";
+
+/**
+ * Fetch the latest crawl IDs from Common Crawl's collection info endpoint.
+ * Returns the N most recent crawl IDs, falling back to hardcoded ones on failure.
+ */
+async function getLatestCrawlIds(count = 3): Promise<string[]> {
+  try {
+    const res = await fetchWithRetry(CC_COLLINFO_URL, { timeoutMs: 10_000, retries: 1 });
+    if (!res.ok) return FALLBACK_CRAWLS;
+    const data = await res.json() as { id: string }[];
+    const ids = data.slice(0, count).map((d) => d.id);
+    return ids.length > 0 ? ids : FALLBACK_CRAWLS;
+  } catch {
+    return FALLBACK_CRAWLS;
+  }
+}
 
 const DEFAULT_KNOWN_SLUGS = [
   "airbnb", "stripe", "twitch", "cloudflare", "datadog", "figma",
@@ -98,9 +163,9 @@ async function discoverSlugsFromIndex(
   onProgress?.(`Querying index ${indexNum}/${crawlIds.length}...`);
 
   try {
-    const res = await fetch(url);
+    const res = await fetchWithRetry(url, { timeoutMs: CC_TIMEOUT_MS });
     if (!res.ok) {
-      onProgress?.(`Index ${indexNum}: HTTP ${res.status}`);
+      onProgress?.(`Index ${indexNum}: HTTP ${res.status} (after retries)`);
       return slugs;
     }
     const text = await res.text();
@@ -115,7 +180,7 @@ async function discoverSlugsFromIndex(
     }
     onProgress?.(`Index ${indexNum}: found ${slugs.size} slugs`);
   } catch (e) {
-    onProgress?.(`Index ${indexNum}: error - ${e}`);
+    onProgress?.(`Index ${indexNum}: error after ${MAX_RETRIES} retries - ${e}`);
   }
 
   return slugs;
@@ -142,9 +207,16 @@ function isValidSlug(slug: string): boolean {
 export async function discoverSlugs(
   options?: DiscoverOptions
 ): Promise<string[]> {
-  const crawlIds = options?.crawlIds ?? DEFAULT_CRAWLS;
   const knownSlugs = options?.knownSlugs ?? DEFAULT_KNOWN_SLUGS;
   const onProgress = options?.onProgress;
+
+  // Fetch latest crawl IDs from CC if not provided
+  let crawlIds = options?.crawlIds;
+  if (!crawlIds) {
+    onProgress?.("Fetching latest crawl indexes...");
+    crawlIds = await getLatestCrawlIds(3);
+    onProgress?.(`Using indexes: ${crawlIds.join(", ")}`);
+  }
 
   onProgress?.(`Discovering company slugs (${crawlIds.length} indexes in parallel)...`);
 
@@ -183,7 +255,7 @@ export async function scrapeCompany(
   const url = `${GREENHOUSE_API}/${encodeURIComponent(slug)}/jobs${contentParam}`;
 
   try {
-    const res = await fetch(url);
+    const res = await fetchWithRetry(url);
     if (res.status === 404) return null;
     if (!res.ok) return null;
 
