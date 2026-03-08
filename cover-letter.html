@@ -49,11 +49,13 @@
   .page { width: 210mm; min-height: 297mm; margin: 2rem auto; background: var(--surface); box-shadow: 0 4px 40px rgba(0,0,0,0.12); overflow: hidden; }
   .page-inner { padding: 2.4rem 2.8rem 2rem; display: flex; flex-direction: column; min-height: 297mm; box-sizing: border-box; }
 
-  .cover-header { padding-bottom: 1.1rem; border-bottom: 2.5px solid var(--ink); margin-bottom: 1.6rem; }
-  .cover-header-name { font-family: var(--serif); font-size: 2.4rem; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; }
-  .cover-header-sub { font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.3rem; }
-  .cover-header-links { display: flex; gap: 0.85rem; margin-top: 0.45rem; flex-wrap: wrap; }
-  .cover-header-links a { font-size: 0.7rem; font-weight: 500; color: var(--accent); text-decoration: none; }
+  .header { display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding-bottom: 1.1rem; border-bottom: 2.5px solid var(--ink); margin-bottom: 1.6rem; }
+  .header-name { font-family: var(--serif); font-size: 2.4rem; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; }
+  .header-title { font-size: 0.86rem; font-weight: 500; color: var(--ink-muted); margin-top: 0.25rem; }
+  .header-contact { text-align: right; display: flex; flex-direction: column; justify-content: center; gap: 0.12rem; }
+  .header-contact a, .header-contact span { font-size: 0.73rem; color: var(--ink-muted); text-decoration: none; display: block; }
+  .contact-row { display: flex; justify-content: flex-end; gap: 0.85rem; margin-top: 0.12rem; }
+  .contact-row a { font-size: 0.7rem; font-weight: 500; color: var(--accent); text-decoration: none; }
 
   .cover-body { flex: 1; }
   .cover-body p { font-size: 0.82rem; line-height: 1.7; color: var(--ink-soft); margin-bottom: 0.85rem; }
@@ -76,36 +78,44 @@
 
 <div class="page">
   <div class="page-inner">
-    <div class="cover-header">
-      <h1 class="cover-header-name">Doug Silkstone</h1>
-      <p class="cover-header-sub">Prague, CZ &middot; doug@withseismic.com &middot; Remote / Hybrid</p>
-      <div class="cover-header-links">
-        <a href="https://github.com/dougwithseismic">GitHub</a>
-        <a href="https://linkedin.com/in/dougsilkstone">LinkedIn</a>
-        <a href="https://contra.com/doug_silkstone/work">Portfolio</a>
-        <a href="https://clutch.co/profile/doug-silkstone-full-stack-engineering">Clutch</a>
-        <a href="https://withseismic.com">withseismic.com</a>
+    <header class="header">
+      <div>
+        <h1 class="header-name">Doug Silkstone</h1>
+        <p class="header-title">Lead Full-Stack Engineer &middot; 10 years &middot; 3 exits</p>
       </div>
-    </div>
+      <div class="header-contact">
+        <span>Prague, CZ &middot; Remote / Hybrid</span>
+        <a href="mailto:doug@withseismic.com">doug@withseismic.com</a>
+        <div class="contact-row">
+          <a href="https://github.com/dougwithseismic">GitHub</a>
+          <a href="https://linkedin.com/in/dougsilkstone">LinkedIn</a>
+          <a href="https://contra.com/doug_silkstone/work">Portfolio</a>
+          <a href="https://clutch.co/profile/doug-silkstone-full-stack-engineering">Clutch</a>
+          <a href="https://withseismic.com">withseismic.com</a>
+        </div>
+      </div>
+    </header>
 
     <div class="cover-body">
       <p class="opener">Hey,</p>
 
-      <p>If you're looking for someone who's done tickets, delivery, standup, retro for four years straight on the same project, you will absolutely find that person. I've seen the CVs out there. There are a lot of good engineers who are perfectly content doing exactly that, and they'll do a great job for you.</p>
+      <p>For most of the job specs I read, they all want roughly the same person. Someone who can pick up tickets, ship deliverables, join standup, sit through retro, stay proactive on Slack, and do that loop reliably for years.</p>
 
-      <p>This isn't me any more.</p>
+      <p>If that's who you're hiring for, I know you'll find them. There is no shortage of good engineers who can do the basics well.</p>
 
-      <p>I'm looking for the tough problems. The situations with pressure, ambiguity, moving parts, and real stakes. The products that have promise but need direction. The teams that are capable but stretched. The work where the brief is incomplete, the path is unclear, and the business needs someone who can get to clarity quickly and start moving things forward.</p>
+      <p>That isn't me anymore.</p>
 
-      <p>What I bring is breadth, but not in the shallow sense. I came up through growth and technical marketing before I was an engineer, so I naturally think about acquisition, conversion, commercial value, architecture, delivery, and product decisions as parts of the same system. That lets me be useful before the roadmap is clean and after execution begins. I can help define the problem, pressure-test priorities, make the technical tradeoffs, and then ship the thing properly.</p>
+      <p>I'm interested in the part of the job that starts after that. The messy part. The bit where the brief is incomplete, the tradeoffs are not obvious, and somebody has to think beyond their lane about product, revenue, conversion, risk, and speed.</p>
 
-      <p>The consultancy alone accounts for over 100 client projects in the last ten years. Some small, some names you'd recognise. Paid ads became analytics, analytics became custom development, development became full product builds. Technical sales, project management, hiring, running the business itself. Ten years is a longer run than most people give anything.</p>
+      <p>Do me a favour. Name the people in your organisation who already do that for you. The ones you can pull into Slack and ask what <a href="https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/">UCP</a> means, why agentic commerce matters, or how AI-driven commerce changes the shape of your funnel, and get a clear answer instead of hand-waving. If you have people like that, you already know how valuable they are. If you don't, you probably know where the gap is.</p>
 
-      <p>That is what the last 15 years have trained me to do. I've built and sold three products, run a consultancy since 2016, and delivered work for companies like Contra, Framer, Sky, The Motley Fool, and MIT. The point is not that I have touched a lot of different things. It is that I know how to enter unfamiliar terrain quickly, separate signal from noise, make sound decisions, and turn effort into outcomes the business can actually feel.</p>
+      <p>That's where I fit. I came into engineering through growth and technical marketing before moving fully into product engineering, so I naturally think about acquisition, conversion, revenue, architecture, and delivery as one system. I don't need the roadmap to be perfect before I can be useful. I can help define the problem, pressure-test priorities, make the tradeoffs, and then build the thing properly.</p>
 
-      <p>I build teams as well as products. I've hired people, led them, and protected their time so they could do good work. In environments where priorities are shifting or delivery needs steadying, what usually helps is not more theatre. It is clearer judgment, calmer ownership, and someone willing to carry weight without adding noise. That is typically where I do my best work.</p>
+      <p>Over the last decade I've built and sold three products and run a consultancy that has delivered 100+ projects for companies including Contra, Framer, Sky, The Motley Fool, and MIT. I managed more than $10M in ad spend and worked across systems that saw over a billion product sessions. I built Contra's Chrome extension that turned 35,000 users into a distributed opportunity-finding network and helped double marketplace inventory. I contributed to MIT's Generative AI course, which reached 50,000+ students, and worked with startups that later raised more than $20M.</p>
 
-      <p class="cta">If reading this brings to mind a product, team, or problem that would benefit from that kind of ownership, I'd be glad to talk. You can reach me at <a href="mailto:doug@withseismic.com">doug@withseismic.com</a> or <a href="https://linkedin.com/in/dougsilkstone">linkedin.com/in/dougsilkstone</a>.</p>
+      <p>There is probably an elephant in the room here as well. A lot of teams are still resisting the shift that is already happening. If your instinct is to defend old process and treat AI as a distraction rather than a capability shift, we're probably not a fit. I've spent most of my career moving toward useful change, helping teams adapt to it, and raising the level of the people around me as we go.</p>
+
+      <p class="cta">So this letter is really here to make that distinction early. If you need someone to stay inside a narrow lane, I'm probably not your best option. If you need someone who can think like an owner, move with the shift, and turn ambiguity into shipped outcomes, that's the work I'm looking for, and I suspect it's the work you're really hiring for. You can reach me at <a href="mailto:doug@withseismic.com">doug@withseismic.com</a> or <a href="https://linkedin.com/in/dougsilkstone">linkedin.com/in/dougsilkstone</a>.</p>
 
       <p class="sign-off">Doug</p>
     </div>
