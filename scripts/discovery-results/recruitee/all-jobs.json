@@ -1,0 +1,30 @@
+[
+  {
+    "company": "personio",
+    "slug": "personio",
+    "jobCount": 1,
+    "jobs": [
+      {
+        "id": 1968676,
+        "title": "API Job - Berlin - Musterstr 1, 10111",
+        "slug": "api-job-berlin-musterstr-1-10111",
+        "department": "Produkt",
+        "location": "Berlin, Berlin, Deutschland",
+        "country": "Deutschland",
+        "city": "Berlin",
+        "state": "",
+        "remote": false,
+        "description": "",
+        "requirements": "",
+        "careersUrl": "https://personio.recruitee.com/o/api-job-berlin-musterstr-1-10111",
+        "publishedAt": "2025-01-02 14:22:42 UTC",
+        "createdAt": "2025-01-02 14:19:26 UTC",
+        "tags": [],
+        "employmentType": "fulltime_permanent",
+        "minHours": 32,
+        "maxHours": 35
+      }
+    ],
+    "scrapedAt": "2026-03-09T10:52:31.244Z"
+  }
+]

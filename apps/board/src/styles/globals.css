@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #16171d;
+  --color-bg-alt: #0C0912;
+  --color-bg-elevated: #1e1f26;
+  --color-bg-hover: #24252d;
+  --color-border: #3B3440;
+  --color-border-subtle: #2a2530;
+  --color-text: #ffffff;
+  --color-text-secondary: #867e8e;
+  --color-text-muted: #5a5462;
+  --color-accent: #b39aff;
+  --color-accent-vivid: #6C3BFF;
+  --color-accent-deep: #370a7f;
+  --color-remote: #22FF73;
+  --color-remote-bg: #002611;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", ui-monospace, monospace;
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+::selection {
+  background-color: var(--color-accent-deep);
+  color: var(--color-text);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Job row grid — shared between header and rows for alignment */
+.job-row-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .job-row-grid {
+    grid-template-columns: 180px 1fr 180px 70px 100px 90px;
+    column-gap: 1rem;
+  }
+}

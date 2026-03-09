@@ -1,0 +1,7 @@
+celonis
+contentful
+gorillas
+n26
+personio
+sennder
+taxfix

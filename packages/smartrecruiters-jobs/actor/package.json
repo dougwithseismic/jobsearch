@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "apify": "^3.6.0",
-    "smartrecruiters-jobs": "workspace:*"
+    "smartrecruiters-jobs": "file:./smartrecruiters-jobs-1.0.0.tgz"
   },
   "devDependencies": {
     "@types/node": "^25.3.5",

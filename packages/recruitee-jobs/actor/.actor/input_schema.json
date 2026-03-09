@@ -1,0 +1,76 @@
+{
+  "title": "Recruitee Jobs Scraper",
+  "description": "Discover and scrape jobs from all Recruitee-powered company job boards. Finds companies automatically via Common Crawl indexes, then scrapes their public job listings.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "How to find companies to scrape.\n- **all**: Auto-discover companies from Common Crawl + scrape all of them\n- **companies**: Scrape only the specified company slugs\n- **search**: Scrape specified companies and apply filters",
+      "editor": "select",
+      "default": "all",
+      "enum": ["all", "companies", "search"],
+      "enumTitles": ["All (discover + scrape)", "Specific companies", "Search (companies + filters)"]
+    },
+    "companies": {
+      "title": "Company Slugs",
+      "type": "array",
+      "description": "Company slugs to scrape (used in 'companies' and 'search' modes). The slug is the company identifier in the Recruitee URL, e.g. 'acme' from acme.recruitee.com",
+      "editor": "stringList",
+      "default": []
+    },
+    "remoteOnly": {
+      "title": "Remote Only",
+      "type": "boolean",
+      "description": "Only include jobs marked as remote",
+      "default": false,
+      "sectionCaption": "Filters",
+      "sectionDescription": "Optional filters to narrow down results. Applied after scraping."
+    },
+    "locationFilter": {
+      "title": "Location Filter",
+      "type": "string",
+      "description": "Regex pattern to filter jobs by location (e.g. 'Berlin|Prague|Remote')",
+      "editor": "textfield",
+      "default": ""
+    },
+    "departmentFilter": {
+      "title": "Department Filter",
+      "type": "string",
+      "description": "Regex pattern to filter jobs by department (e.g. 'Engineering|Product')",
+      "editor": "textfield",
+      "default": ""
+    },
+    "keywordFilter": {
+      "title": "Keyword Filter",
+      "type": "string",
+      "description": "Regex pattern to filter jobs by title (e.g. 'Senior|Lead|Staff')",
+      "editor": "textfield",
+      "default": ""
+    },
+    "includeDescriptions": {
+      "title": "Include Job Descriptions",
+      "type": "boolean",
+      "description": "Fetch full HTML job descriptions. Increases run time and data size.",
+      "default": false,
+      "sectionCaption": "Options"
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "description": "Number of companies to scrape in parallel",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 50
+    },
+    "maxCompanies": {
+      "title": "Max Companies",
+      "type": "integer",
+      "description": "Limit the number of companies to scrape (0 = no limit, useful for testing)",
+      "default": 0,
+      "minimum": 0
+    }
+  },
+  "required": ["mode"]
+}

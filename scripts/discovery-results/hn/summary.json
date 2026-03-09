@@ -1,0 +1,88 @@
+{
+  "scrapedAt": "2026-03-09T10:51:44.572Z",
+  "totalJobs": 292,
+  "uniqueCompanies": 290,
+  "remoteJobs": 145,
+  "topCompanies": [
+    {
+      "company": "Apple",
+      "jobs": 2
+    },
+    {
+      "company": "Innolitics",
+      "jobs": 2
+    },
+    {
+      "company": "Zattoo",
+      "jobs": 1
+    },
+    {
+      "company": "Lead Full-Stack Engineer",
+      "jobs": 1
+    },
+    {
+      "company": "CEF AI (cef.ai)",
+      "jobs": 1
+    },
+    {
+      "company": "Proton VPN (https://protonvpn.com/)",
+      "jobs": 1
+    },
+    {
+      "company": "FUTO",
+      "jobs": 1
+    },
+    {
+      "company": "QuiverAI",
+      "jobs": 1
+    },
+    {
+      "company": "SF Sauna -- SF Bay Area",
+      "jobs": 1
+    },
+    {
+      "company": "Schema Labs (OpenCouncil)",
+      "jobs": 1
+    },
+    {
+      "company": "CiceroAI",
+      "jobs": 1
+    },
+    {
+      "company": "Head of Engineering & Infrastructure",
+      "jobs": 1
+    },
+    {
+      "company": "Softmax",
+      "jobs": 1
+    },
+    {
+      "company": "Rubin Observatory / SLAC",
+      "jobs": 1
+    },
+    {
+      "company": "AI startup (stealth)",
+      "jobs": 1
+    },
+    {
+      "company": "Sage",
+      "jobs": 1
+    },
+    {
+      "company": "Ashby",
+      "jobs": 1
+    },
+    {
+      "company": "Blueberry Pediatrics",
+      "jobs": 1
+    },
+    {
+      "company": "We’re a start-up company, we are building a local-AI camera OS that replaces cloud CCTV: SigmaStar cameras → RTSP/ONVIF → HDMI node → on-device AI (offline-first).",
+      "jobs": 1
+    },
+    {
+      "company": "Clipster",
+      "jobs": 1
+    }
+  ]
+}

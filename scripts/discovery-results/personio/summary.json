@@ -1,0 +1,12 @@
+{
+  "scrapedAt": "2026-03-09T10:52:44.707Z",
+  "totalCompanies": 1,
+  "totalJobs": 1,
+  "companies": [
+    {
+      "company": "personio",
+      "slug": "personio",
+      "jobCount": 1
+    }
+  ]
+}

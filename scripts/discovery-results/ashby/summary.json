@@ -1,0 +1,97 @@
+{
+  "scrapedAt": "2026-03-09T10:52:28.342Z",
+  "totalCompanies": 18,
+  "totalJobs": 2712,
+  "companies": [
+    {
+      "company": "openai",
+      "slug": "openai",
+      "jobCount": 618
+    },
+    {
+      "company": "snowflake",
+      "slug": "snowflake",
+      "jobCount": 416
+    },
+    {
+      "company": "deel",
+      "slug": "deel",
+      "jobCount": 275
+    },
+    {
+      "company": "deliveroo",
+      "slug": "deliveroo",
+      "jobCount": 247
+    },
+    {
+      "company": "harvey",
+      "slug": "harvey",
+      "jobCount": 217
+    },
+    {
+      "company": "vanta",
+      "slug": "vanta",
+      "jobCount": 184
+    },
+    {
+      "company": "Notion",
+      "slug": "Notion",
+      "jobCount": 156
+    },
+    {
+      "company": "ramp",
+      "slug": "ramp",
+      "jobCount": 132
+    },
+    {
+      "company": "cohere",
+      "slug": "cohere",
+      "jobCount": 122
+    },
+    {
+      "company": "replit",
+      "slug": "replit",
+      "jobCount": 82
+    },
+    {
+      "company": "1password",
+      "slug": "1password",
+      "jobCount": 64
+    },
+    {
+      "company": "cursor",
+      "slug": "cursor",
+      "jobCount": 54
+    },
+    {
+      "company": "trainline",
+      "slug": "trainline",
+      "jobCount": 38
+    },
+    {
+      "company": "supabase",
+      "slug": "supabase",
+      "jobCount": 37
+    },
+    {
+      "company": "zapier",
+      "slug": "zapier",
+      "jobCount": 26
+    },
+    {
+      "company": "linear",
+      "slug": "linear",
+      "jobCount": 20
+    },
+    {
+      "company": "posthog",
+      "slug": "posthog",
+      "jobCount": 19
+    },
+    {
+      "company": "stytch",
+      "slug": "stytch",
+      "jobCount": 5
+    }
+  ]
+}

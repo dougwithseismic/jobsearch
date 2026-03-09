@@ -1,0 +1,17 @@
+{
+  "scrapedAt": "2026-03-09T10:52:38.513Z",
+  "totalCompanies": 2,
+  "totalJobs": 4,
+  "companies": [
+    {
+      "company": "MS Breezy Trial",
+      "slug": "breezy",
+      "jobCount": 3
+    },
+    {
+      "company": "Attentive",
+      "slug": "attentive",
+      "jobCount": 1
+    }
+  ]
+}

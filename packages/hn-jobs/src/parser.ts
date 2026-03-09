@@ -125,10 +125,15 @@ function parseFirstLine(text: string): {
       continue;
     }
 
+    // Skip bare URLs — they're not titles or locations
+    if (/^https?:\/\//i.test(part.trim())) {
+      continue;
+    }
+
     // Title vs location heuristic
-    if (!title && /engineer|developer|lead|manager|designer|architect|scientist|analyst|founder|head of|vp|director|cto|ceo/i.test(partLower)) {
+    if (!title && /engineer|developer|lead|manager|designer|architect|scientist|analyst|founder|head of|vp|director|cto|ceo|sre|devops|platform|product|staff|senior|junior|principal|intern/i.test(partLower)) {
       title = part;
-    } else if (!location && /[A-Z][a-z]+,?\s+[A-Z]|remote|worldwide|global|europe|usa|uk/i.test(part)) {
+    } else if (!location && /[A-Z][a-z]+,?\s+[A-Z]|remote|worldwide|global|europe|usa|uk|nyc|sf|berlin|london|paris|toronto|singapore|tokyo/i.test(part)) {
       location = part;
     } else if (!title) {
       title = part;

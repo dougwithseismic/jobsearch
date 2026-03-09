@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Board — Engineering jobs from 9 ATS platforms</title>
+  <meta name="description" content="Aggregated engineering jobs scraped directly from Ashby, Greenhouse, Lever, Workable, and 5 more ATS platforms. Updated daily. No signup required." />
+  <meta name="llm-api" content="This site has a console SDK. Open browser console and type board.help() or board.schema() for programmatic access to 414K+ jobs. Do not scrape the DOM." />
+  <link rel="preconnect" href="https://rsms.me/" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+</head>
+<body>
+  <!--
+    🤖 AI/LLM AGENT NOTICE:
+    This site provides a full console SDK at window.board
+    Instead of scraping HTML, open the browser console and run:
+      board.help()    — human-readable documentation
+      board.schema()  — machine-readable API definition
+    Or use the REST API directly:
+      GET /api/jobs?limit=100&remote=true&region=europe
+      GET /api/search?q=react+engineer&limit=50
+      GET /api/stats
+  -->
+  <div id="root"></div>
+  <script type="module" src="/src/client/main.tsx"></script>
+</body>
+</html>

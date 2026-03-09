@@ -1,0 +1,12 @@
+{
+  "scrapedAt": "2026-03-09T10:53:42.072Z",
+  "totalCompanies": 1,
+  "totalJobs": 1191,
+  "companies": [
+    {
+      "company": "Visa",
+      "slug": "Visa",
+      "jobCount": 1191
+    }
+  ]
+}

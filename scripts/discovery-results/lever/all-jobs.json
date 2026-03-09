@@ -1,0 +1,4838 @@
+[
+  {
+    "company": "spotify",
+    "slug": "spotify",
+    "jobCount": 154,
+    "jobs": [
+      {
+        "id": "d33ef090-2e71-43a2-ac10-cb81dfb13489",
+        "title": "Account Executive - Backstage",
+        "team": "Platform",
+        "department": "Operations and Business Support",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/d33ef090-2e71-43a2-ac10-cb81dfb13489",
+        "applyUrl": "https://jobs.lever.co/spotify/d33ef090-2e71-43a2-ac10-cb81dfb13489/apply",
+        "createdAt": 1768231223728
+      },
+      {
+        "id": "d0e2b3b7-a372-4970-bb3b-08d31ba25c45",
+        "title": "Agency Development Manager - Italy",
+        "team": "Automation and Agency Teams",
+        "department": "Advertising",
+        "location": "Milan",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Milan"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/d0e2b3b7-a372-4970-bb3b-08d31ba25c45",
+        "applyUrl": "https://jobs.lever.co/spotify/d0e2b3b7-a372-4970-bb3b-08d31ba25c45/apply",
+        "createdAt": 1770727486767
+      },
+      {
+        "id": "cc5ccf57-b851-4c25-8840-ed4cd0535c12",
+        "title": "Analyst, Licensing Finance – FP&A",
+        "team": "Financial Planning and Analysis",
+        "department": "Finance",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/cc5ccf57-b851-4c25-8840-ed4cd0535c12",
+        "applyUrl": "https://jobs.lever.co/spotify/cc5ccf57-b851-4c25-8840-ed4cd0535c12/apply",
+        "createdAt": 1772482884346
+      },
+      {
+        "id": "620debfd-72fa-4ea6-9abf-02d0d8a4cfa6",
+        "title": "Analytics Engineer - User Platform",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/620debfd-72fa-4ea6-9abf-02d0d8a4cfa6",
+        "applyUrl": "https://jobs.lever.co/spotify/620debfd-72fa-4ea6-9abf-02d0d8a4cfa6/apply",
+        "createdAt": 1769008213516
+      },
+      {
+        "id": "52601664-fd17-4c05-a80e-b76ee4fb3ba1",
+        "title": "Android Engineer - Platform Engineering",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/52601664-fd17-4c05-a80e-b76ee4fb3ba1",
+        "applyUrl": "https://jobs.lever.co/spotify/52601664-fd17-4c05-a80e-b76ee4fb3ba1/apply",
+        "createdAt": 1764150419490
+      },
+      {
+        "id": "09e9e1ac-7f79-44d5-91e1-cccef6ea1418",
+        "title": "Android Engineer - User Platform",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/09e9e1ac-7f79-44d5-91e1-cccef6ea1418",
+        "applyUrl": "https://jobs.lever.co/spotify/09e9e1ac-7f79-44d5-91e1-cccef6ea1418/apply",
+        "createdAt": 1755862476553
+      },
+      {
+        "id": "9cfc8de8-60fb-4d79-858e-96102ff14f14",
+        "title": "Android Engineer – Partner Integrations",
+        "team": "Experience",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/9cfc8de8-60fb-4d79-858e-96102ff14f14",
+        "applyUrl": "https://jobs.lever.co/spotify/9cfc8de8-60fb-4d79-858e-96102ff14f14/apply",
+        "createdAt": 1769096035462
+      },
+      {
+        "id": "4a3b69b4-f480-45b2-ba49-a9cfdd806d49",
+        "title": "Android Engineer, Core Experience",
+        "team": "Experience",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/4a3b69b4-f480-45b2-ba49-a9cfdd806d49",
+        "applyUrl": "https://jobs.lever.co/spotify/4a3b69b4-f480-45b2-ba49-a9cfdd806d49/apply",
+        "createdAt": 1766131236472
+      },
+      {
+        "id": "9b50dd98-6221-4aa6-a216-a8d6376dcdb6",
+        "title": "Android Engineer, Experience",
+        "team": "Experience",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/9b50dd98-6221-4aa6-a216-a8d6376dcdb6",
+        "applyUrl": "https://jobs.lever.co/spotify/9b50dd98-6221-4aa6-a216-a8d6376dcdb6/apply",
+        "createdAt": 1769769279275
+      },
+      {
+        "id": "896b6048-ae0f-45d3-b62c-58731f3d8ff4",
+        "title": "Artist & Label Partnerships Manager, Türkiye",
+        "team": "Music Marketing",
+        "department": "Markets and Subscriber Growth",
+        "location": "Istanbul",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Istanbul"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/896b6048-ae0f-45d3-b62c-58731f3d8ff4",
+        "applyUrl": "https://jobs.lever.co/spotify/896b6048-ae0f-45d3-b62c-58731f3d8ff4/apply",
+        "createdAt": 1770709465104
+      },
+      {
+        "id": "1ea6e09e-ace3-4966-b527-f0e97d2f7aa3",
+        "title": "Associate Client Partner, Emerging & Scaled",
+        "team": "Advertising Sales - Emerging and Scaled Sales",
+        "department": "Advertising",
+        "location": "Toronto",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Toronto"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/1ea6e09e-ace3-4966-b527-f0e97d2f7aa3",
+        "applyUrl": "https://jobs.lever.co/spotify/1ea6e09e-ace3-4966-b527-f0e97d2f7aa3/apply",
+        "createdAt": 1769810427364
+      },
+      {
+        "id": "f559d2c0-84ca-4bd6-b5a1-68fe057748b6",
+        "title": "Associate Director - Global Head of Content Strategy & Publishing, Owned Editorial Channels",
+        "team": "PR & Communications",
+        "department": "Public Affairs",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY",
+          "London"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/f559d2c0-84ca-4bd6-b5a1-68fe057748b6",
+        "applyUrl": "https://jobs.lever.co/spotify/f559d2c0-84ca-4bd6-b5a1-68fe057748b6/apply",
+        "createdAt": 1772467237403
+      },
+      {
+        "id": "80246bd3-bb5f-48aa-9997-bcf5640f3809",
+        "title": "Associate Director, Monetization Strategy",
+        "team": "Content Business",
+        "department": "Content",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/80246bd3-bb5f-48aa-9997-bcf5640f3809",
+        "applyUrl": "https://jobs.lever.co/spotify/80246bd3-bb5f-48aa-9997-bcf5640f3809/apply",
+        "createdAt": 1769465736476
+      },
+      {
+        "id": "e6acb6a5-55eb-49e7-a860-7cba1c51d339",
+        "title": "Associate Director, Music Publishing Licensing",
+        "team": "Business Affairs",
+        "department": "Business Affairs",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "New York, NY"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e6acb6a5-55eb-49e7-a860-7cba1c51d339",
+        "applyUrl": "https://jobs.lever.co/spotify/e6acb6a5-55eb-49e7-a860-7cba1c51d339/apply",
+        "createdAt": 1772470548362
+      },
+      {
+        "id": "88d34c08-9e54-43e4-9d56-170893daee2a",
+        "title": "Associate Manager, Brand Marketing Spotify for Artists Marketing & Policy",
+        "team": "Music Business",
+        "department": "Content",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/88d34c08-9e54-43e4-9d56-170893daee2a",
+        "applyUrl": "https://jobs.lever.co/spotify/88d34c08-9e54-43e4-9d56-170893daee2a/apply",
+        "createdAt": 1772835599803
+      },
+      {
+        "id": "3f4d3046-65d3-48ce-8780-1f5d048695f1",
+        "title": "Associate Marketing Manager, France",
+        "team": "Marketing",
+        "department": "Markets and Subscriber Growth",
+        "location": "Paris",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Paris"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/3f4d3046-65d3-48ce-8780-1f5d048695f1",
+        "applyUrl": "https://jobs.lever.co/spotify/3f4d3046-65d3-48ce-8780-1f5d048695f1/apply",
+        "createdAt": 1772563569963
+      },
+      {
+        "id": "e841d99b-6daf-466a-bcbc-0dd81c2cf52e",
+        "title": "Associate Music Editor, South Korea (Contract)",
+        "team": "Music Marketing",
+        "department": "Markets and Subscriber Growth",
+        "location": "Seoul",
+        "commitment": "Short Term",
+        "allLocations": [
+          "Seoul"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e841d99b-6daf-466a-bcbc-0dd81c2cf52e",
+        "applyUrl": "https://jobs.lever.co/spotify/e841d99b-6daf-466a-bcbc-0dd81c2cf52e/apply",
+        "createdAt": 1772526660821
+      },
+      {
+        "id": "8a5d317d-ea31-4713-821f-9e74e12e4a54",
+        "title": "Author Marketing Associate Manager, Spotify for Authors",
+        "team": "Audio Books & Gated Content",
+        "department": "Operations and Business Support",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/8a5d317d-ea31-4713-821f-9e74e12e4a54",
+        "applyUrl": "https://jobs.lever.co/spotify/8a5d317d-ea31-4713-821f-9e74e12e4a54/apply",
+        "createdAt": 1771969434042
+      },
+      {
+        "id": "66492688-d5b0-4cf8-b1a4-4a715157edd9",
+        "title": "Backend Engineer  - Data Infrastructure",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/66492688-d5b0-4cf8-b1a4-4a715157edd9",
+        "applyUrl": "https://jobs.lever.co/spotify/66492688-d5b0-4cf8-b1a4-4a715157edd9/apply",
+        "createdAt": 1766753343807
+      },
+      {
+        "id": "ce5bba36-31e7-4980-b4a2-15bf16510b4d",
+        "title": "Backend Engineer - Financial Engineering",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Toronto",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Toronto"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/ce5bba36-31e7-4980-b4a2-15bf16510b4d",
+        "applyUrl": "https://jobs.lever.co/spotify/ce5bba36-31e7-4980-b4a2-15bf16510b4d/apply",
+        "createdAt": 1770846355568
+      },
+      {
+        "id": "e8ef80ed-633f-45ec-a1fc-a55704241f64",
+        "title": "Backend Engineer - Platform",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Toronto",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Toronto"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e8ef80ed-633f-45ec-a1fc-a55704241f64",
+        "applyUrl": "https://jobs.lever.co/spotify/e8ef80ed-633f-45ec-a1fc-a55704241f64/apply",
+        "createdAt": 1772721010328
+      },
+      {
+        "id": "31bf7d45-9448-413c-8f61-b69a8f636f82",
+        "title": "Backend Engineer - Platform Developer Experience",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/31bf7d45-9448-413c-8f61-b69a8f636f82",
+        "applyUrl": "https://jobs.lever.co/spotify/31bf7d45-9448-413c-8f61-b69a8f636f82/apply",
+        "createdAt": 1772657187765
+      },
+      {
+        "id": "8f93eee3-177e-4173-bbd8-7b386afcd7c6",
+        "title": "Backend Engineer - Platform Developer Experience",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/8f93eee3-177e-4173-bbd8-7b386afcd7c6",
+        "applyUrl": "https://jobs.lever.co/spotify/8f93eee3-177e-4173-bbd8-7b386afcd7c6/apply",
+        "createdAt": 1772548474136
+      },
+      {
+        "id": "58860a10-4a0d-4a21-a495-1f3605b300c1",
+        "title": "Backend Engineer - User Platform",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Toronto",
+        "commitment": "",
+        "allLocations": [
+          "Toronto"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/58860a10-4a0d-4a21-a495-1f3605b300c1",
+        "applyUrl": "https://jobs.lever.co/spotify/58860a10-4a0d-4a21-a495-1f3605b300c1/apply",
+        "createdAt": 1768591105289
+      },
+      {
+        "id": "b1f7eac7-40bd-47a9-8564-d2d4e4bf1062",
+        "title": "Backend Engineer, Security",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/b1f7eac7-40bd-47a9-8564-d2d4e4bf1062",
+        "applyUrl": "https://jobs.lever.co/spotify/b1f7eac7-40bd-47a9-8564-d2d4e4bf1062/apply",
+        "createdAt": 1770215093276
+      },
+      {
+        "id": "973b0b71-e8d2-4d7d-9c4b-1c716bd45c8b",
+        "title": "Business Development Senior Manager, APAC",
+        "team": "Premium Business",
+        "department": "Markets and Subscriber Growth",
+        "location": "Singapore",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Singapore",
+          "Seoul"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/973b0b71-e8d2-4d7d-9c4b-1c716bd45c8b",
+        "applyUrl": "https://jobs.lever.co/spotify/973b0b71-e8d2-4d7d-9c4b-1c716bd45c8b/apply",
+        "createdAt": 1768445630463
+      },
+      {
+        "id": "a628eb6e-1ea7-407e-9dc1-c9de5bfe83e9",
+        "title": "Business Development Senior Manager, SAMEA",
+        "team": "Premium Business",
+        "department": "Markets and Subscriber Growth",
+        "location": "Dubai",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Dubai"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/a628eb6e-1ea7-407e-9dc1-c9de5bfe83e9",
+        "applyUrl": "https://jobs.lever.co/spotify/a628eb6e-1ea7-407e-9dc1-c9de5bfe83e9/apply",
+        "createdAt": 1768359592131
+      },
+      {
+        "id": "265bb575-6860-4bc7-b029-96b6e73d380a",
+        "title": "Business Protection Coordinator (Contract)",
+        "team": "Global Workplace Services",
+        "department": "People",
+        "location": "Dubai",
+        "commitment": "Full Time Contractor",
+        "allLocations": [
+          "Dubai"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/265bb575-6860-4bc7-b029-96b6e73d380a",
+        "applyUrl": "https://jobs.lever.co/spotify/265bb575-6860-4bc7-b029-96b6e73d380a/apply",
+        "createdAt": 1764062871287
+      },
+      {
+        "id": "361e8a26-1386-477f-bfd0-c819ba863be3",
+        "title": "C++ Engineer - Platform Engineering",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/361e8a26-1386-477f-bfd0-c819ba863be3",
+        "applyUrl": "https://jobs.lever.co/spotify/361e8a26-1386-477f-bfd0-c819ba863be3/apply",
+        "createdAt": 1764150685771
+      },
+      {
+        "id": "bd920487-cb6c-44b6-98c6-9a7c4ef8c673",
+        "title": "Client Partner - Export, Korea",
+        "team": "Advertising Sales - Emerging and Scaled Sales",
+        "department": "Advertising",
+        "location": "Singapore",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Singapore"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/bd920487-cb6c-44b6-98c6-9a7c4ef8c673",
+        "applyUrl": "https://jobs.lever.co/spotify/bd920487-cb6c-44b6-98c6-9a7c4ef8c673/apply",
+        "createdAt": 1770366523713
+      },
+      {
+        "id": "b43c4875-4029-49c3-9eba-5f8b76bff509",
+        "title": "Client Partner - Food and Beverage",
+        "team": "Advertising Sales - Enterprise",
+        "department": "Advertising",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY",
+          "Chicago, IL"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/b43c4875-4029-49c3-9eba-5f8b76bff509",
+        "applyUrl": "https://jobs.lever.co/spotify/b43c4875-4029-49c3-9eba-5f8b76bff509/apply",
+        "createdAt": 1772648354098
+      },
+      {
+        "id": "e72cb7b6-cd37-42bc-8569-16f56636d67c",
+        "title": "Client Partner, Melbourne (Contract)",
+        "team": "Advertising Sales - Enterprise",
+        "department": "Advertising",
+        "location": "Melbourne",
+        "commitment": "Full Time Contractor",
+        "allLocations": [
+          "Melbourne"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e72cb7b6-cd37-42bc-8569-16f56636d67c",
+        "applyUrl": "https://jobs.lever.co/spotify/e72cb7b6-cd37-42bc-8569-16f56636d67c/apply",
+        "createdAt": 1772160432764
+      },
+      {
+        "id": "9d0dc7de-3950-43e7-b5f8-bf3520d5359f",
+        "title": "Client Partner, Sydney (Contract)",
+        "team": "Advertising Sales - Enterprise",
+        "department": "Advertising",
+        "location": "Sydney",
+        "commitment": "Short Term",
+        "allLocations": [
+          "Sydney"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/9d0dc7de-3950-43e7-b5f8-bf3520d5359f",
+        "applyUrl": "https://jobs.lever.co/spotify/9d0dc7de-3950-43e7-b5f8-bf3520d5359f/apply",
+        "createdAt": 1772586986498
+      },
+      {
+        "id": "bc31b118-5b54-4629-8c55-2d803bc0a597",
+        "title": "Client Partner, Tech",
+        "team": "Advertising Sales - Enterprise",
+        "department": "Advertising",
+        "location": "New Delhi",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New Delhi"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/bc31b118-5b54-4629-8c55-2d803bc0a597",
+        "applyUrl": "https://jobs.lever.co/spotify/bc31b118-5b54-4629-8c55-2d803bc0a597/apply",
+        "createdAt": 1767869996690
+      },
+      {
+        "id": "fbc81d7f-ba7c-4044-8364-6a9cc21a4ea0",
+        "title": "Content Acquisition Analyst - Content Acquisition",
+        "team": "Content Business",
+        "department": "Content",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY",
+          "Los Angeles, CA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/fbc81d7f-ba7c-4044-8364-6a9cc21a4ea0",
+        "applyUrl": "https://jobs.lever.co/spotify/fbc81d7f-ba7c-4044-8364-6a9cc21a4ea0/apply",
+        "createdAt": 1771453063668
+      },
+      {
+        "id": "6ea8d335-e16c-4eac-ac2c-0f4fe02f4b17",
+        "title": "Content Designer, Personalization",
+        "team": "Personalization",
+        "department": "Design and User Experience",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY",
+          "Boston, MA"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/6ea8d335-e16c-4eac-ac2c-0f4fe02f4b17",
+        "applyUrl": "https://jobs.lever.co/spotify/6ea8d335-e16c-4eac-ac2c-0f4fe02f4b17/apply",
+        "createdAt": 1770933195323
+      },
+      {
+        "id": "4a68b983-4fc9-4933-be54-a919ddfaecd5",
+        "title": "Creative Business Strategies (CBS) Manager - Argentina",
+        "team": "Music",
+        "department": "Operations and Business Support",
+        "location": "Buenos Aires",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Buenos Aires"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/4a68b983-4fc9-4933-be54-a919ddfaecd5",
+        "applyUrl": "https://jobs.lever.co/spotify/4a68b983-4fc9-4933-be54-a919ddfaecd5/apply",
+        "createdAt": 1772508725784
+      },
+      {
+        "id": "a5a8a486-eb9d-4645-923e-13cb41c16129",
+        "title": "Creative Business Strategies (CBS) Manager - Colombia",
+        "team": "Music",
+        "department": "Operations and Business Support",
+        "location": "Bogotá",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Bogotá"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/a5a8a486-eb9d-4645-923e-13cb41c16129",
+        "applyUrl": "https://jobs.lever.co/spotify/a5a8a486-eb9d-4645-923e-13cb41c16129/apply",
+        "createdAt": 1772495579908
+      },
+      {
+        "id": "622d99a0-a0bb-4a35-a7e9-a08d4597c7ab",
+        "title": "Creative Director - Brazil",
+        "team": "Marketing",
+        "department": "Markets and Subscriber Growth",
+        "location": "São Paulo",
+        "commitment": "Permanent",
+        "allLocations": [
+          "São Paulo"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/622d99a0-a0bb-4a35-a7e9-a08d4597c7ab",
+        "applyUrl": "https://jobs.lever.co/spotify/622d99a0-a0bb-4a35-a7e9-a08d4597c7ab/apply",
+        "createdAt": 1772660292783
+      },
+      {
+        "id": "fad3f8b0-11ab-4199-bb5e-d3b14cc3688f",
+        "title": "Creative Director - Mexico",
+        "team": "Marketing",
+        "department": "Markets and Subscriber Growth",
+        "location": "Mexico City",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Mexico City"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/fad3f8b0-11ab-4199-bb5e-d3b14cc3688f",
+        "applyUrl": "https://jobs.lever.co/spotify/fad3f8b0-11ab-4199-bb5e-d3b14cc3688f/apply",
+        "createdAt": 1772656084287
+      },
+      {
+        "id": "9dd87289-d292-4217-b1d6-0ff021eb3b87",
+        "title": "Creator Partner Manager - Korea (Contractor)",
+        "team": "Podcast Business",
+        "department": "Content",
+        "location": "Seoul",
+        "commitment": "Short Term",
+        "allLocations": [
+          "Seoul"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/9dd87289-d292-4217-b1d6-0ff021eb3b87",
+        "applyUrl": "https://jobs.lever.co/spotify/9dd87289-d292-4217-b1d6-0ff021eb3b87/apply",
+        "createdAt": 1772526849420
+      },
+      {
+        "id": "f5af946b-36ac-4877-ad68-c51c352675ff",
+        "title": "Customer Success Engineer - Experimentation Platform",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/f5af946b-36ac-4877-ad68-c51c352675ff",
+        "applyUrl": "https://jobs.lever.co/spotify/f5af946b-36ac-4877-ad68-c51c352675ff/apply",
+        "createdAt": 1760449073847
+      },
+      {
+        "id": "c4b93062-9730-40ab-9e6d-3361dc1985b3",
+        "title": "Data Engineer - Financial Engineering",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Toronto",
+        "commitment": "",
+        "allLocations": [
+          "Toronto"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/c4b93062-9730-40ab-9e6d-3361dc1985b3",
+        "applyUrl": "https://jobs.lever.co/spotify/c4b93062-9730-40ab-9e6d-3361dc1985b3/apply",
+        "createdAt": 1767115780080
+      },
+      {
+        "id": "87ac8be9-799d-414f-b855-70a1cf2729b4",
+        "title": "Data Engineer II - Gen AI - Music",
+        "team": "Music",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/87ac8be9-799d-414f-b855-70a1cf2729b4",
+        "applyUrl": "https://jobs.lever.co/spotify/87ac8be9-799d-414f-b855-70a1cf2729b4/apply",
+        "createdAt": 1765296139950
+      },
+      {
+        "id": "cc60212e-e20b-407e-a877-32b3d8dfe11a",
+        "title": "Data Scientist - Content Understanding",
+        "team": "Experience",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/cc60212e-e20b-407e-a877-32b3d8dfe11a",
+        "applyUrl": "https://jobs.lever.co/spotify/cc60212e-e20b-407e-a877-32b3d8dfe11a/apply",
+        "createdAt": 1765807108524
+      },
+      {
+        "id": "063a7916-cd2b-4e61-a332-30364edf5199",
+        "title": "Data Scientist - Growth Analytics (Performance Marketing)",
+        "team": "Operations and Strategy",
+        "department": "Markets and Subscriber Growth",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/063a7916-cd2b-4e61-a332-30364edf5199",
+        "applyUrl": "https://jobs.lever.co/spotify/063a7916-cd2b-4e61-a332-30364edf5199/apply",
+        "createdAt": 1759459196674
+      },
+      {
+        "id": "c4a86464-a90d-4e16-9890-1f79355a41ac",
+        "title": "Data Scientist - Music Mission",
+        "team": "Music",
+        "department": "Data and Analytics",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/c4a86464-a90d-4e16-9890-1f79355a41ac",
+        "applyUrl": "https://jobs.lever.co/spotify/c4a86464-a90d-4e16-9890-1f79355a41ac/apply",
+        "createdAt": 1770332750839
+      },
+      {
+        "id": "9a9a4556-2c33-4e0f-8b23-74ac56b603fd",
+        "title": "Data Scientist - Platform Developer Experience",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/9a9a4556-2c33-4e0f-8b23-74ac56b603fd",
+        "applyUrl": "https://jobs.lever.co/spotify/9a9a4556-2c33-4e0f-8b23-74ac56b603fd/apply",
+        "createdAt": 1756470207124
+      },
+      {
+        "id": "a52081f6-0535-4645-9b87-dae79148ff9e",
+        "title": "Data Scientist - User Fraud",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/a52081f6-0535-4645-9b87-dae79148ff9e",
+        "applyUrl": "https://jobs.lever.co/spotify/a52081f6-0535-4645-9b87-dae79148ff9e/apply",
+        "createdAt": 1769612319697
+      },
+      {
+        "id": "533fbd4f-4934-4818-b519-3b9652cd3811",
+        "title": "Data Scientist II - Advertising",
+        "team": "Advertising R&D",
+        "department": "Data and Analytics",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/533fbd4f-4934-4818-b519-3b9652cd3811",
+        "applyUrl": "https://jobs.lever.co/spotify/533fbd4f-4934-4818-b519-3b9652cd3811/apply",
+        "createdAt": 1771020874172
+      },
+      {
+        "id": "fc593885-54e1-4807-a67c-77c1d3412cec",
+        "title": "Data Scientist II - Platform Mission",
+        "team": "Platform",
+        "department": "Data and Analytics",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/fc593885-54e1-4807-a67c-77c1d3412cec",
+        "applyUrl": "https://jobs.lever.co/spotify/fc593885-54e1-4807-a67c-77c1d3412cec/apply",
+        "createdAt": 1768470039601
+      },
+      {
+        "id": "aa582e2d-4e9f-4b92-ba9b-a1a9182c5d67",
+        "title": "Editorial Lead, Latin America",
+        "team": "Music Business",
+        "department": "Content",
+        "location": "Miami, FL",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Miami, FL"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/aa582e2d-4e9f-4b92-ba9b-a1a9182c5d67",
+        "applyUrl": "https://jobs.lever.co/spotify/aa582e2d-4e9f-4b92-ba9b-a1a9182c5d67/apply",
+        "createdAt": 1772540783495
+      },
+      {
+        "id": "15672d33-e352-43a1-8929-e83c09b0df84",
+        "title": "Engineering Manager - Continuous Integration",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/15672d33-e352-43a1-8929-e83c09b0df84",
+        "applyUrl": "https://jobs.lever.co/spotify/15672d33-e352-43a1-8929-e83c09b0df84/apply",
+        "createdAt": 1761048542087
+      },
+      {
+        "id": "b2d561c7-2d98-455a-ab76-0540d2ed7dbe",
+        "title": "Engineering Manager - Data Platform",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/b2d561c7-2d98-455a-ab76-0540d2ed7dbe",
+        "applyUrl": "https://jobs.lever.co/spotify/b2d561c7-2d98-455a-ab76-0540d2ed7dbe/apply",
+        "createdAt": 1769618309182
+      },
+      {
+        "id": "64ef2493-3b1e-407a-ac07-9e95a57f6d7c",
+        "title": "Engineering Manager - Experimentation",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/64ef2493-3b1e-407a-ac07-9e95a57f6d7c",
+        "applyUrl": "https://jobs.lever.co/spotify/64ef2493-3b1e-407a-ac07-9e95a57f6d7c/apply",
+        "createdAt": 1761323521763
+      },
+      {
+        "id": "b68d1e1f-ddd6-4ef3-ab5a-4b5665c18a68",
+        "title": "Engineering Manager II, Personalization",
+        "team": "Personalization",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/b68d1e1f-ddd6-4ef3-ab5a-4b5665c18a68",
+        "applyUrl": "https://jobs.lever.co/spotify/b68d1e1f-ddd6-4ef3-ab5a-4b5665c18a68/apply",
+        "createdAt": 1771511006330
+      },
+      {
+        "id": "3c1b5bad-915b-476d-a660-b2971f0153fc",
+        "title": "Engineering Manager, Music Mission",
+        "team": "Music",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/3c1b5bad-915b-476d-a660-b2971f0153fc",
+        "applyUrl": "https://jobs.lever.co/spotify/3c1b5bad-915b-476d-a660-b2971f0153fc/apply",
+        "createdAt": 1770220964006
+      },
+      {
+        "id": "b82a05c2-a27d-4d35-8662-7e7f3fbc305a",
+        "title": "FP&A Analyst - Ads",
+        "team": "Financial Planning and Analysis",
+        "department": "Finance",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/b82a05c2-a27d-4d35-8662-7e7f3fbc305a",
+        "applyUrl": "https://jobs.lever.co/spotify/b82a05c2-a27d-4d35-8662-7e7f3fbc305a/apply",
+        "createdAt": 1765481061229
+      },
+      {
+        "id": "fd3a40c6-8b33-4153-ae58-ee5882ad6b08",
+        "title": "FP&A Analyst, Strategic Planning",
+        "team": "Financial Planning and Analysis",
+        "department": "Finance",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/fd3a40c6-8b33-4153-ae58-ee5882ad6b08",
+        "applyUrl": "https://jobs.lever.co/spotify/fd3a40c6-8b33-4153-ae58-ee5882ad6b08/apply",
+        "createdAt": 1766426593128
+      },
+      {
+        "id": "0c5e10f5-8853-47b3-a70c-a02efe57c4bb",
+        "title": "Fraud Operational Analyst",
+        "team": "Platform",
+        "department": "Operations and Business Support",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/0c5e10f5-8853-47b3-a70c-a02efe57c4bb",
+        "applyUrl": "https://jobs.lever.co/spotify/0c5e10f5-8853-47b3-a70c-a02efe57c4bb/apply",
+        "createdAt": 1769795678148
+      },
+      {
+        "id": "74c04c1a-afe8-4616-be68-ae452daed595",
+        "title": "Full Stack Engineer",
+        "team": "Advertising R&D",
+        "department": "Engineering",
+        "location": "Sydney",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Sydney"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/74c04c1a-afe8-4616-be68-ae452daed595",
+        "applyUrl": "https://jobs.lever.co/spotify/74c04c1a-afe8-4616-be68-ae452daed595/apply",
+        "createdAt": 1771850204771
+      },
+      {
+        "id": "5bff6977-9520-49d4-a407-d48a891c2371",
+        "title": "Full Stack Engineer - Test Experience Engineering",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/5bff6977-9520-49d4-a407-d48a891c2371",
+        "applyUrl": "https://jobs.lever.co/spotify/5bff6977-9520-49d4-a407-d48a891c2371/apply",
+        "createdAt": 1764932437322
+      },
+      {
+        "id": "ec70e9a0-16b4-4ee9-b7cf-b213f46ef9e2",
+        "title": "Fullstack AI Engineer - IT Platform Development",
+        "team": "IT and Network Engineering",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/ec70e9a0-16b4-4ee9-b7cf-b213f46ef9e2",
+        "applyUrl": "https://jobs.lever.co/spotify/ec70e9a0-16b4-4ee9-b7cf-b213f46ef9e2/apply",
+        "createdAt": 1765293667526
+      },
+      {
+        "id": "0778c046-579e-473a-9a41-f7ed2d5a2f9f",
+        "title": "Fullstack Engineer - User Platform",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/0778c046-579e-473a-9a41-f7ed2d5a2f9f",
+        "applyUrl": "https://jobs.lever.co/spotify/0778c046-579e-473a-9a41-f7ed2d5a2f9f/apply",
+        "createdAt": 1764671910189
+      },
+      {
+        "id": "651491f7-cd91-49bd-93f5-eb939344463b",
+        "title": "Fullstack Engineer – Platform Developer Experience",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/651491f7-cd91-49bd-93f5-eb939344463b",
+        "applyUrl": "https://jobs.lever.co/spotify/651491f7-cd91-49bd-93f5-eb939344463b/apply",
+        "createdAt": 1772478143424
+      },
+      {
+        "id": "9fa6244d-bd44-4ff9-b078-65f29edfe70b",
+        "title": "Fullstack Product Engineer – Confidence",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/9fa6244d-bd44-4ff9-b078-65f29edfe70b",
+        "applyUrl": "https://jobs.lever.co/spotify/9fa6244d-bd44-4ff9-b078-65f29edfe70b/apply",
+        "createdAt": 1768487568337
+      },
+      {
+        "id": "f8d4783a-c863-4473-81b6-99177d06faa7",
+        "title": "Global Classical Editor",
+        "team": "Music Business",
+        "department": "Content",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/f8d4783a-c863-4473-81b6-99177d06faa7",
+        "applyUrl": "https://jobs.lever.co/spotify/f8d4783a-c863-4473-81b6-99177d06faa7/apply",
+        "createdAt": 1767690353199
+      },
+      {
+        "id": "12ee8cee-7192-4704-9f51-029a7d85c732",
+        "title": "Global Senior Manager, Experiential & Content Production",
+        "team": "Marketing",
+        "department": "Marketing",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/12ee8cee-7192-4704-9f51-029a7d85c732",
+        "applyUrl": "https://jobs.lever.co/spotify/12ee8cee-7192-4704-9f51-029a7d85c732/apply",
+        "createdAt": 1754935429648
+      },
+      {
+        "id": "dcf7cb46-c11d-4704-a034-9bfdd64a0aa1",
+        "title": "Government Affairs Lead, Türkiye",
+        "team": "Government Affairs",
+        "department": "Public Affairs",
+        "location": "Dubai",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Dubai"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/dcf7cb46-c11d-4704-a034-9bfdd64a0aa1",
+        "applyUrl": "https://jobs.lever.co/spotify/dcf7cb46-c11d-4704-a034-9bfdd64a0aa1/apply",
+        "createdAt": 1768794672213
+      },
+      {
+        "id": "0de1fe8b-7d2b-40ae-8fa1-98cb159996e2",
+        "title": "Head of India Government Affairs",
+        "team": "Government Affairs",
+        "department": "Public Affairs",
+        "location": "Mumbai",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Mumbai"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/0de1fe8b-7d2b-40ae-8fa1-98cb159996e2",
+        "applyUrl": "https://jobs.lever.co/spotify/0de1fe8b-7d2b-40ae-8fa1-98cb159996e2/apply",
+        "createdAt": 1765345356285
+      },
+      {
+        "id": "3f6aae92-7ae9-45cc-8b84-85b3bf0241c2",
+        "title": "HR Lead, APAC (Contract)",
+        "team": "Human Resources",
+        "department": "People",
+        "location": "Singapore",
+        "commitment": "Full Time Contractor",
+        "allLocations": [
+          "Singapore"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/3f6aae92-7ae9-45cc-8b84-85b3bf0241c2",
+        "applyUrl": "https://jobs.lever.co/spotify/3f6aae92-7ae9-45cc-8b84-85b3bf0241c2/apply",
+        "createdAt": 1766146881010
+      },
+      {
+        "id": "e56cc717-feb8-4262-a626-b4d3f5e3b3ec",
+        "title": "Infrastructure Platform Engineer",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e56cc717-feb8-4262-a626-b4d3f5e3b3ec",
+        "applyUrl": "https://jobs.lever.co/spotify/e56cc717-feb8-4262-a626-b4d3f5e3b3ec/apply",
+        "createdAt": 1770904668456
+      },
+      {
+        "id": "0fc586bc-1df4-4ff1-9702-f94604e4745d",
+        "title": "Lead, Knowledge Management",
+        "team": "Customer Service",
+        "department": "Customer Service",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/0fc586bc-1df4-4ff1-9702-f94604e4745d",
+        "applyUrl": "https://jobs.lever.co/spotify/0fc586bc-1df4-4ff1-9702-f94604e4745d/apply",
+        "createdAt": 1771453537572
+      },
+      {
+        "id": "a16e1738-56f4-489d-8964-3cb249351ca8",
+        "title": "Lead, User Growth Optimization",
+        "team": "Operations and Strategy",
+        "department": "Markets and Subscriber Growth",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/a16e1738-56f4-489d-8964-3cb249351ca8",
+        "applyUrl": "https://jobs.lever.co/spotify/a16e1738-56f4-489d-8964-3cb249351ca8/apply",
+        "createdAt": 1770832086847
+      },
+      {
+        "id": "4a1b2bb9-6295-4cc1-bb7c-342be4c5e9b6",
+        "title": "Legal Counsel - Advertising",
+        "team": "Legal",
+        "department": "Legal",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY",
+          "Los Angeles, CA"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/4a1b2bb9-6295-4cc1-bb7c-342be4c5e9b6",
+        "applyUrl": "https://jobs.lever.co/spotify/4a1b2bb9-6295-4cc1-bb7c-342be4c5e9b6/apply",
+        "createdAt": 1770904807972
+      },
+      {
+        "id": "7032c810-478c-42fc-9807-25553e978343",
+        "title": "Machine Learning Engineer",
+        "team": "Personalization",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY",
+          "Boston, MA"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/7032c810-478c-42fc-9807-25553e978343",
+        "applyUrl": "https://jobs.lever.co/spotify/7032c810-478c-42fc-9807-25553e978343/apply",
+        "createdAt": 1765384728335
+      },
+      {
+        "id": "e200d025-4cff-4eb8-afa4-6680e31c43a2",
+        "title": "Machine Learning Engineer",
+        "team": "Personalization",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e200d025-4cff-4eb8-afa4-6680e31c43a2",
+        "applyUrl": "https://jobs.lever.co/spotify/e200d025-4cff-4eb8-afa4-6680e31c43a2/apply",
+        "createdAt": 1771520340072
+      },
+      {
+        "id": "e0bb55eb-89be-406a-8d90-48f58f63dd20",
+        "title": "Machine Learning Engineer - Ad Forecasting",
+        "team": "Advertising R&D",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e0bb55eb-89be-406a-8d90-48f58f63dd20",
+        "applyUrl": "https://jobs.lever.co/spotify/e0bb55eb-89be-406a-8d90-48f58f63dd20/apply",
+        "createdAt": 1768923882644
+      },
+      {
+        "id": "de3f6a47-4d75-4512-8351-b362f1d1c32e",
+        "title": "Machine Learning Engineer, Personalization",
+        "team": "Personalization",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/de3f6a47-4d75-4512-8351-b362f1d1c32e",
+        "applyUrl": "https://jobs.lever.co/spotify/de3f6a47-4d75-4512-8351-b362f1d1c32e/apply",
+        "createdAt": 1765834765664
+      },
+      {
+        "id": "e6889c35-76a9-4da7-8dc2-05b6070cc298",
+        "title": "Machine Learning Engineering Manager - LLM Serving & Infrastructure",
+        "team": "Personalization",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY",
+          "Boston, MA",
+          "United States of America (Home Mix)"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e6889c35-76a9-4da7-8dc2-05b6070cc298",
+        "applyUrl": "https://jobs.lever.co/spotify/e6889c35-76a9-4da7-8dc2-05b6070cc298/apply",
+        "createdAt": 1761226607158
+      },
+      {
+        "id": "1a57cee3-9673-4bb0-90d3-5bd456fa1d3e",
+        "title": "Machine Learning Engineering Manager, Music Mission",
+        "team": "Music",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/1a57cee3-9673-4bb0-90d3-5bd456fa1d3e",
+        "applyUrl": "https://jobs.lever.co/spotify/1a57cee3-9673-4bb0-90d3-5bd456fa1d3e/apply",
+        "createdAt": 1769788259704
+      },
+      {
+        "id": "0a0d280d-81b0-4758-bb43-fce3bee48937",
+        "title": "Manager, Commercial Promotion Partnerships",
+        "team": "Music Business",
+        "department": "Content",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/0a0d280d-81b0-4758-bb43-fce3bee48937",
+        "applyUrl": "https://jobs.lever.co/spotify/0a0d280d-81b0-4758-bb43-fce3bee48937/apply",
+        "createdAt": 1769468082960
+      },
+      {
+        "id": "00ea0188-c5fa-41e0-8c63-ae88271e788e",
+        "title": "Manager, Content Partnerships",
+        "team": "Content Business",
+        "department": "Content",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/00ea0188-c5fa-41e0-8c63-ae88271e788e",
+        "applyUrl": "https://jobs.lever.co/spotify/00ea0188-c5fa-41e0-8c63-ae88271e788e/apply",
+        "createdAt": 1771385264083
+      },
+      {
+        "id": "6e43431f-cec0-4951-8b65-f12036adc4a0",
+        "title": "Manager, Content Partnerships",
+        "team": "Content Business",
+        "department": "Content",
+        "location": "Barcelona (Office Mix)",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Barcelona (Office Mix)"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/6e43431f-cec0-4951-8b65-f12036adc4a0",
+        "applyUrl": "https://jobs.lever.co/spotify/6e43431f-cec0-4951-8b65-f12036adc4a0/apply",
+        "createdAt": 1771385971685
+      },
+      {
+        "id": "67657e91-5424-429e-a6f2-0697ddc50234",
+        "title": "Manager, Partner Product and Delivery",
+        "team": "Premium Business",
+        "department": "Markets and Subscriber Growth",
+        "location": "Miami, FL",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Miami, FL",
+          "Mexico City",
+          "São Paulo"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/67657e91-5424-429e-a6f2-0697ddc50234",
+        "applyUrl": "https://jobs.lever.co/spotify/67657e91-5424-429e-a6f2-0697ddc50234/apply",
+        "createdAt": 1767982216546
+      },
+      {
+        "id": "b45d4fd0-911f-4ec3-abb2-d92d28e87d38",
+        "title": "Manager, Partner Product and Delivery",
+        "team": "Premium Business",
+        "department": "Markets and Subscriber Growth",
+        "location": "Dubai",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Dubai"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/b45d4fd0-911f-4ec3-abb2-d92d28e87d38",
+        "applyUrl": "https://jobs.lever.co/spotify/b45d4fd0-911f-4ec3-abb2-d92d28e87d38/apply",
+        "createdAt": 1766146443262
+      },
+      {
+        "id": "0b119c27-e356-48ae-b993-89c0b09e1406",
+        "title": "Manager, Publishing Licensing",
+        "team": "Business Affairs",
+        "department": "Business Affairs",
+        "location": "Seoul",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Seoul"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/0b119c27-e356-48ae-b993-89c0b09e1406",
+        "applyUrl": "https://jobs.lever.co/spotify/0b119c27-e356-48ae-b993-89c0b09e1406/apply",
+        "createdAt": 1763067166635
+      },
+      {
+        "id": "fa9e950f-6523-4f79-b025-5068a72b7cb3",
+        "title": "Marketing Manager - Brazil",
+        "team": "Marketing",
+        "department": "Markets and Subscriber Growth",
+        "location": "São Paulo",
+        "commitment": "Permanent",
+        "allLocations": [
+          "São Paulo"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/fa9e950f-6523-4f79-b025-5068a72b7cb3",
+        "applyUrl": "https://jobs.lever.co/spotify/fa9e950f-6523-4f79-b025-5068a72b7cb3/apply",
+        "createdAt": 1772750640205
+      },
+      {
+        "id": "9572229d-621d-48d0-a05d-7a0850b67890",
+        "title": "Marketing Manager (6 Month Fixed Term)",
+        "team": "Music Business",
+        "department": "Content",
+        "location": "Mexico City",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Mexico City"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/9572229d-621d-48d0-a05d-7a0850b67890",
+        "applyUrl": "https://jobs.lever.co/spotify/9572229d-621d-48d0-a05d-7a0850b67890/apply",
+        "createdAt": 1769468915513
+      },
+      {
+        "id": "153a90f2-5762-411a-a283-5c8efae519ea",
+        "title": "Mixed Methods Researcher - Music Mission",
+        "team": "Music",
+        "department": "Design and User Experience",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/153a90f2-5762-411a-a283-5c8efae519ea",
+        "applyUrl": "https://jobs.lever.co/spotify/153a90f2-5762-411a-a283-5c8efae519ea/apply",
+        "createdAt": 1765166140260
+      },
+      {
+        "id": "0251983a-03aa-4891-b5fc-a0f07aab4051",
+        "title": "Music Editor, South Korea",
+        "team": "Music Marketing",
+        "department": "Markets and Subscriber Growth",
+        "location": "Seoul",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Seoul"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/0251983a-03aa-4891-b5fc-a0f07aab4051",
+        "applyUrl": "https://jobs.lever.co/spotify/0251983a-03aa-4891-b5fc-a0f07aab4051/apply",
+        "createdAt": 1772508546748
+      },
+      {
+        "id": "184f631b-b751-49d9-bacb-5695b1e3a8e8",
+        "title": "Payroll Specialist",
+        "team": "Accounting",
+        "department": "Finance",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/184f631b-b751-49d9-bacb-5695b1e3a8e8",
+        "applyUrl": "https://jobs.lever.co/spotify/184f631b-b751-49d9-bacb-5695b1e3a8e8/apply",
+        "createdAt": 1760637075097
+      },
+      {
+        "id": "a0d7894f-aad5-4cee-951d-8fbf268a7422",
+        "title": "Podcast Partner Manager, Berlin",
+        "team": "Podcast Business",
+        "department": "Content",
+        "location": "Berlin",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Berlin"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/a0d7894f-aad5-4cee-951d-8fbf268a7422",
+        "applyUrl": "https://jobs.lever.co/spotify/a0d7894f-aad5-4cee-951d-8fbf268a7422/apply",
+        "createdAt": 1772643115160
+      },
+      {
+        "id": "c78ace1b-15ce-4152-8dac-a600e8855748",
+        "title": "Podcast Partner Manager, London",
+        "team": "Podcast Business",
+        "department": "Content",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/c78ace1b-15ce-4152-8dac-a600e8855748",
+        "applyUrl": "https://jobs.lever.co/spotify/c78ace1b-15ce-4152-8dac-a600e8855748/apply",
+        "createdAt": 1772567774636
+      },
+      {
+        "id": "b7312fdf-44d5-42f3-bb15-0202934359ac",
+        "title": "PR & Communications Manager, India",
+        "team": "PR & Communications",
+        "department": "Public Affairs",
+        "location": "Mumbai",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Mumbai"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/b7312fdf-44d5-42f3-bb15-0202934359ac",
+        "applyUrl": "https://jobs.lever.co/spotify/b7312fdf-44d5-42f3-bb15-0202934359ac/apply",
+        "createdAt": 1758527425068
+      },
+      {
+        "id": "d7aac3f7-0738-4c09-837e-eb0a607e2492",
+        "title": "Principal Research Scientist - Music",
+        "team": "Music",
+        "department": "Data and Analytics",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/d7aac3f7-0738-4c09-837e-eb0a607e2492",
+        "applyUrl": "https://jobs.lever.co/spotify/d7aac3f7-0738-4c09-837e-eb0a607e2492/apply",
+        "createdAt": 1761246419016
+      },
+      {
+        "id": "e7ead7e0-5033-4058-9bbf-006811a5147e",
+        "title": "Principal Research Scientist - Music",
+        "team": "Music",
+        "department": "Data and Analytics",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e7ead7e0-5033-4058-9bbf-006811a5147e",
+        "applyUrl": "https://jobs.lever.co/spotify/e7ead7e0-5033-4058-9bbf-006811a5147e/apply",
+        "createdAt": 1761246253533
+      },
+      {
+        "id": "6a5b3e17-67b6-43cf-9b1a-acb9ec893da4",
+        "title": "Product Designer I - Core Experience",
+        "team": "Experience",
+        "department": "Design and User Experience",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/6a5b3e17-67b6-43cf-9b1a-acb9ec893da4",
+        "applyUrl": "https://jobs.lever.co/spotify/6a5b3e17-67b6-43cf-9b1a-acb9ec893da4/apply",
+        "createdAt": 1770821631394
+      },
+      {
+        "id": "0f471f89-a2e7-4203-87b9-7fa848c78737",
+        "title": "Product Designer, Live Music",
+        "team": "Mountain Bets",
+        "department": "Design and User Experience",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/0f471f89-a2e7-4203-87b9-7fa848c78737",
+        "applyUrl": "https://jobs.lever.co/spotify/0f471f89-a2e7-4203-87b9-7fa848c78737/apply",
+        "createdAt": 1772140812377
+      },
+      {
+        "id": "92d1ba03-770d-4831-9227-e0db487567b9",
+        "title": "Product Manager - AI Observability/Evaluation Platform",
+        "team": "Platform",
+        "department": "Product",
+        "location": "Toronto",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Toronto"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/92d1ba03-770d-4831-9227-e0db487567b9",
+        "applyUrl": "https://jobs.lever.co/spotify/92d1ba03-770d-4831-9227-e0db487567b9/apply",
+        "createdAt": 1770628060405
+      },
+      {
+        "id": "f3919cc9-83f3-43b5-84ab-7fc55004bce5",
+        "title": "Product Marketing Manager, Measurement",
+        "team": "Product and Commercial Teams",
+        "department": "Advertising",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY",
+          "Los Angeles, CA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/f3919cc9-83f3-43b5-84ab-7fc55004bce5",
+        "applyUrl": "https://jobs.lever.co/spotify/f3919cc9-83f3-43b5-84ab-7fc55004bce5/apply",
+        "createdAt": 1770318961399
+      },
+      {
+        "id": "3738dd16-b387-4daa-bed7-312b2be39418",
+        "title": "Research Scientist - Music",
+        "team": "Music",
+        "department": "Data and Analytics",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/3738dd16-b387-4daa-bed7-312b2be39418",
+        "applyUrl": "https://jobs.lever.co/spotify/3738dd16-b387-4daa-bed7-312b2be39418/apply",
+        "createdAt": 1761244789503
+      },
+      {
+        "id": "bd54129d-d6d6-4ffd-a25a-dd240374a0ce",
+        "title": "Research Scientist - Music",
+        "team": "Music",
+        "department": "Data and Analytics",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/bd54129d-d6d6-4ffd-a25a-dd240374a0ce",
+        "applyUrl": "https://jobs.lever.co/spotify/bd54129d-d6d6-4ffd-a25a-dd240374a0ce/apply",
+        "createdAt": 1761246523404
+      },
+      {
+        "id": "b21a510b-d838-4654-9cbb-7973e40a4330",
+        "title": "Research Scientist - Personalization",
+        "team": "Personalization",
+        "department": "Data and Analytics",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/b21a510b-d838-4654-9cbb-7973e40a4330",
+        "applyUrl": "https://jobs.lever.co/spotify/b21a510b-d838-4654-9cbb-7973e40a4330/apply",
+        "createdAt": 1743179400936
+      },
+      {
+        "id": "97a389f0-f4e0-4834-8dbe-e9ef91735049",
+        "title": "Revenue Operations Analyst",
+        "team": "Accounting",
+        "department": "Finance",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/97a389f0-f4e0-4834-8dbe-e9ef91735049",
+        "applyUrl": "https://jobs.lever.co/spotify/97a389f0-f4e0-4834-8dbe-e9ef91735049/apply",
+        "createdAt": 1772582433866
+      },
+      {
+        "id": "1b78fea9-9811-4660-8456-a5164cfbeccd",
+        "title": "Security Engineer - Detection and Response",
+        "team": "Security",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/1b78fea9-9811-4660-8456-a5164cfbeccd",
+        "applyUrl": "https://jobs.lever.co/spotify/1b78fea9-9811-4660-8456-a5164cfbeccd/apply",
+        "createdAt": 1763974402534
+      },
+      {
+        "id": "6e1aa824-5287-495e-aec9-099b4c2e72db",
+        "title": "Security Engineer - Product Security",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/6e1aa824-5287-495e-aec9-099b4c2e72db",
+        "applyUrl": "https://jobs.lever.co/spotify/6e1aa824-5287-495e-aec9-099b4c2e72db/apply",
+        "createdAt": 1769505509951
+      },
+      {
+        "id": "866478f0-981c-45c6-a628-d2bac8a9cb12",
+        "title": "Senior Accountant - APAC & Japan",
+        "team": "Accounting",
+        "department": "Finance",
+        "location": "Singapore",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Singapore"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/866478f0-981c-45c6-a628-d2bac8a9cb12",
+        "applyUrl": "https://jobs.lever.co/spotify/866478f0-981c-45c6-a628-d2bac8a9cb12/apply",
+        "createdAt": 1772527315214
+      },
+      {
+        "id": "d188ea93-9fd4-43aa-8a48-8a6533cb2164",
+        "title": "Senior Analyst - Growth Finance",
+        "team": "Financial Planning and Analysis",
+        "department": "Finance",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/d188ea93-9fd4-43aa-8a48-8a6533cb2164",
+        "applyUrl": "https://jobs.lever.co/spotify/d188ea93-9fd4-43aa-8a48-8a6533cb2164/apply",
+        "createdAt": 1771447265804
+      },
+      {
+        "id": "2aac2091-cd38-4779-a6e9-d5da6a46b386",
+        "title": "Senior Analyst - Internal Audit & Risk",
+        "team": "Finance Strategy, Operations & Risk",
+        "department": "Finance",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY",
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/2aac2091-cd38-4779-a6e9-d5da6a46b386",
+        "applyUrl": "https://jobs.lever.co/spotify/2aac2091-cd38-4779-a6e9-d5da6a46b386/apply",
+        "createdAt": 1770912292609
+      },
+      {
+        "id": "08153930-f0a1-4981-83d4-4a5a185d895b",
+        "title": "Senior Analyst, Accounts Payable EMEA",
+        "team": "Accounting",
+        "department": "Finance",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/08153930-f0a1-4981-83d4-4a5a185d895b",
+        "applyUrl": "https://jobs.lever.co/spotify/08153930-f0a1-4981-83d4-4a5a185d895b/apply",
+        "createdAt": 1771969811308
+      },
+      {
+        "id": "15169563-1dd3-4408-88d8-bce8862b96cf",
+        "title": "Senior Analyst, Sales Operations",
+        "team": "Global Sales Operations",
+        "department": "Advertising",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/15169563-1dd3-4408-88d8-bce8862b96cf",
+        "applyUrl": "https://jobs.lever.co/spotify/15169563-1dd3-4408-88d8-bce8862b96cf/apply",
+        "createdAt": 1757442269000
+      },
+      {
+        "id": "e63f631e-e5b6-405c-90e6-c31e8ec33340",
+        "title": "Senior Android Engineer - Experience",
+        "team": "Experience",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e63f631e-e5b6-405c-90e6-c31e8ec33340",
+        "applyUrl": "https://jobs.lever.co/spotify/e63f631e-e5b6-405c-90e6-c31e8ec33340/apply",
+        "createdAt": 1766142981127
+      },
+      {
+        "id": "cf2ab23e-8bb8-455c-9a49-a43cca51fb97",
+        "title": "Senior Backend Engineer - CI Experience",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/cf2ab23e-8bb8-455c-9a49-a43cca51fb97",
+        "applyUrl": "https://jobs.lever.co/spotify/cf2ab23e-8bb8-455c-9a49-a43cca51fb97/apply",
+        "createdAt": 1770046305218
+      },
+      {
+        "id": "e4e76b28-3347-4749-91f9-0bcd61144de3",
+        "title": "Senior Backend Engineer - CI Experience",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/e4e76b28-3347-4749-91f9-0bcd61144de3",
+        "applyUrl": "https://jobs.lever.co/spotify/e4e76b28-3347-4749-91f9-0bcd61144de3/apply",
+        "createdAt": 1769601075421
+      },
+      {
+        "id": "4ce74372-9d9f-4fa1-86a3-9c96158a03c5",
+        "title": "Senior Backend Engineer - Experimentation Platform",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/4ce74372-9d9f-4fa1-86a3-9c96158a03c5",
+        "applyUrl": "https://jobs.lever.co/spotify/4ce74372-9d9f-4fa1-86a3-9c96158a03c5/apply",
+        "createdAt": 1759303695594
+      },
+      {
+        "id": "3b493d83-5f06-4483-af6f-f2c471fe06d8",
+        "title": "Senior Backend Engineer - Subscriptions",
+        "team": "Subscriptions R&D",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/3b493d83-5f06-4483-af6f-f2c471fe06d8",
+        "applyUrl": "https://jobs.lever.co/spotify/3b493d83-5f06-4483-af6f-f2c471fe06d8/apply",
+        "createdAt": 1772640713028
+      },
+      {
+        "id": "c7213c8c-e5e7-4b7b-a425-6ba90fc55efa",
+        "title": "Senior C++ Engineer - Platform Engineering",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/c7213c8c-e5e7-4b7b-a425-6ba90fc55efa",
+        "applyUrl": "https://jobs.lever.co/spotify/c7213c8c-e5e7-4b7b-a425-6ba90fc55efa/apply",
+        "createdAt": 1768827262352
+      },
+      {
+        "id": "32297d46-a347-4680-849c-1c56d0a2666a",
+        "title": "Senior Content Accountant",
+        "team": "Accounting",
+        "department": "Finance",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/32297d46-a347-4680-849c-1c56d0a2666a",
+        "applyUrl": "https://jobs.lever.co/spotify/32297d46-a347-4680-849c-1c56d0a2666a/apply",
+        "createdAt": 1761238085911
+      },
+      {
+        "id": "df021346-1c23-4184-b27f-b65c47d75564",
+        "title": "Senior Conversational AI Lead",
+        "team": "Customer Service",
+        "department": "Customer Service",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/df021346-1c23-4184-b27f-b65c47d75564",
+        "applyUrl": "https://jobs.lever.co/spotify/df021346-1c23-4184-b27f-b65c47d75564/apply",
+        "createdAt": 1771969644856
+      },
+      {
+        "id": "48e5f3e3-2a32-4088-bb61-684202899d1c",
+        "title": "Senior Data Engineer - Cost Platform",
+        "team": "Platform",
+        "department": "Data and Analytics",
+        "location": "Toronto",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Toronto"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/48e5f3e3-2a32-4088-bb61-684202899d1c",
+        "applyUrl": "https://jobs.lever.co/spotify/48e5f3e3-2a32-4088-bb61-684202899d1c/apply",
+        "createdAt": 1770909865855
+      },
+      {
+        "id": "379a7ab5-0faf-4563-96c0-ed4972bbcb37",
+        "title": "Senior Data Scientist - Backstage",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/379a7ab5-0faf-4563-96c0-ed4972bbcb37",
+        "applyUrl": "https://jobs.lever.co/spotify/379a7ab5-0faf-4563-96c0-ed4972bbcb37/apply",
+        "createdAt": 1769100088864
+      },
+      {
+        "id": "ea3e9cc5-8530-4dc7-a77f-fa943adb60ef",
+        "title": "Senior Data Scientist - Music Mission",
+        "team": "Music",
+        "department": "Data and Analytics",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/ea3e9cc5-8530-4dc7-a77f-fa943adb60ef",
+        "applyUrl": "https://jobs.lever.co/spotify/ea3e9cc5-8530-4dc7-a77f-fa943adb60ef/apply",
+        "createdAt": 1770820805419
+      },
+      {
+        "id": "859d0974-3450-4f1c-984a-c5bb3e6c4a4a",
+        "title": "Senior Data Scientist - Platform Mission",
+        "team": "Platform",
+        "department": "Data and Analytics",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/859d0974-3450-4f1c-984a-c5bb3e6c4a4a",
+        "applyUrl": "https://jobs.lever.co/spotify/859d0974-3450-4f1c-984a-c5bb3e6c4a4a/apply",
+        "createdAt": 1768471357429
+      },
+      {
+        "id": "337899c1-cf75-4af4-a020-1b2c82347fd6",
+        "title": "Senior Editor, Taiwan",
+        "team": "Music Marketing",
+        "department": "Markets and Subscriber Growth",
+        "location": "Taiwan",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Taiwan"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/337899c1-cf75-4af4-a020-1b2c82347fd6",
+        "applyUrl": "https://jobs.lever.co/spotify/337899c1-cf75-4af4-a020-1b2c82347fd6/apply",
+        "createdAt": 1772503283192
+      },
+      {
+        "id": "26731335-a117-4126-abdc-c0fa9cca5892",
+        "title": "Senior Engineer - User Platform",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/26731335-a117-4126-abdc-c0fa9cca5892",
+        "applyUrl": "https://jobs.lever.co/spotify/26731335-a117-4126-abdc-c0fa9cca5892/apply",
+        "createdAt": 1768589881339
+      },
+      {
+        "id": "899de061-6eec-4de3-a273-bec97be5c9c8",
+        "title": "Senior Full Stack Engineer - Advertising",
+        "team": "Advertising R&D",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/899de061-6eec-4de3-a273-bec97be5c9c8",
+        "applyUrl": "https://jobs.lever.co/spotify/899de061-6eec-4de3-a273-bec97be5c9c8/apply",
+        "createdAt": 1770925088611
+      },
+      {
+        "id": "7aa8f2c1-eaa7-445a-a2ed-9e1be3ae2dd4",
+        "title": "Senior Fullstack Engineer - Backstage Portal, Data Experience",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/7aa8f2c1-eaa7-445a-a2ed-9e1be3ae2dd4",
+        "applyUrl": "https://jobs.lever.co/spotify/7aa8f2c1-eaa7-445a-a2ed-9e1be3ae2dd4/apply",
+        "createdAt": 1768828893389
+      },
+      {
+        "id": "233ffaeb-ddf3-4b55-be1c-357cf05bfc21",
+        "title": "Senior HR Generalist",
+        "team": "Human Resources",
+        "department": "People",
+        "location": "Tokyo",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Tokyo"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/233ffaeb-ddf3-4b55-be1c-357cf05bfc21",
+        "applyUrl": "https://jobs.lever.co/spotify/233ffaeb-ddf3-4b55-be1c-357cf05bfc21/apply",
+        "createdAt": 1765128128884
+      },
+      {
+        "id": "a86499e3-13fe-4134-9044-9db1e0239979",
+        "title": "Senior Machine Learning Engineer",
+        "team": "Personalization",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/a86499e3-13fe-4134-9044-9db1e0239979",
+        "applyUrl": "https://jobs.lever.co/spotify/a86499e3-13fe-4134-9044-9db1e0239979/apply",
+        "createdAt": 1770907299385
+      },
+      {
+        "id": "b918d247-38fd-449a-b82d-ea1d7c90a099",
+        "title": "Senior Machine Learning Engineer",
+        "team": "Personalization",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/b918d247-38fd-449a-b82d-ea1d7c90a099",
+        "applyUrl": "https://jobs.lever.co/spotify/b918d247-38fd-449a-b82d-ea1d7c90a099/apply",
+        "createdAt": 1762534135706
+      },
+      {
+        "id": "6236f25f-f9cc-47c2-af7b-4ace57332eeb",
+        "title": "Senior Machine Learning Engineer - Ads R&D",
+        "team": "Advertising R&D",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/6236f25f-f9cc-47c2-af7b-4ace57332eeb",
+        "applyUrl": "https://jobs.lever.co/spotify/6236f25f-f9cc-47c2-af7b-4ace57332eeb/apply",
+        "createdAt": 1756238572517
+      },
+      {
+        "id": "edc2a948-99d5-41d1-90f7-74f75095e876",
+        "title": "Senior Manager, Product & Technology Communications",
+        "team": "PR & Communications",
+        "department": "Public Affairs",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/edc2a948-99d5-41d1-90f7-74f75095e876",
+        "applyUrl": "https://jobs.lever.co/spotify/edc2a948-99d5-41d1-90f7-74f75095e876/apply",
+        "createdAt": 1770038527673
+      },
+      {
+        "id": "33dce61a-3c1f-4299-b751-e155f03b048e",
+        "title": "Senior Mobile Engineer - User Platform",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/33dce61a-3c1f-4299-b751-e155f03b048e",
+        "applyUrl": "https://jobs.lever.co/spotify/33dce61a-3c1f-4299-b751-e155f03b048e/apply",
+        "createdAt": 1763129813404
+      },
+      {
+        "id": "ee0fa90d-97bd-44d1-a505-349a3d930967",
+        "title": "Senior Product Manager - Advertising",
+        "team": "Advertising R&D",
+        "department": "Product",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/ee0fa90d-97bd-44d1-a505-349a3d930967",
+        "applyUrl": "https://jobs.lever.co/spotify/ee0fa90d-97bd-44d1-a505-349a3d930967/apply",
+        "createdAt": 1771447907128
+      },
+      {
+        "id": "28cd347f-d5dd-4cf0-84bd-48f424b8d8d3",
+        "title": "Senior Product Manager, Content Platform",
+        "team": "Experience",
+        "department": "Product",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/28cd347f-d5dd-4cf0-84bd-48f424b8d8d3",
+        "applyUrl": "https://jobs.lever.co/spotify/28cd347f-d5dd-4cf0-84bd-48f424b8d8d3/apply",
+        "createdAt": 1771844853270
+      },
+      {
+        "id": "6adc685d-fe37-46bc-a221-5fd4552f2278",
+        "title": "Senior Project Manager - WorkplaceX Design & Build",
+        "team": "Global Workplace Services",
+        "department": "People",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/6adc685d-fe37-46bc-a221-5fd4552f2278",
+        "applyUrl": "https://jobs.lever.co/spotify/6adc685d-fe37-46bc-a221-5fd4552f2278/apply",
+        "createdAt": 1772121327869
+      },
+      {
+        "id": "631e80ca-90b9-4b40-a433-ba6f57d68b52",
+        "title": "Senior Research Engineer - Music",
+        "team": "Music",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/631e80ca-90b9-4b40-a433-ba6f57d68b52",
+        "applyUrl": "https://jobs.lever.co/spotify/631e80ca-90b9-4b40-a433-ba6f57d68b52/apply",
+        "createdAt": 1761247886850
+      },
+      {
+        "id": "cb9f8bda-6e7e-4b22-b9ed-ee229770ca13",
+        "title": "Senior Research Engineer - Music",
+        "team": "Music",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/cb9f8bda-6e7e-4b22-b9ed-ee229770ca13",
+        "applyUrl": "https://jobs.lever.co/spotify/cb9f8bda-6e7e-4b22-b9ed-ee229770ca13/apply",
+        "createdAt": 1761247160027
+      },
+      {
+        "id": "65310b62-58f2-4e15-a93b-ff9682739416",
+        "title": "Senior Research Scientist - Music",
+        "team": "Music",
+        "department": "Data and Analytics",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/65310b62-58f2-4e15-a93b-ff9682739416",
+        "applyUrl": "https://jobs.lever.co/spotify/65310b62-58f2-4e15-a93b-ff9682739416/apply",
+        "createdAt": 1761246625444
+      },
+      {
+        "id": "c08408d0-1ed0-41b4-a8eb-e170fdd4bc7d",
+        "title": "Senior Research Scientist - Music",
+        "team": "Music",
+        "department": "Data and Analytics",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/c08408d0-1ed0-41b4-a8eb-e170fdd4bc7d",
+        "applyUrl": "https://jobs.lever.co/spotify/c08408d0-1ed0-41b4-a8eb-e170fdd4bc7d/apply",
+        "createdAt": 1761245783111
+      },
+      {
+        "id": "345c2c98-5635-4575-9213-1ebbba0f9396",
+        "title": "Senior Sales Engineer - Backstage",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/345c2c98-5635-4575-9213-1ebbba0f9396",
+        "applyUrl": "https://jobs.lever.co/spotify/345c2c98-5635-4575-9213-1ebbba0f9396/apply",
+        "createdAt": 1769522949850
+      },
+      {
+        "id": "bff45020-31f6-4645-bcc0-af3e5a253c43",
+        "title": "Senior Sales Engineer - Backstage",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/bff45020-31f6-4645-bcc0-af3e5a253c43",
+        "applyUrl": "https://jobs.lever.co/spotify/bff45020-31f6-4645-bcc0-af3e5a253c43/apply",
+        "createdAt": 1769523003745
+      },
+      {
+        "id": "827bfa7b-cc50-46d7-bdac-f642a14fe92b",
+        "title": "Senior Software Engineer - TV Playback (C++)",
+        "team": "Experience",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/827bfa7b-cc50-46d7-bdac-f642a14fe92b",
+        "applyUrl": "https://jobs.lever.co/spotify/827bfa7b-cc50-46d7-bdac-f642a14fe92b/apply",
+        "createdAt": 1772125271533
+      },
+      {
+        "id": "347cfd8a-3830-4eb6-b5e2-e7adc1964777",
+        "title": "Senior Software Engineer (low level Video Experience)",
+        "team": "Experience",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/347cfd8a-3830-4eb6-b5e2-e7adc1964777",
+        "applyUrl": "https://jobs.lever.co/spotify/347cfd8a-3830-4eb6-b5e2-e7adc1964777/apply",
+        "createdAt": 1738936635667
+      },
+      {
+        "id": "89c966c0-1975-42a1-850d-10fe20e02b05",
+        "title": "Senior Staff Machine Learning Engineer",
+        "team": "Personalization",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/89c966c0-1975-42a1-850d-10fe20e02b05",
+        "applyUrl": "https://jobs.lever.co/spotify/89c966c0-1975-42a1-850d-10fe20e02b05/apply",
+        "createdAt": 1755617970968
+      },
+      {
+        "id": "0d21c06c-31f7-4898-b34b-b7bcd1518335",
+        "title": "Senior Staff Machine Learning Engineer - Home",
+        "team": "Personalization",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/0d21c06c-31f7-4898-b34b-b7bcd1518335",
+        "applyUrl": "https://jobs.lever.co/spotify/0d21c06c-31f7-4898-b34b-b7bcd1518335/apply",
+        "createdAt": 1767701005795
+      },
+      {
+        "id": "ad5ef898-b800-4213-a63e-e39a97df9cfb",
+        "title": "Site Reliability Engineer - Backstage",
+        "team": "Platform",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/ad5ef898-b800-4213-a63e-e39a97df9cfb",
+        "applyUrl": "https://jobs.lever.co/spotify/ad5ef898-b800-4213-a63e-e39a97df9cfb/apply",
+        "createdAt": 1770308064357
+      },
+      {
+        "id": "3f98f62d-2bd9-49b7-b765-f24b127817fa",
+        "title": "Staff Machine Learning Engineer",
+        "team": "Personalization",
+        "department": "Engineering",
+        "location": "London",
+        "commitment": "Permanent",
+        "allLocations": [
+          "London",
+          "Stockholm"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/3f98f62d-2bd9-49b7-b765-f24b127817fa",
+        "applyUrl": "https://jobs.lever.co/spotify/3f98f62d-2bd9-49b7-b765-f24b127817fa/apply",
+        "createdAt": 1757868103906
+      },
+      {
+        "id": "40fee238-4ba5-4f65-bd6a-c655774d7ce0",
+        "title": "Staff Research Engineer - Music",
+        "team": "Music",
+        "department": "Engineering",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/40fee238-4ba5-4f65-bd6a-c655774d7ce0",
+        "applyUrl": "https://jobs.lever.co/spotify/40fee238-4ba5-4f65-bd6a-c655774d7ce0/apply",
+        "createdAt": 1761247985263
+      },
+      {
+        "id": "d196c5ef-9eac-44ff-9e8a-c82965c7e71a",
+        "title": "Staff Research Engineer - Music",
+        "team": "Music",
+        "department": "Engineering",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/d196c5ef-9eac-44ff-9e8a-c82965c7e71a",
+        "applyUrl": "https://jobs.lever.co/spotify/d196c5ef-9eac-44ff-9e8a-c82965c7e71a/apply",
+        "createdAt": 1761247279524
+      },
+      {
+        "id": "33114d31-b3d0-4bbb-bf7c-ab32596e8969",
+        "title": "Staff Research Scientist - Music",
+        "team": "Music",
+        "department": "Data and Analytics",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/33114d31-b3d0-4bbb-bf7c-ab32596e8969",
+        "applyUrl": "https://jobs.lever.co/spotify/33114d31-b3d0-4bbb-bf7c-ab32596e8969/apply",
+        "createdAt": 1761246105505
+      },
+      {
+        "id": "7ff04f01-8cc5-4ee9-94b4-c05a91fee0d7",
+        "title": "Staff Research Scientist - Music",
+        "team": "Music",
+        "department": "Data and Analytics",
+        "location": "Stockholm",
+        "commitment": "Permanent",
+        "allLocations": [
+          "Stockholm",
+          "London"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/7ff04f01-8cc5-4ee9-94b4-c05a91fee0d7",
+        "applyUrl": "https://jobs.lever.co/spotify/7ff04f01-8cc5-4ee9-94b4-c05a91fee0d7/apply",
+        "createdAt": 1761246727182
+      },
+      {
+        "id": "521272b5-9e4e-4ba0-a0b9-e6e5b067c7ac",
+        "title": "Workday Payroll Specialist",
+        "team": "Global Workplace Services",
+        "department": "People",
+        "location": "New York, NY",
+        "commitment": "Permanent",
+        "allLocations": [
+          "New York, NY",
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/spotify/521272b5-9e4e-4ba0-a0b9-e6e5b067c7ac",
+        "applyUrl": "https://jobs.lever.co/spotify/521272b5-9e4e-4ba0-a0b9-e6e5b067c7ac/apply",
+        "createdAt": 1756478202315
+      }
+    ],
+    "scrapedAt": "2026-03-09T10:52:31.327Z"
+  },
+  {
+    "company": "plaid",
+    "slug": "plaid",
+    "jobCount": 93,
+    "jobs": [
+      {
+        "id": "f783a8c4-8ae2-4646-b4f3-a194940ff3b2",
+        "title": "Account Executive - Banking and Wealth",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Raleigh-Durham"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/f783a8c4-8ae2-4646-b4f3-a194940ff3b2",
+        "applyUrl": "https://jobs.lever.co/plaid/f783a8c4-8ae2-4646-b4f3-a194940ff3b2/apply",
+        "createdAt": 1762907745394
+      },
+      {
+        "id": "d6389903-e642-4189-804c-02d271714bdb",
+        "title": "Account Executive - Fintech",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "San Francisco"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/d6389903-e642-4189-804c-02d271714bdb",
+        "applyUrl": "https://jobs.lever.co/plaid/d6389903-e642-4189-804c-02d271714bdb/apply",
+        "createdAt": 1767914803825
+      },
+      {
+        "id": "529e32e5-d849-498f-b313-29b6cc99e593",
+        "title": "Account Executive - Fintech Named",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "San Francisco"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/529e32e5-d849-498f-b313-29b6cc99e593",
+        "applyUrl": "https://jobs.lever.co/plaid/529e32e5-d849-498f-b313-29b6cc99e593/apply",
+        "createdAt": 1753824031587
+      },
+      {
+        "id": "a335de27-ae68-46cb-a320-8c0494e47e42",
+        "title": "Account Executive - Named Enterprise - Public Sector",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/a335de27-ae68-46cb-a320-8c0494e47e42",
+        "applyUrl": "https://jobs.lever.co/plaid/a335de27-ae68-46cb-a320-8c0494e47e42/apply",
+        "createdAt": 1760658232599
+      },
+      {
+        "id": "96cecfd1-a364-4514-8bf3-f753fd601e02",
+        "title": "Account Executive - SMB",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Raleigh-Durham"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/96cecfd1-a364-4514-8bf3-f753fd601e02",
+        "applyUrl": "https://jobs.lever.co/plaid/96cecfd1-a364-4514-8bf3-f753fd601e02/apply",
+        "createdAt": 1738084657783
+      },
+      {
+        "id": "98704e37-c2f5-491a-b5db-281eea83520a",
+        "title": "Account Executive Leader - Fraud",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/98704e37-c2f5-491a-b5db-281eea83520a",
+        "applyUrl": "https://jobs.lever.co/plaid/98704e37-c2f5-491a-b5db-281eea83520a/apply",
+        "createdAt": 1768528831587
+      },
+      {
+        "id": "2c176b51-6d61-409b-aab3-0faaa319f18e",
+        "title": "Account Executive Leader - Payments",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/2c176b51-6d61-409b-aab3-0faaa319f18e",
+        "applyUrl": "https://jobs.lever.co/plaid/2c176b51-6d61-409b-aab3-0faaa319f18e/apply",
+        "createdAt": 1768608225887
+      },
+      {
+        "id": "f09937a3-5edf-47c8-a9ba-69f9f5e39d86",
+        "title": "Account Manager - Banking and Wealth",
+        "team": "Account Management",
+        "department": "Account Management",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/f09937a3-5edf-47c8-a9ba-69f9f5e39d86",
+        "applyUrl": "https://jobs.lever.co/plaid/f09937a3-5edf-47c8-a9ba-69f9f5e39d86/apply",
+        "createdAt": 1767729457869
+      },
+      {
+        "id": "2200a764-239c-40c7-bd74-8785b1df62e4",
+        "title": "Account-Based Marketing Manager",
+        "team": "Marketing",
+        "department": "Marketing",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/2200a764-239c-40c7-bd74-8785b1df62e4",
+        "applyUrl": "https://jobs.lever.co/plaid/2200a764-239c-40c7-bd74-8785b1df62e4/apply",
+        "createdAt": 1768319831683
+      },
+      {
+        "id": "b2eef61c-c66a-46f3-bc55-477f5836f5bc",
+        "title": "Brand Design Manager - Growth",
+        "team": "Design",
+        "department": "Design",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/b2eef61c-c66a-46f3-bc55-477f5836f5bc",
+        "applyUrl": "https://jobs.lever.co/plaid/b2eef61c-c66a-46f3-bc55-477f5836f5bc/apply",
+        "createdAt": 1765920083294
+      },
+      {
+        "id": "0314736e-7b5a-40d3-ad8c-1d8052d53a83",
+        "title": "Brand Design Program Manager",
+        "team": "Design",
+        "department": "Design",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/0314736e-7b5a-40d3-ad8c-1d8052d53a83",
+        "applyUrl": "https://jobs.lever.co/plaid/0314736e-7b5a-40d3-ad8c-1d8052d53a83/apply",
+        "createdAt": 1762995776030
+      },
+      {
+        "id": "615ff21b-54e1-4511-845e-12a3d1cea521",
+        "title": "Business Operations",
+        "team": "Business Operations",
+        "department": "Business Operations",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/615ff21b-54e1-4511-845e-12a3d1cea521",
+        "applyUrl": "https://jobs.lever.co/plaid/615ff21b-54e1-4511-845e-12a3d1cea521/apply",
+        "createdAt": 1769463861618
+      },
+      {
+        "id": "04b342bf-6012-433f-918a-3d147f86595c",
+        "title": "Commercial",
+        "team": "Commercial",
+        "department": "New Product GTM & Commercial",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/04b342bf-6012-433f-918a-3d147f86595c",
+        "applyUrl": "https://jobs.lever.co/plaid/04b342bf-6012-433f-918a-3d147f86595c/apply",
+        "createdAt": 1764039531819
+      },
+      {
+        "id": "7b9db23f-8687-4bdc-bd75-170f6d8d622f",
+        "title": "Customer Operations Leader",
+        "team": "GTM Operations",
+        "department": "GTM Operations",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/7b9db23f-8687-4bdc-bd75-170f6d8d622f",
+        "applyUrl": "https://jobs.lever.co/plaid/7b9db23f-8687-4bdc-bd75-170f6d8d622f/apply",
+        "createdAt": 1770329028282
+      },
+      {
+        "id": "0dc0a0f9-7c59-468c-8bc7-8918a09d24d4",
+        "title": "Data Engineer  - Data Engineering",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/0dc0a0f9-7c59-468c-8bc7-8918a09d24d4",
+        "applyUrl": "https://jobs.lever.co/plaid/0dc0a0f9-7c59-468c-8bc7-8918a09d24d4/apply",
+        "createdAt": 1747190117383
+      },
+      {
+        "id": "619ed4a1-1bfb-4ad9-8309-b073135ec771",
+        "title": "Data Scientist - Fraud",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Raleigh-Durham",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/619ed4a1-1bfb-4ad9-8309-b073135ec771",
+        "applyUrl": "https://jobs.lever.co/plaid/619ed4a1-1bfb-4ad9-8309-b073135ec771/apply",
+        "createdAt": 1763486741883
+      },
+      {
+        "id": "18503c02-17a0-4c47-98c8-155b0b6ccc2a",
+        "title": "Data Scientist - Network Value",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/18503c02-17a0-4c47-98c8-155b0b6ccc2a",
+        "applyUrl": "https://jobs.lever.co/plaid/18503c02-17a0-4c47-98c8-155b0b6ccc2a/apply",
+        "createdAt": 1769818028287
+      },
+      {
+        "id": "9a7fdf04-036a-4e38-adcd-cbff770f6f82",
+        "title": "Digital Marketing Manager",
+        "team": "Marketing",
+        "department": "Marketing",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/9a7fdf04-036a-4e38-adcd-cbff770f6f82",
+        "applyUrl": "https://jobs.lever.co/plaid/9a7fdf04-036a-4e38-adcd-cbff770f6f82/apply",
+        "createdAt": 1768320152907
+      },
+      {
+        "id": "b2d4d105-9183-4982-8065-58126093c02d",
+        "title": "Engineering Manager - Consumer",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/b2d4d105-9183-4982-8065-58126093c02d",
+        "applyUrl": "https://jobs.lever.co/plaid/b2d4d105-9183-4982-8065-58126093c02d/apply",
+        "createdAt": 1765386690343
+      },
+      {
+        "id": "d40b3f7b-cdaa-441d-8d4a-6aad9a5f6a1b",
+        "title": "Engineering Manager - Credit Distribution",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "Seattle, WA",
+        "commitment": "",
+        "allLocations": [
+          "Seattle, WA",
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/d40b3f7b-cdaa-441d-8d4a-6aad9a5f6a1b",
+        "applyUrl": "https://jobs.lever.co/plaid/d40b3f7b-cdaa-441d-8d4a-6aad9a5f6a1b/apply",
+        "createdAt": 1769619272359
+      },
+      {
+        "id": "f50f9386-06b2-4b85-94b5-e265720949bc",
+        "title": "Engineering Manager - IDV",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/f50f9386-06b2-4b85-94b5-e265720949bc",
+        "applyUrl": "https://jobs.lever.co/plaid/f50f9386-06b2-4b85-94b5-e265720949bc/apply",
+        "createdAt": 1771887998596
+      },
+      {
+        "id": "5731dc74-0cf9-43ab-98db-c5e961370e7d",
+        "title": "Engineering Manager - Intelligent Tooling",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/5731dc74-0cf9-43ab-98db-c5e961370e7d",
+        "applyUrl": "https://jobs.lever.co/plaid/5731dc74-0cf9-43ab-98db-c5e961370e7d/apply",
+        "createdAt": 1762899705358
+      },
+      {
+        "id": "cdc5447e-b4c5-49f4-807a-f95656e2f1ce",
+        "title": "Engineering Manager - Machine Learning Infrastructure",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/cdc5447e-b4c5-49f4-807a-f95656e2f1ce",
+        "applyUrl": "https://jobs.lever.co/plaid/cdc5447e-b4c5-49f4-807a-f95656e2f1ce/apply",
+        "createdAt": 1757527864599
+      },
+      {
+        "id": "da1aae0b-ce8f-47e8-9cb8-233d8bf75a5a",
+        "title": "Engineering Manager - Payment Risk",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/da1aae0b-ce8f-47e8-9cb8-233d8bf75a5a",
+        "applyUrl": "https://jobs.lever.co/plaid/da1aae0b-ce8f-47e8-9cb8-233d8bf75a5a/apply",
+        "createdAt": 1761946210322
+      },
+      {
+        "id": "fafcc858-4607-43da-abb7-544ea8dfb6bd",
+        "title": "Event Marketing Specialist",
+        "team": "Marketing",
+        "department": "Marketing",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/fafcc858-4607-43da-abb7-544ea8dfb6bd",
+        "applyUrl": "https://jobs.lever.co/plaid/fafcc858-4607-43da-abb7-544ea8dfb6bd/apply",
+        "createdAt": 1767997680163
+      },
+      {
+        "id": "95277731-991f-4d9a-bcc2-db7baaee44b0",
+        "title": "Executive Assistant, Policy & Legal",
+        "team": "People",
+        "department": "People",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/95277731-991f-4d9a-bcc2-db7baaee44b0",
+        "applyUrl": "https://jobs.lever.co/plaid/95277731-991f-4d9a-bcc2-db7baaee44b0/apply",
+        "createdAt": 1770855963729
+      },
+      {
+        "id": "5d376246-e5ed-4dea-a306-19570dcb07c4",
+        "title": "Executive Editorial Lead",
+        "team": "Communications",
+        "department": "Communications",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/5d376246-e5ed-4dea-a306-19570dcb07c4",
+        "applyUrl": "https://jobs.lever.co/plaid/5d376246-e5ed-4dea-a306-19570dcb07c4/apply",
+        "createdAt": 1772144974094
+      },
+      {
+        "id": "f1631596-3d91-4d68-894d-bd80bb68f610",
+        "title": "Experienced Engineering Manager - Customer Growth & Experience",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/f1631596-3d91-4d68-894d-bd80bb68f610",
+        "applyUrl": "https://jobs.lever.co/plaid/f1631596-3d91-4d68-894d-bd80bb68f610/apply",
+        "createdAt": 1758058352638
+      },
+      {
+        "id": "8ca14e45-6c18-4156-a169-9352653559b6",
+        "title": "FinTech Account Manager - Named",
+        "team": "Account Management",
+        "department": "Account Management",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/8ca14e45-6c18-4156-a169-9352653559b6",
+        "applyUrl": "https://jobs.lever.co/plaid/8ca14e45-6c18-4156-a169-9352653559b6/apply",
+        "createdAt": 1769120654279
+      },
+      {
+        "id": "680d77af-487c-4226-9302-d16f37649bde",
+        "title": "GTM Strategic Finance",
+        "team": "Finance",
+        "department": "Finance",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/680d77af-487c-4226-9302-d16f37649bde",
+        "applyUrl": "https://jobs.lever.co/plaid/680d77af-487c-4226-9302-d16f37649bde/apply",
+        "createdAt": 1771538109462
+      },
+      {
+        "id": "979a8c5d-536a-48ce-8cbd-41202812d99d",
+        "title": "GTM Strategy & Operations Lead, GTM Technology",
+        "team": "GTM Operations",
+        "department": "GTM Operations",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/979a8c5d-536a-48ce-8cbd-41202812d99d",
+        "applyUrl": "https://jobs.lever.co/plaid/979a8c5d-536a-48ce-8cbd-41202812d99d/apply",
+        "createdAt": 1769577103727
+      },
+      {
+        "id": "582b1c72-e531-4e71-ba80-09956c1163eb",
+        "title": "Macro & Credit Research Economist",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/582b1c72-e531-4e71-ba80-09956c1163eb",
+        "applyUrl": "https://jobs.lever.co/plaid/582b1c72-e531-4e71-ba80-09956c1163eb/apply",
+        "createdAt": 1769638681215
+      },
+      {
+        "id": "e287ebb1-9529-4412-85e1-6b3737bedd9d",
+        "title": "Manager, Sales Development - Inbound",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/e287ebb1-9529-4412-85e1-6b3737bedd9d",
+        "applyUrl": "https://jobs.lever.co/plaid/e287ebb1-9529-4412-85e1-6b3737bedd9d/apply",
+        "createdAt": 1765227895427
+      },
+      {
+        "id": "b5311b97-bc98-4219-a3c9-efcd994243d0",
+        "title": "Marketing Strategy and Operations Analyst",
+        "team": "GTM Operations",
+        "department": "GTM Operations",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Raleigh-Durham"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/b5311b97-bc98-4219-a3c9-efcd994243d0",
+        "applyUrl": "https://jobs.lever.co/plaid/b5311b97-bc98-4219-a3c9-efcd994243d0/apply",
+        "createdAt": 1760565232870
+      },
+      {
+        "id": "feecc9a5-c9e7-44a1-9246-de84fa8b84bf",
+        "title": "Money Laundering Reporting Officer (MLRO), Europe",
+        "team": "Compliance",
+        "department": "Compliance",
+        "location": "London",
+        "commitment": "Full-time",
+        "allLocations": [
+          "London"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/feecc9a5-c9e7-44a1-9246-de84fa8b84bf",
+        "applyUrl": "https://jobs.lever.co/plaid/feecc9a5-c9e7-44a1-9246-de84fa8b84bf/apply",
+        "createdAt": 1770734902273
+      },
+      {
+        "id": "e0480846-7be1-40b4-a215-d4889da1978b",
+        "title": "Motion Designer",
+        "team": "Brand",
+        "department": "Brand",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Seattle, WA",
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/e0480846-7be1-40b4-a215-d4889da1978b",
+        "applyUrl": "https://jobs.lever.co/plaid/e0480846-7be1-40b4-a215-d4889da1978b/apply",
+        "createdAt": 1769208562994
+      },
+      {
+        "id": "5bd42805-f6a2-4346-ae89-da30bb427e01",
+        "title": "Named Account Executive - Credit",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/5bd42805-f6a2-4346-ae89-da30bb427e01",
+        "applyUrl": "https://jobs.lever.co/plaid/5bd42805-f6a2-4346-ae89-da30bb427e01/apply",
+        "createdAt": 1764632560214
+      },
+      {
+        "id": "22514543-cc83-4ba9-82a6-aeece27dd167",
+        "title": "Named Account Executive - Fraud",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/22514543-cc83-4ba9-82a6-aeece27dd167",
+        "applyUrl": "https://jobs.lever.co/plaid/22514543-cc83-4ba9-82a6-aeece27dd167/apply",
+        "createdAt": 1768608713141
+      },
+      {
+        "id": "177857f0-5455-4af7-ae04-1bedb3a1bc27",
+        "title": "New Business Associate - Inbound",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Raleigh-Durham"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/177857f0-5455-4af7-ae04-1bedb3a1bc27",
+        "applyUrl": "https://jobs.lever.co/plaid/177857f0-5455-4af7-ae04-1bedb3a1bc27/apply",
+        "createdAt": 1758898813344
+      },
+      {
+        "id": "15eef875-6124-4e9e-ab98-df1854643c56",
+        "title": "Partner Development Manager - Fintech",
+        "team": "Partnerships",
+        "department": "Partnerships",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/15eef875-6124-4e9e-ab98-df1854643c56",
+        "applyUrl": "https://jobs.lever.co/plaid/15eef875-6124-4e9e-ab98-df1854643c56/apply",
+        "createdAt": 1770773170768
+      },
+      {
+        "id": "bac42d6e-ab4e-4025-b58d-ec9e71dc7b50",
+        "title": "Policy Manager",
+        "team": "Policy",
+        "department": "Policy",
+        "location": "Washington DC",
+        "commitment": "Full-time",
+        "allLocations": [
+          "Washington DC"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/bac42d6e-ab4e-4025-b58d-ec9e71dc7b50",
+        "applyUrl": "https://jobs.lever.co/plaid/bac42d6e-ab4e-4025-b58d-ec9e71dc7b50/apply",
+        "createdAt": 1772580255773
+      },
+      {
+        "id": "4ced8121-c5a8-4a67-af1e-44d854b05d68",
+        "title": "Privacy & Data Innovation Counsel",
+        "team": "Legal",
+        "department": "Legal",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/4ced8121-c5a8-4a67-af1e-44d854b05d68",
+        "applyUrl": "https://jobs.lever.co/plaid/4ced8121-c5a8-4a67-af1e-44d854b05d68/apply",
+        "createdAt": 1771373527423
+      },
+      {
+        "id": "66eb7ff7-6227-45f8-a602-77fe637eec94",
+        "title": "Product Designer, Fraud & Risk",
+        "team": "Design",
+        "department": "Design",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/66eb7ff7-6227-45f8-a602-77fe637eec94",
+        "applyUrl": "https://jobs.lever.co/plaid/66eb7ff7-6227-45f8-a602-77fe637eec94/apply",
+        "createdAt": 1768936877937
+      },
+      {
+        "id": "8a10da34-daad-4ebe-bcfb-4485089a0538",
+        "title": "Product Lead - Account Verification",
+        "team": "Product",
+        "department": "Product",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/8a10da34-daad-4ebe-bcfb-4485089a0538",
+        "applyUrl": "https://jobs.lever.co/plaid/8a10da34-daad-4ebe-bcfb-4485089a0538/apply",
+        "createdAt": 1763096797452
+      },
+      {
+        "id": "b87c595b-b231-4a86-bffa-450e3f9dc335",
+        "title": "Product Lead - Growth",
+        "team": "Product",
+        "department": "Product",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/b87c595b-b231-4a86-bffa-450e3f9dc335",
+        "applyUrl": "https://jobs.lever.co/plaid/b87c595b-b231-4a86-bffa-450e3f9dc335/apply",
+        "createdAt": 1766437922183
+      },
+      {
+        "id": "f49c8a79-0281-420d-aff6-856a66f932d0",
+        "title": "Product Lead - Money Movement",
+        "team": "Product",
+        "department": "Product",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/f49c8a79-0281-420d-aff6-856a66f932d0",
+        "applyUrl": "https://jobs.lever.co/plaid/f49c8a79-0281-420d-aff6-856a66f932d0/apply",
+        "createdAt": 1763097620183
+      },
+      {
+        "id": "9c7b4342-de57-4a74-8ada-9741a07c7b5f",
+        "title": "Product Manager",
+        "team": "Product",
+        "department": "Product",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/9c7b4342-de57-4a74-8ada-9741a07c7b5f",
+        "applyUrl": "https://jobs.lever.co/plaid/9c7b4342-de57-4a74-8ada-9741a07c7b5f/apply",
+        "createdAt": 1761276207086
+      },
+      {
+        "id": "1d3a494a-ca7d-4b25-afc5-dc32ce1fc50d",
+        "title": "Product Marketing Manager - Payments",
+        "team": "Product Marketing",
+        "department": "Product Marketing",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/1d3a494a-ca7d-4b25-afc5-dc32ce1fc50d",
+        "applyUrl": "https://jobs.lever.co/plaid/1d3a494a-ca7d-4b25-afc5-dc32ce1fc50d/apply",
+        "createdAt": 1754337922532
+      },
+      {
+        "id": "7f6174b1-2470-400c-94e3-64fe62664884",
+        "title": "Product Operations",
+        "team": "Business Operations",
+        "department": "Business Operations",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/7f6174b1-2470-400c-94e3-64fe62664884",
+        "applyUrl": "https://jobs.lever.co/plaid/7f6174b1-2470-400c-94e3-64fe62664884/apply",
+        "createdAt": 1771027605986
+      },
+      {
+        "id": "909fe097-a480-49c4-bb44-430757bd3019",
+        "title": "Product Recruiter",
+        "team": "Recruiting",
+        "department": "Recruiting",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/909fe097-a480-49c4-bb44-430757bd3019",
+        "applyUrl": "https://jobs.lever.co/plaid/909fe097-a480-49c4-bb44-430757bd3019/apply",
+        "createdAt": 1760037120072
+      },
+      {
+        "id": "0637c8d0-4e39-4f11-af17-6e63324a9b79",
+        "title": "Recruiting Manager, Specialized Tech",
+        "team": "Recruiting",
+        "department": "Recruiting",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/0637c8d0-4e39-4f11-af17-6e63324a9b79",
+        "applyUrl": "https://jobs.lever.co/plaid/0637c8d0-4e39-4f11-af17-6e63324a9b79/apply",
+        "createdAt": 1770758894319
+      },
+      {
+        "id": "8d7e55bb-6d48-4e2c-9f9f-f05d9a18681b",
+        "title": "Risk Analyst, Customer Oversight",
+        "team": "Risk",
+        "department": "Risk",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/8d7e55bb-6d48-4e2c-9f9f-f05d9a18681b",
+        "applyUrl": "https://jobs.lever.co/plaid/8d7e55bb-6d48-4e2c-9f9f-f05d9a18681b/apply",
+        "createdAt": 1770392639881
+      },
+      {
+        "id": "e852b15b-b38f-45a6-9a81-af9c4b758b5f",
+        "title": "Sales Development Representative",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "Raleigh-Durham"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/e852b15b-b38f-45a6-9a81-af9c4b758b5f",
+        "applyUrl": "https://jobs.lever.co/plaid/e852b15b-b38f-45a6-9a81-af9c4b758b5f/apply",
+        "createdAt": 1695765285815
+      },
+      {
+        "id": "e8984a69-e0bb-4ef5-a8fe-2c3593cbd855",
+        "title": "Sales Development Representative",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York",
+          "Raleigh-Durham"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/e8984a69-e0bb-4ef5-a8fe-2c3593cbd855",
+        "applyUrl": "https://jobs.lever.co/plaid/e8984a69-e0bb-4ef5-a8fe-2c3593cbd855/apply",
+        "createdAt": 1695769335887
+      },
+      {
+        "id": "3e67a67b-dfbb-4c33-a691-9aed28461171",
+        "title": "Sales Engineer - Enterprise",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/3e67a67b-dfbb-4c33-a691-9aed28461171",
+        "applyUrl": "https://jobs.lever.co/plaid/3e67a67b-dfbb-4c33-a691-9aed28461171/apply",
+        "createdAt": 1772473981476
+      },
+      {
+        "id": "db945796-be4f-4498-a839-d84508906a9d",
+        "title": "Sales Leader - SMB",
+        "team": "Sales",
+        "department": "Sales",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/db945796-be4f-4498-a839-d84508906a9d",
+        "applyUrl": "https://jobs.lever.co/plaid/db945796-be4f-4498-a839-d84508906a9d/apply",
+        "createdAt": 1763751641657
+      },
+      {
+        "id": "ae19a253-926d-4ca1-b236-f41e5edf8ac2",
+        "title": "Sales Operations Associate, GTM Strategy & Operations",
+        "team": "GTM Operations",
+        "department": "GTM Operations",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/ae19a253-926d-4ca1-b236-f41e5edf8ac2",
+        "applyUrl": "https://jobs.lever.co/plaid/ae19a253-926d-4ca1-b236-f41e5edf8ac2/apply",
+        "createdAt": 1760049487094
+      },
+      {
+        "id": "d31b1c6b-a5ec-4a1d-b245-9601457a48b2",
+        "title": "Senior Credit Risk Manager - Payments",
+        "team": "Risk",
+        "department": "Risk",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/d31b1c6b-a5ec-4a1d-b245-9601457a48b2",
+        "applyUrl": "https://jobs.lever.co/plaid/d31b1c6b-a5ec-4a1d-b245-9601457a48b2/apply",
+        "createdAt": 1769015299107
+      },
+      {
+        "id": "022278b3-0943-44b3-a54b-1de421017589",
+        "title": "Senior Data Engineer - Data Engineering",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/022278b3-0943-44b3-a54b-1de421017589",
+        "applyUrl": "https://jobs.lever.co/plaid/022278b3-0943-44b3-a54b-1de421017589/apply",
+        "createdAt": 1731717372208
+      },
+      {
+        "id": "0512e257-f07a-481e-8496-d2f86e6caf1a",
+        "title": "Senior Data Scientist - Data Foundations & AI",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/0512e257-f07a-481e-8496-d2f86e6caf1a",
+        "applyUrl": "https://jobs.lever.co/plaid/0512e257-f07a-481e-8496-d2f86e6caf1a/apply",
+        "createdAt": 1772044344636
+      },
+      {
+        "id": "0106d105-641d-49f6-a605-4ea64b8c4bf7",
+        "title": "Senior Data Scientist - Payments",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/0106d105-641d-49f6-a605-4ea64b8c4bf7",
+        "applyUrl": "https://jobs.lever.co/plaid/0106d105-641d-49f6-a605-4ea64b8c4bf7/apply",
+        "createdAt": 1760980354346
+      },
+      {
+        "id": "bee8c984-b6d9-4c37-a53e-a1492fe2a225",
+        "title": "Senior Data Scientist - Payments ACH",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/bee8c984-b6d9-4c37-a53e-a1492fe2a225",
+        "applyUrl": "https://jobs.lever.co/plaid/bee8c984-b6d9-4c37-a53e-a1492fe2a225/apply",
+        "createdAt": 1770928409661
+      },
+      {
+        "id": "6d510dc8-2e7b-48e6-b8e8-601ca5777fa8",
+        "title": "Senior Developer Relations Engineer - Customer Growth and Experience",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States",
+          "San Francisco",
+          "New York",
+          "Seattle, WA"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/6d510dc8-2e7b-48e6-b8e8-601ca5777fa8",
+        "applyUrl": "https://jobs.lever.co/plaid/6d510dc8-2e7b-48e6-b8e8-601ca5777fa8/apply",
+        "createdAt": 1771345124333
+      },
+      {
+        "id": "1ad7a02f-c7ec-450f-a1de-d0ed0cc75f44",
+        "title": "Senior Experiential Designer",
+        "team": "Design",
+        "department": "Design",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/1ad7a02f-c7ec-450f-a1de-d0ed0cc75f44",
+        "applyUrl": "https://jobs.lever.co/plaid/1ad7a02f-c7ec-450f-a1de-d0ed0cc75f44/apply",
+        "createdAt": 1770658715413
+      },
+      {
+        "id": "e28926e1-4d8d-4419-95e2-42ade249e998",
+        "title": "Senior Machine Learning Engineer - Fraud (Research Scientist)",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States",
+          "New York",
+          "San Francisco",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/e28926e1-4d8d-4419-95e2-42ade249e998",
+        "applyUrl": "https://jobs.lever.co/plaid/e28926e1-4d8d-4419-95e2-42ade249e998/apply",
+        "createdAt": 1770361907299
+      },
+      {
+        "id": "b7d3a770-946b-4b08-92d3-e02506742066",
+        "title": "Senior Machine Learning Engineer - Payments",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/b7d3a770-946b-4b08-92d3-e02506742066",
+        "applyUrl": "https://jobs.lever.co/plaid/b7d3a770-946b-4b08-92d3-e02506742066/apply",
+        "createdAt": 1769104460600
+      },
+      {
+        "id": "6ce66588-0d49-42be-bcdd-724425d02b8b",
+        "title": "Senior Product Manager",
+        "team": "Product",
+        "department": "Product",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/6ce66588-0d49-42be-bcdd-724425d02b8b",
+        "applyUrl": "https://jobs.lever.co/plaid/6ce66588-0d49-42be-bcdd-724425d02b8b/apply",
+        "createdAt": 1770742284951
+      },
+      {
+        "id": "0afb2b7b-7e54-40e4-a8f6-642ac1df00f6",
+        "title": "Senior Software Engineer - AI Applications",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/0afb2b7b-7e54-40e4-a8f6-642ac1df00f6",
+        "applyUrl": "https://jobs.lever.co/plaid/0afb2b7b-7e54-40e4-a8f6-642ac1df00f6/apply",
+        "createdAt": 1772226306529
+      },
+      {
+        "id": "0e7c6766-a599-4c5f-80a9-36164c45d93e",
+        "title": "Senior Software Engineer - Backend",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/0e7c6766-a599-4c5f-80a9-36164c45d93e",
+        "applyUrl": "https://jobs.lever.co/plaid/0e7c6766-a599-4c5f-80a9-36164c45d93e/apply",
+        "createdAt": 1727129280620
+      },
+      {
+        "id": "7b9d1e17-f492-492d-9c77-9b82f57c6d78",
+        "title": "Senior Software Engineer - Backend",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "Seattle, WA",
+        "commitment": "Full-time",
+        "allLocations": [
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/7b9d1e17-f492-492d-9c77-9b82f57c6d78",
+        "applyUrl": "https://jobs.lever.co/plaid/7b9d1e17-f492-492d-9c77-9b82f57c6d78/apply",
+        "createdAt": 1772489431890
+      },
+      {
+        "id": "cdfaadbd-7cae-479c-94fc-538a610cf4f0",
+        "title": "Senior Software Engineer - Backend",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/cdfaadbd-7cae-479c-94fc-538a610cf4f0",
+        "applyUrl": "https://jobs.lever.co/plaid/cdfaadbd-7cae-479c-94fc-538a610cf4f0/apply",
+        "createdAt": 1727207942783
+      },
+      {
+        "id": "05b0ae3f-ec60-48d6-ae27-1bd89d928c47",
+        "title": "Senior Software Engineer - Data Infrastructure",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/05b0ae3f-ec60-48d6-ae27-1bd89d928c47",
+        "applyUrl": "https://jobs.lever.co/plaid/05b0ae3f-ec60-48d6-ae27-1bd89d928c47/apply",
+        "createdAt": 1757949773106
+      },
+      {
+        "id": "28bad806-9938-48eb-b643-2720605cd965",
+        "title": "Senior Software Engineer - Fullstack",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "Seattle, WA",
+        "commitment": "Full-time",
+        "allLocations": [
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/28bad806-9938-48eb-b643-2720605cd965",
+        "applyUrl": "https://jobs.lever.co/plaid/28bad806-9938-48eb-b643-2720605cd965/apply",
+        "createdAt": 1772489657006
+      },
+      {
+        "id": "9a4fcc86-9c58-4439-9fe5-9c206cfc8dd3",
+        "title": "Senior Software Engineer - Fullstack",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/9a4fcc86-9c58-4439-9fe5-9c206cfc8dd3",
+        "applyUrl": "https://jobs.lever.co/plaid/9a4fcc86-9c58-4439-9fe5-9c206cfc8dd3/apply",
+        "createdAt": 1727207986866
+      },
+      {
+        "id": "de02fe74-6365-4aa0-8d21-fa700db3abe8",
+        "title": "Senior Software Engineer - Fullstack",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/de02fe74-6365-4aa0-8d21-fa700db3abe8",
+        "applyUrl": "https://jobs.lever.co/plaid/de02fe74-6365-4aa0-8d21-fa700db3abe8/apply",
+        "createdAt": 1727128830321
+      },
+      {
+        "id": "16383203-9942-42be-9698-76207e2a500e",
+        "title": "Senior Software Engineer - ML Infrastructure",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/16383203-9942-42be-9698-76207e2a500e",
+        "applyUrl": "https://jobs.lever.co/plaid/16383203-9942-42be-9698-76207e2a500e/apply",
+        "createdAt": 1757953826217
+      },
+      {
+        "id": "43b1374d-5c5e-4b63-b710-a95e3cb76bbe",
+        "title": "Senior Software Engineer - Network Enablement (Applied ML)",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/43b1374d-5c5e-4b63-b710-a95e3cb76bbe",
+        "applyUrl": "https://jobs.lever.co/plaid/43b1374d-5c5e-4b63-b710-a95e3cb76bbe/apply",
+        "createdAt": 1754342962196
+      },
+      {
+        "id": "eb87ad8f-2141-429f-b0d2-fde095823044",
+        "title": "Social Media Lead",
+        "team": "Communications",
+        "department": "Communications",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/eb87ad8f-2141-429f-b0d2-fde095823044",
+        "applyUrl": "https://jobs.lever.co/plaid/eb87ad8f-2141-429f-b0d2-fde095823044/apply",
+        "createdAt": 1763480846831
+      },
+      {
+        "id": "49139a62-a9bc-4400-ae89-789818b34cb8",
+        "title": "Software Engineer",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/49139a62-a9bc-4400-ae89-789818b34cb8",
+        "applyUrl": "https://jobs.lever.co/plaid/49139a62-a9bc-4400-ae89-789818b34cb8/apply",
+        "createdAt": 1749230501679
+      },
+      {
+        "id": "f455a60a-6ea0-4d1b-890b-5f7869192c5f",
+        "title": "Software Engineer",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "Seattle, WA",
+        "commitment": "Full-time",
+        "allLocations": [
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/f455a60a-6ea0-4d1b-890b-5f7869192c5f",
+        "applyUrl": "https://jobs.lever.co/plaid/f455a60a-6ea0-4d1b-890b-5f7869192c5f/apply",
+        "createdAt": 1772489780844
+      },
+      {
+        "id": "f456f4fa-a9f7-4673-892a-8943e3cfa3fe",
+        "title": "Software Engineer",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/f456f4fa-a9f7-4673-892a-8943e3cfa3fe",
+        "applyUrl": "https://jobs.lever.co/plaid/f456f4fa-a9f7-4673-892a-8943e3cfa3fe/apply",
+        "createdAt": 1724870763809
+      },
+      {
+        "id": "2b9a141e-0669-4197-aa52-2b07d9fadc96",
+        "title": "Software Engineer - Platform",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/2b9a141e-0669-4197-aa52-2b07d9fadc96",
+        "applyUrl": "https://jobs.lever.co/plaid/2b9a141e-0669-4197-aa52-2b07d9fadc96/apply",
+        "createdAt": 1755794364103
+      },
+      {
+        "id": "2f79ded3-c9b3-407d-b3c1-da42d5e95693",
+        "title": "Staff Product Manager - AI Foundations",
+        "team": "Product",
+        "department": "Product",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/2f79ded3-c9b3-407d-b3c1-da42d5e95693",
+        "applyUrl": "https://jobs.lever.co/plaid/2f79ded3-c9b3-407d-b3c1-da42d5e95693/apply",
+        "createdAt": 1763095720055
+      },
+      {
+        "id": "2c06ab7d-0925-46be-a79e-73c014022898",
+        "title": "Staff Product Manager - API & Developer Experience",
+        "team": "Product",
+        "department": "Product",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/2c06ab7d-0925-46be-a79e-73c014022898",
+        "applyUrl": "https://jobs.lever.co/plaid/2c06ab7d-0925-46be-a79e-73c014022898/apply",
+        "createdAt": 1748993850708
+      },
+      {
+        "id": "80321712-6e20-47af-9dd9-c79e9f55ab44",
+        "title": "Staff Product Manager - Fraud",
+        "team": "Product",
+        "department": "Product",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/80321712-6e20-47af-9dd9-c79e9f55ab44",
+        "applyUrl": "https://jobs.lever.co/plaid/80321712-6e20-47af-9dd9-c79e9f55ab44/apply",
+        "createdAt": 1756334466388
+      },
+      {
+        "id": "a6bf6eeb-6486-4e45-a3b2-e712f32523d3",
+        "title": "Staff Software Engineer - AI",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/a6bf6eeb-6486-4e45-a3b2-e712f32523d3",
+        "applyUrl": "https://jobs.lever.co/plaid/a6bf6eeb-6486-4e45-a3b2-e712f32523d3/apply",
+        "createdAt": 1767999671098
+      },
+      {
+        "id": "0a94e7cb-1f30-40d8-ae09-899200091386",
+        "title": "Staff Software Engineer - Money Movement",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/0a94e7cb-1f30-40d8-ae09-899200091386",
+        "applyUrl": "https://jobs.lever.co/plaid/0a94e7cb-1f30-40d8-ae09-899200091386/apply",
+        "createdAt": 1764020162325
+      },
+      {
+        "id": "90b7be5b-30f3-43c0-b576-879065991072",
+        "title": "Staff Software Engineer - Online Storage",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/90b7be5b-30f3-43c0-b576-879065991072",
+        "applyUrl": "https://jobs.lever.co/plaid/90b7be5b-30f3-43c0-b576-879065991072/apply",
+        "createdAt": 1772229511804
+      },
+      {
+        "id": "55eecfac-b1cc-4660-a728-ae840bc9a267",
+        "title": "Staff Software Engineer - Product Foundations",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/55eecfac-b1cc-4660-a728-ae840bc9a267",
+        "applyUrl": "https://jobs.lever.co/plaid/55eecfac-b1cc-4660-a728-ae840bc9a267/apply",
+        "createdAt": 1755056300194
+      },
+      {
+        "id": "acb399b1-e0f8-45f3-bffa-c89c9c573a12",
+        "title": "Staff Technical Program Manager - FinOps",
+        "team": "Engineering",
+        "department": "Engineering",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York",
+          "Seattle, WA"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/acb399b1-e0f8-45f3-bffa-c89c9c573a12",
+        "applyUrl": "https://jobs.lever.co/plaid/acb399b1-e0f8-45f3-bffa-c89c9c573a12/apply",
+        "createdAt": 1767996754831
+      },
+      {
+        "id": "b6b36372-68a9-4bc2-9f5b-c3cb34277bec",
+        "title": "Technical Account Manager - Enterprise",
+        "team": "Professional Services",
+        "department": "Professional Services",
+        "location": "San Francisco",
+        "commitment": "Full-time",
+        "allLocations": [
+          "San Francisco",
+          "New York"
+        ],
+        "workplaceType": "hybrid",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/b6b36372-68a9-4bc2-9f5b-c3cb34277bec",
+        "applyUrl": "https://jobs.lever.co/plaid/b6b36372-68a9-4bc2-9f5b-c3cb34277bec/apply",
+        "createdAt": 1763597603165
+      },
+      {
+        "id": "1e10caf7-85ed-4610-842f-78cea7d40de7",
+        "title": "Technical Support Engineer",
+        "team": "Product Support",
+        "department": "Product Support",
+        "location": "United States",
+        "commitment": "Full-time",
+        "allLocations": [
+          "United States"
+        ],
+        "workplaceType": "remote",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/1e10caf7-85ed-4610-842f-78cea7d40de7",
+        "applyUrl": "https://jobs.lever.co/plaid/1e10caf7-85ed-4610-842f-78cea7d40de7/apply",
+        "createdAt": 1768496406710
+      },
+      {
+        "id": "2146a355-1a0e-4d82-8aca-9dd4b2b5f1b5",
+        "title": "Workplace Operations Manager",
+        "team": "Workplace Experience",
+        "department": "Workplace Experience",
+        "location": "New York",
+        "commitment": "Full-time",
+        "allLocations": [
+          "New York"
+        ],
+        "workplaceType": "onsite",
+        "description": "",
+        "descriptionPlain": "",
+        "lists": [],
+        "additional": "",
+        "hostedUrl": "https://jobs.lever.co/plaid/2146a355-1a0e-4d82-8aca-9dd4b2b5f1b5",
+        "applyUrl": "https://jobs.lever.co/plaid/2146a355-1a0e-4d82-8aca-9dd4b2b5f1b5/apply",
+        "createdAt": 1772819306239
+      }
+    ],
+    "scrapedAt": "2026-03-09T10:52:31.814Z"
+  }
+]

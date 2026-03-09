@@ -1,0 +1,12 @@
+{
+  "scrapedAt": "2026-03-09T10:52:37.375Z",
+  "totalCompanies": 1,
+  "totalJobs": 37,
+  "companies": [
+    {
+      "company": "1000heads",
+      "slug": "1000heads",
+      "jobCount": 37
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "scrapedAt": "2026-03-09T10:52:47.564Z",
+  "totalCompanies": 2,
+  "totalJobs": 247,
+  "companies": [
+    {
+      "company": "spotify",
+      "slug": "spotify",
+      "jobCount": 154
+    },
+    {
+      "company": "plaid",
+      "slug": "plaid",
+      "jobCount": 93
+    }
+  ]
+}

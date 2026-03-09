@@ -1,0 +1,22 @@
+name = "job-board"
+compatibility_date = "2025-04-01"
+main = "src/worker.ts"
+
+[assets]
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "job-board"
+database_id = "1e5cbd5f-7681-4836-83fb-67dfb3d21e11"
+
+[placement]
+mode = "smart"
+
+[[kv_namespaces]]
+binding = "STATS_KV"
+id = "c8268fd130e24ae2b31d5bf548cd093a"
+
+[triggers]
+crons = ["0 0 * * *", "0 6 * * *", "0 12 * * *", "0 18 * * *"]

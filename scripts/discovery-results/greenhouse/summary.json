@@ -1,0 +1,77 @@
+{
+  "scrapedAt": "2026-03-09T10:53:11.617Z",
+  "totalCompanies": 14,
+  "totalJobs": 3749,
+  "companies": [
+    {
+      "company": "databricks",
+      "slug": "databricks",
+      "jobCount": 762
+    },
+    {
+      "company": "cloudflare",
+      "slug": "cloudflare",
+      "jobCount": 575
+    },
+    {
+      "company": "stripe",
+      "slug": "stripe",
+      "jobCount": 559
+    },
+    {
+      "company": "datadog",
+      "slug": "datadog",
+      "jobCount": 437
+    },
+    {
+      "company": "airbnb",
+      "slug": "airbnb",
+      "jobCount": 257
+    },
+    {
+      "company": "coinbase",
+      "slug": "coinbase",
+      "jobCount": 225
+    },
+    {
+      "company": "figma",
+      "slug": "figma",
+      "jobCount": 172
+    },
+    {
+      "company": "lyft",
+      "slug": "lyft",
+      "jobCount": 163
+    },
+    {
+      "company": "gitlab",
+      "slug": "gitlab",
+      "jobCount": 162
+    },
+    {
+      "company": "robinhood",
+      "slug": "robinhood",
+      "jobCount": 142
+    },
+    {
+      "company": "pinterest",
+      "slug": "pinterest",
+      "jobCount": 109
+    },
+    {
+      "company": "gusto",
+      "slug": "gusto",
+      "jobCount": 75
+    },
+    {
+      "company": "twitch",
+      "slug": "twitch",
+      "jobCount": 66
+    },
+    {
+      "company": "airtable",
+      "slug": "airtable",
+      "jobCount": 45
+    }
+  ]
+}

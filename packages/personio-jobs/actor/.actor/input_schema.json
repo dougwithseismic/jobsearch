@@ -1,0 +1,98 @@
+{
+  "title": "Personio Jobs Scraper",
+  "description": "Discover and scrape jobs from all Personio-powered company job boards. Finds companies automatically via Common Crawl indexes, then scrapes their public job listings via the Personio XML API.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "How to find companies to scrape.\n- **all**: Auto-discover companies from Common Crawl + scrape all of them\n- **companies**: Scrape only the specified company slugs\n- **search**: Scrape specified companies and apply filters",
+      "editor": "select",
+      "default": "all",
+      "enum": ["all", "companies", "search"],
+      "enumTitles": ["All (discover + scrape)", "Specific companies", "Search (companies + filters)"]
+    },
+    "companies": {
+      "title": "Company Slugs",
+      "type": "array",
+      "description": "Company slugs to scrape (used in 'companies' and 'search' modes). The slug is the company identifier in the Personio URL, e.g. 'acme' from acme.jobs.personio.de",
+      "editor": "stringList",
+      "default": []
+    },
+    "locationFilter": {
+      "title": "Location Filter",
+      "type": "string",
+      "description": "Regex pattern to filter jobs by location (e.g. 'Berlin|Prague|Remote')",
+      "editor": "textfield",
+      "default": "",
+      "sectionCaption": "Filters",
+      "sectionDescription": "Optional regex filters to narrow down results. Applied after scraping."
+    },
+    "departmentFilter": {
+      "title": "Department Filter",
+      "type": "string",
+      "description": "Regex pattern to filter jobs by department (e.g. 'Engineering|Product')",
+      "editor": "textfield",
+      "default": ""
+    },
+    "officeFilter": {
+      "title": "Office Filter",
+      "type": "string",
+      "description": "Regex pattern to filter jobs by office (e.g. 'Berlin|London')",
+      "editor": "textfield",
+      "default": ""
+    },
+    "keywordFilter": {
+      "title": "Keyword Filter",
+      "type": "string",
+      "description": "Regex pattern to filter jobs by title or content (e.g. 'Senior|Lead|Staff')",
+      "editor": "textfield",
+      "default": ""
+    },
+    "seniorityFilter": {
+      "title": "Seniority Filter",
+      "type": "string",
+      "description": "Regex pattern to filter jobs by seniority level (e.g. 'Senior|Lead|Principal')",
+      "editor": "textfield",
+      "default": ""
+    },
+    "employmentTypeFilter": {
+      "title": "Employment Type Filter",
+      "type": "string",
+      "description": "Regex pattern to filter jobs by employment type (e.g. 'permanent|full.time')",
+      "editor": "textfield",
+      "default": ""
+    },
+    "includeContent": {
+      "title": "Include Job Descriptions",
+      "type": "boolean",
+      "description": "Include full HTML job descriptions in the output. Increases data size.",
+      "default": false,
+      "sectionCaption": "Options"
+    },
+    "language": {
+      "title": "Language",
+      "type": "string",
+      "description": "Language code for job listings (e.g. 'en', 'de', 'fr')",
+      "editor": "textfield",
+      "default": "en"
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "description": "Number of companies to scrape in parallel",
+      "default": 5,
+      "minimum": 1,
+      "maximum": 50
+    },
+    "maxCompanies": {
+      "title": "Max Companies",
+      "type": "integer",
+      "description": "Limit the number of companies to scrape (0 = no limit, useful for testing)",
+      "default": 0,
+      "minimum": 0
+    }
+  },
+  "required": ["mode"]
+}

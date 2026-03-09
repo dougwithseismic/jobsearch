@@ -1,0 +1,75 @@
+name: Ingest Jobs
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+    - cron: '0 6 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: 'Comma-separated sources (or "all")'
+        default: 'all'
+
+jobs:
+  scrape:
+    strategy:
+      matrix:
+        source: [ashby, greenhouse, lever, workable, recruitee, smartrecruiters, breezyhr, personio, hn]
+      fail-fast: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 23
+          cache: pnpm
+      - run: pnpm install
+      - name: Scrape ${{ matrix.source }}
+        run: npx tsx packages/job-ingest/src/cli.ts --source ${{ matrix.source }} --db /tmp/${{ matrix.source }}.db --quiet
+      - name: Export SQL
+        run: npx tsx packages/job-ingest/src/cli.ts --db /tmp/${{ matrix.source }}.db --export-sql /tmp/${{ matrix.source }}.sql --stats
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sql-${{ matrix.source }}
+          path: /tmp/${{ matrix.source }}.sql
+          retention-days: 1
+
+  push-to-d1:
+    needs: scrape
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 23
+          cache: pnpm
+      - run: pnpm install
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/sql-artifacts
+          pattern: sql-*
+          merge-multiple: true
+      - name: Push to D1
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          for f in /tmp/sql-artifacts/*.sql; do
+            echo "Pushing $(basename $f)..."
+            npx wrangler d1 execute job-board --remote --file="$f" || echo "Failed: $f"
+          done
+      - name: Purge cache
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: |
+          curl -s -X POST "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d '{"purge_everything": true}'

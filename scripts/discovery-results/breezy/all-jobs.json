@@ -1,0 +1,162 @@
+[
+  {
+    "company": "MS Breezy Trial",
+    "slug": "breezy",
+    "jobCount": 3,
+    "jobs": [
+      {
+        "id": "98323abf2296",
+        "friendlyId": "98323abf2296-employee-12",
+        "name": "Employee #12",
+        "url": "https://breezy.breezy.hr/p/98323abf2296-employee-12",
+        "publishedDate": "2024-02-15T14:37:22.684Z",
+        "type": {
+          "id": "other",
+          "name": "Other"
+        },
+        "location": {
+          "country": {
+            "name": "United States",
+            "id": "US"
+          },
+          "state": {
+            "id": "FL",
+            "name": "Florida"
+          },
+          "city": "Chaos",
+          "primary": true,
+          "isRemote": false,
+          "name": "Chaos, FL"
+        },
+        "department": "Does Not Matter",
+        "salary": "$0.05 - $0.06 / hr",
+        "company": {
+          "name": "MS Breezy Trial",
+          "logoUrl": null,
+          "friendlyId": "breezy",
+          "isMultipleLocationsEnabled": false
+        },
+        "locations": [
+          {
+            "country": {
+              "name": "United States",
+              "id": "US"
+            },
+            "countryCode": "",
+            "city": "Chaos",
+            "region": "",
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "id": "088ac6d52139",
+        "friendlyId": "088ac6d52139-open-position",
+        "name": "Open Position",
+        "url": "https://breezy.breezy.hr/p/088ac6d52139-open-position",
+        "publishedDate": "2023-04-06T01:32:13.932Z",
+        "type": {
+          "id": "contract",
+          "name": "Contract"
+        },
+        "location": {
+          "country": {
+            "name": "United States",
+            "id": "US"
+          },
+          "state": {
+            "id": "NY",
+            "name": "New York"
+          },
+          "city": "New York",
+          "primary": true,
+          "isRemote": false,
+          "name": "New York, NY"
+        },
+        "department": "Sporting Goods",
+        "salary": "$1.00 - $5.00",
+        "company": {
+          "name": "MS Breezy Trial",
+          "logoUrl": null,
+          "friendlyId": "breezy",
+          "isMultipleLocationsEnabled": false
+        },
+        "locations": []
+      },
+      {
+        "id": "4f4620daf613",
+        "friendlyId": "4f4620daf613-position-title-details",
+        "name": "Position Title Details",
+        "url": "https://breezy.breezy.hr/p/4f4620daf613-position-title-details",
+        "publishedDate": "2022-05-02T17:43:54.391Z",
+        "type": {
+          "id": "fullTime",
+          "name": "Full-Time"
+        },
+        "location": {
+          "country": {
+            "name": "United States",
+            "id": "US"
+          },
+          "state": {
+            "id": "CT",
+            "name": "Connecticut"
+          },
+          "city": "Sandy Hook",
+          "primary": true,
+          "isRemote": false,
+          "name": "Sandy Hook, CT"
+        },
+        "department": "Department X",
+        "salary": "$7.00 - $12.00",
+        "company": {
+          "name": "MS Breezy Trial",
+          "logoUrl": null,
+          "friendlyId": "breezy",
+          "isMultipleLocationsEnabled": false
+        },
+        "locations": []
+      }
+    ],
+    "scrapedAt": "2026-03-09T10:52:38.168Z"
+  },
+  {
+    "company": "Attentive",
+    "slug": "attentive",
+    "jobCount": 1,
+    "jobs": [
+      {
+        "id": "9bbfd9566a7001",
+        "friendlyId": "9bbfd9566a7001-sales-development-representative",
+        "name": "Sales Development Representative",
+        "url": "https://attentive.breezy.hr/p/9bbfd9566a7001-sales-development-representative",
+        "publishedDate": "2019-09-23T08:31:24.700Z",
+        "type": {
+          "id": "fullTime",
+          "name": "Full-Time"
+        },
+        "location": {
+          "country": {
+            "name": "Portugal",
+            "id": "PT"
+          },
+          "state": null,
+          "city": "Lisbon",
+          "primary": true,
+          "isRemote": false,
+          "name": "Lisbon, PT"
+        },
+        "department": "Sales",
+        "salary": "",
+        "company": {
+          "name": "Attentive",
+          "logoUrl": null,
+          "friendlyId": "attentive",
+          "isMultipleLocationsEnabled": false
+        },
+        "locations": []
+      }
+    ],
+    "scrapedAt": "2026-03-09T10:52:38.256Z"
+  }
+]
