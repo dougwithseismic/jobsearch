@@ -104,36 +104,147 @@ const GLOBAL_BLOCKLIST = new Set([
 ]);
 
 const SEARCH_STRATEGIES: ((domain: string) => string)[] = [
+  // ── Core discovery ──
   (d) => `site:${d}`,
   (d) => `site:${d} careers`,
   (d) => `site:${d} jobs`,
   (d) => `site:${d} hiring`,
+  (d) => `site:${d} "we're hiring"`,
+  (d) => `site:${d} apply now`,
+
+  // ── Job roles (surfaces companies hiring for these) ──
   (d) => `site:${d} software engineer`,
-  (d) => `site:${d} product manager`,
+  (d) => `site:${d} ai engineer`,
+  (d) => `site:${d} machine learning`,
   (d) => `site:${d} data scientist`,
+  (d) => `site:${d} data engineer`,
+  (d) => `site:${d} devops`,
+  (d) => `site:${d} cloud engineer`,
+  (d) => `site:${d} security engineer`,
+  (d) => `site:${d} product manager`,
   (d) => `site:${d} designer`,
+  (d) => `site:${d} sales`,
+  (d) => `site:${d} enterprise sales`,
+  (d) => `site:${d} account executive`,
+  (d) => `site:${d} marketing`,
+  (d) => `site:${d} finance`,
+  (d) => `site:${d} quant`,
+  (d) => `site:${d} trading`,
+  (d) => `site:${d} engineering`,
+
+  // ── Remote / workplace ──
   (d) => `site:${d} remote`,
+
+  // ── Europe Tier 1 ──
   (d) => `site:${d} "Europe"`,
-  (d) => `site:${d} "Berlin"`,
   (d) => `site:${d} "London"`,
-  (d) => `site:${d} "New York"`,
-  (d) => `site:${d} "San Francisco"`,
-  (d) => `site:${d} "Amsterdam"`,
+  (d) => `site:${d} "Berlin"`,
   (d) => `site:${d} "Paris"`,
+  (d) => `site:${d} "Amsterdam"`,
   (d) => `site:${d} "Stockholm"`,
+  (d) => `site:${d} "Copenhagen"`,
+  (d) => `site:${d} "Oslo"`,
+  (d) => `site:${d} "Zurich"`,
+  (d) => `site:${d} "Geneva"`,
+  (d) => `site:${d} "Dublin"`,
+  (d) => `site:${d} "Barcelona"`,
+  (d) => `site:${d} "Madrid"`,
+  (d) => `site:${d} "Munich"`,
+  (d) => `site:${d} "Milan"`,
+  (d) => `site:${d} "Warsaw"`,
+  (d) => `site:${d} "Brussels"`,
   (d) => `site:${d} "Prague"`,
+  (d) => `site:${d} "Lisbon"`,
+  (d) => `site:${d} "Helsinki"`,
+
+  // ── North America ──
+  (d) => `site:${d} "San Francisco"`,
+  (d) => `site:${d} "New York"`,
+  (d) => `site:${d} "Seattle"`,
+  (d) => `site:${d} "Austin"`,
+  (d) => `site:${d} "Boston"`,
+  (d) => `site:${d} "Los Angeles"`,
+  (d) => `site:${d} "Chicago"`,
+  (d) => `site:${d} "Denver"`,
   (d) => `site:${d} "Toronto"`,
+  (d) => `site:${d} "Vancouver"`,
+  (d) => `site:${d} "Montreal"`,
+
+  // ── Asia-Pacific ──
   (d) => `site:${d} "Singapore"`,
   (d) => `site:${d} "Tokyo"`,
+  (d) => `site:${d} "Seoul"`,
+  (d) => `site:${d} "Hong Kong"`,
   (d) => `site:${d} "Sydney"`,
+  (d) => `site:${d} "Melbourne"`,
+  (d) => `site:${d} "Bangalore"`,
+  (d) => `site:${d} "Mumbai"`,
+  (d) => `site:${d} "Delhi"`,
+
+  // ── Middle East ──
+  (d) => `site:${d} "Dubai"`,
+  (d) => `site:${d} "Abu Dhabi"`,
+  (d) => `site:${d} "Riyadh"`,
+
+  // ── South America ──
+  (d) => `site:${d} "São Paulo"`,
+  (d) => `site:${d} "Buenos Aires"`,
+  (d) => `site:${d} "Mexico City"`,
+
+  // ── Startup / VC searches ──
   (d) => `site:${d} startup`,
   (d) => `site:${d} "Y Combinator"`,
+  (d) => `site:${d} "a16z"`,
+  (d) => `site:${d} "Andreessen Horowitz"`,
+  (d) => `site:${d} "Sequoia Capital"`,
+  (d) => `site:${d} "Accel"`,
+  (d) => `site:${d} "Index Ventures"`,
+  (d) => `site:${d} "Benchmark"`,
+  (d) => `site:${d} "Greylock"`,
+  (d) => `site:${d} "Lightspeed"`,
+  (d) => `site:${d} "Founders Fund"`,
+  (d) => `site:${d} "Tiger Global"`,
   (d) => `site:${d} series A OR series B`,
-  (d) => `site:${d} engineering`,
-  (d) => `site:${d} sales`,
-  (d) => `site:${d} marketing`,
+  (d) => `site:${d} series C OR series D`,
+  (d) => `site:${d} "tech startup"`,
+
+  // ── Industry verticals ──
   (d) => `site:${d} fintech`,
-  (d) => `site:${d} ai engineer`,
+  (d) => `site:${d} healthtech`,
+  (d) => `site:${d} edtech`,
+  (d) => `site:${d} climate tech`,
+  (d) => `site:${d} cybersecurity`,
+  (d) => `site:${d} ecommerce`,
+  (d) => `site:${d} saas`,
+  (d) => `site:${d} gaming`,
+  (d) => `site:${d} biotech`,
+  (d) => `site:${d} logistics`,
+  (d) => `site:${d} real estate`,
+  (d) => `site:${d} media`,
+  (d) => `site:${d} travel`,
+
+  // ── Enterprise / big company searches ──
+  (d) => `site:${d} "enterprise"`,
+  (d) => `site:${d} "corporate"`,
+  (d) => `site:${d} "fortune 500"`,
+  (d) => `site:${d} "global careers"`,
+
+  // ── Combined high-value patterns ──
+  (d) => `site:${d} "San Francisco" software engineer`,
+  (d) => `site:${d} "New York" software engineer`,
+  (d) => `site:${d} "London" software engineer`,
+  (d) => `site:${d} "Berlin" software engineer`,
+  (d) => `site:${d} "Singapore" software engineer`,
+  (d) => `site:${d} "remote" software engineer`,
+
+  // ── Region buckets ──
+  (d) => `site:${d} "North America"`,
+  (d) => `site:${d} "Asia"`,
+  (d) => `site:${d} "Middle East"`,
+  (d) => `site:${d} "South America"`,
+  (d) => `site:${d} "Africa"`,
+  (d) => `site:${d} "EMEA"`,
+  (d) => `site:${d} "APAC"`,
 ];
 
 function sleep(ms: number): Promise<void> {
