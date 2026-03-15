@@ -21,15 +21,25 @@ import type {
   SearchQuery,
 } from "./types.js";
 import { searchResults } from "./filters.js";
+import { ProxyAgent } from "undici";
+
+let _proxyDispatcher: ProxyAgent | undefined;
+function getProxyDispatcher(): ProxyAgent | undefined {
+  if (_proxyDispatcher) return _proxyDispatcher;
+  const proxyUrl = process.env.HTTPS_PROXY || process.env.HTTP_PROXY || process.env.https_proxy || process.env.http_proxy;
+  if (proxyUrl) {
+    _proxyDispatcher = new ProxyAgent(proxyUrl);
+  }
+  return _proxyDispatcher;
+}
 
 const SR_API = "https://api.smartrecruiters.com/v1/companies";
-const CC_INDEX = "https://index.commoncrawl.org";
+const DEFAULT_SLUG_API_URL = "https://job-slugs.wd40.workers.dev/slugs/smartrecruiters";
 const PAGE_LIMIT = 100;
 
 const MAX_RETRIES = 3;
 const BASE_DELAY_MS = 1000;
 const DEFAULT_TIMEOUT_MS = 30_000;
-const CC_TIMEOUT_MS = 120_000; // Common Crawl queries can be very slow
 
 /**
  * Fetch with exponential backoff retry and per-request timeout.
@@ -47,7 +57,7 @@ async function fetchWithRetry(
   let lastError: Error | undefined;
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) });
+      const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs), dispatcher: getProxyDispatcher() } as RequestInit);
       // Don't retry client errors (except 429)
       if (res.ok || (res.status >= 400 && res.status < 500 && res.status !== 429)) {
         return res;
@@ -73,38 +83,6 @@ async function fetchWithRetry(
   throw lastError ?? new Error(`fetchWithRetry failed for ${url}`);
 }
 
-const FALLBACK_CRAWLS = [
-  "CC-MAIN-2026-08",
-  "CC-MAIN-2026-04",
-  "CC-MAIN-2025-51",
-];
-
-const CC_COLLINFO_URL = "https://index.commoncrawl.org/collinfo.json";
-
-/**
- * Fetch the latest crawl IDs from Common Crawl's collection info endpoint.
- * Returns the N most recent crawl IDs, falling back to hardcoded ones on failure.
- */
-async function getLatestCrawlIds(count = 3): Promise<string[]> {
-  try {
-    const res = await fetchWithRetry(CC_COLLINFO_URL, { timeoutMs: 10_000, retries: 1 });
-    if (!res.ok) return FALLBACK_CRAWLS;
-    const data = await res.json() as { id: string }[];
-    const ids = data.slice(0, count).map((d) => d.id);
-    return ids.length > 0 ? ids : FALLBACK_CRAWLS;
-  } catch {
-    return FALLBACK_CRAWLS;
-  }
-}
-
-const DEFAULT_KNOWN_SLUGS = [
-  "Visa", "BOSCH", "Lidl", "Bayer", "Sanofi", "Ubisoft",
-  "DHL", "Siemens", "adidas-group", "JohnsonAndJohnson",
-  "ABB", "Nestle", "Publicis", "Spotify", "Danone",
-  "SmartRecruiters1", "Intel", "Workday", "CrowdStrike",
-  "TCL", "Avery-Dennison",
-];
-
 /** SmartRecruiters posting API response shape */
 interface PostingsResponse {
   totalFound: number;
@@ -113,58 +91,23 @@ interface PostingsResponse {
   content: SmartRecruitersJob[];
 }
 
-/**
- * Discover slugs from a single web index.
- */
-async function discoverSlugsFromIndex(
-  crawlId: string,
-  indexNum: number,
-  totalIndexes: number,
-  onProgress?: (message: string) => void
-): Promise<Set<string>> {
-  const slugs = new Set<string>();
+const INVALID_SLUGS = new Set([
+  "embed", "api", "v1", "inclusion", "internal",
+  "favicon.ico", "robots.txt", "sitemap.xml",
+]);
 
-  // Query both URL patterns in parallel
-  const urls = [
-    `${CC_INDEX}/${crawlId}-index?url=careers.smartrecruiters.com/*&output=text&fl=url&limit=100000`,
-    `${CC_INDEX}/${crawlId}-index?url=jobs.smartrecruiters.com/*&output=text&fl=url&limit=100000`,
-  ];
-
-  onProgress?.(`Querying index ${indexNum}/${totalIndexes}...`);
-
-  const results = await Promise.all(
-    urls.map(async (url) => {
-      try {
-        const res = await fetchWithRetry(url, { timeoutMs: CC_TIMEOUT_MS });
-        if (!res.ok) return new Set<string>();
-        const text = await res.text();
-        const found = new Set<string>();
-        for (const line of text.split("\n")) {
-          // Match careers.smartrecruiters.com/{slug} or jobs.smartrecruiters.com/{slug}
-          const match = line.match(
-            /https?:\/\/(?:careers|jobs)\.smartrecruiters\.com\/([^/?#]+)/
-          );
-          if (match?.[1]) {
-            found.add(decodeURIComponent(match[1]));
-          }
-        }
-        return found;
-      } catch {
-        return new Set<string>();
-      }
-    })
-  );
-
-  for (const set of results) {
-    for (const s of set) slugs.add(s);
-  }
-
-  onProgress?.(`Index ${indexNum}: found ${slugs.size} slugs`);
-  return slugs;
+function isValidSlug(slug: string): boolean {
+  if (INVALID_SLUGS.has(slug)) return false;
+  if (slug.includes(".")) return false;
+  if (slug.length < 2 || slug.length > 80) return false;
+  return true;
 }
 
 /**
- * Discover all company slugs from web indexes.
+ * Discover all company slugs from the slug API.
+ *
+ * Fetches a newline-delimited list of slugs from the Cloudflare Worker endpoint,
+ * merges in any additional knownSlugs, and returns a sorted unique array.
  *
  * @param options - Discovery options
  * @returns Sorted array of unique company slugs
@@ -172,30 +115,35 @@ async function discoverSlugsFromIndex(
 export async function discoverSlugs(
   options?: DiscoverOptions
 ): Promise<string[]> {
-  const knownSlugs = options?.knownSlugs ?? DEFAULT_KNOWN_SLUGS;
+  const knownSlugs = options?.knownSlugs ?? [];
   const onProgress = options?.onProgress;
+  const slugApiUrl =
+    options?.slugApiUrl ??
+    process.env.SLUG_API_URL ??
+    DEFAULT_SLUG_API_URL;
 
-  // Fetch latest crawl IDs from CC if not provided
-  let crawlIds = options?.crawlIds;
-  if (!crawlIds) {
-    onProgress?.("Fetching latest crawl indexes...");
-    crawlIds = await getLatestCrawlIds(3);
-    onProgress?.(`Using indexes: ${crawlIds.join(", ")}`);
+  onProgress?.(`Fetching slugs from ${slugApiUrl}...`);
+
+  const apiSlugs: string[] = [];
+  try {
+    const res = await fetchWithRetry(slugApiUrl, { timeoutMs: DEFAULT_TIMEOUT_MS, retries: 2 });
+    if (res.ok) {
+      const text = await res.text();
+      for (const line of text.split("\n")) {
+        const slug = line.trim();
+        if (slug && isValidSlug(slug)) {
+          apiSlugs.push(slug);
+        }
+      }
+      onProgress?.(`Fetched ${apiSlugs.length} slugs from API`);
+    } else {
+      onProgress?.(`Slug API returned HTTP ${res.status}, falling back to knownSlugs only`);
+    }
+  } catch (e) {
+    onProgress?.(`Slug API unreachable (${e}), falling back to knownSlugs only`);
   }
 
-  onProgress?.(`Discovering company slugs (${crawlIds.length} indexes in parallel)...`);
-
-  const results = await Promise.all(
-    crawlIds.map((crawl, i) =>
-      discoverSlugsFromIndex(crawl, i + 1, crawlIds.length, onProgress)
-    )
-  );
-
-  const allSlugs = new Set<string>();
-  for (const slugSet of results) {
-    for (const s of slugSet) allSlugs.add(s);
-  }
-
+  const allSlugs = new Set<string>(apiSlugs);
   for (const s of knownSlugs) allSlugs.add(s);
 
   const sorted = [...allSlugs].sort((a, b) =>

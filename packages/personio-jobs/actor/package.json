@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "apify": "^3.6.0",
-    "personio-jobs": "file:./personio-jobs-1.0.0.tgz"
+    "personio-jobs": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

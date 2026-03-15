@@ -1,24 +1,21 @@
-/** Raw job from Workable widget API */
+/** Raw job from Workable v3 API */
 export interface WorkableRawJob {
-  title: string;
+  id: number;
   shortcode: string;
-  code: string;
-  employment_type: string;
-  telecommuting: boolean;
-  department: string;
-  url: string;
-  shortlink: string;
-  application_url: string;
-  published_on: string;
-  created_at: string;
-  country: string;
-  city: string;
-  state: string;
-  education: string;
-  experience: string;
-  function: string;
-  industry: string;
+  title: string;
+  remote: boolean;
+  location: WorkableRawLocation;
   locations: WorkableRawLocation[];
+  state: string;
+  isInternal: boolean;
+  code: string;
+  published: string;
+  type: string;
+  language: string;
+  department: string[];
+  accountUid: string;
+  approvalStatus: string;
+  workplace: string;
 }
 
 export interface WorkableRawLocation {
@@ -26,7 +23,7 @@ export interface WorkableRawLocation {
   countryCode: string;
   city: string;
   region: string;
-  hidden: boolean;
+  hidden?: boolean;
 }
 
 /** A single job posting from Workable */
@@ -87,8 +84,8 @@ export interface FlatJob {
 
 /** Options for slug discovery */
 export interface DiscoverOptions {
-  /** Web index IDs to query. Defaults to recent indexes. */
-  crawlIds?: string[];
+  /** URL to fetch slugs from. Defaults to SLUG_API_URL env var or the Cloudflare Worker endpoint. */
+  slugApiUrl?: string;
   /** Additional known slugs to include */
   knownSlugs?: string[];
   /** Progress callback */

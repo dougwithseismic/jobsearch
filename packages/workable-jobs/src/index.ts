@@ -26,15 +26,27 @@ import type {
   SearchQuery,
 } from "./types.js";
 import { searchResults } from "./filters.js";
+import { ProxyAgent } from "undici";
+
+let _proxyDispatcher: ProxyAgent | undefined;
+function getProxyDispatcher(): ProxyAgent | undefined {
+  if (_proxyDispatcher) return _proxyDispatcher;
+  const proxyUrl = process.env.HTTPS_PROXY || process.env.HTTP_PROXY || process.env.https_proxy || process.env.http_proxy;
+  if (proxyUrl) {
+    _proxyDispatcher = new ProxyAgent(proxyUrl);
+  }
+  return _proxyDispatcher;
+}
+
+const DEFAULT_SLUG_API_URL = "https://job-slugs.wd40.workers.dev/slugs/workable";
 
 const MAX_RETRIES = 3;
 const BASE_DELAY_MS = 1000;
 const DEFAULT_TIMEOUT_MS = 30_000;
-const CC_TIMEOUT_MS = 120_000;
 
 async function fetchWithRetry(
   url: string,
-  options?: { retries?: number; baseDelay?: number; timeoutMs?: number }
+  options?: { retries?: number; baseDelay?: number; timeoutMs?: number; method?: string; body?: string; headers?: Record<string, string> }
 ): Promise<Response> {
   const retries = options?.retries ?? MAX_RETRIES;
   const baseDelay = options?.baseDelay ?? BASE_DELAY_MS;
@@ -43,7 +55,12 @@ async function fetchWithRetry(
   let lastError: Error | undefined;
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) });
+      const fetchOpts: RequestInit = { signal: AbortSignal.timeout(timeoutMs) };
+      if (options?.method) fetchOpts.method = options.method;
+      if (options?.body) fetchOpts.body = options.body;
+      if (options?.headers) fetchOpts.headers = options.headers;
+      (fetchOpts as Record<string, unknown>).dispatcher = getProxyDispatcher();
+      const res = await fetch(url, fetchOpts);
       if (res.ok || (res.status >= 400 && res.status < 500 && res.status !== 429)) {
         return res;
       }
@@ -67,79 +84,26 @@ async function fetchWithRetry(
   throw lastError ?? new Error(`fetchWithRetry failed for ${url}`);
 }
 
-const WORKABLE_WIDGET_API =
-  "https://apply.workable.com/api/v1/widget/accounts";
-const CC_INDEX = "https://index.commoncrawl.org";
+const WORKABLE_API = "https://apply.workable.com/api/v3/accounts";
 
-const FALLBACK_CRAWLS = [
-  "CC-MAIN-2026-08",
-  "CC-MAIN-2026-04",
-  "CC-MAIN-2025-51",
-];
-
-const CC_COLLINFO_URL = "https://index.commoncrawl.org/collinfo.json";
-
-async function getLatestCrawlIds(count = 3): Promise<string[]> {
-  try {
-    const res = await fetchWithRetry(CC_COLLINFO_URL, { timeoutMs: 10_000, retries: 1 });
-    if (!res.ok) return FALLBACK_CRAWLS;
-    const data = await res.json() as { id: string }[];
-    const ids = data.slice(0, count).map((d) => d.id);
-    return ids.length > 0 ? ids : FALLBACK_CRAWLS;
-  } catch {
-    return FALLBACK_CRAWLS;
-  }
-}
-
-/** Slugs to exclude — non-company paths that appear in Common Crawl */
-const SLUG_BLOCKLIST = new Set([
-  "j",
-  "api",
-  "static",
-  "favicon.ico",
-  "robots.txt",
-  "sitemap.xml",
-  "sitemap",
-  "css",
-  "js",
-  "images",
-  "assets",
+const INVALID_SLUGS = new Set([
+  "j", "api", "static", "favicon.ico", "robots.txt",
+  "sitemap.xml", "sitemap", "css", "js", "images", "assets",
 ]);
 
-const DEFAULT_KNOWN_SLUGS = [
-  "typeform",
-  "spotify",
-  "posthog",
-  "deel",
-  "1000heads",
-  "miro-jobs",
-  "semrush",
-  "sennder",
-  "personio",
-  "taxfix",
-  "contentful",
-  "adjust",
-  "n26",
-  "messagebird",
-  "trivago",
-  "delivery-hero",
-  "sumup",
-  "wire",
-  "babbel",
-  "omio",
-  "ecosia",
-  "foodspring",
-  "helpling",
-  "jimdo",
-  "komoot",
-];
+function isValidSlug(slug: string): boolean {
+  if (INVALID_SLUGS.has(slug)) return false;
+  if (slug.includes(".")) return false;
+  if (slug.length < 2 || slug.length > 80) return false;
+  return true;
+}
 
 /**
- * Map a raw Workable job to our clean interface.
+ * Map a raw Workable v3 job to our clean interface.
  */
 function mapJob(
   raw: WorkableRawJob,
-  includeDescriptions: boolean
+  slug: string,
 ): WorkableJob {
   const locations: WorkableLocation[] = (raw.locations ?? [])
     .filter((l) => !l.hidden)
@@ -150,84 +114,34 @@ function mapJob(
       region: l.region,
     }));
 
+  const loc = raw.location ?? {};
+
   const job: WorkableJob = {
     shortcode: raw.shortcode,
     title: raw.title,
-    department: raw.department ?? "",
-    employmentType: raw.employment_type ?? "",
-    isRemote: raw.telecommuting ?? false,
-    country: raw.country ?? "",
-    city: raw.city ?? "",
-    state: raw.state ?? "",
+    department: (raw.department ?? []).join(", "),
+    employmentType: raw.type ?? "",
+    isRemote: raw.remote ?? false,
+    country: loc.country ?? "",
+    city: loc.city ?? "",
+    state: loc.region ?? "",
     locations,
-    experience: raw.experience ?? "",
-    industry: raw.industry ?? "",
-    publishedAt: raw.published_on ?? raw.created_at ?? "",
-    createdAt: raw.created_at ?? "",
-    jobUrl: raw.url ?? raw.shortlink ?? "",
-    applyUrl: raw.application_url ?? "",
+    experience: "",
+    industry: "",
+    publishedAt: raw.published ?? "",
+    createdAt: raw.published ?? "",
+    jobUrl: `https://apply.workable.com/${encodeURIComponent(slug)}/j/${raw.shortcode}/`,
+    applyUrl: `https://apply.workable.com/${encodeURIComponent(slug)}/j/${raw.shortcode}/apply/`,
   };
-
-  if (includeDescriptions) {
-    // Widget API doesn't return descriptions inline — would need per-job fetch
-    // For now, we leave this as undefined unless we add per-job fetching later
-    job.descriptionHtml = undefined;
-  }
 
   return job;
 }
 
 /**
- * Discover slugs from a single web index.
- */
-async function discoverSlugsFromIndex(
-  crawlId: string,
-  crawlIds: string[],
-  onProgress?: (message: string) => void
-): Promise<Set<string>> {
-  const slugs = new Set<string>();
-  const url = `${CC_INDEX}/${crawlId}-index?url=apply.workable.com/*&output=json&limit=5000`;
-  const idx = crawlIds.indexOf(crawlId) + 1;
-
-  onProgress?.(`Querying index ${idx}/${crawlIds.length}...`);
-
-  try {
-    const res = await fetchWithRetry(url, { timeoutMs: CC_TIMEOUT_MS });
-    if (!res.ok) {
-      onProgress?.(`Index ${idx}: HTTP ${res.status}`);
-      return slugs;
-    }
-    const text = await res.text();
-    for (const line of text.split("\n")) {
-      const trimmed = line.trim();
-      if (!trimmed) continue;
-
-      try {
-        const record = JSON.parse(trimmed) as { url?: string };
-        const recordUrl = record.url ?? "";
-        const match = recordUrl.match(
-          /https?:\/\/apply\.workable\.com\/([^/?#]+)/
-        );
-        if (match?.[1]) {
-          const slug = decodeURIComponent(match[1]).toLowerCase();
-          if (!SLUG_BLOCKLIST.has(slug) && !slug.startsWith("%") && !slug.startsWith("-")) {
-            slugs.add(slug);
-          }
-        }
-      } catch {
-        // Skip malformed JSON lines
-      }
-    }
-    onProgress?.(`Index ${idx}: found ${slugs.size} slugs`);
-  } catch (e) {
-    onProgress?.(`Index ${idx}: error - ${e}`);
-  }
-
-  return slugs;
-}
-
-/**
- * Discover all company slugs from web indexes.
+ * Discover all company slugs (board tokens) from the slug API.
+ *
+ * Fetches a newline-delimited list of slugs from the Cloudflare Worker endpoint,
+ * merges in any additional knownSlugs, and returns a sorted unique array.
  *
  * @param options - Discovery options
  * @returns Sorted array of unique company slugs
@@ -235,31 +149,35 @@ async function discoverSlugsFromIndex(
 export async function discoverSlugs(
   options?: DiscoverOptions
 ): Promise<string[]> {
-  const knownSlugs = options?.knownSlugs ?? DEFAULT_KNOWN_SLUGS;
+  const knownSlugs = options?.knownSlugs ?? [];
   const onProgress = options?.onProgress;
+  const slugApiUrl =
+    options?.slugApiUrl ??
+    process.env.SLUG_API_URL ??
+    DEFAULT_SLUG_API_URL;
 
-  let crawlIds = options?.crawlIds;
-  if (!crawlIds) {
-    onProgress?.("Fetching latest crawl indexes...");
-    crawlIds = await getLatestCrawlIds(3);
-    onProgress?.(`Using indexes: ${crawlIds.join(", ")}`);
+  onProgress?.(`Fetching slugs from ${slugApiUrl}...`);
+
+  const apiSlugs: string[] = [];
+  try {
+    const res = await fetchWithRetry(slugApiUrl, { timeoutMs: DEFAULT_TIMEOUT_MS, retries: 2 });
+    if (res.ok) {
+      const text = await res.text();
+      for (const line of text.split("\n")) {
+        const slug = line.trim().toLowerCase();
+        if (slug && isValidSlug(slug)) {
+          apiSlugs.push(slug);
+        }
+      }
+      onProgress?.(`Fetched ${apiSlugs.length} slugs from API`);
+    } else {
+      onProgress?.(`Slug API returned HTTP ${res.status}, falling back to knownSlugs only`);
+    }
+  } catch (e) {
+    onProgress?.(`Slug API unreachable (${e}), falling back to knownSlugs only`);
   }
 
-  onProgress?.(
-    `Discovering company slugs (${crawlIds.length} indexes in parallel)...`
-  );
-
-  const results = await Promise.all(
-    crawlIds.map((crawl) =>
-      discoverSlugsFromIndex(crawl, crawlIds, onProgress)
-    )
-  );
-
-  const allSlugs = new Set<string>();
-  for (const slugs of results) {
-    for (const s of slugs) allSlugs.add(s);
-  }
-
+  const allSlugs = new Set<string>(apiSlugs);
   for (const s of knownSlugs) allSlugs.add(s);
 
   const sorted = [...allSlugs].sort((a, b) =>
@@ -270,44 +188,61 @@ export async function discoverSlugs(
   return sorted;
 }
 
+/** v3 API response */
+interface V3Response {
+  total: number;
+  results: WorkableRawJob[];
+  nextPage?: string | null;
+}
+
 /**
- * Scrape a single company's job board.
+ * Scrape a single company's job board via Workable v3 API.
  *
  * @param slug - The Workable job board slug
- * @param options - Scrape options
+ * @param _options - Scrape options
  * @returns CompanyJobs or null if not found / no listed jobs
  */
 export async function scrapeCompany(
   slug: string,
-  options?: ScrapeCompanyOptions
+  _options?: ScrapeCompanyOptions
 ): Promise<CompanyJobs | null> {
-  const url = `${WORKABLE_WIDGET_API}/${encodeURIComponent(slug)}`;
-  const includeDescriptions = options?.includeDescriptions ?? false;
+  const url = `${WORKABLE_API}/${encodeURIComponent(slug)}/jobs`;
+  const allJobs: WorkableJob[] = [];
+  let token = "";
 
   try {
-    const res = await fetchWithRetry(url);
-    if (res.status === 404) return null;
-    if (!res.ok) return null;
+    while (true) {
+      const body = JSON.stringify({ query: "", token });
+      const res = await fetchWithRetry(url, {
+        method: "POST",
+        body,
+        headers: { "Content-Type": "application/json" },
+      });
+      if (res.status === 404) return null;
+      if (!res.ok) return null;
 
-    const text = await res.text();
-    if (text === "Not Found") return null;
+      const text = await res.text();
+      if (text === "Not Found") return null;
 
-    const data = JSON.parse(text) as {
-      name?: string;
-      jobs?: WorkableRawJob[];
-    };
-    const rawJobs = data.jobs ?? [];
+      const data = JSON.parse(text) as V3Response;
 
-    if (rawJobs.length === 0) return null;
+      if (data.total === 0 && allJobs.length === 0) return null;
 
-    const jobs = rawJobs.map((j) => mapJob(j, includeDescriptions));
-    const companyName = data.name ?? slug;
+      for (const raw of data.results ?? []) {
+        allJobs.push(mapJob(raw, slug));
+      }
+
+      if (!data.nextPage) break;
+      token = data.nextPage;
+    }
+
+    if (allJobs.length === 0) return null;
 
     return {
-      company: companyName,
+      company: slug,
       slug,
-      jobCount: jobs.length,
-      jobs,
+      jobCount: allJobs.length,
+      jobs: allJobs,
       scrapedAt: new Date().toISOString(),
     };
   } catch {
@@ -328,7 +263,6 @@ export async function scrapeAll(
 ): Promise<CompanyJobs[]> {
   const concurrency = options?.concurrency ?? 10;
   const onProgress = options?.onProgress;
-  const includeDescriptions = options?.includeDescriptions ?? false;
 
   const results: CompanyJobs[] = [];
   let done = 0;
@@ -340,7 +274,7 @@ export async function scrapeAll(
       const slug = queue.shift();
       if (!slug) break;
 
-      const result = await scrapeCompany(slug, { includeDescriptions });
+      const result = await scrapeCompany(slug);
       done++;
 
       if (result) {

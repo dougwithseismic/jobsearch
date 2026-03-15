@@ -30,24 +30,17 @@ export function makeJob(overrides?: Partial<WorkableJob>): WorkableJob {
 
 export function makeRawJob(overrides?: Partial<WorkableRawJob>): WorkableRawJob {
   return {
+    id: 12345,
     title: 'Senior Software Engineer',
     shortcode: 'TEST123',
     code: '',
-    employment_type: 'Full-time',
-    telecommuting: true,
-    department: 'Engineering',
-    url: 'https://apply.workable.com/j/TEST123',
-    shortlink: 'https://apply.workable.com/j/TEST123',
-    application_url: 'https://apply.workable.com/j/TEST123/apply',
-    published_on: '2026-03-01',
-    created_at: '2026-03-01',
-    country: 'Germany',
-    city: 'Berlin',
-    state: 'Berlin',
-    education: '',
-    experience: 'Mid-Senior level',
-    function: 'Engineering',
-    industry: 'Computer Software',
+    remote: true,
+    location: {
+      country: 'Germany',
+      countryCode: 'DE',
+      city: 'Berlin',
+      region: 'Berlin',
+    },
     locations: [
       {
         country: 'Germany',
@@ -57,6 +50,15 @@ export function makeRawJob(overrides?: Partial<WorkableRawJob>): WorkableRawJob 
         hidden: false,
       },
     ],
+    state: 'published',
+    isInternal: false,
+    published: '2026-03-01',
+    type: 'full',
+    language: 'en',
+    department: ['Engineering'],
+    accountUid: 'test-uid',
+    approvalStatus: 'approved',
+    workplace: 'remote',
     ...overrides,
   };
 }

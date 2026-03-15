@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "apify": "^3.6.0",
-    "ashby-jobs": "file:./ashby-jobs-1.0.0.tgz"
+    "ashby-jobs": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^25.3.5",

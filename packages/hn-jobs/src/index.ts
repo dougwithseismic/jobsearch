@@ -4,6 +4,17 @@ export { filterJobs, searchJobs } from "./filters.js";
 
 import type { HNJob, HNThread, ScrapeOptions } from "./types.js";
 import { parseComment } from "./parser.js";
+import { ProxyAgent } from "undici";
+
+let _proxyDispatcher: ProxyAgent | undefined;
+function getProxyDispatcher(): ProxyAgent | undefined {
+  if (_proxyDispatcher) return _proxyDispatcher;
+  const proxyUrl = process.env.HTTPS_PROXY || process.env.HTTP_PROXY || process.env.https_proxy || process.env.http_proxy;
+  if (proxyUrl) {
+    _proxyDispatcher = new ProxyAgent(proxyUrl);
+  }
+  return _proxyDispatcher;
+}
 
 const HN_API = "https://hacker-news.firebaseio.com/v0";
 const WHOISHIRING_USER = "whoishiring";
@@ -25,7 +36,7 @@ interface HNItem {
  */
 async function fetchItem(id: number): Promise<HNItem | null> {
   try {
-    const res = await fetch(`${HN_API}/item/${id}.json`);
+    const res = await fetch(`${HN_API}/item/${id}.json`, { dispatcher: getProxyDispatcher() } as RequestInit);
     if (!res.ok) return null;
     return (await res.json()) as HNItem;
   } catch {
@@ -37,7 +48,7 @@ async function fetchItem(id: number): Promise<HNItem | null> {
  * Find the most recent "Who is Hiring" threads.
  */
 export async function findThreads(months = 2): Promise<HNThread[]> {
-  const res = await fetch(`${HN_API}/user/${WHOISHIRING_USER}.json`);
+  const res = await fetch(`${HN_API}/user/${WHOISHIRING_USER}.json`, { dispatcher: getProxyDispatcher() } as RequestInit);
   if (!res.ok) throw new Error(`Failed to fetch whoishiring user: ${res.status}`);
 
   const user = (await res.json()) as { submitted: number[] };

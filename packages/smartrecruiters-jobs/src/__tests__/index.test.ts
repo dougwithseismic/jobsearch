@@ -296,56 +296,48 @@ describe('searchJobs', () => {
 });
 
 describe('discoverSlugs', () => {
-  it('queries Common Crawl and parses slugs from URLs', async () => {
-    const ccResponse = [
-      'https://careers.smartrecruiters.com/AcmeCorp/some-job-id',
-      'https://careers.smartrecruiters.com/AcmeCorp/another-job',
-      'https://jobs.smartrecruiters.com/WidgetInc/job-123',
-      'https://careers.smartrecruiters.com/WidgetInc',
-      'not-a-url',
-      '',
-    ].join('\n');
+  it('fetches slugs from the API and parses newline-delimited response', async () => {
+    const apiResponse = ['AcmeCorp', 'WidgetInc', '', 'not.valid'].join('\n');
 
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => apiResponse,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/smartrecruiters',
       knownSlugs: [],
     });
 
     expect(slugs).toContain('AcmeCorp');
     expect(slugs).toContain('WidgetInc');
+    expect(slugs).not.toContain('not.valid'); // filtered by isValidSlug
     // Should be sorted
     expect(slugs).toEqual([...slugs].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())));
   });
 
   it('includes known slugs in results', async () => {
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
       text: async () => '',
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/smartrecruiters',
       knownSlugs: ['my-known-company'],
     });
 
     expect(slugs).toContain('my-known-company');
   });
 
-  it('deduplicates slugs across crawls', async () => {
-    const ccResponse = 'https://careers.smartrecruiters.com/AcmeCorp/job-1\n';
-
-    mockFetch.mockResolvedValue({
+  it('deduplicates slugs from API and knownSlugs', async () => {
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => 'AcmeCorp\n',
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01', 'CC-TEST-2025-02'],
+      slugApiUrl: 'https://test-api.example.com/slugs/smartrecruiters',
       knownSlugs: ['AcmeCorp'],
     });
 
@@ -353,31 +345,29 @@ describe('discoverSlugs', () => {
     expect(acmeCount).toBe(1);
   });
 
-  it('handles HTTP errors gracefully', async () => {
-    mockFetch.mockResolvedValue({
+  it('handles HTTP errors gracefully and falls back to knownSlugs', async () => {
+    mockFetch.mockResolvedValueOnce({
       ok: false,
       status: 500,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/smartrecruiters',
       knownSlugs: ['fallback'],
     });
 
-    // Should still return known slugs
     expect(slugs).toContain('fallback');
-    mockFetch.mockReset();
-  }, 30000);
+  });
 
   it('calls onProgress callback', async () => {
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => '',
+      text: async () => 'SomeCompany\n',
     });
 
     const onProgress = vi.fn();
     await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/smartrecruiters',
       knownSlugs: [],
       onProgress,
     });
@@ -385,29 +375,14 @@ describe('discoverSlugs', () => {
     expect(onProgress).toHaveBeenCalled();
   });
 
-  it('discovers slugs from both careers and jobs URL patterns', async () => {
-    // The index function fires 2 fetches per crawl (careers + jobs)
-    let callCount = 0;
-    mockFetch.mockImplementation(async () => {
-      callCount++;
-      if (callCount === 1) {
-        return {
-          ok: true,
-          text: async () => 'https://careers.smartrecruiters.com/CareersOnly/job-1\n',
-        };
-      }
-      return {
-        ok: true,
-        text: async () => 'https://jobs.smartrecruiters.com/JobsOnly/job-2\n',
-      };
-    });
+  it('handles network errors gracefully', async () => {
+    mockFetch.mockRejectedValueOnce(new Error('Network error'));
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
-      knownSlugs: [],
+      slugApiUrl: 'https://test-api.example.com/slugs/smartrecruiters',
+      knownSlugs: ['fallback-co'],
     });
 
-    expect(slugs).toContain('CareersOnly');
-    expect(slugs).toContain('JobsOnly');
+    expect(slugs).toContain('fallback-co');
   });
 });

@@ -1,6 +1,11 @@
-import type { UnifiedJob } from "../types.js";
-import { classifyRegion, inferCountry } from "../region.js";
+import type { UnifiedJob } from "../unified-schema.js";
 import { slugify, generateId, snippet } from "../utils.js";
+import {
+  parseSalary,
+  inferSeniority,
+  normalizeWorkplaceType,
+  buildLocation,
+} from "./helpers.js";
 
 /**
  * Raw HN (Hacker News) job shape (from hn-jobs scraper).
@@ -68,6 +73,17 @@ function inferTitleFromDescription(description: string): string {
   return "";
 }
 
+/**
+ * Derive workplace type from HN boolean flags.
+ */
+function hnWorkplaceType(raw: RawHNJob): "remote" | "hybrid" | "onsite" | "unknown" {
+  if (raw.isRemote && raw.isOnsite) return "hybrid";
+  if (raw.isHybrid) return "hybrid";
+  if (raw.isRemote) return "remote";
+  if (raw.isOnsite) return "onsite";
+  return normalizeWorkplaceType(undefined, false);
+}
+
 export function normalize(rawJobs: RawHNJob[]): UnifiedJob[] {
   const seen = new Map<string, UnifiedJob>();
 
@@ -111,60 +127,64 @@ export function normalize(rawJobs: RawHNJob[]): UnifiedJob[] {
       }
     }
 
-    // Strip trailing URLs from titles (e.g. "Staff Engineer - https://example.com/job/123")
+    // Strip trailing URLs from titles
     title = title.replace(/\s*[-–—]\s*https?:\/\/\S+$/i, "").trim();
     title = title.replace(/\s+https?:\/\/\S+$/i, "").trim();
-    // Also strip "title: https://..." pattern
     title = title.replace(/:\s*https?:\/\/\S+$/i, "").trim();
 
     // Clean up location: remove work arrangement words (tracked separately)
     location = location
       .replace(/\b(remote|onsite|on-site|hybrid|in-office)\b/gi, "")
-      .replace(/\(\s*\)/g, "")           // empty parens "()"
-      .replace(/\(\s*,\s*/g, "(")        // "( , US" → "(US"
-      .replace(/,\s*\)/g, ")")           // "US, )" → "US)"
-      .replace(/\/\s*\(/g, "(")          // "/ (" → "("
-      .replace(/,\s*\(/g, " (")         // ", (" → " ("
-      .replace(/or\s*\(/g, "(")         // "or (" → "("
+      .replace(/\(\s*\)/g, "")
+      .replace(/\(\s*,\s*/g, "(")
+      .replace(/,\s*\)/g, ")")
+      .replace(/\/\s*\(/g, "(")
+      .replace(/,\s*\(/g, " (")
+      .replace(/or\s*\(/g, "(")
       .replace(/[,|/]\s*$/g, "")
       .replace(/^\s*[,|/]\s*/g, "")
       .replace(/\s{2,}/g, " ")
       .trim();
 
-    const isRemote = raw.isRemote ?? /remote/i.test(raw.location ?? "");
-    const country = inferCountry(location || (raw.location ?? ""));
+    const companySlug = slugify(company);
 
-    // Build employment type from work arrangement flags
-    const arrangements: string[] = [];
-    if (raw.isRemote) arrangements.push("Remote");
-    if (raw.isOnsite) arrangements.push("Onsite");
-    if (raw.isHybrid) arrangements.push("Hybrid");
-    const employmentType = arrangements.join(" / ");
+    // Build tags from technologies and thread metadata
+    const tags: string[] = [...(raw.technologies ?? [])];
+    if (raw.threadMonth) tags.push(`hn:${raw.threadMonth}`);
 
     // Deduplicate: same company + title → keep the most recent one
-    const dedupeKey = `${slugify(company)}|${slugify(title)}`;
+    const dedupeKey = `${companySlug}|${slugify(title)}`;
     const existing = seen.get(dedupeKey);
 
     const job: UnifiedJob = {
       id: generateId("hn", sourceId),
-      source: "hn" as const,
       sourceId,
-      company,
-      companySlug: slugify(company),
       title,
+      description: raw.description ?? "",
+      descriptionSnippet: snippet(raw.description ?? ""),
+      descriptionHtml: raw.rawHtml ?? null,
       department: "",
-      location,
-      country,
-      region: classifyRegion(location || (raw.location ?? ""), country, isRemote),
-      isRemote,
-      employmentType,
-      salary: raw.salary ?? "",
-      applyUrl: raw.applyUrl || raw.url || raw.commentUrl || "",
+      team: "",
+      category: "",
+      location: buildLocation({ text: location || undefined }),
+      secondaryLocations: [],
+      workplaceType: hnWorkplaceType(raw),
+      employmentType: "other",
+      employmentTypeRaw: "",
+      seniorityLevel: inferSeniority(title),
+      salary: parseSalary(raw.salary ?? ""),
       jobUrl: raw.commentUrl ?? "",
+      applyUrl: raw.applyUrl || raw.url || raw.commentUrl || "",
+      company: {
+        name: company,
+        slug: companySlug,
+        ats: "hn",
+        logoUrl: null,
+        careersUrl: raw.url || null,
+      },
+      tags,
       publishedAt: raw.postedAt ?? "",
       scrapedAt: new Date().toISOString(),
-      tags: JSON.stringify(raw.technologies ?? []),
-      descriptionSnippet: snippet(raw.description ?? ""),
       lastSeenAt: new Date().toISOString(),
     };
 

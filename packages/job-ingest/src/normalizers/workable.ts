@@ -1,6 +1,12 @@
-import type { UnifiedJob } from "../types.js";
-import { classifyRegion, inferCountry } from "../region.js";
+import type { UnifiedJob } from "../unified-schema.js";
 import { slugify, generateId, snippet, stripHtml } from "../utils.js";
+import {
+  parseSalary,
+  inferSeniority,
+  normalizeEmploymentType,
+  normalizeWorkplaceType,
+  buildLocation,
+} from "./helpers.js";
 
 /**
  * Raw Workable job shape (from workable-jobs scraper).
@@ -38,41 +44,64 @@ interface RawWorkableJob {
 export function normalize(rawJobs: RawWorkableJob[]): UnifiedJob[] {
   return rawJobs.map((raw) => {
     const sourceId = raw.shortcode ?? "";
-    const company = raw._company ?? "";
-
-    // Build location string from city, state, country
-    const parts = [raw.city, raw.state, raw.country].filter(Boolean);
-    const location = parts.join(", ") || "";
-
+    const companyName = raw._company ?? "";
+    const companySlug = raw._slug ?? slugify(companyName);
     const isRemote = raw.isRemote ?? raw.telecommuting ?? false;
-    const country =
-      raw.locations?.[0]?.countryCode ?? inferCountry(raw.country ?? location);
+    const descriptionPlain = stripHtml(raw.descriptionHtml ?? "");
+    const employmentRaw = raw.employmentType ?? "";
 
-    const description = stripHtml(raw.descriptionHtml ?? "");
+    // Primary location from top-level fields
+    const primaryLocation = buildLocation({
+      city: raw.city ?? null,
+      state: raw.state ?? null,
+      country: raw.country ?? null,
+      countryCode: raw.locations?.[0]?.countryCode ?? null,
+    });
 
-    // Tags from experience/industry if present
-    const tags = [raw.experience, raw.industry].filter(Boolean);
+    // Secondary locations from the locations array (skip the first if it matches primary)
+    const secondaryLocations = (raw.locations ?? []).slice(1).map((loc) =>
+      buildLocation({
+        city: loc.city ?? null,
+        state: loc.region ?? null,
+        country: loc.country ?? null,
+        countryCode: loc.countryCode ?? null,
+      }),
+    );
+
+    // Tags from experience/industry
+    const tags: string[] = [];
+    if (raw.experience) tags.push(raw.experience);
+    if (raw.industry) tags.push(raw.industry);
 
     return {
       id: generateId("workable", sourceId),
-      source: "workable" as const,
       sourceId,
-      company,
-      companySlug: raw._slug ?? slugify(company),
       title: raw.title ?? "",
+      description: descriptionPlain,
+      descriptionSnippet: snippet(descriptionPlain),
+      descriptionHtml: raw.descriptionHtml ?? null,
       department: raw.department ?? "",
-      location,
-      country,
-      region: classifyRegion(location, country, isRemote),
-      isRemote,
-      employmentType: raw.employmentType ?? "",
-      salary: "",
-      applyUrl: raw.applyUrl ?? "",
+      team: "",
+      category: raw.industry ?? "",
+      location: primaryLocation,
+      secondaryLocations,
+      workplaceType: normalizeWorkplaceType(undefined, isRemote, [raw.city, raw.state, raw.country].filter(Boolean).join(", ")),
+      employmentType: normalizeEmploymentType(employmentRaw),
+      employmentTypeRaw: employmentRaw,
+      seniorityLevel: inferSeniority(raw.title ?? "", raw.experience),
+      salary: parseSalary(""),
       jobUrl: raw.jobUrl ?? "",
+      applyUrl: raw.applyUrl ?? "",
+      company: {
+        name: companyName,
+        slug: companySlug,
+        ats: "workable",
+        logoUrl: null,
+        careersUrl: null,
+      },
+      tags,
       publishedAt: raw.publishedAt ?? raw.createdAt ?? "",
       scrapedAt: raw._scrapedAt ?? new Date().toISOString(),
-      tags: tags.length > 0 ? JSON.stringify(tags) : "",
-      descriptionSnippet: snippet(description),
       lastSeenAt: new Date().toISOString(),
     };
   });

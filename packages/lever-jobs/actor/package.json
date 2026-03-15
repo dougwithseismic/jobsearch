@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "apify": "^3.6.0",
-    "lever-jobs": "file:./lever-jobs-1.0.0.tgz"
+    "lever-jobs": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^25.3.5",

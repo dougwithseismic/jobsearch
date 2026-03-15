@@ -1,6 +1,12 @@
-import type { UnifiedJob } from "../types.js";
-import { classifyRegion, inferCountry } from "../region.js";
+import type { UnifiedJob } from "../unified-schema.js";
 import { slugify, generateId, snippet, stripHtml } from "../utils.js";
+import {
+  parseSalary,
+  inferSeniority,
+  normalizeEmploymentType,
+  normalizeWorkplaceType,
+  buildLocation,
+} from "./helpers.js";
 
 /**
  * Raw Recruitee job shape (from recruitee-jobs scraper).
@@ -35,42 +41,48 @@ interface RawRecruiteeJob {
 export function normalize(rawJobs: RawRecruiteeJob[]): UnifiedJob[] {
   return rawJobs.map((raw) => {
     const sourceId = String(raw.id ?? "");
-    const company = raw._company ?? "";
+    const companyName = raw._company ?? "";
+    const companySlug = raw._slug ?? slugify(companyName);
+    const isRemote = raw.remote ?? /remote/i.test(raw.location ?? "");
+    const employmentRaw = raw.employmentType ?? "";
 
-    // Use the location field, or build from city/state/country
-    const location =
-      raw.location ||
-      [raw.city, raw.state, raw.country].filter(Boolean).join(", ") ||
-      "";
-
-    const isRemote = raw.remote ?? /remote/i.test(location);
-    const country = raw.country ?? inferCountry(location);
-
-    const plainText =
-      raw.descriptionPlain ?? stripHtml(raw.description ?? "");
-
-    const tags = raw.tags ?? [];
+    const descriptionHtml = raw.description ?? null;
+    const descriptionPlain = raw.descriptionPlain ?? stripHtml(raw.description ?? "");
 
     return {
       id: generateId("recruitee", sourceId),
-      source: "recruitee" as const,
       sourceId,
-      company,
-      companySlug: raw._slug ?? slugify(company),
       title: raw.title ?? "",
+      description: descriptionPlain,
+      descriptionSnippet: snippet(descriptionPlain),
+      descriptionHtml,
       department: raw.department ?? "",
-      location,
-      country,
-      region: classifyRegion(location, country, isRemote),
-      isRemote,
-      employmentType: raw.employmentType ?? "",
-      salary: "",
-      applyUrl: raw.careersUrl ?? "",
+      team: "",
+      category: "",
+      location: buildLocation({
+        text: raw.location ?? undefined,
+        city: raw.city ?? null,
+        state: raw.state ?? null,
+        country: raw.country ?? null,
+      }),
+      secondaryLocations: [],
+      workplaceType: normalizeWorkplaceType(undefined, isRemote, raw.location ?? undefined),
+      employmentType: normalizeEmploymentType(employmentRaw),
+      employmentTypeRaw: employmentRaw,
+      seniorityLevel: inferSeniority(raw.title ?? ""),
+      salary: parseSalary(""),
       jobUrl: raw.careersUrl ?? "",
+      applyUrl: raw.careersUrl ?? "",
+      company: {
+        name: companyName,
+        slug: companySlug,
+        ats: "recruitee",
+        logoUrl: null,
+        careersUrl: null,
+      },
+      tags: raw.tags ?? [],
       publishedAt: raw.publishedAt ?? raw.createdAt ?? "",
       scrapedAt: raw._scrapedAt ?? new Date().toISOString(),
-      tags: tags.length > 0 ? JSON.stringify(tags) : "",
-      descriptionSnippet: snippet(plainText),
       lastSeenAt: new Date().toISOString(),
     };
   });

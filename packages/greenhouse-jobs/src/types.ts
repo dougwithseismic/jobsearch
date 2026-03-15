@@ -45,8 +45,8 @@ export interface FlatJob {
 
 /** Options for slug discovery */
 export interface DiscoverOptions {
-  /** Web index IDs to query. Defaults to recent indexes. */
-  crawlIds?: string[];
+  /** URL to fetch slugs from. Defaults to SLUG_API_URL env var or the Cloudflare Worker endpoint. */
+  slugApiUrl?: string;
   /** Additional known slugs to include */
   knownSlugs?: string[];
   /** Progress callback */

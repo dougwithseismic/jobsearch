@@ -1,6 +1,12 @@
-import type { UnifiedJob } from "../types.js";
-import { classifyRegion, inferCountry } from "../region.js";
+import type { UnifiedJob } from "../unified-schema.js";
 import { slugify, generateId, snippet } from "../utils.js";
+import {
+  parseSalary,
+  inferSeniority,
+  normalizeEmploymentType,
+  normalizeWorkplaceType,
+  buildLocation,
+} from "./helpers.js";
 
 /**
  * Raw BreezyHR job shape (from breezyhr-jobs scraper).
@@ -45,45 +51,63 @@ interface RawBreezyJob {
 export function normalize(rawJobs: RawBreezyJob[]): UnifiedJob[] {
   return rawJobs.map((raw) => {
     const sourceId = raw.id ?? "";
-    const company = raw._company ?? raw.company?.name ?? "";
+    const companyName = raw._company ?? raw.company?.name ?? "";
+    const companySlug = raw._slug ?? slugify(companyName);
     const loc = raw.location ?? {};
+    const isRemote = loc.isRemote ?? false;
+    const employmentRaw = raw.type?.name ?? "";
 
-    // Build location string from the location object
-    const locationParts = [
-      loc.city,
-      loc.state?.name,
-      loc.country?.name,
-    ].filter(Boolean);
-    const location = loc.name || locationParts.join(", ");
+    // Primary location from the location object
+    const firstExtra = raw.locations?.[0];
+    const primaryLocation = buildLocation({
+      text: loc.name || undefined,
+      city: loc.city ?? null,
+      state: loc.state?.name ?? null,
+      country: loc.country?.name ?? null,
+      countryCode: firstExtra?.countryCode ?? null,
+    });
 
-    const isRemote = loc.isRemote ?? /remote/i.test(location);
-
-    // Try to get country code from locations array first, then infer from location name
-    const firstLocation = raw.locations?.[0];
-    const countryCode = firstLocation?.countryCode
-      ? firstLocation.countryCode
-      : inferCountry(loc.country?.name ?? location);
+    // Secondary locations from the locations array
+    const secondaryLocations = (raw.locations ?? []).slice(1)
+      .filter((l) => !l.hidden)
+      .map((l) =>
+        buildLocation({
+          city: l.city ?? null,
+          state: l.region ?? null,
+          country: l.country?.name ?? null,
+          countryCode: l.countryCode ?? null,
+        }),
+      );
 
     return {
       id: generateId("breezyhr", sourceId),
-      source: "breezyhr" as const,
       sourceId,
-      company,
-      companySlug: raw._slug ?? slugify(company),
       title: raw.name ?? "",
+      description: "",
+      descriptionSnippet: "",
+      descriptionHtml: null,
       department: raw.department ?? "",
-      location,
-      country: countryCode,
-      region: classifyRegion(location, countryCode, isRemote),
-      isRemote,
-      employmentType: raw.type?.name ?? "",
-      salary: raw.salary ?? "",
-      applyUrl: raw.url ?? "",
+      team: "",
+      category: "",
+      location: primaryLocation,
+      secondaryLocations,
+      workplaceType: normalizeWorkplaceType(undefined, isRemote, loc.name ?? undefined),
+      employmentType: normalizeEmploymentType(employmentRaw),
+      employmentTypeRaw: employmentRaw,
+      seniorityLevel: inferSeniority(raw.name ?? ""),
+      salary: parseSalary(raw.salary ?? ""),
       jobUrl: raw.url ?? "",
+      applyUrl: raw.url ?? "",
+      company: {
+        name: companyName,
+        slug: companySlug,
+        ats: "breezyhr",
+        logoUrl: raw.company?.logoUrl ?? null,
+        careersUrl: null,
+      },
+      tags: [],
       publishedAt: raw.publishedDate ?? "",
       scrapedAt: raw._scrapedAt ?? new Date().toISOString(),
-      tags: "",
-      descriptionSnippet: "",
       lastSeenAt: new Date().toISOString(),
     };
   });

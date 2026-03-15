@@ -100,7 +100,7 @@ function printHelp() {
   ${NAME} <command> [options]
 
 COMMANDS:
-  discover              Discover company slugs from Common Crawl
+  discover              Discover company slugs from slug API
   scrape                Full run: discover slugs + scrape all companies
   search <query>        Search previously scraped job data
 

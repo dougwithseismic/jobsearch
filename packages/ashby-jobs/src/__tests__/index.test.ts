@@ -239,56 +239,53 @@ describe('searchJobs', () => {
 });
 
 describe('discoverSlugs', () => {
-  it('queries Common Crawl and parses slugs from URLs', async () => {
-    const ccResponse = [
-      'https://jobs.ashbyhq.com/acme-corp/some-job-id',
-      'https://jobs.ashbyhq.com/acme-corp/another-job',
-      'https://jobs.ashbyhq.com/widget-inc/job-123',
-      'https://jobs.ashbyhq.com/widget-inc',
-      'not-a-url',
+  it('fetches slugs from the API and parses newline-delimited response', async () => {
+    const apiResponse = [
+      'acme-corp',
+      'widget-inc',
+      'another-co',
       '',
     ].join('\n');
 
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => apiResponse,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/ashby',
       knownSlugs: [],
     });
 
     expect(slugs).toContain('acme-corp');
     expect(slugs).toContain('widget-inc');
+    expect(slugs).toContain('another-co');
     // Should be sorted
     expect(slugs).toEqual([...slugs].sort((a, b) => a.localeCompare(b)));
   });
 
   it('includes known slugs in results', async () => {
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
       text: async () => '',
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/ashby',
       knownSlugs: ['my-known-company'],
     });
 
     expect(slugs).toContain('my-known-company');
   });
 
-  it('deduplicates slugs across crawls', async () => {
-    const ccResponse = 'https://jobs.ashbyhq.com/acme-corp/job-1\n';
-
-    mockFetch.mockResolvedValue({
+  it('deduplicates slugs from API and knownSlugs', async () => {
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => 'acme-corp\n',
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01', 'CC-TEST-2025-02'],
+      slugApiUrl: 'https://test-api.example.com/slugs/ashby',
       knownSlugs: ['acme-corp'],
     });
 
@@ -296,31 +293,55 @@ describe('discoverSlugs', () => {
     expect(acmeCount).toBe(1);
   });
 
-  it('handles HTTP errors gracefully', async () => {
-    mockFetch.mockResolvedValue({
+  it('handles HTTP errors gracefully and falls back to knownSlugs', async () => {
+    mockFetch.mockResolvedValueOnce({
       ok: false,
       status: 500,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/ashby',
       knownSlugs: ['fallback'],
     });
 
-    // Should still return known slugs
     expect(slugs).toContain('fallback');
-    mockFetch.mockReset();
-  }, 30000);
+  });
+
+  it('filters out invalid slugs', async () => {
+    const apiResponse = [
+      'valid-company',
+      'embed',
+      'a',
+      'robots.txt',
+      'good-slug',
+    ].join('\n');
+
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => apiResponse,
+    });
+
+    const slugs = await discoverSlugs({
+      slugApiUrl: 'https://test-api.example.com/slugs/ashby',
+      knownSlugs: [],
+    });
+
+    expect(slugs).toContain('valid-company');
+    expect(slugs).toContain('good-slug');
+    expect(slugs).not.toContain('embed');
+    expect(slugs).not.toContain('a');
+    expect(slugs).not.toContain('robots.txt');
+  });
 
   it('calls onProgress callback', async () => {
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
       text: async () => '',
     });
 
     const onProgress = vi.fn();
     await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/ashby',
       knownSlugs: [],
       onProgress,
     });

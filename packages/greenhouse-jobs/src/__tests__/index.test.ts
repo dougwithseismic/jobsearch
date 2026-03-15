@@ -267,23 +267,16 @@ describe('searchJobs', () => {
 });
 
 describe('discoverSlugs', () => {
-  it('queries Common Crawl and parses slugs from URLs', async () => {
-    const ccResponse = [
-      'https://boards.greenhouse.io/acmecorp/jobs/12345',
-      'https://boards.greenhouse.io/acmecorp/jobs/67890',
-      'https://boards.greenhouse.io/widgetinc/jobs/11111',
-      'https://boards.greenhouse.io/widgetinc',
-      'not-a-url',
-      '',
-    ].join('\n');
+  it('fetches slugs from the API and parses newline-delimited response', async () => {
+    const apiResponse = ['acmecorp', 'widgetinc', ''].join('\n');
 
     mockFetch.mockResolvedValue({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => apiResponse,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test.example.com/slugs',
       knownSlugs: [],
     });
 
@@ -299,23 +292,23 @@ describe('discoverSlugs', () => {
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test.example.com/slugs',
       knownSlugs: ['my-known-company'],
     });
 
     expect(slugs).toContain('my-known-company');
   });
 
-  it('deduplicates slugs across crawls', async () => {
-    const ccResponse = 'https://boards.greenhouse.io/acmecorp/jobs/1\n';
+  it('deduplicates slugs from API and knownSlugs', async () => {
+    const apiResponse = 'acmecorp\n';
 
     mockFetch.mockResolvedValue({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => apiResponse,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01', 'CC-TEST-2025-02'],
+      slugApiUrl: 'https://test.example.com/slugs',
       knownSlugs: ['acmecorp'],
     });
 
@@ -323,14 +316,26 @@ describe('discoverSlugs', () => {
     expect(acmeCount).toBe(1);
   });
 
-  it('handles HTTP errors gracefully', async () => {
+  it('falls back to knownSlugs on HTTP errors', async () => {
     mockFetch.mockResolvedValue({
       ok: false,
       status: 500,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test.example.com/slugs',
+      knownSlugs: ['fallback'],
+    });
+
+    expect(slugs).toContain('fallback');
+    mockFetch.mockReset();
+  }, 30000);
+
+  it('falls back to knownSlugs on network error', async () => {
+    mockFetch.mockRejectedValue(new Error('Network error'));
+
+    const slugs = await discoverSlugs({
+      slugApiUrl: 'https://test.example.com/slugs',
       knownSlugs: ['fallback'],
     });
 
@@ -341,12 +346,12 @@ describe('discoverSlugs', () => {
   it('calls onProgress callback', async () => {
     mockFetch.mockResolvedValue({
       ok: true,
-      text: async () => '',
+      text: async () => 'testco\n',
     });
 
     const onProgress = vi.fn();
     await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test.example.com/slugs',
       knownSlugs: [],
       onProgress,
     });
@@ -354,21 +359,16 @@ describe('discoverSlugs', () => {
     expect(onProgress).toHaveBeenCalled();
   });
 
-  it('filters out invalid slugs', async () => {
-    const ccResponse = [
-      'https://boards.greenhouse.io/embed/job/12345',
-      'https://boards.greenhouse.io/api/something',
-      'https://boards.greenhouse.io/favicon.ico',
-      'https://boards.greenhouse.io/validcompany/jobs/1',
-    ].join('\n');
+  it('filters out invalid slugs from API response', async () => {
+    const apiResponse = ['embed', 'api', 'favicon.ico', 'validcompany'].join('\n');
 
     mockFetch.mockResolvedValue({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => apiResponse,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test.example.com/slugs',
       knownSlugs: [],
     });
 

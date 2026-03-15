@@ -276,55 +276,50 @@ describe('searchJobs', () => {
 });
 
 describe('discoverSlugs', () => {
-  it('queries Common Crawl and parses slugs from URLs', async () => {
-    const ccResponse = [
-      'https://jobs.lever.co/acme-corp/some-job-id',
-      'https://jobs.lever.co/acme-corp/another-job',
-      'https://jobs.lever.co/widget-inc/job-123',
-      'https://jobs.lever.co/widget-inc',
-      'not-a-url',
-      '',
-    ].join('\n');
+  it('fetches slugs from API and returns sorted unique list', async () => {
+    const apiResponse = ['acme-corp', 'widget-inc', 'acme-corp', ''].join('\n');
 
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => apiResponse,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/lever',
       knownSlugs: [],
     });
 
     expect(slugs).toContain('acme-corp');
     expect(slugs).toContain('widget-inc');
     expect(slugs).toEqual([...slugs].sort((a, b) => a.localeCompare(b)));
+    // Should deduplicate
+    const acmeCount = slugs.filter((s) => s === 'acme-corp').length;
+    expect(acmeCount).toBe(1);
   });
 
   it('includes known slugs in results', async () => {
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => '',
+      text: async () => 'api-company\n',
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/lever',
       knownSlugs: ['my-known-company'],
     });
 
     expect(slugs).toContain('my-known-company');
+    expect(slugs).toContain('api-company');
   });
 
-  it('deduplicates slugs across crawls', async () => {
-    const ccResponse = 'https://jobs.lever.co/acme-corp/job-1\n';
-
-    mockFetch.mockResolvedValue({
+  it('deduplicates API slugs and known slugs', async () => {
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => 'acme-corp\n',
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01', 'CC-TEST-2025-02'],
+      slugApiUrl: 'https://test-api.example.com/slugs/lever',
       knownSlugs: ['acme-corp'],
     });
 
@@ -332,30 +327,40 @@ describe('discoverSlugs', () => {
     expect(acmeCount).toBe(1);
   });
 
-  it('handles HTTP errors gracefully', async () => {
-    mockFetch.mockResolvedValue({
+  it('falls back to knownSlugs on HTTP error', async () => {
+    mockFetch.mockResolvedValueOnce({
       ok: false,
       status: 500,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/lever',
       knownSlugs: ['fallback'],
     });
 
     expect(slugs).toContain('fallback');
-    mockFetch.mockReset();
-  }, 30000);
+  });
+
+  it('falls back to knownSlugs on network error', async () => {
+    mockFetch.mockRejectedValueOnce(new Error('Network error'));
+
+    const slugs = await discoverSlugs({
+      slugApiUrl: 'https://test-api.example.com/slugs/lever',
+      knownSlugs: ['fallback'],
+    });
+
+    expect(slugs).toContain('fallback');
+  });
 
   it('calls onProgress callback', async () => {
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => '',
+      text: async () => 'some-company\n',
     });
 
     const onProgress = vi.fn();
     await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/lever',
       knownSlugs: [],
       onProgress,
     });
@@ -363,19 +368,24 @@ describe('discoverSlugs', () => {
     expect(onProgress).toHaveBeenCalled();
   });
 
-  it('handles http URLs from older crawls', async () => {
-    const ccResponse = 'http://jobs.lever.co/old-company/job-1\n';
+  it('filters out invalid slugs', async () => {
+    const apiResponse = ['good-company', 'embed', 'api', 'x', 'favicon.ico', 'also-good'].join('\n');
 
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => apiResponse,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/lever',
       knownSlugs: [],
     });
 
-    expect(slugs).toContain('old-company');
+    expect(slugs).toContain('good-company');
+    expect(slugs).toContain('also-good');
+    expect(slugs).not.toContain('embed');
+    expect(slugs).not.toContain('api');
+    expect(slugs).not.toContain('x');
+    expect(slugs).not.toContain('favicon.ico');
   });
 });

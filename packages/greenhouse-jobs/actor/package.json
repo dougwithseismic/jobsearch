@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "apify": "^3.6.0",
-    "greenhouse-jobs": "file:./greenhouse-jobs-1.0.0.tgz"
+    "greenhouse-jobs": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^25.3.5",

@@ -409,23 +409,16 @@ describe('searchJobs', () => {
 });
 
 describe('discoverSlugs', () => {
-  it('queries Common Crawl and parses slugs from subdomain URLs', async () => {
-    const ccResponse = [
-      'https://acmecorp.breezy.hr/p/abc123-some-job',
-      'https://acmecorp.breezy.hr/json',
-      'https://widgetinc.breezy.hr/p/def456-another-job',
-      'https://widgetinc.breezy.hr',
-      'not-a-url',
-      '',
-    ].join('\n');
+  it('fetches slugs from the API and parses them', async () => {
+    const apiResponse = ['acmecorp', 'widgetinc', '', '  '].join('\n');
 
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => apiResponse,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/breezyhr',
       knownSlugs: [],
     });
 
@@ -435,29 +428,27 @@ describe('discoverSlugs', () => {
   });
 
   it('includes known slugs in results', async () => {
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
       text: async () => '',
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/breezyhr',
       knownSlugs: ['my-known-company'],
     });
 
     expect(slugs).toContain('my-known-company');
   });
 
-  it('deduplicates slugs across crawls', async () => {
-    const ccResponse = 'https://acmecorp.breezy.hr/p/abc123\n';
-
-    mockFetch.mockResolvedValue({
+  it('deduplicates slugs from API and knownSlugs', async () => {
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => 'acmecorp\n',
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01', 'CC-TEST-2025-02'],
+      slugApiUrl: 'https://test-api.example.com/slugs/breezyhr',
       knownSlugs: ['acmecorp'],
     });
 
@@ -466,29 +457,28 @@ describe('discoverSlugs', () => {
   });
 
   it('handles HTTP errors gracefully', async () => {
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: false,
       status: 500,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/breezyhr',
       knownSlugs: ['fallback'],
     });
 
     expect(slugs).toContain('fallback');
-    mockFetch.mockReset();
-  }, 30000);
+  });
 
   it('calls onProgress callback', async () => {
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => '',
+      text: async () => 'slug1\nslug2\n',
     });
 
     const onProgress = vi.fn();
     await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/breezyhr',
       knownSlugs: [],
       onProgress,
     });
@@ -497,21 +487,15 @@ describe('discoverSlugs', () => {
   });
 
   it('filters out invalid slugs', async () => {
-    const ccResponse = [
-      'https://www.breezy.hr/some-page',
-      'https://app.breezy.hr/dashboard',
-      'https://api.breezy.hr/v3/something',
-      'https://help.breezy.hr/article',
-      'https://validcompany.breezy.hr/p/job1',
-    ].join('\n');
+    const apiResponse = ['www', 'app', 'api', 'help', 'validcompany'].join('\n');
 
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => apiResponse,
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/breezyhr',
       knownSlugs: [],
     });
 
@@ -523,66 +507,57 @@ describe('discoverSlugs', () => {
   });
 
   it('filters out slugs with dots', async () => {
-    const ccResponse = 'https://some.thing.breezy.hr/p/job1\n';
-
-    mockFetch.mockResolvedValue({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => ccResponse,
+      text: async () => 'some.thing\nvalidslug\n',
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/breezyhr',
       knownSlugs: [],
     });
 
-    // The regex should only capture the subdomain part before .breezy.hr
-    // In this case "some.thing" won't match as a valid slug because it has a dot
-    // Actually, the regex captures "some" from the URL "some.thing.breezy.hr"
-    // Wait -- the regex is /([^.]+)\.breezy\.hr/ which captures "thing" (the part right before .breezy.hr)
-    // "thing" is fine. Let's just ensure we don't get slugs with dots
     for (const s of slugs) {
       expect(s.includes('.')).toBe(false);
     }
+    expect(slugs).toContain('validslug');
   });
 
   it('handles network errors gracefully', async () => {
-    mockFetch.mockRejectedValue(new Error('Network error'));
+    mockFetch.mockRejectedValueOnce(new Error('Network error'));
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/breezyhr',
       knownSlugs: ['safe-slug'],
     });
 
     expect(slugs).toContain('safe-slug');
-    mockFetch.mockReset();
-  }, 30000);
+  });
 
-  it('uses default crawl IDs when not specified', async () => {
-    mockFetch.mockResolvedValue({
+  it('calls the API only once', async () => {
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => '',
-      json: async () => [{ id: 'CC-MAIN-2026-08' }, { id: 'CC-MAIN-2026-04' }, { id: 'CC-MAIN-2025-51' }],
+      text: async () => 'slug1\nslug2\n',
     });
 
-    const slugs = await discoverSlugs({
+    await discoverSlugs({
+      slugApiUrl: 'https://test-api.example.com/slugs/breezyhr',
       knownSlugs: [],
     });
 
-    // Should have called fetch 4 times (1 for collinfo.json + 3 for crawl indexes)
-    expect(mockFetch).toHaveBeenCalledTimes(4);
+    expect(mockFetch).toHaveBeenCalledTimes(1);
   });
 
-  it('uses default known slugs when not specified', async () => {
-    mockFetch.mockResolvedValue({
+  it('defaults to empty knownSlugs when not specified', async () => {
+    mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => '',
+      text: async () => 'fromapi\n',
     });
 
     const slugs = await discoverSlugs({
-      crawlIds: ['CC-TEST-2025-01'],
+      slugApiUrl: 'https://test-api.example.com/slugs/breezyhr',
     });
 
-    expect(slugs).toContain('breezy');
-    expect(slugs).toContain('hubstaff');
+    expect(slugs).toEqual(['fromapi']);
   });
 });

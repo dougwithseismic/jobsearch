@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "apify": "^3.6.0",
-    "recruitee-jobs": "file:./recruitee-jobs-1.0.0.tgz"
+    "recruitee-jobs": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^25.3.5",

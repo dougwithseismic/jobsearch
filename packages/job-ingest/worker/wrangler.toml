@@ -1,0 +1,7 @@
+name = "job-slugs"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+[[kv_namespaces]]
+binding = "SLUGS"
+id = "8afd1e8bd6f64b44b2d80d7e998075fa"

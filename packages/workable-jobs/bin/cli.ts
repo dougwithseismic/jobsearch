@@ -100,7 +100,7 @@ function printHelp() {
   ${NAME} <command> [options]
 
 COMMANDS:
-  discover              Discover company slugs from Common Crawl
+  discover              Discover company slugs from slug API
   scrape                Full run: discover slugs + scrape all companies
   search <query>        Search previously scraped job data
 
@@ -161,7 +161,6 @@ async function runScrape(parsed: ParsedArgs): Promise<void> {
   const outputDir = resolve(flag(parsed.flags, "output") ?? "./workable-data");
   const format = flag(parsed.flags, "format") ?? "json";
   const concurrency = parseInt(flag(parsed.flags, "concurrency") ?? "10", 10);
-  const includeDescriptions = hasFlag(parsed.flags, "descriptions");
   const singleCompany = flag(parsed.flags, "company");
   const slugFile = flag(parsed.flags, "slugs");
 
@@ -175,7 +174,7 @@ async function runScrape(parsed: ParsedArgs): Promise<void> {
   if (singleCompany) {
     // Single company mode
     if (!quiet) console.log(`Scraping ${singleCompany}...`);
-    const result = await scrapeCompany(singleCompany, { includeDescriptions });
+    const result = await scrapeCompany(singleCompany);
     results = result ? [result] : [];
   } else {
     // Multi-company mode

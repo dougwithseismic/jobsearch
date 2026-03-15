@@ -23,40 +23,24 @@ import type {
   SearchQuery,
 } from "./types.js";
 import { searchResults } from "./filters.js";
+import { ProxyAgent } from "undici";
+
+let _proxyDispatcher: ProxyAgent | undefined;
+function getProxyDispatcher(): ProxyAgent | undefined {
+  if (_proxyDispatcher) return _proxyDispatcher;
+  const proxyUrl = process.env.HTTPS_PROXY || process.env.HTTP_PROXY || process.env.https_proxy || process.env.http_proxy;
+  if (proxyUrl) {
+    _proxyDispatcher = new ProxyAgent(proxyUrl);
+  }
+  return _proxyDispatcher;
+}
 
 const PERSONIO_BASE = "https://{slug}.jobs.personio.de/xml";
-const CC_INDEX = "https://index.commoncrawl.org";
+const DEFAULT_SLUG_API_URL = "https://job-slugs.wd40.workers.dev/slugs/personio";
 
-const DEFAULT_KNOWN_SLUGS = [
-  "n26", "celonis", "sennder", "taxfix", "contentful",
-  "gorillas", "personio",
-];
-
-const REQUEST_DELAY_MS = 200;
 const MAX_RETRIES = 3;
 const BASE_DELAY_MS = 1000;
 const DEFAULT_TIMEOUT_MS = 30_000;
-const CC_TIMEOUT_MS = 120_000;
-
-const FALLBACK_CRAWLS = [
-  "CC-MAIN-2026-08",
-  "CC-MAIN-2026-04",
-  "CC-MAIN-2025-51",
-];
-
-const CC_COLLINFO_URL = "https://index.commoncrawl.org/collinfo.json";
-
-async function getLatestCrawlIds(count = 3): Promise<string[]> {
-  try {
-    const res = await fetchWithRetry(CC_COLLINFO_URL, { timeoutMs: 10_000, retries: 1 });
-    if (!res.ok) return FALLBACK_CRAWLS;
-    const data = await res.json() as { id: string }[];
-    const ids = data.slice(0, count).map((d) => d.id);
-    return ids.length > 0 ? ids : FALLBACK_CRAWLS;
-  } catch {
-    return FALLBACK_CRAWLS;
-  }
-}
 
 /**
  * Extract text content from a simple XML tag.
@@ -140,13 +124,6 @@ function stripDescriptions(job: PersonioJob): PersonioJob {
   return { ...job, jobDescriptions: [] };
 }
 
-/**
- * Sleep for a given number of milliseconds.
- */
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 async function fetchWithRetry(
   url: string,
   options?: { retries?: number; baseDelay?: number; timeoutMs?: number }
@@ -158,7 +135,7 @@ async function fetchWithRetry(
   let lastError: Error | undefined;
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) });
+      const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs), dispatcher: getProxyDispatcher() } as RequestInit);
       if (res.ok || (res.status >= 400 && res.status < 500 && res.status !== 429)) {
         return res;
       }
@@ -182,43 +159,6 @@ async function fetchWithRetry(
   throw lastError ?? new Error(`fetchWithRetry failed for ${url}`);
 }
 
-/**
- * Discover slugs from a single web index.
- */
-async function discoverSlugsFromIndex(
-  crawlId: string,
-  crawlIds: string[],
-  onProgress?: (message: string) => void
-): Promise<Set<string>> {
-  const slugs = new Set<string>();
-  const url = `${CC_INDEX}/${crawlId}-index?url=*.jobs.personio.de/*&output=text&fl=url&limit=100000`;
-
-  const indexNum = crawlIds.indexOf(crawlId) + 1;
-  onProgress?.(`Querying index ${indexNum}/${crawlIds.length}...`);
-
-  try {
-    const res = await fetchWithRetry(url, { timeoutMs: CC_TIMEOUT_MS });
-    if (!res.ok) {
-      onProgress?.(`Index ${indexNum}: HTTP ${res.status}`);
-      return slugs;
-    }
-    const text = await res.text();
-    for (const line of text.split("\n")) {
-      const match = line.match(/https?:\/\/([^.]+)\.jobs\.personio\.de/);
-      if (match?.[1]) {
-        const slug = decodeURIComponent(match[1]).toLowerCase();
-        if (!isValidSlug(slug)) continue;
-        slugs.add(slug);
-      }
-    }
-    onProgress?.(`Index ${indexNum}: found ${slugs.size} slugs`);
-  } catch (e) {
-    onProgress?.(`Index ${indexNum}: error - ${e}`);
-  }
-
-  return slugs;
-}
-
 const INVALID_SLUGS = new Set([
   "www", "api", "static", "cdn", "assets",
   "favicon.ico", "robots.txt", "sitemap.xml",
@@ -232,7 +172,10 @@ function isValidSlug(slug: string): boolean {
 }
 
 /**
- * Discover all company slugs from web indexes.
+ * Discover all company slugs (board tokens) from the slug API.
+ *
+ * Fetches a newline-delimited list of slugs from the Cloudflare Worker endpoint,
+ * merges in any additional knownSlugs, and returns a sorted unique array.
  *
  * @param options - Discovery options
  * @returns Sorted array of unique company slugs
@@ -240,27 +183,35 @@ function isValidSlug(slug: string): boolean {
 export async function discoverSlugs(
   options?: DiscoverOptions
 ): Promise<string[]> {
-  const knownSlugs = options?.knownSlugs ?? DEFAULT_KNOWN_SLUGS;
+  const knownSlugs = options?.knownSlugs ?? [];
   const onProgress = options?.onProgress;
+  const slugApiUrl =
+    options?.slugApiUrl ??
+    process.env.SLUG_API_URL ??
+    DEFAULT_SLUG_API_URL;
 
-  let crawlIds = options?.crawlIds;
-  if (!crawlIds) {
-    onProgress?.("Fetching latest crawl indexes...");
-    crawlIds = await getLatestCrawlIds(3);
-    onProgress?.(`Using indexes: ${crawlIds.join(", ")}`);
+  onProgress?.(`Fetching slugs from ${slugApiUrl}...`);
+
+  const apiSlugs: string[] = [];
+  try {
+    const res = await fetchWithRetry(slugApiUrl, { timeoutMs: DEFAULT_TIMEOUT_MS, retries: 2 });
+    if (res.ok) {
+      const text = await res.text();
+      for (const line of text.split("\n")) {
+        const slug = line.trim().toLowerCase();
+        if (slug && isValidSlug(slug)) {
+          apiSlugs.push(slug);
+        }
+      }
+      onProgress?.(`Fetched ${apiSlugs.length} slugs from API`);
+    } else {
+      onProgress?.(`Slug API returned HTTP ${res.status}, falling back to knownSlugs only`);
+    }
+  } catch (e) {
+    onProgress?.(`Slug API unreachable (${e}), falling back to knownSlugs only`);
   }
 
-  onProgress?.(`Discovering company slugs (${crawlIds.length} indexes in parallel)...`);
-
-  const results = await Promise.all(
-    crawlIds.map((crawl) => discoverSlugsFromIndex(crawl, crawlIds, onProgress))
-  );
-
-  const allSlugs = new Set<string>();
-  for (const slugSet of results) {
-    for (const s of slugSet) allSlugs.add(s);
-  }
-
+  const allSlugs = new Set<string>(apiSlugs);
   for (const s of knownSlugs) allSlugs.add(s);
 
   const sorted = [...allSlugs].sort((a, b) =>
@@ -349,11 +300,6 @@ export async function scrapeAll(
 
       if (done % 50 === 0 || done === slugs.length) {
         onProgress?.(done, slugs.length, found);
-      }
-
-      // Rate limiting delay between requests
-      if (queue.length > 0) {
-        await sleep(REQUEST_DELAY_MS);
       }
     }
   }
