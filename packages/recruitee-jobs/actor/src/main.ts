@@ -2,6 +2,8 @@ import { Actor, log } from 'apify';
 
 import { discoverSlugs, scrapeAll, scrapeCompany, searchJobs } from 'recruitee-jobs';
 import type { CompanyJobs, JobFilter } from 'recruitee-jobs';
+import { normalize } from '@jobsearch/job-ingest/src/normalizers/recruitee.js';
+import type { OutputFormat } from '@jobsearch/job-ingest/src/unified-schema.js';
 
 interface Input {
   mode: 'all' | 'companies' | 'search';
@@ -13,6 +15,7 @@ interface Input {
   includeDescriptions?: boolean;
   concurrency?: number;
   maxCompanies?: number;
+  outputFormat?: OutputFormat;
 }
 
 await Actor.init();
@@ -33,6 +36,7 @@ try {
     includeDescriptions = false,
     concurrency = 10,
     maxCompanies = 0,
+    outputFormat = 'unified',
   } = input;
 
   let results: CompanyJobs[];
@@ -105,35 +109,57 @@ try {
 
   // Push flattened jobs to dataset (one row per job)
   const totalJobs = results.reduce((s, c) => s + c.jobCount, 0);
-  log.info(`Pushing ${totalJobs} jobs from ${results.length} companies to dataset...`);
+  log.info(`Pushing ${totalJobs} jobs from ${results.length} companies to dataset (format: ${outputFormat})...`);
 
   const batchSize = 500;
   let pushed = 0;
 
   for (const company of results) {
-    const batch = company.jobs.map((job) => ({
-      company: company.company,
-      companySlug: company.slug,
-      jobId: job.id,
-      title: job.title,
-      department: job.department,
-      location: job.location,
-      country: job.country,
-      city: job.city,
-      state: job.state,
-      remote: job.remote,
-      employmentType: job.employmentType,
-      tags: job.tags,
-      publishedAt: job.publishedAt,
-      careersUrl: job.careersUrl,
-      ...(includeDescriptions ? { description: job.descriptionPlain ?? null } : {}),
-      scrapedAt: company.scrapedAt,
-    }));
+    if (outputFormat === 'raw') {
+      // Legacy flat format — backward compatible
+      const batch = company.jobs.map((job) => ({
+        company: company.company,
+        companySlug: company.slug,
+        jobId: job.id,
+        title: job.title,
+        department: job.department,
+        location: job.location,
+        country: job.country,
+        city: job.city,
+        state: job.state,
+        remote: job.remote,
+        employmentType: job.employmentType,
+        tags: job.tags,
+        publishedAt: job.publishedAt,
+        careersUrl: job.careersUrl,
+        ...(includeDescriptions ? { description: job.descriptionPlain ?? null } : {}),
+        scrapedAt: company.scrapedAt,
+      }));
 
-    // Push in batches for efficiency
-    for (let i = 0; i < batch.length; i += batchSize) {
-      await Actor.pushData(batch.slice(i, i + batchSize));
-      pushed += Math.min(batchSize, batch.length - i);
+      for (let i = 0; i < batch.length; i += batchSize) {
+        await Actor.pushData(batch.slice(i, i + batchSize));
+        pushed += Math.min(batchSize, batch.length - i);
+      }
+    } else {
+      // Unified or both — normalize via job-ingest
+      const rawJobs = company.jobs.map((j) => ({
+        ...j,
+        _company: company.company,
+        _slug: company.slug,
+        _scrapedAt: company.scrapedAt,
+      }));
+      const unified = normalize(rawJobs);
+
+      if (outputFormat === 'both') {
+        unified.forEach((u, i) => {
+          u.raw = rawJobs[i] as Record<string, unknown>;
+        });
+      }
+
+      for (let i = 0; i < unified.length; i += batchSize) {
+        await Actor.pushData(unified.slice(i, i + batchSize));
+        pushed += Math.min(batchSize, unified.length - i);
+      }
     }
   }
 

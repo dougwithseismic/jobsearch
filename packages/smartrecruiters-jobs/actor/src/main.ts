@@ -2,6 +2,8 @@ import { Actor, log } from 'apify';
 
 import { discoverSlugs, scrapeAll, scrapeCompany, searchJobs } from 'smartrecruiters-jobs';
 import type { CompanyJobs, JobFilter } from 'smartrecruiters-jobs';
+import { normalize } from '@jobsearch/job-ingest/src/normalizers/smartrecruiters.js';
+import type { OutputFormat } from '@jobsearch/job-ingest/src/unified-schema.js';
 
 interface Input {
   mode: 'all' | 'companies' | 'search';
@@ -13,6 +15,7 @@ interface Input {
   includeDescriptions?: boolean;
   concurrency?: number;
   maxCompanies?: number;
+  outputFormat?: OutputFormat;
 }
 
 await Actor.init();
@@ -33,6 +36,7 @@ try {
     includeDescriptions = false,
     concurrency = 10,
     maxCompanies = 0,
+    outputFormat = 'unified',
   } = input;
 
   let results: CompanyJobs[];
@@ -105,38 +109,62 @@ try {
 
   // Push flattened jobs to dataset (one row per job)
   const totalJobs = results.reduce((s, c) => s + c.jobCount, 0);
-  log.info(`Pushing ${totalJobs} jobs from ${results.length} companies to dataset...`);
+  log.info(`Pushing ${totalJobs} jobs from ${results.length} companies to dataset (format: ${outputFormat})...`);
 
   const batchSize = 500;
   let pushed = 0;
 
   for (const company of results) {
-    const batch = company.jobs.map((job) => ({
-      company: company.company,
-      companySlug: company.slug,
-      jobId: job.id,
-      title: job.name,
-      department: job.department?.label ?? null,
-      employmentType: job.typeOfEmployment?.label ?? null,
-      experienceLevel: job.experienceLevel?.label ?? null,
-      city: job.location?.city ?? null,
-      region: job.location?.region ?? null,
-      country: job.location?.country ?? null,
-      isRemote: job.location?.remote ?? false,
-      industry: job.industry?.label ?? null,
-      function: job.function?.label ?? null,
-      releasedDate: job.releasedDate ?? null,
-      refNumber: job.refNumber ?? null,
-      jobUrl: job.ref ?? null,
-      recruiterName: job.creator?.name ?? null,
-      ...(includeDescriptions ? { description: job.descriptionHtml ?? null } : {}),
-      scrapedAt: company.scrapedAt,
-    }));
+    if (outputFormat === 'raw') {
+      // Raw mode: push native SmartRecruiters format (existing behavior)
+      const batch = company.jobs.map((job) => ({
+        company: company.company,
+        companySlug: company.slug,
+        jobId: job.id,
+        title: job.name,
+        department: job.department?.label ?? null,
+        employmentType: job.typeOfEmployment?.label ?? null,
+        experienceLevel: job.experienceLevel?.label ?? null,
+        city: job.location?.city ?? null,
+        region: job.location?.region ?? null,
+        country: job.location?.country ?? null,
+        isRemote: job.location?.remote ?? false,
+        industry: job.industry?.label ?? null,
+        function: job.function?.label ?? null,
+        releasedDate: job.releasedDate ?? null,
+        refNumber: job.refNumber ?? null,
+        jobUrl: job.ref ?? null,
+        recruiterName: job.creator?.name ?? null,
+        ...(includeDescriptions ? { description: job.descriptionHtml ?? null } : {}),
+        scrapedAt: company.scrapedAt,
+      }));
 
-    // Push in batches for efficiency
-    for (let i = 0; i < batch.length; i += batchSize) {
-      await Actor.pushData(batch.slice(i, i + batchSize));
-      pushed += Math.min(batchSize, batch.length - i);
+      for (let i = 0; i < batch.length; i += batchSize) {
+        await Actor.pushData(batch.slice(i, i + batchSize));
+        pushed += Math.min(batchSize, batch.length - i);
+      }
+    } else {
+      // Unified or both mode: normalize through job-ingest
+      const rawJobs = company.jobs.map((job) => ({
+        ...job,
+        _company: company.company,
+        _slug: company.slug,
+        _scrapedAt: company.scrapedAt,
+      }));
+
+      const unified = normalize(rawJobs);
+
+      const batch = unified.map((u, i) => {
+        if (outputFormat === 'both') {
+          return { ...u, raw: rawJobs[i] };
+        }
+        return u;
+      });
+
+      for (let i = 0; i < batch.length; i += batchSize) {
+        await Actor.pushData(batch.slice(i, i + batchSize));
+        pushed += Math.min(batchSize, batch.length - i);
+      }
     }
   }
 
@@ -147,6 +175,7 @@ try {
     scrapedAt: new Date().toISOString(),
     elapsedSeconds: parseFloat(elapsed),
     mode,
+    outputFormat,
     totalCompanies: results.length,
     totalJobs,
     filters: {

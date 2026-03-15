@@ -2,6 +2,8 @@ import { Actor, log } from 'apify';
 
 import { discoverSlugs, scrapeAll, scrapeCompany, searchJobs } from 'lever-jobs';
 import type { CompanyJobs, JobFilter } from 'lever-jobs';
+import { normalize } from '@jobsearch/job-ingest/src/normalizers/lever.js';
+import type { OutputFormat } from '@jobsearch/job-ingest/src/unified-schema.js';
 
 interface Input {
   mode: 'all' | 'companies' | 'search';
@@ -13,6 +15,7 @@ interface Input {
   includeDescriptions?: boolean;
   concurrency?: number;
   maxCompanies?: number;
+  outputFormat?: OutputFormat;
 }
 
 await Actor.init();
@@ -33,6 +36,7 @@ try {
     includeDescriptions = false,
     concurrency = 10,
     maxCompanies = 0,
+    outputFormat = 'unified',
   } = input;
 
   let results: CompanyJobs[];
@@ -103,36 +107,57 @@ try {
     log.info(`Filters applied: ${beforeCount} -> ${afterCount} jobs (${results.length} companies)`);
   }
 
-  // Push flattened jobs to dataset (one row per job)
+  // Push jobs to dataset
   const totalJobs = results.reduce((s, c) => s + c.jobCount, 0);
-  log.info(`Pushing ${totalJobs} jobs from ${results.length} companies to dataset...`);
+  log.info(`Pushing ${totalJobs} jobs from ${results.length} companies to dataset (format: ${outputFormat})...`);
 
   const batchSize = 500;
   let pushed = 0;
 
   for (const company of results) {
-    const batch = company.jobs.map((job) => ({
-      company: company.company,
-      companySlug: company.slug,
-      jobId: job.id,
-      title: job.title,
-      department: job.department,
-      team: job.team,
-      commitment: job.commitment,
-      location: job.location,
-      allLocations: job.allLocations ?? [],
-      workplaceType: job.workplaceType,
-      hostedUrl: job.hostedUrl,
-      applyUrl: job.applyUrl,
-      createdAt: new Date(job.createdAt).toISOString(),
-      ...(includeDescriptions ? { description: job.descriptionPlain ?? null } : {}),
-      scrapedAt: company.scrapedAt,
-    }));
+    if (outputFormat === 'raw') {
+      // Raw mode: flat output, same as original behaviour
+      const batch = company.jobs.map((job) => ({
+        company: company.company,
+        companySlug: company.slug,
+        jobId: job.id,
+        title: job.title,
+        department: job.department,
+        team: job.team,
+        commitment: job.commitment,
+        location: job.location,
+        allLocations: job.allLocations ?? [],
+        workplaceType: job.workplaceType,
+        hostedUrl: job.hostedUrl,
+        applyUrl: job.applyUrl,
+        createdAt: new Date(job.createdAt).toISOString(),
+        ...(includeDescriptions ? { description: job.descriptionPlain ?? null } : {}),
+        scrapedAt: company.scrapedAt,
+      }));
 
-    // Push in batches for efficiency
-    for (let i = 0; i < batch.length; i += batchSize) {
-      await Actor.pushData(batch.slice(i, i + batchSize));
-      pushed += Math.min(batchSize, batch.length - i);
+      for (let i = 0; i < batch.length; i += batchSize) {
+        await Actor.pushData(batch.slice(i, i + batchSize));
+        pushed += Math.min(batchSize, batch.length - i);
+      }
+    } else {
+      // Unified or both: normalise via job-ingest
+      const rawJobs = company.jobs.map((job) => ({
+        ...job,
+        _company: company.company,
+        _slug: company.slug,
+        _scrapedAt: company.scrapedAt,
+      }));
+
+      const unified = normalize(rawJobs);
+
+      const batch = unified.map((u, i) =>
+        outputFormat === 'both' ? { ...u, raw: rawJobs[i] } : u,
+      );
+
+      for (let i = 0; i < batch.length; i += batchSize) {
+        await Actor.pushData(batch.slice(i, i + batchSize));
+        pushed += Math.min(batchSize, batch.length - i);
+      }
     }
   }
 

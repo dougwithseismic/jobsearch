@@ -10,6 +10,7 @@
     "test": "echo 'Run tests from parent package'"
   },
   "dependencies": {
+    "@jobsearch/job-ingest": "workspace:*",
     "apify": "^3.6.0",
     "workable-jobs": "workspace:*"
   },

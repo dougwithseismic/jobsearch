@@ -65,6 +65,14 @@
       "minimum": 1,
       "maximum": 20
     },
+    "outputFormat": {
+      "title": "Output Format",
+      "type": "string",
+      "description": "How to format output records:\n- 'unified' (default) — Normalized schema consistent across all ATS platforms with structured location, salary, company objects\n- 'raw' — Native Workable format, no normalization\n- 'both' — Unified schema with original Workable data in the 'raw' field",
+      "enum": ["unified", "raw", "both"],
+      "default": "unified",
+      "sectionCaption": "Output Format"
+    },
     "maxCompanies": {
       "title": "Max Companies",
       "type": "integer",

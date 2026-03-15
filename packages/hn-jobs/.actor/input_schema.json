@@ -56,6 +56,14 @@
       "type": "boolean",
       "description": "Include the raw HTML from each HN comment in the output. Increases dataset size. Default: off to keep results lean.",
       "default": false
+    },
+    "outputFormat": {
+      "title": "Output Format",
+      "type": "string",
+      "description": "How to format output records:\n- 'unified' (default) — Normalized schema consistent across all ATS platforms with structured location, salary, company objects\n- 'raw' — Native HN format, no normalization\n- 'both' — Unified schema with original HN data in the 'raw' field",
+      "enum": ["unified", "raw", "both"],
+      "default": "unified",
+      "sectionCaption": "Output Format"
     }
   },
   "required": []
