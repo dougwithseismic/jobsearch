@@ -5,13 +5,13 @@
   "properties": {
     "jobs": {
       "title": "Job Listings",
-      "description": "Scraped and normalized job postings in unified format",
-      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview",
+      "type": "string"
     },
     "summary": {
       "title": "Run Summary",
-      "description": "Stats about the scrape run",
-      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY",
+      "type": "string"
     }
   }
 }
