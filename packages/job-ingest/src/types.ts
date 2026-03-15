@@ -1,4 +1,4 @@
-export type Source = "ashby" | "greenhouse" | "lever" | "workable" | "recruitee" | "smartrecruiters" | "breezyhr" | "personio" | "hn";
+export type Source = "ashby" | "greenhouse" | "lever" | "workable" | "recruitee" | "smartrecruiters" | "breezyhr" | "personio" | "teamtailor" | "pinpoint" | "dover" | "jazzhr" | "jobvite" | "bamboohr" | "hn";
 export type Region = "europe" | "north-america" | "asia" | "remote" | "other";
 
 export interface UnifiedJob {

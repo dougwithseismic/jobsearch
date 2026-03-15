@@ -9,7 +9,7 @@
 
 export type AtsSource =
   | "greenhouse" | "lever" | "ashby" | "workable"
-  | "smartrecruiters" | "breezyhr" | "personio" | "recruitee" | "hn";
+  | "smartrecruiters" | "breezyhr" | "personio" | "recruitee" | "teamtailor" | "pinpoint" | "dover" | "jazzhr" | "jobvite" | "bamboohr" | "hn";
 
 export type WorkplaceType = "remote" | "hybrid" | "onsite" | "unknown";
 

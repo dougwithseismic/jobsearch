@@ -87,6 +87,12 @@ const CONTENT_FLAGS: Record<Source, "includeDescriptions" | "includeContent" | "
   breezyhr: "none",
   greenhouse: "includeContent",
   personio: "includeContent",
+  teamtailor: "none",
+  pinpoint: "none",
+  dover: "none",
+  jazzhr: "includeDescriptions",
+  jobvite: "includeContent",
+  bamboohr: "none",
   hn: "hn",
 };
 

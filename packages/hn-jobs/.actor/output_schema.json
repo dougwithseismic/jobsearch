@@ -1,7 +1,7 @@
 {
   "actorOutputSchemaVersion": 1,
-  "title": "HN Who is Hiring Scraper Output",
-  "description": "Jobs parsed from HN Who is Hiring threads, plus a run summary",
+  "title": "HN Jobs Scraper Output",
+  "description": "Unified job listings parsed from HN Who is Hiring threads, plus a run summary",
   "properties": {
     "jobs": {
       "type": "string",

@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "./src/ingest.ts",
+  "main": "./dist/ingest.js",
+  "exports": {
+    ".": "./dist/ingest.js",
+    "./src/normalizers/*": "./dist/normalizers/*",
+    "./src/unified-schema.js": "./dist/unified-schema.js"
+  },
+  "files": ["dist"],
   "scripts": {
     "ingest": "tsx src/cli.ts --all",
     "ingest:source": "tsx src/cli.ts --source",
-    "build": "tsc --noEmit",
+    "build": "tsc",
     "check-types": "tsc --noEmit"
   },
   "dependencies": {

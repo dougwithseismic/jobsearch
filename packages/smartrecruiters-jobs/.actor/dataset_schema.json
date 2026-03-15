@@ -3,93 +3,170 @@
   "fields": {
     "type": "object",
     "properties": {
-      "company": {
+      "id": {
         "type": "string",
-        "description": "Company display name"
+        "description": "Unique job identifier (ats:company:sourceId)"
       },
-      "companySlug": {
+      "sourceId": {
         "type": "string",
-        "description": "SmartRecruiters company identifier"
-      },
-      "jobId": {
-        "type": "string",
-        "description": "Unique SmartRecruiters posting ID"
+        "description": "Original job ID from the ATS"
       },
       "title": {
         "type": "string",
         "description": "Job title"
       },
+      "descriptionSnippet": {
+        "type": "string",
+        "description": "Short plain-text snippet of the job description"
+      },
       "department": {
         "type": "string",
         "description": "Department name"
       },
+      "team": {
+        "type": "string",
+        "description": "Team name"
+      },
+      "category": {
+        "type": "string",
+        "description": "Job category"
+      },
+      "location": {
+        "type": "object",
+        "description": "Primary job location",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Free-text location as displayed on the ATS"
+          },
+          "city": {
+            "type": "string",
+            "description": "City name",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "description": "State or province",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "description": "ISO 3166-1 alpha-2 country code",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "description": "Geographic region",
+            "enum": ["europe", "north-america", "south-america", "asia-pacific", "middle-east", "africa", "remote-global", "other"]
+          }
+        }
+      },
+      "workplaceType": {
+        "type": "string",
+        "description": "Workplace arrangement",
+        "enum": ["remote", "hybrid", "onsite", "unknown"]
+      },
       "employmentType": {
         "type": "string",
-        "description": "Full-time, Part-time, Contract, etc."
+        "description": "Type of employment",
+        "enum": ["full-time", "part-time", "contract", "freelance", "internship", "temporary", "volunteer", "other"]
       },
-      "experienceLevel": {
+      "seniorityLevel": {
         "type": "string",
-        "description": "Entry, Mid-Senior level, Director, etc."
+        "description": "Seniority level",
+        "enum": ["intern", "junior", "mid", "senior", "staff", "principal", "lead", "manager", "director", "vp", "c-level", "other"]
       },
-      "city": {
-        "type": "string",
-        "description": "Job city"
-      },
-      "region": {
-        "type": "string",
-        "description": "Job region/state"
-      },
-      "country": {
-        "type": "string",
-        "description": "Job country"
-      },
-      "isRemote": {
-        "type": "boolean",
-        "description": "Whether the job is remote"
-      },
-      "industry": {
-        "type": "string",
-        "description": "Industry label"
-      },
-      "function": {
-        "type": "string",
-        "description": "Function/category label"
-      },
-      "releasedDate": {
-        "type": "string",
-        "description": "ISO 8601 date when the job was posted"
-      },
-      "refNumber": {
-        "type": "string",
-        "description": "Job reference number"
+      "salary": {
+        "type": "object",
+        "description": "Compensation details",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Raw salary string as scraped"
+          },
+          "min": {
+            "type": "number",
+            "description": "Minimum salary",
+            "nullable": true
+          },
+          "max": {
+            "type": "number",
+            "description": "Maximum salary",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "description": "ISO 4217 currency code",
+            "nullable": true
+          },
+          "period": {
+            "type": "string",
+            "description": "Pay period",
+            "enum": ["yearly", "monthly", "weekly", "daily", "hourly"],
+            "nullable": true
+          }
+        }
       },
       "jobUrl": {
         "type": "string",
-        "description": "URL to the job posting on SmartRecruiters"
+        "description": "Direct link to the job posting"
       },
-      "recruiterName": {
+      "applyUrl": {
         "type": "string",
-        "description": "Name of the recruiter who posted the job",
-        "nullable": true
+        "description": "Direct application URL"
       },
-      "description": {
+      "company": {
+        "type": "object",
+        "description": "Company information",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Company display name"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Company slug/identifier on the ATS"
+          },
+          "ats": {
+            "type": "string",
+            "description": "ATS platform source",
+            "enum": ["greenhouse", "lever", "ashby", "workable", "smartrecruiters", "breezyhr", "personio", "recruitee", "hn"]
+          },
+          "logoUrl": {
+            "type": "string",
+            "description": "Company logo URL",
+            "nullable": true
+          },
+          "careersUrl": {
+            "type": "string",
+            "description": "Company careers page URL",
+            "nullable": true
+          }
+        }
+      },
+      "tags": {
+        "type": "array",
+        "description": "Tags extracted from the job posting",
+        "items": { "type": "string" }
+      },
+      "publishedAt": {
         "type": "string",
-        "description": "Full HTML job description (only when includeDescriptions is enabled)",
-        "nullable": true
+        "description": "ISO 8601 date when the job was published"
       },
       "scrapedAt": {
         "type": "string",
         "description": "ISO 8601 timestamp of when this job was scraped"
+      },
+      "lastSeenAt": {
+        "type": "string",
+        "description": "ISO 8601 timestamp of when this job was last seen active"
       }
     },
     "required": [
-      "company",
-      "companySlug",
-      "jobId",
+      "id",
+      "sourceId",
       "title",
-      "city",
-      "country",
-      "isRemote",
+      "company",
       "jobUrl",
       "scrapedAt"
     ]
@@ -99,161 +176,59 @@
       "title": "Overview",
       "transformation": {
         "fields": [
-          "company",
           "title",
-          "department",
-          "city",
-          "country",
-          "isRemote",
-          "employmentType",
-          "experienceLevel",
-          "releasedDate",
-          "jobUrl"
-        ]
-      },
-      "display": {
-        "component": "table",
-        "properties": {
-          "company": {
-            "label": "Company",
-            "format": "text"
-          },
-          "title": {
-            "label": "Job Title",
-            "format": "text"
-          },
-          "department": {
-            "label": "Department",
-            "format": "text"
-          },
-          "city": {
-            "label": "City",
-            "format": "text"
-          },
-          "country": {
-            "label": "Country",
-            "format": "text"
-          },
-          "isRemote": {
-            "label": "Remote",
-            "format": "boolean"
-          },
-          "employmentType": {
-            "label": "Type",
-            "format": "text"
-          },
-          "experienceLevel": {
-            "label": "Level",
-            "format": "text"
-          },
-          "releasedDate": {
-            "label": "Posted",
-            "format": "date"
-          },
-          "jobUrl": {
-            "label": "Job URL",
-            "format": "link"
-          }
-        }
-      }
-    },
-    "full": {
-      "title": "Full Details",
-      "transformation": {
-        "fields": [
           "company",
-          "companySlug",
-          "jobId",
-          "title",
           "department",
+          "location",
+          "workplaceType",
           "employmentType",
-          "experienceLevel",
-          "city",
-          "region",
-          "country",
-          "isRemote",
-          "industry",
-          "function",
-          "refNumber",
-          "recruiterName",
-          "releasedDate",
+          "seniorityLevel",
+          "salary",
           "jobUrl",
-          "scrapedAt"
+          "publishedAt"
         ]
       },
       "display": {
         "component": "table",
         "properties": {
-          "company": {
-            "label": "Company",
-            "format": "text"
-          },
-          "companySlug": {
-            "label": "Identifier",
-            "format": "text"
-          },
-          "jobId": {
-            "label": "Job ID",
-            "format": "text"
-          },
           "title": {
             "label": "Job Title",
             "format": "text"
+          },
+          "company": {
+            "label": "Company",
+            "format": "object"
           },
           "department": {
             "label": "Department",
             "format": "text"
           },
+          "location": {
+            "label": "Location",
+            "format": "object"
+          },
+          "workplaceType": {
+            "label": "Workplace",
+            "format": "text"
+          },
           "employmentType": {
-            "label": "Type",
+            "label": "Employment",
             "format": "text"
           },
-          "experienceLevel": {
-            "label": "Level",
+          "seniorityLevel": {
+            "label": "Seniority",
             "format": "text"
           },
-          "city": {
-            "label": "City",
-            "format": "text"
-          },
-          "region": {
-            "label": "Region",
-            "format": "text"
-          },
-          "country": {
-            "label": "Country",
-            "format": "text"
-          },
-          "isRemote": {
-            "label": "Remote",
-            "format": "boolean"
-          },
-          "industry": {
-            "label": "Industry",
-            "format": "text"
-          },
-          "function": {
-            "label": "Function",
-            "format": "text"
-          },
-          "refNumber": {
-            "label": "Ref #",
-            "format": "text"
-          },
-          "recruiterName": {
-            "label": "Recruiter",
-            "format": "text"
-          },
-          "releasedDate": {
-            "label": "Posted",
-            "format": "date"
+          "salary": {
+            "label": "Salary",
+            "format": "object"
           },
           "jobUrl": {
             "label": "Job URL",
             "format": "link"
           },
-          "scrapedAt": {
-            "label": "Scraped At",
+          "publishedAt": {
+            "label": "Published",
             "format": "date"
           }
         }

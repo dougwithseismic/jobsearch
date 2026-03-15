@@ -1,7 +1,7 @@
 {
   "actorOutputSchemaVersion": 1,
   "title": "Personio Jobs Scraper Output",
-  "description": "Jobs scraped from Personio-powered job boards, plus a run summary",
+  "description": "Unified job listings scraped from Personio-powered job boards, plus a run summary",
   "properties": {
     "jobs": {
       "type": "string",

@@ -3,93 +3,182 @@
   "fields": {
     "type": "object",
     "properties": {
-      "company": {
+      "id": {
         "type": "string",
-        "description": "Company display name (subdomain)"
+        "description": "Unique job identifier (ats:company:sourceId)"
       },
-      "companySlug": {
+      "sourceId": {
         "type": "string",
-        "description": "Personio subdomain (e.g. 'n26', 'celonis')"
+        "description": "Original job ID from the ATS"
       },
-      "jobId": {
-        "type": "integer",
-        "description": "Unique Personio job ID"
-      },
-      "name": {
+      "title": {
         "type": "string",
-        "description": "Job title / position name"
+        "description": "Job title"
+      },
+      "descriptionSnippet": {
+        "type": "string",
+        "description": "Short plain-text snippet of the job description"
       },
       "department": {
         "type": "string",
         "description": "Department name"
       },
-      "office": {
+      "team": {
         "type": "string",
-        "description": "Office location"
+        "description": "Team name"
       },
-      "recruitingCategory": {
+      "category": {
         "type": "string",
-        "description": "Recruiting category (e.g. Full-time, Part-time)"
+        "description": "Job category"
+      },
+      "location": {
+        "type": "object",
+        "description": "Structured location data",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Free-text location as displayed on the ATS"
+          },
+          "city": {
+            "type": "string",
+            "description": "City name",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "description": "State or region",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "description": "ISO 3166-1 alpha-2 country code",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "description": "Broad region (europe, north-america, asia-pacific, etc.)",
+            "enum": ["europe", "north-america", "south-america", "asia-pacific", "middle-east", "africa", "remote-global", "other"]
+          },
+          "lat": {
+            "type": "number",
+            "description": "Latitude",
+            "nullable": true
+          },
+          "lng": {
+            "type": "number",
+            "description": "Longitude",
+            "nullable": true
+          }
+        }
+      },
+      "workplaceType": {
+        "type": "string",
+        "description": "Workplace arrangement",
+        "enum": ["remote", "hybrid", "onsite", "unknown"]
       },
       "employmentType": {
         "type": "string",
-        "description": "Employment type (e.g. permanent, contract)"
+        "description": "Employment type",
+        "enum": ["full-time", "part-time", "contract", "freelance", "internship", "temporary", "volunteer", "other"]
       },
-      "seniority": {
+      "seniorityLevel": {
         "type": "string",
-        "description": "Seniority level (e.g. Senior, Junior, Mid)"
+        "description": "Seniority level",
+        "enum": ["intern", "junior", "mid", "senior", "staff", "principal", "lead", "manager", "director", "vp", "c-level", "other"]
       },
-      "schedule": {
-        "type": "string",
-        "description": "Work schedule (e.g. full-time, part-time)"
-      },
-      "yearsOfExperience": {
-        "type": "string",
-        "description": "Required years of experience"
-      },
-      "keywords": {
-        "type": "string",
-        "description": "Job keywords / tags"
-      },
-      "occupation": {
-        "type": "string",
-        "description": "Occupation category"
-      },
-      "occupationCategory": {
-        "type": "string",
-        "description": "Occupation sub-category"
-      },
-      "createdAt": {
-        "type": "string",
-        "description": "ISO 8601 date when the job was created"
+      "salary": {
+        "type": "object",
+        "description": "Compensation data",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Raw salary string exactly as scraped"
+          },
+          "min": {
+            "type": "number",
+            "description": "Minimum salary",
+            "nullable": true
+          },
+          "max": {
+            "type": "number",
+            "description": "Maximum salary",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "description": "ISO 4217 currency code",
+            "nullable": true
+          },
+          "period": {
+            "type": "string",
+            "description": "Pay period",
+            "enum": ["yearly", "monthly", "weekly", "daily", "hourly"],
+            "nullable": true
+          }
+        }
       },
       "jobUrl": {
         "type": "string",
-        "description": "Direct link to the job posting on Personio"
+        "description": "Direct link to the job posting"
       },
-      "jobDescriptions": {
-        "type": "array",
-        "description": "Full HTML job descriptions (only when includeContent is enabled)",
-        "items": {
-          "type": "object",
-          "properties": {
-            "name": { "type": "string" },
-            "value": { "type": "string" }
+      "applyUrl": {
+        "type": "string",
+        "description": "Direct link to apply for the job"
+      },
+      "company": {
+        "type": "object",
+        "description": "Company information",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Company display name"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Company slug / identifier"
+          },
+          "ats": {
+            "type": "string",
+            "description": "ATS source",
+            "enum": ["greenhouse", "lever", "ashby", "workable", "smartrecruiters", "breezyhr", "personio", "recruitee", "hn"]
+          },
+          "logoUrl": {
+            "type": "string",
+            "description": "Company logo URL",
+            "nullable": true
+          },
+          "careersUrl": {
+            "type": "string",
+            "description": "Company careers page URL",
+            "nullable": true
           }
         }
+      },
+      "tags": {
+        "type": "array",
+        "description": "Tags and labels",
+        "items": { "type": "string" }
+      },
+      "publishedAt": {
+        "type": "string",
+        "description": "ISO 8601 date when the job was published"
       },
       "scrapedAt": {
         "type": "string",
         "description": "ISO 8601 timestamp of when this job was scraped"
+      },
+      "lastSeenAt": {
+        "type": "string",
+        "description": "ISO 8601 timestamp of when this job was last seen"
       }
     },
     "required": [
-      "company",
-      "companySlug",
-      "jobId",
-      "name",
-      "office",
+      "id",
+      "sourceId",
+      "title",
+      "location",
       "jobUrl",
+      "company",
       "scrapedAt"
     ]
   },
@@ -98,24 +187,21 @@
       "title": "Overview",
       "transformation": {
         "fields": [
-          "company",
-          "name",
+          "title",
           "department",
-          "office",
-          "seniority",
+          "location",
+          "workplaceType",
           "employmentType",
-          "createdAt",
+          "seniorityLevel",
+          "company",
+          "publishedAt",
           "jobUrl"
         ]
       },
       "display": {
         "component": "table",
         "properties": {
-          "company": {
-            "label": "Company",
-            "format": "text"
-          },
-          "name": {
+          "title": {
             "label": "Job Title",
             "format": "text"
           },
@@ -123,114 +209,33 @@
             "label": "Department",
             "format": "text"
           },
-          "office": {
-            "label": "Office",
-            "format": "text"
+          "location": {
+            "label": "Location",
+            "format": "object"
           },
-          "seniority": {
-            "label": "Seniority",
+          "workplaceType": {
+            "label": "Workplace",
             "format": "text"
           },
           "employmentType": {
             "label": "Type",
             "format": "text"
           },
-          "createdAt": {
-            "label": "Created",
-            "format": "date"
+          "seniorityLevel": {
+            "label": "Seniority",
+            "format": "text"
           },
-          "jobUrl": {
-            "label": "Job URL",
-            "format": "link"
-          }
-        }
-      }
-    },
-    "full": {
-      "title": "Full Details",
-      "transformation": {
-        "fields": [
-          "company",
-          "companySlug",
-          "jobId",
-          "name",
-          "department",
-          "office",
-          "recruitingCategory",
-          "employmentType",
-          "seniority",
-          "schedule",
-          "yearsOfExperience",
-          "keywords",
-          "occupation",
-          "occupationCategory",
-          "createdAt",
-          "jobUrl",
-          "scrapedAt"
-        ]
-      },
-      "display": {
-        "component": "table",
-        "properties": {
           "company": {
             "label": "Company",
-            "format": "text"
+            "format": "object"
           },
-          "companySlug": {
-            "label": "Slug",
-            "format": "text"
-          },
-          "jobId": {
-            "label": "Job ID",
-            "format": "number"
-          },
-          "name": {
-            "label": "Job Title",
-            "format": "text"
-          },
-          "department": {
-            "label": "Department",
-            "format": "text"
-          },
-          "office": {
-            "label": "Office",
-            "format": "text"
-          },
-          "recruitingCategory": {
-            "label": "Category",
-            "format": "text"
-          },
-          "employmentType": {
-            "label": "Type",
-            "format": "text"
-          },
-          "seniority": {
-            "label": "Seniority",
-            "format": "text"
-          },
-          "schedule": {
-            "label": "Schedule",
-            "format": "text"
-          },
-          "yearsOfExperience": {
-            "label": "Experience",
-            "format": "text"
-          },
-          "keywords": {
-            "label": "Keywords",
-            "format": "text"
-          },
-          "createdAt": {
-            "label": "Created",
+          "publishedAt": {
+            "label": "Published",
             "format": "date"
           },
           "jobUrl": {
             "label": "Job URL",
             "format": "link"
-          },
-          "scrapedAt": {
-            "label": "Scraped At",
-            "format": "date"
           }
         }
       }

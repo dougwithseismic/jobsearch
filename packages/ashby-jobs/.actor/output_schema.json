@@ -1,16 +1,16 @@
 {
   "actorOutputSchemaVersion": 1,
   "title": "Ashby Jobs Scraper Output",
-  "description": "Jobs scraped from Ashby-powered job boards, plus a run summary",
+  "description": "Unified job listings with structured location, salary, company, and seniority data",
   "properties": {
     "jobs": {
-      "type": "string",
       "title": "Job Listings",
+      "description": "Scraped and normalized job postings in unified format",
       "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
     },
     "summary": {
-      "type": "string",
       "title": "Run Summary",
+      "description": "Stats about the scrape run",
       "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
     }
   }
