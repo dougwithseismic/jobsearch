@@ -3,7 +3,7 @@
  * Works with the rich UnifiedJob schema (location/company/salary as objects).
  */
 
-import type { UnifiedJob } from "../../job-ingest/src/unified-schema.js";
+import type { UnifiedJob } from "@jobsearch/job-ingest/src/unified-schema.js";
 import type { SearchOptions } from "./types.js";
 
 /**

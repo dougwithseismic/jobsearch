@@ -12,10 +12,10 @@
   "dependencies": {
     "apify": "^3.6.0",
     "@jobsearch/job-ingest": "workspace:*",
-    "bamboohr-jobs": "workspace:*"
+    "bamboohr-jobs": "workspace:*",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@types/node": "^25.3.5",
-    "typescript": "^5.9.3"
+    "@types/node": "^25.3.5"
   }
 }

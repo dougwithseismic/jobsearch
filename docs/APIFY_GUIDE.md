@@ -43,10 +43,11 @@ packages/job-ingest/          # Shared normalizer + unified schema
 | hn-jobs | `6yIzafQOIC3S6cnhm` | [Console](https://console.apify.com/actors/6yIzafQOIC3S6cnhm) |
 | teamtailor-jobs | *not yet deployed* | — |
 | pinpoint-jobs | *not yet deployed* | — |
-| dover-jobs | *not yet deployed* | — |
+| dover-jobs | `lOpx0Gw2cVtbKFfH0` | [Console](https://console.apify.com/actors/lOpx0Gw2cVtbKFfH0) |
 | bamboohr-jobs | *not yet deployed* | — |
 | jazzhr-jobs | *not yet deployed* | — |
 | jobvite-jobs | *not yet deployed* | — |
+| **deadlyaccuratejobs** | `99Iti3WKdLg9klIam` | [Console](https://console.apify.com/actors/99Iti3WKdLg9klIam) |
 
 ## Building & Deploying
 
@@ -278,3 +279,4 @@ All actors support 3 output modes via the `outputFormat` input:
 | Personio | $2.00 |
 | Recruitee | $2.00 |
 | HN Jobs | $0.50 |
+| Dover | $2.00 |

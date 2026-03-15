@@ -3,17 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": ["dist"],
   "bin": {
     "deadlyaccuratejobs": "./bin/cli.ts"
   },
   "scripts": {
     "search": "tsx bin/cli.ts",
-    "build": "tsc --noEmit",
+    "build": "tsc",
     "check-types": "tsc --noEmit",
     "test": "node --experimental-vm-modules node_modules/.bin/vitest run"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@jobsearch/job-ingest": "workspace:*"
+  },
   "devDependencies": {
     "@types/node": "^25.3.5",
     "tsx": "^4.21.0",

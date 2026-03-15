@@ -13,7 +13,7 @@ beforeEach(() => {
 describe('_parseListJob', () => {
   it('parses raw BambooHR list API response', () => {
     const raw = makeRawListResponse().result[0];
-    const job = _parseListJob(raw as Parameters<typeof _parseListJob>[0]);
+    const job = _parseListJob(raw as unknown as Parameters<typeof _parseListJob>[0]);
     expect(job.id).toBe('15');
     expect(job.jobOpeningName).toBe('Senior Software Engineer');
     expect(job.departmentLabel).toBe('Engineering');
@@ -25,7 +25,7 @@ describe('_parseListJob', () => {
 
   it('does not include description from list endpoint', () => {
     const raw = makeRawListResponse().result[0];
-    const job = _parseListJob(raw as Parameters<typeof _parseListJob>[0]);
+    const job = _parseListJob(raw as unknown as Parameters<typeof _parseListJob>[0]);
     expect(job.description).toBeUndefined();
   });
 });

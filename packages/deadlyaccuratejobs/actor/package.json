@@ -3,17 +3,33 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "src/main.ts",
+  "description": "Apify actor: Universal job search across 15 ATS platforms",
   "scripts": {
-    "start": "tsx src/main.ts"
+    "build": "tsc",
+    "start": "node dist/main.js"
   },
   "dependencies": {
     "apify": "^3.3.2",
     "@jobsearch/deadlyaccuratejobs": "workspace:*",
-    "@jobsearch/job-ingest": "workspace:*"
+    "@jobsearch/job-ingest": "workspace:*",
+    "greenhouse-jobs": "workspace:*",
+    "lever-jobs": "workspace:*",
+    "ashby-jobs": "workspace:*",
+    "workable-jobs": "workspace:*",
+    "smartrecruiters-jobs": "workspace:*",
+    "breezyhr-jobs": "workspace:*",
+    "personio-jobs": "workspace:*",
+    "recruitee-jobs": "workspace:*",
+    "teamtailor-jobs": "workspace:*",
+    "pinpoint-jobs": "workspace:*",
+    "dover-jobs": "workspace:*",
+    "bamboohr-jobs": "workspace:*",
+    "jazzhr-jobs": "workspace:*",
+    "jobvite-jobs": "workspace:*",
+    "hn-jobs": "workspace:*",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "@types/node": "^25.3.5"
   }
 }

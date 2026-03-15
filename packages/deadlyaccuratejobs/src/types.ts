@@ -1,5 +1,5 @@
-import type { UnifiedJob as RichUnifiedJob, AtsSource, JobLocation, JobSalary, JobCompany } from "../../job-ingest/src/unified-schema.js";
-import type { Source } from "../../job-ingest/src/types.js";
+import type { UnifiedJob as RichUnifiedJob, AtsSource, JobLocation, JobSalary, JobCompany } from "@jobsearch/job-ingest/src/unified-schema.js";
+import type { Source } from "@jobsearch/job-ingest/src/types.js";
 
 export type { Source, RichUnifiedJob as UnifiedJob, AtsSource, JobLocation, JobSalary, JobCompany };
 

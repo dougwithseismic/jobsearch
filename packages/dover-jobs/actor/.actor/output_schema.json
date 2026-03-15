@@ -1,0 +1,19 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Dover Jobs Scraper Output",
+  "description": "Unified job listings with structured location, salary, company, and seniority data",
+  "properties": {
+    "jobs": {
+      "type": "dataset",
+      "title": "Job Listings",
+      "description": "Scraped and normalized job postings in unified format",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    },
+    "summary": {
+      "type": "keyValueStore",
+      "title": "Run Summary",
+      "description": "Stats about the scrape run",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+    }
+  }
+}

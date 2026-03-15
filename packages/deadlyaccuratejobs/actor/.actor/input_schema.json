@@ -1,0 +1,98 @@
+{
+  "title": "deadlyaccuratejobs — Universal Job Search",
+  "description": "Search for any company by name, get back every open job. Auto-resolves which ATS platform(s) they use across 15 platforms.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "How to run:\n- 'search' — Search by company name, auto-resolve ATS, scrape all jobs\n- 'resolve' — Just resolve company to ATS matches (no scraping)\n- 'stats' — Get platform slug counts\n- 'direct' — Scrape a specific slug on a specific ATS (skip resolution)",
+      "editor": "select",
+      "enum": ["search", "resolve", "stats", "direct"],
+      "default": "search",
+      "prefill": "search",
+      "sectionCaption": "Mode",
+      "sectionDescription": "Choose how you want to search."
+    },
+    "company": {
+      "title": "Company Name",
+      "type": "string",
+      "description": "Company name to search for (modes: search, resolve).\n\nExamples: 'Stripe', 'Airbnb', 'Cloudflare', 'Figma'",
+      "editor": "textfield",
+      "sectionCaption": "Target",
+      "sectionDescription": "Which company to search."
+    },
+    "slug": {
+      "title": "Slug (Direct Mode)",
+      "type": "string",
+      "description": "ATS slug for direct mode. The identifier used in the ATS URL (e.g. 'stripe' for boards.greenhouse.io/stripe).",
+      "editor": "textfield"
+    },
+    "ats": {
+      "title": "ATS Platform (Direct Mode)",
+      "type": "string",
+      "description": "Which ATS platform the slug belongs to (direct mode only).",
+      "editor": "select",
+      "enum": ["greenhouse", "lever", "ashby", "workable", "smartrecruiters", "breezyhr", "personio", "recruitee", "teamtailor", "pinpoint", "dover", "jazzhr", "jobvite", "bamboohr"]
+    },
+    "remoteOnly": {
+      "title": "Remote Only",
+      "type": "boolean",
+      "description": "Only return jobs with workplaceType 'remote'.",
+      "default": false,
+      "sectionCaption": "Filters",
+      "sectionDescription": "Filter results by location, keywords, seniority, etc."
+    },
+    "locationFilter": {
+      "title": "Location Filter",
+      "type": "string",
+      "description": "Regex pattern to match job locations.\n\nExamples:\n- 'europe|germany|uk|france' — European jobs\n- 'remote' — Any location containing 'remote'\n- 'prague|czech' — Specific city/country",
+      "editor": "textfield",
+      "default": ""
+    },
+    "keywordFilter": {
+      "title": "Title/Keyword Filter",
+      "type": "string",
+      "description": "Regex pattern to match job titles, departments, description snippets.\n\nExamples:\n- 'senior|staff|lead' — Senior roles\n- 'full.?stack|fullstack' — Full-stack\n- 'react|typescript|node' — Tech-specific",
+      "editor": "textfield",
+      "default": ""
+    },
+    "departmentFilter": {
+      "title": "Department Filter",
+      "type": "string",
+      "description": "Regex pattern to match departments.\n\nExamples:\n- 'engineering|product' — Tech roles\n- 'sales|marketing|growth' — Go-to-market",
+      "editor": "textfield",
+      "default": ""
+    },
+    "seniorityFilter": {
+      "title": "Seniority Filter",
+      "type": "string",
+      "description": "Comma-separated seniority levels.\n\nExamples: 'senior,staff,lead,principal'",
+      "editor": "textfield",
+      "default": ""
+    },
+    "sinceFilter": {
+      "title": "Since Filter",
+      "type": "string",
+      "description": "Only return jobs posted after this time.\n\nExamples: '2d' (2 days), '1w' (1 week), '2026-03-10' (ISO date)",
+      "editor": "textfield",
+      "default": ""
+    },
+    "limit": {
+      "title": "Max Results",
+      "type": "integer",
+      "description": "Maximum number of jobs to return. 0 = no limit.",
+      "default": 0,
+      "minimum": 0
+    },
+    "slugApiUrl": {
+      "title": "Slug API URL",
+      "type": "string",
+      "description": "Override the slug API endpoint (default: https://job-slugs.wd40.workers.dev). Advanced use only.",
+      "editor": "textfield",
+      "default": ""
+    }
+  },
+  "required": ["mode"]
+}

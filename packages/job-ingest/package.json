@@ -7,7 +7,9 @@
   "exports": {
     ".": "./dist/ingest.js",
     "./src/normalizers/*": "./dist/normalizers/*",
-    "./src/unified-schema.js": "./dist/unified-schema.js"
+    "./src/unified-schema.js": "./dist/unified-schema.js",
+    "./src/scraper-factory.js": "./dist/scraper-factory.js",
+    "./src/types.js": "./dist/types.js"
   },
   "files": ["dist"],
   "scripts": {

@@ -5,7 +5,7 @@
 
 import type { CompanyMatch, SearchOptions, SearchResult, UnifiedJob, SlugSource } from "./types.js";
 import { resolveCompany } from "./resolver.js";
-import { getAdapter, flattenCompanyJobs } from "../../job-ingest/src/scraper-factory.js";
+import { getAdapter, flattenCompanyJobs } from "@jobsearch/job-ingest/src/scraper-factory.js";
 import { filterJobs } from "./filters.js";
 
 /**
@@ -87,7 +87,7 @@ async function scrapeFromAts(
   const rawJobs = flattenCompanyJobs(companies);
   if (rawJobs.length === 0) return [];
 
-  return adapter.normalize(rawJobs);
+  return adapter.normalize(rawJobs) as unknown as UnifiedJob[];
 }
 
 /**

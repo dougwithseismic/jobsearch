@@ -32,11 +32,11 @@ function makeSlugAdapter(
   return {
     source,
     async discoverSlugs(opts) {
-      const scraper = await import(`../../${source}-jobs/src/index.js`);
+      const scraper = await import(`${source}-jobs`);
       return scraper.discoverSlugs({ quiet: true }) as Promise<string[]>;
     },
     async scrapeAll(slugs, opts) {
-      const scraper = await import(`../../${source}-jobs/src/index.js`);
+      const scraper = await import(`${source}-jobs`);
       const scrapeOpts: Record<string, unknown> = {
         concurrency: opts?.concurrency ?? 10,
       };
@@ -67,7 +67,7 @@ function makeHnAdapter(): ScraperAdapter {
       return [];
     },
     async scrapeAll(_slugs, opts) {
-      const { scrapeJobs } = await import("../../hn-jobs/src/index.js");
+      const { scrapeJobs } = await import("hn-jobs");
       const result = await scrapeJobs({ months: 1 });
       const jobs = (result || []) as unknown as Record<string, unknown>[];
       // HN returns flat jobs, wrap them as a single "company"
