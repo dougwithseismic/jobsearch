@@ -1,0 +1,57 @@
+{
+  "name": "dover-jobs",
+  "version": "1.0.0",
+  "description": "Discover and scrape every job posted on Dover-powered job boards",
+  "type": "module",
+  "bin": {
+    "dover-jobs": "./bin/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "cli": "tsx bin/cli.ts",
+    "check-types": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "dover",
+    "jobs",
+    "scraper",
+    "job-board",
+    "careers",
+    "hiring",
+    "ats"
+  ],
+  "author": "Doug Silkstone",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dougwithseismic/jobsearch",
+    "directory": "packages/dover-jobs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "undici": "^7.24.2"
+  }
+}

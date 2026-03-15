@@ -15,6 +15,7 @@ interface Env {
 const PLATFORMS = [
   "greenhouse", "lever", "ashby", "workable",
   "smartrecruiters", "breezyhr", "personio", "recruitee",
+  "teamtailor", "pinpoint", "dover", "bamboohr", "jazzhr", "jobvite",
 ];
 
 export default {

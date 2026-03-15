@@ -2,7 +2,7 @@
 # Deploy all Apify actors. Builds everything first, then pushes in parallel.
 set -e
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-PACKAGES="greenhouse-jobs lever-jobs ashby-jobs smartrecruiters-jobs workable-jobs breezyhr-jobs personio-jobs recruitee-jobs hn-jobs"
+PACKAGES="greenhouse-jobs lever-jobs ashby-jobs smartrecruiters-jobs workable-jobs breezyhr-jobs personio-jobs recruitee-jobs hn-jobs teamtailor-jobs pinpoint-jobs dover-jobs bamboohr-jobs jazzhr-jobs jobvite-jobs"
 
 echo "=== Phase 1: Build ==="
 

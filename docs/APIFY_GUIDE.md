@@ -41,6 +41,12 @@ packages/job-ingest/          # Shared normalizer + unified schema
 | personio-jobs | `XYqex5DbPG1pqFDZ4` | [Console](https://console.apify.com/actors/XYqex5DbPG1pqFDZ4) |
 | recruitee-jobs | `Re6ZHliubx6uZ4qlw` | [Console](https://console.apify.com/actors/Re6ZHliubx6uZ4qlw) |
 | hn-jobs | `6yIzafQOIC3S6cnhm` | [Console](https://console.apify.com/actors/6yIzafQOIC3S6cnhm) |
+| teamtailor-jobs | *not yet deployed* | — |
+| pinpoint-jobs | *not yet deployed* | — |
+| dover-jobs | *not yet deployed* | — |
+| bamboohr-jobs | *not yet deployed* | — |
+| jazzhr-jobs | *not yet deployed* | — |
+| jobvite-jobs | *not yet deployed* | — |
 
 ## Building & Deploying
 

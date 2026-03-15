@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
-  "description": "Apify actor: Discover and scrape every job from Jobvite-powered company job boards",
+  "description": "Apify actor: Scrape jobs from Jobvite-powered company career pages",
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
@@ -12,10 +12,10 @@
   "dependencies": {
     "apify": "^3.6.0",
     "@jobsearch/job-ingest": "workspace:*",
-    "jobvite-jobs": "workspace:*"
+    "jobvite-jobs": "workspace:*",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@types/node": "^25.3.5",
-    "typescript": "^5.9.3"
+    "@types/node": "^25.3.5"
   }
 }

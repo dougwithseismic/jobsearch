@@ -61,12 +61,42 @@ const PLATFORMS: Record<string, PlatformConfig> = {
     pattern: /https?:\/\/([^.]+)\.recruitee\.com/,
     outputFile: "recruitee-slugs.txt",
   },
+  teamtailor: {
+    domains: ["teamtailor.com"],
+    pattern: /https?:\/\/([^.]+)\.teamtailor\.com/,
+    outputFile: "teamtailor-slugs.txt",
+  },
+  pinpoint: {
+    domains: ["pinpointhq.com"],
+    pattern: /https?:\/\/([^.]+)\.pinpointhq\.com/,
+    outputFile: "pinpoint-slugs.txt",
+  },
+  dover: {
+    domains: ["app.dover.com"],
+    pattern: /https?:\/\/app\.dover\.com\/jobs\/([^/?#]+)/,
+    outputFile: "dover-slugs.txt",
+  },
+  bamboohr: {
+    domains: ["bamboohr.com"],
+    pattern: /https?:\/\/([^.]+)\.bamboohr\.com/,
+    outputFile: "bamboohr-slugs.txt",
+  },
+  jazzhr: {
+    domains: ["applytojob.com", "app.jazz.co"],
+    pattern: /https?:\/\/(?:([^.]+)\.applytojob\.com|app\.jazz\.co\/widgets\/basic\/create\/([^/?#]+))/,
+    outputFile: "jazzhr-slugs.txt",
+  },
+  jobvite: {
+    domains: ["jobs.jobvite.com"],
+    pattern: /https?:\/\/jobs\.jobvite\.com\/([^/?#]+)/,
+    outputFile: "jobvite-slugs.txt",
+  },
 };
 
 // Slugs to always exclude (non-company paths)
 const GLOBAL_BLOCKLIST = new Set([
   "www", "app", "api", "help", "support", "blog", "docs", "status",
-  "mail", "cdn", "static", "embed", "v1", "internal", "favicon.ico",
+  "career", "mail", "cdn", "static", "embed", "v1", "internal", "favicon.ico",
   "robots.txt", "sitemap.xml", "sitemap", "css", "js", "images",
   "assets", "j", "general", "headquarters", "careers", "admin",
   "login", "auth", "sso", "dashboard", "console", "portal",
@@ -155,8 +185,9 @@ function extractSlugs(
     const url = r.url ?? "";
     if (!config.domains.some((d) => url.includes(d))) continue;
     const match = url.match(config.pattern);
-    if (match?.[1]) {
-      const slug = decodeURIComponent(match[1]).toLowerCase();
+    const captured = match?.[1] ?? match?.[2];
+    if (captured) {
+      const slug = decodeURIComponent(captured).toLowerCase();
       if (!GLOBAL_BLOCKLIST.has(slug) && slug.length >= 2 && slug.length <= 80 && !slug.includes(".")) {
         slugs.add(slug);
       }

@@ -1,0 +1,21 @@
+{
+  "name": "teamtailor-jobs-actor",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Apify actor: Discover and scrape every job from Teamtailor-powered company job boards",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "test": "echo 'Run tests from parent package'"
+  },
+  "dependencies": {
+    "apify": "^3.6.0",
+    "@jobsearch/job-ingest": "workspace:*",
+    "teamtailor-jobs": "workspace:*",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5"
+  }
+}

@@ -1,0 +1,169 @@
+name: deadlyaccuratejobs CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'packages/deadlyaccuratejobs/**'
+      - 'packages/job-ingest/src/normalizers/**'
+      - 'packages/job-ingest/src/scraper-factory.ts'
+      - 'packages/job-ingest/src/unified-schema.ts'
+  pull_request:
+    paths:
+      - 'packages/deadlyaccuratejobs/**'
+      - 'packages/job-ingest/src/normalizers/**'
+      - 'packages/job-ingest/src/scraper-factory.ts'
+      - 'packages/job-ingest/src/unified-schema.ts'
+  workflow_dispatch:
+    inputs:
+      company:
+        description: 'Company to test search (e.g. "Stripe")'
+        default: 'Stripe'
+      smoke_test:
+        description: 'Run live smoke tests against ATS APIs'
+        type: boolean
+        default: false
+
+# Cancel in-progress runs on same branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: 23
+  SLUGS_API_URL: https://job-slugs.wd40.workers.dev
+
+jobs:
+  # ─── Unit & integration tests ───────────────────────────────
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+      - run: pnpm install
+
+      - name: Run unit tests
+        run: cd packages/deadlyaccuratejobs && npx vitest run
+
+      - name: Type check
+        run: cd packages/deadlyaccuratejobs && npx tsc --noEmit
+
+  # ─── Resolver smoke test (fast, no scraping) ────────────────
+  resolve-smoke:
+    name: Resolve smoke test
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+      - run: pnpm install
+
+      - name: Verify KV API is reachable
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" ${{ env.SLUGS_API_URL }}/slugs)
+          echo "KV API status: $STATUS"
+          [ "$STATUS" = "200" ] || exit 1
+
+      - name: Resolve known companies
+        run: |
+          npx tsx packages/deadlyaccuratejobs/bin/cli.ts resolve Stripe
+          npx tsx packages/deadlyaccuratejobs/bin/cli.ts resolve Notion
+          npx tsx packages/deadlyaccuratejobs/bin/cli.ts resolve Spotify
+
+      - name: Platform stats
+        run: npx tsx packages/deadlyaccuratejobs/bin/cli.ts stats
+
+  # ─── Full scrape smoke test (manual trigger only) ───────────
+  scrape-smoke:
+    name: Scrape smoke test
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.smoke_test == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+      - run: pnpm install
+
+      - name: Search ${{ github.event.inputs.company }}
+        run: |
+          npx tsx packages/deadlyaccuratejobs/bin/cli.ts "${{ github.event.inputs.company }}" --limit 20
+
+      - name: Search with filters
+        run: |
+          npx tsx packages/deadlyaccuratejobs/bin/cli.ts "${{ github.event.inputs.company }}" --remote --keyword engineer --limit 10
+
+      - name: JSON output
+        run: |
+          npx tsx packages/deadlyaccuratejobs/bin/cli.ts "${{ github.event.inputs.company }}" --limit 5 --format json > /tmp/results.json
+          echo "Jobs returned: $(cat /tmp/results.json | node -e 'let d="";process.stdin.on("data",c=>d+=c);process.stdin.on("end",()=>console.log(JSON.parse(d).length))')"
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-test-results
+          path: /tmp/results.json
+          retention-days: 3
+
+  # ─── Slug discovery refresh (weekly) ────────────────────────
+  # Runs SearXNG to discover new company slugs and uploads to KV.
+  # Requires a self-hosted runner with Docker (SearXNG) or a
+  # SearXNG instance accessible via SEARXNG_URL secret.
+  discover-slugs:
+    name: Discover new slugs
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      matrix:
+        platform: [greenhouse, lever, ashby, workable, smartrecruiters, breezyhr, personio, recruitee]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+      - run: pnpm install
+
+      - name: Start SearXNG
+        run: |
+          docker run -d --name searxng -p 8888:8080 searxng/searxng
+          sleep 5
+          curl -s http://localhost:8888/search?q=test > /dev/null || echo "SearXNG warming up..."
+          sleep 3
+
+      - name: Discover ${{ matrix.platform }} slugs
+        env:
+          SEARXNG_URL: http://localhost:8888
+        run: |
+          npx tsx packages/job-ingest/discover.ts --platform ${{ matrix.platform }} --max-queries 15
+
+      - name: Upload to KV
+        if: secrets.SLUGS_AUTH_TOKEN != ''
+        env:
+          SLUGS_API_URL: ${{ env.SLUGS_API_URL }}
+          SLUGS_AUTH_TOKEN: ${{ secrets.SLUGS_AUTH_TOKEN }}
+        run: |
+          npx tsx packages/job-ingest/upload-slugs.ts
+
+      - name: Upload slug files as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: slugs-${{ matrix.platform }}
+          path: packages/job-ingest/discovered/${{ matrix.platform }}-slugs.txt
+          retention-days: 7
