@@ -71,12 +71,13 @@ deploy_actor() {
   fi
 }
 
-# Deploy all in parallel (max 4 at a time to avoid rate limits)
+# Deploy 2 at a time to stay within Apify memory limits
+count=0
 for pkg in $PACKAGES; do
   deploy_actor "$pkg" &
-  # Throttle: max 4 concurrent
-  if (( $(jobs -r | wc -l) >= 4 )); then
-    wait -n
+  count=$((count + 1))
+  if [ $((count % 2)) -eq 0 ]; then
+    wait
   fi
 done
 wait

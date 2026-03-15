@@ -1,6 +1,6 @@
 FROM apify/actor-node:20
 
-COPY --chown=myuser:myuser package*.json ./
+COPY --chown=myuser:myuser . ./
 
 RUN npm --quiet set progress=false \
     && npm install --only=prod --no-optional \
@@ -9,8 +9,7 @@ RUN npm --quiet set progress=false \
     && echo "Node.js version:" \
     && node --version \
     && echo "NPM version:" \
-    && npm --version
-
-COPY --chown=myuser:myuser . ./
+    && npm --version \
+    && rm -f *.tgz
 
 CMD ["node", "dist/main.js"]
