@@ -35,7 +35,7 @@ export async function buildIndex(options?: {
   apiUrl?: string;
   force?: boolean;
 }): Promise<SlugIndex> {
-  const apiUrl = options?.apiUrl ?? process.env.SLUGS_API_URL ?? DEFAULT_SLUG_API;
+  const apiUrl = options?.apiUrl || process.env.SLUGS_API_URL || DEFAULT_SLUG_API;
 
   if (cachedIndex && !options?.force && Date.now() - cachedIndex.fetchedAt < CACHE_TTL_MS) {
     return cachedIndex;
@@ -46,16 +46,28 @@ export async function buildIndex(options?: {
 
   const results = await Promise.allSettled(
     SLUG_SOURCES.map(async (source) => {
-      const res = await fetch(`${apiUrl}/slugs/${source}`);
-      if (!res.ok) return { source, slugs: [] as string[] };
-      const text = await res.text();
-      const slugs = text.split("\n").map((s) => s.trim()).filter(Boolean);
-      return { source, slugs };
+      try {
+        const res = await fetch(`${apiUrl}/slugs/${source}`);
+        if (!res.ok) {
+          console.error(`  [resolver] ${source}: HTTP ${res.status}`);
+          return { source, slugs: [] as string[] };
+        }
+        const text = await res.text();
+        const slugs = text.split("\n").map((s) => s.trim()).filter(Boolean);
+        return { source, slugs };
+      } catch (err) {
+        console.error(`  [resolver] ${source}: fetch failed — ${err instanceof Error ? err.message : String(err)}`);
+        return { source, slugs: [] as string[] };
+      }
     }),
   );
 
+  let totalSlugs = 0;
   for (const result of results) {
-    if (result.status !== "fulfilled") continue;
+    if (result.status !== "fulfilled") {
+      console.error(`  [resolver] Promise rejected: ${result.reason}`);
+      continue;
+    }
     const { source, slugs } = result.value;
     platforms.set(source, new Set(slugs));
     for (const slug of slugs) {
@@ -65,6 +77,7 @@ export async function buildIndex(options?: {
     }
   }
 
+  console.log(`  [resolver] Index built: ${reverse.size} slugs across ${platforms.size} platforms from ${apiUrl}`);
   cachedIndex = { platforms, reverse, fetchedAt: Date.now() };
   return cachedIndex;
 }
