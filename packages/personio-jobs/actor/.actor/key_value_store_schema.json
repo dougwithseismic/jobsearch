@@ -1,0 +1,31 @@
+{
+  "actorKeyValueStoreSchemaVersion": 1,
+  "title": "Personio Jobs Scraper Store",
+  "collections": {
+    "summary": {
+      "title": "Run Summary",
+      "description": "Summary of the scrape run including total companies, total jobs, filters applied, elapsed time, and top companies by job count.",
+      "keyPrefix": "SUMMARY",
+      "contentTypes": ["application/json"],
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "totalCompanies": { "type": "integer" },
+          "totalJobs": { "type": "integer" },
+          "elapsedSeconds": { "type": "number" },
+          "topCompanies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "slug": { "type": "string" },
+                "jobs": { "type": "integer" }
+              }
+            }
+          },
+          "filtersApplied": { "type": "object" }
+        }
+      }
+    }
+  }
+}

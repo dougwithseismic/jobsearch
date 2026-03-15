@@ -1,0 +1,17 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "BambooHR Jobs Scraper Output",
+  "description": "Unified job listings with structured location, salary, company, and seniority data",
+  "properties": {
+    "jobs": {
+      "title": "Job Listings",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview",
+      "type": "string"
+    },
+    "summary": {
+      "title": "Run Summary",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY",
+      "type": "string"
+    }
+  }
+}

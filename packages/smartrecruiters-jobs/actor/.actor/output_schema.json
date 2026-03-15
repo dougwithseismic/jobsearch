@@ -1,0 +1,17 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "SmartRecruiters Jobs Scraper Output",
+  "description": "Jobs scraped from SmartRecruiters-powered job boards, plus a run summary",
+  "properties": {
+    "jobs": {
+      "type": "string",
+      "title": "Job Listings",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    },
+    "summary": {
+      "type": "string",
+      "title": "Run Summary",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+    }
+  }
+}

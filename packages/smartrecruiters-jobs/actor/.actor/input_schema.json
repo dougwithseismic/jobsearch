@@ -1,73 +1,82 @@
 {
   "title": "SmartRecruiters Jobs Scraper",
-  "description": "Discover and scrape jobs from all SmartRecruiters-powered company job boards. Finds companies automatically via Common Crawl indexes, then scrapes their public job listings via the SmartRecruiters API.",
+  "description": "Discover, scrape, and search jobs from companies using SmartRecruiters as their ATS. Auto-discovers companies — no manual URL input needed.",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
     "mode": {
       "title": "Mode",
       "type": "string",
-      "description": "How to find companies to scrape.\n- **all**: Auto-discover companies from Common Crawl + scrape all of them\n- **companies**: Scrape only the specified company slugs\n- **search**: Scrape specified companies and apply filters",
+      "description": "How to run the scraper:\n- 'all' — Auto-discover ALL companies and scrape every job board. Zero config.\n- 'companies' — Scrape only the company identifiers you specify.\n- 'search' — Search a specific company's jobs by keyword (fast, single API call).",
       "editor": "select",
-      "default": "all",
       "enum": ["all", "companies", "search"],
-      "enumTitles": ["All (discover + scrape)", "Specific companies", "Search (companies + filters)"]
+      "default": "all",
+      "prefill": "all",
+      "sectionCaption": "Scraping Mode",
+      "sectionDescription": "Choose how you want to discover and scrape SmartRecruiters job boards."
     },
     "companies": {
-      "title": "Company Slugs",
+      "title": "Company Identifiers",
       "type": "array",
-      "description": "Company slugs to scrape (used in 'companies' and 'search' modes). The slug is the company identifier in the SmartRecruiters URL, e.g. 'Spotify' from careers.smartrecruiters.com/Spotify",
+      "description": "SmartRecruiters company identifiers to scrape. Used in 'companies' and 'search' modes.\n\nThe identifier is the company slug in careers.smartrecruiters.com/{identifier}. Examples: 'Visa', 'Spotify', 'BOSCH', 'Ubisoft'.\n\nNot sure of the identifier? Run in 'all' mode first — the output includes every discovered identifier.",
       "editor": "stringList",
-      "default": []
+      "default": [],
+      "sectionCaption": "Target Companies",
+      "sectionDescription": "Specify which companies to scrape. Leave empty for 'all' mode."
     },
     "remoteOnly": {
-      "title": "Remote Only",
+      "title": "Remote Jobs Only",
       "type": "boolean",
-      "description": "Only include jobs marked as remote",
-      "default": false,
-      "sectionCaption": "Filters",
-      "sectionDescription": "Optional filters to narrow down results. Applied after scraping."
+      "description": "Only return jobs explicitly marked as remote by the company.",
+      "default": false
     },
     "locationFilter": {
       "title": "Location Filter",
       "type": "string",
-      "description": "Regex pattern to filter jobs by location (e.g. 'Berlin|Prague|Remote')",
+      "description": "Regex pattern to match job locations (city, region, or country).\n\nExamples:\n- 'europe|germany|uk|france' — European jobs\n- 'remote' — Any location containing 'remote'\n- 'new york|san francisco|austin' — US tech hubs\n- 'prague|czech' — Specific city/country",
       "editor": "textfield",
       "default": ""
     },
     "departmentFilter": {
       "title": "Department Filter",
       "type": "string",
-      "description": "Regex pattern to filter jobs by department (e.g. 'Engineering|Product')",
+      "description": "Regex pattern to match departments.\n\nExamples:\n- 'engineering|product' — Tech roles\n- 'sales|marketing|growth' — Go-to-market\n- 'design|creative' — Design teams\n- 'data|machine.learning|ai' — Data/ML roles",
       "editor": "textfield",
       "default": ""
     },
     "keywordFilter": {
-      "title": "Keyword Filter",
+      "title": "Title/Keyword Filter",
       "type": "string",
-      "description": "Regex pattern to filter jobs by title (e.g. 'Senior|Lead|Staff')",
+      "description": "Regex pattern to match job titles.\n\nExamples:\n- 'senior|staff|lead|principal' — Senior roles\n- 'full.?stack|fullstack' — Full-stack engineers\n- 'react|typescript|node' — Tech-specific\n- 'founding|head.of|vp|director' — Leadership\n- 'intern|junior|entry' — Entry-level",
       "editor": "textfield",
       "default": ""
     },
     "includeDescriptions": {
-      "title": "Include Job Descriptions",
+      "title": "Include Full Descriptions",
       "type": "boolean",
-      "description": "Fetch full HTML job descriptions from the posting detail endpoint. Significantly increases run time (one extra API call per job).",
-      "default": false,
-      "sectionCaption": "Options"
+      "description": "Include the full HTML job description in output. Requires an extra API call per job, so significantly slower. Default: off to keep results lean and fast.",
+      "default": false
     },
     "concurrency": {
       "title": "Concurrency",
       "type": "integer",
-      "description": "Number of companies to scrape in parallel",
+      "description": "Number of parallel API requests. Higher = faster scraping but more memory. Recommended: 10 for full scrape, 5 for testing.",
       "default": 10,
       "minimum": 1,
-      "maximum": 50
+      "maximum": 20
+    },
+    "outputFormat": {
+      "title": "Output Format",
+      "type": "string",
+      "description": "How to format output records:\n- 'unified' (default) — Normalized schema consistent across all ATS platforms with structured location, salary, company objects\n- 'raw' — Native SmartRecruiters format, no normalization\n- 'both' — Unified schema with original SmartRecruiters data in the 'raw' field",
+      "enum": ["unified", "raw", "both"],
+      "default": "unified",
+      "sectionCaption": "Output Format"
     },
     "maxCompanies": {
       "title": "Max Companies",
       "type": "integer",
-      "description": "Limit the number of companies to scrape (0 = no limit, useful for testing)",
+      "description": "Limit the number of companies to scrape. 0 = no limit (scrape all). Useful for testing or staying within budget.",
       "default": 0,
       "minimum": 0
     }
