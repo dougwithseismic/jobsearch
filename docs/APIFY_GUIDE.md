@@ -46,7 +46,7 @@ packages/job-ingest/          # Shared normalizer + unified schema
 | dover-jobs | `lOpx0Gw2cVtbKFfH0` | [Console](https://console.apify.com/actors/lOpx0Gw2cVtbKFfH0) |
 | bamboohr-jobs | *not yet deployed* | — |
 | jazzhr-jobs | *not yet deployed* | — |
-| jobvite-jobs | *not yet deployed* | — |
+| jobvite-jobs | `4g2y9UxVzo00MN5C7` | [Console](https://console.apify.com/actors/4g2y9UxVzo00MN5C7) |
 | **deadlyaccuratejobs** | `99Iti3WKdLg9klIam` | [Console](https://console.apify.com/actors/99Iti3WKdLg9klIam) |
 
 ## Building & Deploying

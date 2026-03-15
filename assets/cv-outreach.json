@@ -15,9 +15,9 @@
     "frontend": ["React 18", "Next.js", "Material UI (MUI)", "Storybook", "Recharts", "Tailwind"],
     "backend": ["Node.js", "Express", "Hono", "GraphQL (Apollo)", "Postgres", "MongoDB", "Redis"],
     "infrastructure": ["AWS", "GCP", "Vercel", "Terraform", "Docker", "Kubernetes"],
-    "observability": ["Datadog", "Sentry", "Custom dashboards"],
+    "observability": ["Sentry", "Prometheus", "Custom dashboards"],
     "testing": ["Jest", "React Testing Library", "BVT / build verification tests", "Playwright"],
-    "tooling": ["LaunchDarkly (feature flags)", "ESLint", "Prettier", "Yarn workspaces", "Turborepo", "pnpm workspaces"],
+    "tooling": ["Feature flags", "ESLint", "Prettier", "Yarn workspaces", "Turborepo", "pnpm workspaces"],
     "other": ["Scraping & Automation", "Martech & Analytics", "Growth Engineering", "Agentic Workflows"]
   },
   "notable_clients": ["Contra", "Framer", "The Motley Fool", "Groupon", "Sky", "MIT", "Techstars-backed startups"],
@@ -32,12 +32,12 @@
       "company": "DinnersWithFriends.co.uk",
       "role": "Technical Founder",
       "period": "2024 - Present",
-      "tech": ["TypeScript", "React 18", "Next.js", "Hono", "GraphQL", "Postgres", "GCP", "Terraform", "Datadog"],
+      "tech": ["TypeScript", "React 18", "Next.js", "Hono", "GraphQL", "Postgres", "GCP", "Terraform"],
       "highlights": [
         "Designed and built full-stack platform with React 18 functional components, strict TypeScript, and GraphQL API layer",
         "Monorepo architecture with layered package dependencies and shared component library",
-        "Terraform for infrastructure provisioning across GCP; Datadog for monitoring, alerting, and cost tracking",
-        "Revenue dashboards with Recharts, feature rollouts managed via LaunchDarkly",
+        "Terraform for infrastructure provisioning across GCP; Sentry and custom dashboards for monitoring and alerting",
+        "Revenue dashboards with Recharts, feature flag-driven rollouts",
         "CI/CD pipeline with BVT gates, Jest + React Testing Library coverage, ESLint/Prettier enforcement"
       ]
     },
@@ -45,11 +45,11 @@
       "company": "Patrianna Ltd",
       "role": "Lead Growth Engineer",
       "period": "2022 - 2023",
-      "tech": ["TypeScript", "React", "Next.js", "Postgres", "LaunchDarkly", "Datadog", "Jest"],
+      "tech": ["TypeScript", "React", "Next.js", "Postgres", "Jest"],
       "highlights": [
         "Led greenfield in-house Game Studio for top-three social casino from zero to 1M players",
-        "LaunchDarkly for controlled feature rollouts across five high-stakes casino games",
-        "Datadog for real-time performance monitoring and cost-per-player tracking",
+        "Feature flag-driven rollouts across five high-stakes casino games",
+        "Real-time performance monitoring and cost-per-player tracking",
         "Built MVP game delivery mechanism with full BVT test coverage in CI pipeline",
         "Hired and led nine-member team across frontend and QA"
       ]
@@ -58,9 +58,9 @@
       "company": "getBenson.com",
       "role": "Senior Full-stack Developer",
       "period": "2021 - 2022",
-      "tech": ["TypeScript", "React", "Next.js", "Node", "Express", "GraphQL", "Postgres", "Datadog"],
+      "tech": ["TypeScript", "React", "Next.js", "Node", "Express", "GraphQL", "Postgres"],
       "highlights": [
-        "Built SaaS protecting 25M+ monthly sessions — Datadog for monitoring and alerting on anomalies",
+        "Built SaaS protecting 25M+ monthly sessions with real-time monitoring and alerting",
         "GraphQL API serving real-time analytics dashboards (Recharts). Onboarded 80+ brands",
         "Rewrote MVP to production with strict TypeScript and RTL coverage. Commercially exited 2023"
       ]
@@ -89,7 +89,7 @@
       "company": "Mekamon.com / Reach Robotics",
       "role": "Head of Digital",
       "period": "2016 - 2018",
-      "tech": ["React", "BigQuery", "Firebase Analytics", "Datadog"],
+      "tech": ["React", "BigQuery", "Firebase Analytics"],
       "highlights": [
         "Go-to-market for AR Spider Robot launched in Apple Stores globally. Hired and led cross-functional team"
       ]

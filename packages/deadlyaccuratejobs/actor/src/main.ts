@@ -39,13 +39,13 @@ try {
   if (mode === "stats") {
     log.info("Getting platform stats...");
     const stats = await getStats({ apiUrl: input.slugApiUrl });
-    await Actor.pushData(stats);
+    await Actor.setValue("OUTPUT", stats);
     log.info(`Done. ${stats.totalSlugs} total slugs across ${stats.platforms.length} platforms.`);
   } else if (mode === "resolve") {
     if (!input.company) throw new Error("company is required for resolve mode");
     log.info(`Resolving "${input.company}"...`);
     const matches = await resolveCompany(input.company, { apiUrl: input.slugApiUrl });
-    await Actor.pushData({ company: input.company, matches });
+    await Actor.setValue("OUTPUT", { company: input.company, matches });
     log.info(`Found ${matches.length} match(es).`);
   } else if (mode === "direct") {
     if (!input.slug || !input.ats) throw new Error("slug and ats are required for direct mode");
@@ -78,7 +78,7 @@ try {
 
     if (result.matches.length === 0) {
       log.warning(`No ATS match found for "${input.company}".`);
-      await Actor.pushData({ company: input.company, matches: [], jobs: [] });
+      await Actor.setValue("OUTPUT", { company: input.company, matches: [], jobs: [], message: `No ATS match found for "${input.company}". The company may not be in the slug index.` });
     } else {
       log.info(`Resolved on: ${result.matches.map((m) => `${m.ats}/${m.slug}`).join(", ")}`);
       log.info(`${result.totalJobs} total jobs, ${result.jobs.length} after filters.`);

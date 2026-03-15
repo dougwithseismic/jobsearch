@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "apify": "^3.6.0",
-    "@jobsearch/job-ingest": "workspace:*",
-    "pinpoint-jobs": "workspace:*",
+    "@jobsearch/job-ingest": "file:./jobsearch-job-ingest-1.0.0.tgz",
+    "pinpoint-jobs": "file:./pinpoint-jobs-1.0.0.tgz",
     "typescript": "^5.9.3"
   },
   "devDependencies": {

@@ -78,9 +78,11 @@ export function normalize(rawJobs: RawPinpointJob[]): UnifiedJob[] {
       salary.currency = raw.compensationCurrency ?? null;
       if (raw.compensationFrequency) {
         const freqMap: Record<string, "yearly" | "monthly" | "weekly" | "daily" | "hourly"> = {
-          yearly: "yearly", annual: "yearly", annually: "yearly",
-          monthly: "monthly", weekly: "weekly", daily: "daily",
-          hourly: "hourly",
+          yearly: "yearly", year: "yearly", annual: "yearly", annually: "yearly",
+          monthly: "monthly", month: "monthly",
+          weekly: "weekly", week: "weekly",
+          daily: "daily", day: "daily",
+          hourly: "hourly", hour: "hourly",
         };
         salary.period = freqMap[raw.compensationFrequency.toLowerCase()] ?? null;
       }

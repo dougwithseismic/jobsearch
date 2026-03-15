@@ -5,7 +5,6 @@
   "buildTag": "latest",
   "input": "./input_schema.json",
   "storages": {
-    "dataset": "./dataset_schema.json",
     "keyValueStore": "./key_value_store_schema.json"
   },
   "output": "./output_schema.json",

@@ -1,242 +1,80 @@
 {
   "actorSpecification": 1,
   "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "properties": {
-      "id": {
-        "type": "string",
-        "description": "Unique job identifier (ats:company:sourceId)"
-      },
-      "sourceId": {
-        "type": "string",
-        "description": "Original job ID from the ATS"
-      },
-      "title": {
-        "type": "string",
-        "description": "Job title"
-      },
-      "descriptionSnippet": {
-        "type": "string",
-        "description": "Short plain-text snippet of the job description"
-      },
-      "department": {
-        "type": "string",
-        "description": "Department name"
-      },
-      "team": {
-        "type": "string",
-        "description": "Team name"
-      },
-      "category": {
-        "type": "string",
-        "description": "Job category"
-      },
+      "id": { "type": "string", "title": "ID", "description": "Deterministic job ID (source_sourceId)" },
+      "sourceId": { "type": "string", "title": "Source ID" },
+      "title": { "type": "string", "title": "Title" },
+      "description": { "type": "string", "title": "Description" },
+      "descriptionSnippet": { "type": "string", "title": "Description Snippet" },
+      "descriptionHtml": { "type": ["string", "null"], "title": "Description HTML" },
+      "department": { "type": "string", "title": "Department" },
+      "team": { "type": "string", "title": "Team" },
+      "category": { "type": "string", "title": "Category" },
       "location": {
-        "type": "object",
-        "description": "Structured location data",
+        "type": "object", "title": "Location",
         "properties": {
-          "text": {
-            "type": "string",
-            "description": "Free-text location as displayed on the ATS"
-          },
-          "city": {
-            "type": "string",
-            "description": "City name",
-            "nullable": true
-          },
-          "state": {
-            "type": "string",
-            "description": "State or region",
-            "nullable": true
-          },
-          "country": {
-            "type": "string",
-            "description": "ISO 3166-1 alpha-2 country code",
-            "nullable": true
-          },
-          "region": {
-            "type": "string",
-            "description": "Broad region (europe, north-america, asia-pacific, etc.)",
-            "enum": ["europe", "north-america", "south-america", "asia-pacific", "middle-east", "africa", "remote-global", "other"]
-          },
-          "lat": {
-            "type": "number",
-            "description": "Latitude",
-            "nullable": true
-          },
-          "lng": {
-            "type": "number",
-            "description": "Longitude",
-            "nullable": true
-          }
+          "text": { "type": "string" },
+          "city": { "type": ["string", "null"] },
+          "state": { "type": ["string", "null"] },
+          "country": { "type": ["string", "null"] },
+          "region": { "type": "string" },
+          "lat": { "type": ["number", "null"] },
+          "lng": { "type": ["number", "null"] }
         }
       },
-      "workplaceType": {
-        "type": "string",
-        "description": "Workplace arrangement",
-        "enum": ["remote", "hybrid", "onsite", "unknown"]
-      },
-      "employmentType": {
-        "type": "string",
-        "description": "Employment type",
-        "enum": ["full-time", "part-time", "contract", "freelance", "internship", "temporary", "volunteer", "other"]
-      },
-      "seniorityLevel": {
-        "type": "string",
-        "description": "Seniority level",
-        "enum": ["intern", "junior", "mid", "senior", "staff", "principal", "lead", "manager", "director", "vp", "c-level", "other"]
-      },
+      "secondaryLocations": { "type": "array", "title": "Secondary Locations" },
+      "workplaceType": { "type": "string", "title": "Workplace" },
+      "employmentType": { "type": "string", "title": "Employment Type" },
+      "employmentTypeRaw": { "type": "string", "title": "Employment Type (Raw)" },
+      "seniorityLevel": { "type": "string", "title": "Seniority" },
       "salary": {
-        "type": "object",
-        "description": "Compensation data",
+        "type": "object", "title": "Salary",
         "properties": {
-          "text": {
-            "type": "string",
-            "description": "Raw salary string exactly as scraped"
-          },
-          "min": {
-            "type": "number",
-            "description": "Minimum salary",
-            "nullable": true
-          },
-          "max": {
-            "type": "number",
-            "description": "Maximum salary",
-            "nullable": true
-          },
-          "currency": {
-            "type": "string",
-            "description": "ISO 4217 currency code",
-            "nullable": true
-          },
-          "period": {
-            "type": "string",
-            "description": "Pay period",
-            "enum": ["yearly", "monthly", "weekly", "daily", "hourly"],
-            "nullable": true
-          }
+          "text": { "type": "string" },
+          "min": { "type": ["number", "null"] },
+          "max": { "type": ["number", "null"] },
+          "currency": { "type": ["string", "null"] },
+          "period": { "type": ["string", "null"] }
         }
       },
-      "jobUrl": {
-        "type": "string",
-        "description": "Direct link to the job posting"
-      },
-      "applyUrl": {
-        "type": "string",
-        "description": "Direct link to apply for the job"
-      },
+      "jobUrl": { "type": "string", "title": "Job URL" },
+      "applyUrl": { "type": "string", "title": "Apply URL" },
       "company": {
-        "type": "object",
-        "description": "Company information",
+        "type": "object", "title": "Company",
         "properties": {
-          "name": {
-            "type": "string",
-            "description": "Company display name"
-          },
-          "slug": {
-            "type": "string",
-            "description": "Company slug / identifier"
-          },
-          "ats": {
-            "type": "string",
-            "description": "ATS source",
-            "enum": ["greenhouse", "lever", "ashby", "workable", "smartrecruiters", "breezyhr", "personio", "recruitee", "hn"]
-          },
-          "logoUrl": {
-            "type": "string",
-            "description": "Company logo URL",
-            "nullable": true
-          },
-          "careersUrl": {
-            "type": "string",
-            "description": "Company careers page URL",
-            "nullable": true
-          }
+          "name": { "type": "string" },
+          "slug": { "type": "string" },
+          "ats": { "type": "string" },
+          "logoUrl": { "type": ["string", "null"] },
+          "careersUrl": { "type": ["string", "null"] }
         }
       },
-      "tags": {
-        "type": "array",
-        "description": "Tags and labels",
-        "items": { "type": "string" }
-      },
-      "publishedAt": {
-        "type": "string",
-        "description": "ISO 8601 date when the job was published"
-      },
-      "scrapedAt": {
-        "type": "string",
-        "description": "ISO 8601 timestamp of when this job was scraped"
-      },
-      "lastSeenAt": {
-        "type": "string",
-        "description": "ISO 8601 timestamp of when this job was last seen"
-      }
-    },
-    "required": [
-      "id",
-      "sourceId",
-      "title",
-      "location",
-      "jobUrl",
-      "company",
-      "scrapedAt"
-    ]
+      "tags": { "type": "array", "items": { "type": "string" }, "title": "Tags" },
+      "publishedAt": { "type": "string", "title": "Published" },
+      "scrapedAt": { "type": "string", "title": "Scraped At" },
+      "lastSeenAt": { "type": "string", "title": "Last Seen" }
+    }
   },
   "views": {
     "overview": {
       "title": "Overview",
       "transformation": {
-        "fields": [
-          "title",
-          "department",
-          "location",
-          "workplaceType",
-          "employmentType",
-          "seniorityLevel",
-          "company",
-          "publishedAt",
-          "jobUrl"
-        ]
+        "fields": ["title", "company", "location", "workplaceType", "seniorityLevel", "salary", "publishedAt", "applyUrl"]
       },
       "display": {
         "component": "table",
         "properties": {
-          "title": {
-            "label": "Job Title",
-            "format": "text"
-          },
-          "department": {
-            "label": "Department",
-            "format": "text"
-          },
-          "location": {
-            "label": "Location",
-            "format": "object"
-          },
-          "workplaceType": {
-            "label": "Workplace",
-            "format": "text"
-          },
-          "employmentType": {
-            "label": "Type",
-            "format": "text"
-          },
-          "seniorityLevel": {
-            "label": "Seniority",
-            "format": "text"
-          },
-          "company": {
-            "label": "Company",
-            "format": "object"
-          },
-          "publishedAt": {
-            "label": "Published",
-            "format": "date"
-          },
-          "jobUrl": {
-            "label": "Job URL",
-            "format": "link"
-          }
+          "title": { "label": "Title", "format": "text" },
+          "company": { "label": "Company", "format": "object" },
+          "location": { "label": "Location", "format": "object" },
+          "workplaceType": { "label": "Workplace", "format": "text" },
+          "seniorityLevel": { "label": "Seniority", "format": "text" },
+          "salary": { "label": "Salary", "format": "object" },
+          "publishedAt": { "label": "Published", "format": "date" },
+          "applyUrl": { "label": "Apply", "format": "link" }
         }
       }
     }
