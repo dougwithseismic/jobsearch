@@ -12,10 +12,10 @@
   "dependencies": {
     "apify": "^3.6.0",
     "@jobsearch/job-ingest": "workspace:*",
-    "personio-jobs": "workspace:*"
+    "personio-jobs": "workspace:*",
+    "typescript": "^5.9.0"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "typescript": "^5.9.0"
+    "@types/node": "^22.0.0"
   }
 }

@@ -1,0 +1,19 @@
+{
+  "name": "deadlyaccuratejobs-actor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "apify": "^3.3.2",
+    "@jobsearch/deadlyaccuratejobs": "workspace:*",
+    "@jobsearch/job-ingest": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
