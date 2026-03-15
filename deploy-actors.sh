@@ -54,9 +54,9 @@ deploy_actor() {
     fs.writeFileSync("package.json", JSON.stringify(pkg, null, 2) + "\n");
   ' "${scraper_tgz}" "${ingest_tgz}"
 
-  # Push (capture output, don't wait for interactive prompts)
+  # Push without waiting for remote build to finish
   local result
-  result=$(apify push --force 2>&1) || true
+  result=$(apify push --force --wait-for-finish=0 2>&1) || true
   local status=$?
 
   # Restore and clean
