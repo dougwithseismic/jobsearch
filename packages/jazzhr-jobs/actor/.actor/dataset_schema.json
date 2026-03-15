@@ -1,0 +1,82 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "id": { "type": "string", "title": "ID", "description": "Deterministic job ID (source_sourceId)" },
+      "sourceId": { "type": "string", "title": "Source ID" },
+      "title": { "type": "string", "title": "Title" },
+      "description": { "type": "string", "title": "Description" },
+      "descriptionSnippet": { "type": "string", "title": "Description Snippet" },
+      "descriptionHtml": { "type": ["string", "null"], "title": "Description HTML" },
+      "department": { "type": "string", "title": "Department" },
+      "team": { "type": "string", "title": "Team" },
+      "category": { "type": "string", "title": "Category" },
+      "location": {
+        "type": "object", "title": "Location",
+        "properties": {
+          "text": { "type": "string" },
+          "city": { "type": ["string", "null"] },
+          "state": { "type": ["string", "null"] },
+          "country": { "type": ["string", "null"] },
+          "region": { "type": "string" },
+          "lat": { "type": ["number", "null"] },
+          "lng": { "type": ["number", "null"] }
+        }
+      },
+      "secondaryLocations": { "type": "array", "title": "Secondary Locations" },
+      "workplaceType": { "type": "string", "title": "Workplace" },
+      "employmentType": { "type": "string", "title": "Employment Type" },
+      "employmentTypeRaw": { "type": "string", "title": "Employment Type (Raw)" },
+      "seniorityLevel": { "type": "string", "title": "Seniority" },
+      "salary": {
+        "type": "object", "title": "Salary",
+        "properties": {
+          "text": { "type": "string" },
+          "min": { "type": ["number", "null"] },
+          "max": { "type": ["number", "null"] },
+          "currency": { "type": ["string", "null"] },
+          "period": { "type": ["string", "null"] }
+        }
+      },
+      "jobUrl": { "type": "string", "title": "Job URL" },
+      "applyUrl": { "type": "string", "title": "Apply URL" },
+      "company": {
+        "type": "object", "title": "Company",
+        "properties": {
+          "name": { "type": "string" },
+          "slug": { "type": "string" },
+          "ats": { "type": "string" },
+          "logoUrl": { "type": ["string", "null"] },
+          "careersUrl": { "type": ["string", "null"] }
+        }
+      },
+      "tags": { "type": "array", "items": { "type": "string" }, "title": "Tags" },
+      "publishedAt": { "type": "string", "title": "Published" },
+      "scrapedAt": { "type": "string", "title": "Scraped At" },
+      "lastSeenAt": { "type": "string", "title": "Last Seen" }
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": ["title", "company", "location", "workplaceType", "seniorityLevel", "salary", "publishedAt", "applyUrl"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "title": { "label": "Title", "format": "text" },
+          "company": { "label": "Company", "format": "object" },
+          "location": { "label": "Location", "format": "object" },
+          "workplaceType": { "label": "Workplace", "format": "text" },
+          "seniorityLevel": { "label": "Seniority", "format": "text" },
+          "salary": { "label": "Salary", "format": "object" },
+          "publishedAt": { "label": "Published", "format": "date" },
+          "applyUrl": { "label": "Apply", "format": "link" }
+        }
+      }
+    }
+  }
+}

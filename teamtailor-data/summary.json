@@ -1,0 +1,12 @@
+{
+  "scrapedAt": "2026-03-15T11:27:47.371Z",
+  "totalCompanies": 1,
+  "totalJobs": 3,
+  "companies": [
+    {
+      "company": "storytel",
+      "slug": "storytel",
+      "jobCount": 3
+    }
+  ]
+}

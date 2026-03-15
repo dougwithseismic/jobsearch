@@ -1,0 +1,27 @@
+{
+  "actorSpecification": 1,
+  "name": "hn-jobs-scraper",
+  "title": "HN Who is Hiring Scraper",
+  "description": "Scrape and parse every job from Hacker News 'Who is Hiring?' monthly threads. Auto-discovers threads, parses company/role/location/salary/tech from unstructured comments, returns structured data.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "environmentVariables": {},
+  "meta": {
+    "authorName": "Doug Silkstone",
+    "authorProfileUrl": "https://apify.com/deadlyaccurate",
+    "authorUrl": "https://github.com/dougwithseismic",
+    "categories": ["JOBS"],
+    "defaultRunOptions": {
+      "build": "latest",
+      "memoryMbytes": 256,
+      "timeoutSecs": 300
+    }
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json",
+    "keyValueStore": "./key_value_store_schema.json"
+  },
+  "dockerfile": "../Dockerfile"
+}

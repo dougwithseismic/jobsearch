@@ -1,0 +1,62 @@
+[
+  {
+    "company": "storytel",
+    "slug": "storytel",
+    "jobCount": 3,
+    "jobs": [
+      {
+        "title": "Mobile App Developer (Android)",
+        "description": "",
+        "pubDate": "Thu, 26 Feb 2026 16:19:55 +0100",
+        "link": "https://jobs.storytel.com/jobs/7301118-mobile-app-developer-android",
+        "guid": "65ee4320-6d96-4cf3-82c6-1bf1a6452f04",
+        "remoteStatus": "none",
+        "locations": [
+          {
+            "city": "Stockholm",
+            "country": "Sweden"
+          },
+          {
+            "name": "København",
+            "city": "København",
+            "country": "Denmark"
+          }
+        ],
+        "department": "Product &amp; Tech",
+        "role": "Mobile Engineer"
+      },
+      {
+        "title": "Senior Product Designer",
+        "description": "",
+        "pubDate": "Thu, 26 Feb 2026 10:43:45 +0100",
+        "link": "https://jobs.storytel.com/jobs/7298038-senior-product-designer",
+        "guid": "634da541-1d71-4292-ba17-f2eecc5947b3",
+        "remoteStatus": "none",
+        "locations": [
+          {
+            "city": "Stockholm",
+            "country": "Sweden"
+          }
+        ],
+        "department": "Product &amp; Tech",
+        "role": "Product Design"
+      },
+      {
+        "title": "Event Manager (Parental Leave Cover)",
+        "description": "",
+        "pubDate": "Fri, 20 Feb 2026 11:47:52 +0100",
+        "link": "https://jobs.storytel.com/jobs/7269964-event-manager-parental-leave-cover",
+        "guid": "644191ec-427b-4d84-ae90-09d56b3457ab",
+        "remoteStatus": "none",
+        "locations": [
+          {
+            "city": "Stockholm",
+            "country": "Sweden"
+          }
+        ],
+        "department": "Commercial"
+      }
+    ],
+    "scrapedAt": "2026-03-15T11:27:47.370Z"
+  }
+]

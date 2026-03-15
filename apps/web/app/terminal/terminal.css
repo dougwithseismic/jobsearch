@@ -1,0 +1,554 @@
+/* ── acid ─────────────────────────────────────────────────────────── */
+
+.term {
+  background: #050510;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  position: relative;
+}
+
+.term-scan {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0, 0, 0, 0.03) 3px,
+    rgba(0, 0, 0, 0.03) 6px
+  );
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* ── container ───────────────────────────────────────────────────── */
+
+.term-wrap {
+  width: 72ch;
+  max-width: 100%;
+  font-family: var(--font-geist-mono), "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #999;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── header ──────────────────────────────────────────────────────── */
+
+.term-head {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #151520;
+}
+
+.term-name {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: #88cccc;
+  margin: 0;
+}
+
+.term-title {
+  color: #667;
+  font-size: 0.8rem;
+  margin: 0.4rem 0 0;
+}
+
+.term-info {
+  color: #556;
+  font-size: 0.75rem;
+  margin: 0.3rem 0 0;
+}
+
+.term-links {
+  display: flex;
+  gap: 2ch;
+  margin-top: 1.2rem;
+  font-size: 0.75rem;
+}
+
+.term-links a {
+  color: #667;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.term-links a:hover {
+  color: #88cccc;
+}
+
+/* ── nav ─────────────────────────────────────────────────────────── */
+
+.term-nav {
+  display: flex;
+  gap: 0;
+  margin-top: 2rem;
+}
+
+.term-tab {
+  background: none;
+  border: none;
+  color: #445;
+  font-family: inherit;
+  font-size: 0.72rem;
+  padding: 0.4rem 2ch;
+  cursor: pointer;
+  transition: color 0.3s;
+  letter-spacing: 0.1em;
+}
+
+.term-tab:first-child {
+  padding-left: 0;
+}
+
+.term-tab:hover {
+  color: #889;
+}
+
+.term-tab.on {
+  color: #88cccc;
+}
+
+/* ── body ────────────────────────────────────────────────────────── */
+
+.term-body {
+  padding-top: 2rem;
+}
+
+.term-loading {
+  color: #556;
+  margin: 0;
+}
+
+/* ── sections ────────────────────────────────────────────────────── */
+
+.term-section {
+  margin-top: 2.5rem;
+}
+
+.term-section:first-child {
+  margin-top: 0;
+}
+
+.term-label {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #88cccc;
+  text-transform: lowercase;
+  margin: 0 0 1rem;
+}
+
+/* ── about ───────────────────────────────────────────────────────── */
+
+.term-about {
+  color: #999;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  margin: 0;
+  text-align: justify;
+}
+
+/* ── skills ──────────────────────────────────────────────────────── */
+
+.term-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.term-skill-row {
+  font-size: 0.78rem;
+  display: flex;
+  line-height: 1.6;
+}
+
+.term-skill-key {
+  color: #88cccc;
+  min-width: 15ch;
+  flex-shrink: 0;
+}
+
+.term-skill-val {
+  color: #778;
+}
+
+/* ── experience ──────────────────────────────────────────────────── */
+
+.term-jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.term-job-top {
+  display: flex;
+  align-items: baseline;
+  gap: 1ch;
+  font-size: 0.8rem;
+}
+
+.term-job-role {
+  color: #ccc;
+  font-weight: 400;
+}
+
+.term-job-dot {
+  flex: 1;
+  border-bottom: 1px dotted #222;
+  margin-bottom: 0.25em;
+}
+
+.term-job-period {
+  color: #556;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.term-job-co {
+  color: #889;
+  font-size: 0.75rem;
+  margin-top: 0.15rem;
+}
+
+.term-job-tech {
+  color: #445;
+  font-size: 0.68rem;
+  margin-top: 0.3rem;
+}
+
+.term-job-hl {
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.term-job-hl li {
+  color: #778;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  padding-left: 2ch;
+  position: relative;
+  text-align: justify;
+}
+
+.term-job-hl li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: #445;
+}
+
+/* ── clients ─────────────────────────────────────────────────────── */
+
+.term-dim {
+  color: #778;
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+/* ── job summary ─────────────────────────────────────────────────── */
+
+.term-job-summary {
+  color: #667;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  margin-top: 0.3rem;
+  text-align: justify;
+}
+
+/* ── oss ─────────────────────────────────────────────────────────── */
+
+.term-oss {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem 2ch;
+}
+
+.term-oss-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.term-oss-name {
+  color: #ccc;
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.term-oss-tag {
+  color: #88cccc;
+  font-size: 0.65rem;
+}
+
+.term-oss-desc {
+  color: #556;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+/* ── awards ──────────────────────────────────────────────────────── */
+
+.term-awards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.2rem 2ch;
+}
+
+.term-awards li {
+  color: #778;
+  font-size: 0.75rem;
+  line-height: 1.55;
+  padding-left: 2ch;
+  position: relative;
+}
+
+.term-awards li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: #445;
+}
+
+/* ── references ──────────────────────────────────────────────────── */
+
+.term-refs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.term-ref {
+  border-left: 1px solid #1a1a2a;
+  padding-left: 1.5ch;
+}
+
+.term-ref-text {
+  color: #667;
+  font-size: 0.75rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.term-ref-attr {
+  color: #445;
+  font-size: 0.68rem;
+  margin: 0.2rem 0 0;
+}
+
+/* ── letter ──────────────────────────────────────────────────────── */
+
+.term-letter {
+  max-width: 64ch;
+}
+
+.term-lp {
+  color: #889;
+  font-size: 0.8rem;
+  line-height: 1.85;
+  margin: 0 0 0.8rem;
+  text-align: justify;
+}
+
+.term-lp-opener {
+  color: #bbc;
+}
+
+.term-lp-cta {
+  color: #99a;
+}
+
+.term-lp-sign-off {
+  color: #88cccc;
+  margin-top: 1.5rem !important;
+}
+
+/* ── footer ──────────────────────────────────────────────────────── */
+
+.term-foot {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #151520;
+  color: #334;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+/* ── print ───────────────────────────────────────────────────────── */
+
+@media print {
+  .term {
+    background: white;
+    padding: 0;
+  }
+
+  .term-scan {
+    display: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .term-wrap {
+    color: #555;
+    width: 100%;
+  }
+
+  .term-name {
+    color: #111;
+  }
+
+  .term-title {
+    color: #555;
+  }
+
+  .term-info {
+    color: #777;
+  }
+
+  .term-head {
+    border-bottom-color: #ddd;
+  }
+
+  .term-links a {
+    color: #555;
+  }
+
+  .term-label {
+    color: #333;
+  }
+
+  .term-about,
+  .term-lp {
+    color: #444;
+  }
+
+  .term-skill-key {
+    color: #333;
+  }
+
+  .term-skill-val,
+  .term-dim {
+    color: #555;
+  }
+
+  .term-job-role {
+    color: #222;
+  }
+
+  .term-job-co {
+    color: #444;
+  }
+
+  .term-job-dot {
+    border-bottom-color: #ccc;
+  }
+
+  .term-job-period {
+    color: #777;
+  }
+
+  .term-job-tech {
+    color: #888;
+  }
+
+  .term-job-hl li {
+    color: #555;
+  }
+
+  .term-job-hl li::before {
+    color: #bbb;
+  }
+
+  .term-lp-sign-off {
+    color: #111;
+  }
+
+  .term-job-summary {
+    color: #555;
+  }
+
+  .term-oss-name {
+    color: #222;
+  }
+
+  .term-oss-tag {
+    color: #555;
+  }
+
+  .term-oss-desc {
+    color: #666;
+  }
+
+  .term-awards li {
+    color: #444;
+  }
+
+  .term-awards li::before {
+    color: #bbb;
+  }
+
+  .term-ref {
+    border-left-color: #ddd;
+  }
+
+  .term-ref-text {
+    color: #444;
+  }
+
+  .term-ref-attr {
+    color: #777;
+  }
+}
+
+/* ── responsive ──────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .term {
+    padding: 2rem 1rem;
+  }
+
+  .term-wrap {
+    font-size: 12px;
+  }
+
+  .term-links {
+    flex-wrap: wrap;
+    gap: 1ch;
+  }
+
+  .term-job-top {
+    flex-wrap: wrap;
+  }
+
+  .term-job-dot {
+    display: none;
+  }
+
+  .term-skill-row {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0.4rem;
+  }
+
+  .term-skill-key {
+    min-width: unset;
+  }
+
+  .term-oss {
+    grid-template-columns: 1fr;
+  }
+
+  .term-awards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "HN Who is Hiring Scraper",
+  "description": "Scrape and parse jobs from Hacker News 'Who is Hiring?' monthly threads into structured data.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "months": {
+      "title": "Months to Scrape",
+      "type": "integer",
+      "description": "Number of recent monthly 'Who is Hiring?' threads to scrape.\n\nEach month typically has 500-800 job posts. Default: 2 (current + previous month).",
+      "default": 2,
+      "minimum": 1,
+      "maximum": 12,
+      "sectionCaption": "Scraping Options",
+      "sectionDescription": "Control how many threads to scrape and how fast."
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "description": "Number of parallel API requests for fetching HN comments. Higher = faster but more memory. Recommended: 10.",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "remoteOnly": {
+      "title": "Remote Jobs Only",
+      "type": "boolean",
+      "description": "Only return jobs that mention remote work.",
+      "default": false,
+      "sectionCaption": "Filters",
+      "sectionDescription": "Filter jobs by location, keywords, or technologies. All filters use case-insensitive regex."
+    },
+    "locationFilter": {
+      "title": "Location Filter",
+      "type": "string",
+      "description": "Regex pattern to match job locations.\n\nExamples:\n- 'europe|germany|uk|france' -- European jobs\n- 'remote' -- Any location containing 'remote'\n- 'new york|san francisco|austin' -- US tech hubs\n- 'prague|czech' -- Specific city/country",
+      "editor": "textfield",
+      "default": ""
+    },
+    "keywordFilter": {
+      "title": "Title/Keyword Filter",
+      "type": "string",
+      "description": "Regex pattern to match job titles or descriptions.\n\nExamples:\n- 'senior|staff|lead|principal' -- Senior roles\n- 'full.?stack|fullstack' -- Full-stack engineers\n- 'react|typescript|node' -- Tech-specific\n- 'founding|head.of|vp|director' -- Leadership",
+      "editor": "textfield",
+      "default": ""
+    },
+    "technologyFilter": {
+      "title": "Technology Filter",
+      "type": "string",
+      "description": "Regex pattern to match technologies.\n\nExamples:\n- 'react|vue|angular' -- Frontend frameworks\n- 'python|rust|go' -- Languages\n- 'aws|gcp|azure' -- Cloud providers\n- 'postgres|mongodb|redis' -- Databases",
+      "editor": "textfield",
+      "default": ""
+    },
+    "includeRawHtml": {
+      "title": "Include Raw HTML",
+      "type": "boolean",
+      "description": "Include the raw HTML from each HN comment in the output. Increases dataset size. Default: off to keep results lean.",
+      "default": false
+    },
+    "outputFormat": {
+      "title": "Output Format",
+      "type": "string",
+      "description": "How to format output records:\n- 'unified' (default) — Normalized schema consistent across all ATS platforms with structured location, salary, company objects\n- 'raw' — Native HN format, no normalization\n- 'both' — Unified schema with original HN data in the 'raw' field",
+      "enum": ["unified", "raw", "both"],
+      "default": "unified",
+      "sectionCaption": "Output Format"
+    }
+  },
+  "required": []
+}

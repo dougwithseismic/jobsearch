@@ -1,0 +1,91 @@
+[
+  {
+    "company": "workwithus",
+    "slug": "workwithus",
+    "jobCount": 3,
+    "jobs": [
+      {
+        "id": "447735",
+        "title": "Customer Success Manager",
+        "description": "",
+        "location": {
+          "id": "2548",
+          "city": "Washington, DC",
+          "name": "United States",
+          "postalCode": "",
+          "province": "Maryland"
+        },
+        "department": "Customer Success",
+        "workplaceType": "remote",
+        "workplaceTypeText": "Fully remote",
+        "employmentType": "full_time",
+        "employmentTypeText": "Full Time",
+        "url": "https://workwithus.pinpointhq.com/en/postings/1116dabc-4a3b-43a3-ab5e-dfc8b9516d4a",
+        "path": "/en/postings/1116dabc-4a3b-43a3-ab5e-dfc8b9516d4a",
+        "compensationVisible": false,
+        "compensationMin": null,
+        "compensationMax": null,
+        "compensationCurrency": null,
+        "compensationFrequency": null,
+        "deadlineAt": null,
+        "reportingTo": "Head of Customer Success",
+        "requisitionId": "PIN-0373"
+      },
+      {
+        "id": "450964",
+        "title": "Software Integrations Engineer",
+        "description": "",
+        "location": {
+          "id": "283",
+          "city": "London",
+          "name": "Remote",
+          "postalCode": "",
+          "province": "London"
+        },
+        "department": "Engineering",
+        "workplaceType": "remote",
+        "workplaceTypeText": "Fully remote",
+        "employmentType": "full_time",
+        "employmentTypeText": "Full Time",
+        "url": "https://workwithus.pinpointhq.com/en/postings/817d1187-4a5a-4ff4-9ae5-26b7969baba9",
+        "path": "/en/postings/817d1187-4a5a-4ff4-9ae5-26b7969baba9",
+        "compensationVisible": true,
+        "compensationMin": 60000,
+        "compensationMax": 70000,
+        "compensationCurrency": "GBP",
+        "compensationFrequency": "year",
+        "deadlineAt": null,
+        "reportingTo": "Lead Integrations Engineer",
+        "requisitionId": "PIN-0375"
+      },
+      {
+        "id": "451269",
+        "title": "Software Integrations Engineer",
+        "description": "",
+        "location": {
+          "id": "32056",
+          "city": "Poland",
+          "name": "Poland",
+          "postalCode": "",
+          "province": "Poland"
+        },
+        "department": "Engineering",
+        "workplaceType": "remote",
+        "workplaceTypeText": "Fully remote",
+        "employmentType": "full_time",
+        "employmentTypeText": "Full Time",
+        "url": "https://workwithus.pinpointhq.com/en/postings/d9b295b5-ee04-463e-b281-197d45340c07",
+        "path": "/en/postings/d9b295b5-ee04-463e-b281-197d45340c07",
+        "compensationVisible": false,
+        "compensationMin": null,
+        "compensationMax": null,
+        "compensationCurrency": null,
+        "compensationFrequency": null,
+        "deadlineAt": null,
+        "reportingTo": "Lead Integrations Engineer",
+        "requisitionId": "PIN-0375"
+      }
+    ],
+    "scrapedAt": "2026-03-15T11:27:48.003Z"
+  }
+]
